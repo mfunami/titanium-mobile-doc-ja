@@ -107,7 +107,21 @@ http://img.skitch.com/20090616-5u6gr8tkf7hfayra35a5wtgsb.png
 
 これでとりあえずは動作確認完了です。
 
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100126/20100126070736.png
+
+実際操作して挙動確認できるのは「シェイクジェスチャー」の実行によるアラート表示のみです。
+
+実機動作まで行えば、vibrationsボタンをクリックしたときにバイブ動作することもできるんですけどね。その辺は震えたツモリ…ということで。
+（カメラ・加速度センサー・GPSといったあたりは実機検証しないと動作確認すらできません）
+
 == 生成されたソース ==
+Javascriptのソースにたびたび出てくるTitanium.～というのはTitanium MobileのAPIになります。
+Titanium.Media.vibrate()は本体をバイブするためのメソッドですし、Titanium.Gestureというオブジェクトの高級イベントにあたるshakeに対してイベントハンドラを追加しているという寸法です。
+shakeイベント内で宣言されているTitanium.UI.createAlertDialogというメソッドはデバイスNative UIの警告ダイアログを生成するためのものです。
+（iPhoneかAndroidかというところは抽象化されています）
+
+ついついJavascriptでalert関数を使って表示しようとしてしまうのですが、Titaniumの環境下でalertしてもデバッグログとして出力されるだけになります。要注意。
+
 === /testapp/tiapp.xml ===
 {{{
 <?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
