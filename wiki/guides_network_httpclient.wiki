@@ -1,0 +1,107 @@
+#summary API案内 - HTTPClient編
+#labels api,network
+= API案内 - HTTPClient編 =
+参考文献：[http://www.codestrong.com/timobile/guides/platform_api/ Titanium Mobile API Guide]
+
+HTTPClientと称していますが、AJAXでおなじみのXMLHttpClient(xhr)と同じ仕組みで動くので、prototype.jsやjQueryなどのラッパーなしで素のAJAXをしていた向きには理解しやすいかもしれませんね。
+
+== 基本構文 ==
+{{{
+// オフラインなら処理しないようにしたほうがいいですよね！
+if(Titanium.Network.online == false){
+    // エラー表示
+    return;
+}
+
+// オブジェクトを生成します。
+var xhr = Titanium.Network.createHTTPClient();
+
+// 第一引数はHTTP Method(GETかPOSTがほとんどだと思いますが)
+// 第二引数はURIです。
+xhr.open('GET','http://search.twitter.com/search.json?q=%23titanium');
+
+// レスポンスを受け取るイベント
+xhr.onload = function(){
+    alert(this.responseText);
+    /*
+    // これと同義
+    xhr.onreadystatechange = function(){
+        if(this.readyState == xhr.DONE){
+            alert(this.responseText);
+        }
+    };
+    */
+};
+
+// エラー発生時のイベント
+xhr.onerror = function(error){
+    // errorにはエラー事由の文字列オブジェクトが入ってくる。
+};
+
+// リクエスト送信します。(引数としてJSON値を入れるとパラメータ化される)
+xhr.send();
+/*
+ xhr.send({
+     q : 'querystring',
+     param_name : 'param_value'
+ });
+ */
+}}}
+基本的にonloadでレスポンスをごにょごにょいじるという路線です。
+responseTextのほかにDOMParserに予め通した形で受け取るresponseXMLというプロパティもあります。
+
+残念ながらJSON化するためのメソッドがないため、JSON変換には定石の以下の手続きをすることになります。
+{{{
+xhr.onload = function(){
+    var json = eval('(' + this.responseText + ')');
+    // 後続処理
+};
+}}}
+
+== 写真をPOSTする例 ==
+カメラ撮影をしたものをTwitPicサーバにアップロードする例です。
+{{{
+Titanium.Media.showCamera({
+    success : function(image,details){
+        try{
+            var xhr = Titanium.Network.createHTTPClient();
+            xhr.onload = function(){
+                var xml = this.responseXML;
+                var url = xml.documentElement.getElementsByTagName("mediaurl")[0].nodeValue;
+                // ...
+            };
+            xhr.open("POST","http://twitpic.com/api/upload");
+            xhr.send({media:image, username:'username', password:'password'});
+        }
+        catch(error){
+            // ...
+        }
+    }
+});
+}}}
+== 標準認証 ==
+実はあまりこのHTTPClient、あまりスマートにできていません。
+
+標準認証時は次のようにしろとドキュメントに書かれていて思わず脱力してしまいます。
+{{{
+try{
+    var xhr = Titanium.Network.createHTTPClient();
+    xhr.onload = function() {
+        //do work on "this.responseXML"
+    };
+    xhr.open("GET","https://"+username + ":" + password + "@twitter.com/account/verify_credentials.xml");
+    xhr.send();
+}
+catch(error){
+    Titanium.UI.createAlertDialog({
+        title: "Error",
+        message: String(error),
+        buttonNames: ['OK']
+    }).show();
+}
+}}}
+URLに直接ユーザ名とパスワードを埋め込む方式です。
+このあたりは今後改善されていくと信じたいところです。
+
+== ちなみにサーバ化はできません。 ==
+現状(Ver.0.8.1)のTitanium Mobileで提供されている標準機能ではサーバとなる機能はありませんので、他のデバイスと連携するようなアプリケーションを構築することはできません。(Desktop版にはあるのですが)
