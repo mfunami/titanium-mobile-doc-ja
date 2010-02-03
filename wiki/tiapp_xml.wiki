@@ -1,0 +1,74 @@
+#Titanium Moibleのアプリケーション情報を定義するtiapp.xmlについて
+
+= tiapp.xml =
+== 例 ==
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.twitter.donayama.testapp</id>
+    <name>testapp</name>
+    <version>1.0</version>
+    <icon>default_app_logo.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>opaque</statusbar-style>
+    <windows>
+        <window>
+            <id>initial</id>
+            <url>index.html</url>
+            <backgroundColor>#111</backgroundColor>
+            <icon>ti://featured</icon>
+            <barColor>#000</barColor>
+            <fullscreen>false</fullscreen>
+        </window>
+        <window>
+            <id>about</id>
+            <url>about.html</url>
+            <backgroundColor>#111</backgroundColor>
+            <icon>ti://top rated</icon>
+            <barColor>#000</barColor>
+            <fullscreen>false</fullscreen>
+        </window>
+    </windows>
+    <guid>877913e9-a903-4dd3-b111-f0fbfd29ffcc</guid>
+</ti:app>
+}}}
+
+== window要素 ==
+windows要素の子要素としてのwindow要素が各tabの定義になっています。
+
+||要素名||説明||
+||id||windowを参照するためのIDを指定します。||
+||url||そのwindowのメインHTMLのURLを指定します。Resoucesフォルダからの相対パスで指定します。||
+||backgroundColor||windowの背景色を指定します。CSS的な色指定でいけるみたいです。||
+||icon||Tabbarにアイコンを載せる場合のアイコンを指定します。これでti://～を指定していると、↓のtitleでどんだけ指定しても無視されますのでご注意を。||
+||title||Tabbarの見出し文字列を指定します。icon指定していないと寂しい感じですよ。||
+||backButtonTitle||NavBarの戻るボタンのタイトルを指定します。||
+||titleImage||NavBarで使用する画像のパスを指定します。||
+||barColor||NavBarの背景色を指定します。||
+||backgroundImage||windowの背景画像のパスを指定します。||
+||hideNavBar||NavBarの表示非表示を指定します。trueなら非表示。||
+||hideTabBar||TabBarの表示非表示を指定します。trueなら非表示。||
+||statusBarStyle||最上段のステータスバーの表示形式を指定します。選択はgrey (デフォルト), opaque_black , translucent_blackの3種類。||
+||fullscreen||フルスクリーン表示をする場合はtrueを指定します。||
+||orientation||縦横方法工を限定する場合に指定します。デフォルトはどっちでOKのeither。landscape か portraitを指定すれば縦横のみに限定できます。||
+
+=== icon要素 ===
+Titanium側がシステムバッジとして用意しているものがいくつかあります。
+
+ * ti://bookmarks
+ * ti://contacts
+ * ti://downloads
+ * ti://favorites
+ * ti://featured
+ * ti://more
+ * ti://most recent
+ * ti://most viewed
+ * ti://recents
+ * ti://search
+ * ti://top rated
+
+またこれら以外にも下記素材などをResourcesフォルダに入れて利用する事もできます。
+
+ * http://glyphish.com/
+ * http://blog.twg.ca/2009/09/free-iphone-toolbar-icons/
