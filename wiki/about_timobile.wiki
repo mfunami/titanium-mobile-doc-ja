@@ -1,0 +1,43 @@
+#summary One-sentence summary of this page.
+
+= Titanium Mobileについて =
+
+Titanium Mobileがそもそもなんなのかというところなのですが、次のslideshareのスライドで端的にまとまっています。
+
+http://www.slideshare.net/marshall_law/titanium-mobile-intro
+
+== 特徴 ==
+
+ * HTML5, CSS, CanvasといったWebの標準技術でUIを構成できる
+ * JavascriptのソースをiPhone(3.x)とAndroid(1.5)をネイティブコードに変換
+  ** ブリッジとしての動作もしているようなので、すべてがObjective-CやJavaのソースになってるわけではなさそう
+ * 高速なJavascript APIでwidgetやviewを操作
+
+通常のHTML5でWebアプリケーションを作る際に制約がありできないことが可能になります。
+
+ * Native UI（Javascriptから生成・操作）
+ * 音楽・動画再生
+ * カメラ撮影（動画も可）
+ * GPS、コンパス（safariからは使えますが…）
+ * 加速度センサー（簡易的にシェイク・縦横回転を認識するイベントもあり）
+ * XMLHttpRequest風のHTTPClient API(crossdomainも可能)
+
+こういうものでMobileアプリケーションを開発していきましょう！っていう環境・ミドルウェアをTitanium Mobileというわけです。
+
+== 情報源 ==
+
+主な情報源は順当過ぎるのですが、公式サイトになります。
+
+ * http://www.appcelerator.com/
+ * http://www.codestrong.com/timobile/
+ * http://github.com/appcelerator/titanium_mobile/tree/master/demos/KitchenSink/
+
+が、思いのほか点在しているため、知りたい情報がそこにない！みたいなことが多々発生します。
+
+だからこそぼくもこうやって情報をまとめようとしているわけですが(^^；
+
+ってことで、今後は上記のドキュメント類を目次・逆引きベースでたどれるようにまとめていくことが目的になります。
+
+なので、もっと先に知りたいって向きは上記サイト群を目を皿のようにしてチェックしていきましょう！
+
+そして情報共有しましょう！！
