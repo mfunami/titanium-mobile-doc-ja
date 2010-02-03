@@ -3,8 +3,7 @@
 
 = API案内 - メディア編 - 動画再生・音声再生 =
 
-参考文献：[http://www.codestrong.com/timobile/guides/rich_media_api/ 
-Titanium Mobile Rich Media API Guide]
+参考文献：[http://www.codestrong.com/timobile/guides/rich_media_api/ Titanium Mobile Rich Media API Guide]
 
 == 動画ストリーミング再生 ==
 Titaniumではアプリケーション内動画再生ができます。使いどころが難しいような気がしないでもありませんが(^^;
