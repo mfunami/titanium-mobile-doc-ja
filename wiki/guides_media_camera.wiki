@@ -2,6 +2,8 @@
 #labels api,media
 
 = API案内 - メディア編 - カメラ撮影・カメラロール =
+参考文献：[http://www.codestrong.com/timobile/guides/rich_media_api/Titanium Mobile Rich Media API Guide]
+
 
 カメラ撮影・アップロードあたりはHTMLアプリケーションでできない一番大きな要素の一つではないでしょうか。
 
