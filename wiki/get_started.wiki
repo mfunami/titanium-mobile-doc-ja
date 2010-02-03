@@ -68,30 +68,30 @@ Aptanaみたいなでっかい環境でもCarbon EmacsみたいなものでもCo
 キチンと認識されていれば、他の項目をうめていくカンタンなお仕事ですよ。
 
  * Name
- ** アプリケーションの名前です。これあとから変更するの地味に面倒なのでできればキチンと付けましょう。ちなみにiPhoneのHome画面にもこの名前で出てきます。長すぎると...とかで省略されるよ！
- *App Id
- ** iPhone用です。実機動作などをさせる場合にはprovisioning profileというものを使うのですが、それを作るときにもこのApp IDが必要になります。一意である必要が有るので、Javaのユーザ名前空間同様にドメイン名を反転させた名前の付け方をすることが推奨されています。com.twitter.yourscreenname.testappとかそんな感じにしておけばいいと思います。
- *Directory
- ** アプリケーションのソースが展開されるフォルダを指定します。
+  ** アプリケーションの名前です。これあとから変更するの地味に面倒なのでできればキチンと付けましょう。ちなみにiPhoneのHome画面にもこの名前で出てきます。長すぎると...とかで省略されるよ！
+ * App Id
+  ** iPhone用です。実機動作などをさせる場合にはprovisioning profileというものを使うのですが、それを作るときにもこのApp IDが必要になります。一意である必要が有るので、Javaのユーザ名前空間同様にドメイン名を反転させた名前の付け方をすることが推奨されています。com.twitter.yourscreenname.testappとかそんな感じにしておけばいいと思います。
+ * Directory
+  ** アプリケーションのソースが展開されるフォルダを指定します。
  * Company/Personal URL
- ** 会社や個人のURLということで、そのままですね。ぼくは http://twitter.com/donayama/ などと放り込んでいます。
+  ** 会社や個人のURLということで、そのままですね。ぼくは http://twitter.com/donayama/ などと放り込んでいます。
  * Titanium SDK version
- ** 最新のSDKを使いましょう。
+  ** 最新のSDKを使いましょう。
  * JS Libraries
- ** 必須では有りませんが、いくつかの著名なJavascript fwやlibが列挙されています。お好きなものを選択してください。この解説ではぼくの趣味でjQueryが使われていきますので、ここではjQueryを選んでおきましょうか！
+  ** 必須では有りませんが、いくつかの著名なJavascript fwやlibが列挙されています。お好きなものを選択してください。この解説ではぼくの趣味でjQueryが使われていきますので、ここではjQueryを選んでおきましょうか！
 
 これでCreate Projectすると、Directory欄で指定したフォルダにName欄で指定したフォルダが生成されているはずです。
 
 （これ気をつけないとムダにフォルダ階層が深くなるんですよね…）
 
  * /Users/account/Dropbox/Dev/Titanium/testapp ここがさっきのDirectory/Nameで構成されます。
- ** /build 特に触る必要のないフォルダ。中間ソース的にあれこれが。
- ** /Resouces あとでがりがり触るフォルダ。主戦場です。中のファイルは自動生成されるもの。
- *** index.html
- *** index.js
- *** index.css
- *** about.html
- *** /iphone アイコンや起動時のスプラッシュスクリーン画像(Default.png)などが入っている。
+  ** /build 特に触る必要のないフォルダ。中間ソース的にあれこれが。
+  ** /Resouces あとでがりがり触るフォルダ。主戦場です。中のファイルは自動生成されるもの。
+   *** index.html
+   *** index.js
+   *** index.css
+   *** about.html
+   *** /iphone アイコンや起動時のスプラッシュスクリーン画像(Default.png)などが入っている。
  ** tiapp.xml アプリの定義とかを行うファイル。
 
 http://img.skitch.com/20090616-ewt986g5nbafifdbttb9pddp7s.png
