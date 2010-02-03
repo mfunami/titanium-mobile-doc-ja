@@ -1,5 +1,4 @@
-#Titanium Moibleのアプリケーション情報を定義するtiapp.xmlについて
-
+#summary Titanium Moibleのアプリケーション情報を定義するtiapp.xmlについて
 = tiapp.xml =
 == 例 ==
 {{{
