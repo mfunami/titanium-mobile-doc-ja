@@ -1,6 +1,6 @@
-= Titanium Mobileについて =
-
-Titanium Mobileがそもそもなんなのかというところなのですが、次のslideshareのスライドで端的にまとまっています。
+#summary Titanium Mobileがそもそもなんなのか
+= Appcelerator Titanium Mobileについて =
+Titanium Mobile（タイタニウム・モバイル）がそもそもなんなのかというところなのですが、次のslideshareのスライドで端的にまとまっています。
 
 http://www.slideshare.net/marshall_law/titanium-mobile-intro
 
