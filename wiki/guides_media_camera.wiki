@@ -1,0 +1,54 @@
+#summary API案内 - メディア編 - カメラ撮影・カメラロール
+#labels api,media
+
+= API案内 - メディア編 - カメラ撮影・カメラロール =
+
+カメラ撮影・アップロードあたりはHTMLアプリケーションでできない一番大きな要素の一つではないでしょうか。
+
+その半分側にあたる撮影ですが、ファインダー画面に映り、撮影後プレビューが表示され、"Use"ボタンをクリックすることで初めて「成功」するという仕掛けになっています。
+
+== カメラ撮影 ==
+{{{
+$('#photo').click(function(){
+    Titanium.Media.showCamera({
+        // JSON形式の引数です
+        success:function(image, details)
+        {
+            // 成功時の関数にはイメージデータのオブジェクトと詳細情報が引き渡されます。
+            // ここでプレビューしたり、アップロードしたり（そのためのキューに貯めるとか）
+            // する感じです。
+            
+            // img要素(id=preview)のsrc属性にパス情報を渡してみます。
+            $('img#preview').attr('src', image.url);
+        },
+        cancel:function()
+        {
+            //
+        },
+        error:function(error)
+        {
+            // errorとしてカメラがデバイスにないようなケース(iPod touchなどがそうでしょうか)では
+            // error.code が Titanium.Media.NO_CAMERA として返るようです。
+        },
+        // trueにしてもiPhoneでは無効ですよ
+        allowImageEditing:true
+    });
+});
+}}}
+
+== カメラロール側から写真選択 ==
+{{{
+Titanium.Media.openPhotoGallery({
+    success: function(image, details) {
+        // カメラロールで写真を選択した時の挙動
+    },
+    error: function(error) {
+        // notify(e.message);
+    },
+    cancel: function() {
+        // キャンセル時の挙動
+    },
+    // 対応してるのはAndroidだけっすね…
+    allowImageEditing: true
+});
+}}}
