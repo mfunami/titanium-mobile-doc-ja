@@ -1,0 +1,61 @@
+#summary API案内 - デバイスハードウェア編 - 位置測定
+#labels api,device
+
+= API案内 - デバイスハードウェア編 - 位置測定 =
+参考文献：[http://www.codestrong.com/timobile/guides/mobile_api/ Titanium Mobile API Guide]
+
+GPSなどから現在位置を測定するため、2つの方法が提供されています。
+
+ひとつは継続的に位置情報を更新し続けるタイマー系の処理、もうひとつは端的に今どこにいるのかを取得する一度きりの処理です。
+
+== Titanium.Geolocation.getCurrentPosition ==
+いかにも値を返しそうなメソッド名なんですが、voidです(^^;
+実際の座標取得は取得成功時の関数呼出の引数というかたちで行います。ややこしい。
+{{{
+Titanium.Geolocation.getCurrentPosition(
+    // 第一引数は成功時のコールバック関数です
+    function(pos) {
+        /*
+        // posは次のようなJSONデータが入っていますよ。coordsって座標なのね...
+        pos = {
+            "coords": {
+                "latitude":37.331689,
+                "longitude":-122.030731,
+                "altitude":0,
+                "accuracy":100,
+                "altitudeAccuracy":-1,
+                "heading": -1,
+                "speed": -1
+            },
+            "timestamp":274737055043
+        }
+        */
+    }, 
+    // 第二引数は取得失敗時に呼び出される関数です。
+    function() {
+    }
+);
+}}}
+
+== Titanium.Geolocation.watchPosition ==
+一方、なんかvoidっぽい関数名ですが、こちらはwatchIdというものを返します。もうやめて...
+{{{
+var watchId = Titanium.Geolocation.watchPosition(
+    // 第一引数は成功時のコールバック関数です
+    function(pos) {
+        var coords = pos.coords;
+        var dlg = Titanium.UI.createAlertDialog({
+            'title' : 'Location Identified',
+            'message' : 'Your position is: '+coords.latitude+' latitude',
+            'buttonNames' : [ 'OK' ]
+        });
+        dlg.show();
+    },
+    // 第二引数は取得失敗時に呼び出される関数です。
+    function() {
+    }
+);
+
+// 監視を停止するときは拾ったwatchIdを引数にこれを呼び出すという寸法です。
+Titanium.Geolocation.stopwatchPosition(watchId);
+}}}
