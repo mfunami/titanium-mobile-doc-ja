@@ -106,3 +106,137 @@ http://img.skitch.com/20090616-5u6gr8tkf7hfayra35a5wtgsb.png
 しばらくするとこんな画面になって、iPhoneシミュレータが起動してくると思います。
 
 これでとりあえずは動作確認完了です。
+
+== 生成されたソース ==
+=== /testapp/tiapp.xml ===
+{{{
+<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.twitter.donayama.testapp</id>
+    <name>testapp</name>
+    <version>1.0</version>
+    <icon>default_app_logo.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>opaque</statusbar-style>
+    <windows>
+        <window>
+            <id>initial</id>
+            <url>index.html</url>
+            <backgroundColor>#111</backgroundColor>
+			<icon>ti://featured</icon>
+			<barColor>#000</barColor>
+			<fullscreen>false</fullscreen>
+        </window>
+        <window>
+            <id>about</id>
+            <url>about.html</url>
+            <backgroundColor>#111</backgroundColor>
+			<icon>ti://top rated</icon>
+            <barColor>#000</barColor>
+			<fullscreen>false</fullscreen>
+        </window>
+    </windows>
+    <guid>877913e9-a903-4dd3-b111-f0fbfd29ffcc</guid>
+</ti:app>
+}}}
+=== /testapp/Resources/index.html ===
+{{{
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.3.2.js"></script>
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<title>Hello Mobile</title>
+	<script type="text/javascript" src="index.js"></script>
+	<link href="index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<h2>Welcome to Titanium Mobile</h2>
+	<p>
+		Titanium Mobile is a next generation application platform
+		for building native mobile applications using web technologies
+		such as HTML and JavaScript.
+	</p>
+	<p>
+		You are using Titanium version <span id="version">...</span> 
+		on <span id="phone"></span>.
+	</p>
+	<p>
+		Why not have some good <button id="b">vibrations</button> on us?
+	</p>
+	<p> thank you  &#35874;&#35874;〓 Спасибо Danke ありがとうございました &#44048;&#49324;&#54633;&#45768;&#45796; gracias merci c&#7843;m &#417;n b&#7841;n
+		kiitos grazie salamat tak dzi〓kuj〓 terima kasih tak хвала 謝謝〓
+		go raibh maith agat
+	</p>
+</body>
+</html>
+}}}
+=== /testapp/Resources/index.js ===
+{{{
+window.onload = function()
+{
+	document.getElementById('version').innerHTML = Titanium.version;
+	document.getElementById('phone').innerHTML = Titanium.Platform.name + ' '+Titanium.Platform.version;
+	document.getElementById('b').onclick = function() { Titanium.Media.vibrate(); };
+
+	Titanium.Gesture.addEventListener('shake',function(){
+		var alerty = Titanium.UI.createAlertDialog();
+		alerty.setTitle("Not stirred!");
+		alerty.show();
+	},false);
+	
+};
+}}}
+=== /testapp/Resources/index.css ===
+{{{
+body
+{
+	background-color:#111;
+	color:#bbb;
+	font-family:sans-serif;
+}
+
+h1,h2
+{
+	color:#900;
+}
+
+p
+{
+	margin-bottom:20px;
+}
+}}}
+=== /testapp/Resources/about.html ===
+{{{
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<title>About Titanium</title>
+	<link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<h2>About Titanium Mobile</h2>
+	<p>
+		Titanium is brought to you by Appcelerator and many
+		contributions and love from our open source community.
+	</p>
+	<p>
+		We'd like to especially thank the following key contributions 
+		from:
+		
+		<ul>
+			<li>Blain Hamon</li>
+			<li>Don Thorp</li>
+			<li>Nolan Wright</li>
+			<li>Jeff Haynie</li>
+			<li>Marshall Culpepper</li>
+			<li>Martin Robinson</li>
+			<li>Kevin Whinnery</li>
+			<li>Nika Jones</li>
+			<li>Daniel Sternberg</li>
+		</ul>
+	</p>
+</body>
+</html>
+}}}
