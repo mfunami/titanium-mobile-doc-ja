@@ -1,0 +1,53 @@
+#summary API案内 - UI編 - ダイアログ
+#labels api,ui
+= API案内 - UI編 - ダイアログ =
+参考文献：[http://www.codestrong.com/timobile/guides/iphone/ui/ iPhone UI Programming Guide - Dialogs]より
+== 単なるアラート(Alert Dialog) ==
+http://img.skitch.com/20090708-t6pc3h3jfhrnxj38sr6wi7i9k3.jpg
+
+タイトルとメッセージ、OKボタンだけというような簡易的なダイアログのパターンはこちら。
+{{{
+var dialog = Titanium.UI.createAlertDialog();
+dialog.setTitle('アラートのテスト');
+dialog.setMessage('メッセージはここに指定します。'); 
+dialog.setButtonNames(['OK']);
+dialog.show();
+}}}
+setButtonNamesをしなくてもOKボタンは表示されますので、基本的に指定するべきプロパティは２つだけになります。
+
+== 処理選択をするダイアログ(Option Dialog) ==
+http://img.skitch.com/20090708-m9wjycq3ar92ikep3ds5yadpcq.jpg
+
+プロンプトと共に処理内容を選択させるような画面です。
+{{{
+// ダイアログの生成
+var dialog = Titanium.UI.createOptionDialog();
+
+// タイトルということになっていますが、プロンプト的な位置づけですね。
+dialog.setTitle('どの処理を実行しますか？');
+
+// ボタンの配置（ちなみに配列なので0オリジンでindexを持ちます）
+dialog.setOptions(["更新","削除","キャンセル"]);
+
+// 削除などの破壊的な挙動をするボタンは赤くするという規定が
+// iPhoneにはあるのでそれに該当するボタンのindexを指定します。
+dialog.setDestructive(1);
+
+// キャンセルボタンにも同様の規定があるので、indexを指定します。
+dialog.setCancel(2);
+
+// ボタン選択時の処理はイベントハンドラを記述します。
+// 第一引数のindexプロパティで選択されたボタンのindexが設定されます。
+dialog.addEventListener('click',function(event)
+{
+    if(event.index == 0){
+        // 更新処理
+    }
+    else if(event.index == 1){
+        // 削除処理
+    }
+});
+
+// ダイアログを表示します。
+dialog.show();
+}}}
