@@ -1,4 +1,5 @@
-#summary Titanium Mobileがそもそもなんなのか
+#summary Appcelerator Titanium Mobileについて
+#labels about
 = Appcelerator Titanium Mobileについて =
 Titanium Mobile（タイタニウム・モバイル）がそもそもなんなのかというところなのですが、次のslideshareのスライドで端的にまとまっています。
 
