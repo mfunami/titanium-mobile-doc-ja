@@ -1,0 +1,16 @@
+#summary 起動時画像(スプラッシュスクリーン)の変更方法
+#labels howto
+
+= 起動時画像(スプラッシュスクリーン)の変更方法 =
+
+参考文献：[http://www.codestrong.com/timobile/howto/change-the-splash-screen/ HowTo: Changing the Splash Screen]
+
+プロジェクト生成時にも少し触れましたが、project/Resorces/iphoneフォルダにあるDefault.pngというファイルが起動時にされる画像になります。お好きな画像に差し替えると気分が変わりますし…そもそもブランディングの観点からも差替えないとだめだと思います(^^;
+
+ちなみに画面中央部にはローディングインジケータが表示されるので干渉しないような画像にしておくと少し幸せになれると思いますよ。
+
+http://img.skitch.com/20090709-mh4nupgp213pn2se12fa6tpyn.jpg
+
+ちなみにこのファイルを消すとどうなるのかというと、真っ暗な画面にローディングインジケータが表示されます。
+
+一度でもデフォルトの画像がある状態でコンパイルしていると、/build/iPhone/Resources/Default.pngが残ってしまうので、意図的にこうしたい場合は削除する必要があります。
