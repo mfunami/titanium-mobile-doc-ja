@@ -1,7 +1,8 @@
 #summary API案内 - UI編 - ダイアログ
 #labels api,ui
 = API案内 - UI編 - ダイアログ =
-参考文献：[http://www.codestrong.com/timobile/guides/iphone/ui/ iPhone UI Programming Guide - Dialogs]より
+参考文献：[http://www.codestrong.com/timobile/guides/iphone/ui/ iPhone UI Programming Guide - Dialogs], [http://github.com/kwhinnery/KitchenSink/blob/master/0.8.1/KitchenSink/Resources/email.html Titanium Mobile Kitchen Sink Example]
+
 == 単なるアラート(Alert Dialog) ==
 http://img.skitch.com/20090708-t6pc3h3jfhrnxj38sr6wi7i9k3.jpg
 
@@ -50,4 +51,28 @@ dialog.addEventListener('click',function(event)
 
 // ダイアログを表示します。
 dialog.show();
+}}}
+
+== E-mail作成ダイアログ ==
+いわゆるe-mailの作成画面です。
+
+ぼくはMMSに対応してからめっきり使わなくなりましたが(^^;
+{{{
+var emailDialog = Titanium.UI.createEmailDialog()
+
+// 題名の初期値をセットします
+emailDialog.setSubject('題名');
+
+// To, Cc, Bccについては文字列配列として引き渡します。
+emailDialog.setToRecipients(['foo1@yahoo.com', 'foo2@yahoo.com']);
+emailDialog.setCcRecipients(['bar@yahoo.com']);
+emailDialog.setBccRecipients(['hoge@yahoo.com']);
+
+// 本文と添付(ここではすでにimageというオブジェクトがある前提)を初期設定します。
+emailDialog.setMessageBody('this is a test message');
+emailDialog.addAttachment(image);
+
+// ツールバー色を指定して画面を開きます。
+emailDialog.setBarColor('#336699');
+emailDialog.open();
 }}}
