@@ -1,4 +1,5 @@
 #summary iPhoneのUI構造
+#labels about,ui
 = iPhoneのUI構造 =
 
 Titanium Mobileはイメージ的にObjective-Cへのプリプロセッサとして動きます。オブジェクトの作成や解放、各種オブジェクトの抽象化(iPhone/Android間)したところで、実際のUI構造までは抽象化できません。親亀を作って、その上に子亀を載せるということをする必要があるわけです。
