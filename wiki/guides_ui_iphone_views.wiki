@@ -1,0 +1,72 @@
+#summary Native UI案内 - iPhone - View(共通)
+#labels ui
+= Native UI案内 - iPhone - View(共通) =
+Titanium MobileのwindowにはViewとしてWebViewかNative UIのViewを格納できます。
+
+何も指定しない場合、windowにはWebViewがひとつ配置されており、HTMLベースのコンテンツを配置する場合はこれを利用する形になります。
+WindowにはさらにWebViewやNative Viewを追加することができます。
+
+== WindowへのViewの追加 ==
+生成したView(WebView, Native VIew問わず)は必ず何らかのWindowに追加しなければ利用できません。それぞれのWindowにはViewを格納した配列があり、そこにpushされます。
+{{{
+// 新たに作られた myView を追加する
+Titanium.UI.currentWindow.addView(myView);
+}}}
+
+== Viewを表示する ==
+Windowに追加しただけでは表示する事はできません。{{{window#showView}}}をすることにより、表示できます。表示時にはオプションを付加する事でアニメーションさせたりすることができます。
+
+次の例では左へフリップ移動を1000msの時間をかけてするアニメーションで表示します。
+{{{
+// myViewはすでにある
+Titanium.UI.currentWindow.showView(myView, {
+    animated:true,
+    animationStyle:Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT,
+    animationDuration:1000
+});
+}}}
+
+=== 表示時アニメーション設定 ===
+アニメーション表示には先の例で示したような３つのプロパティを指定できます。
+
+||animated||アニメーションするかどうか。{{{true}}} or {{{false}}} で指定します。||
+||animationDuration||アニメーションの開始から終了までの所要時間をミリ秒単位で指定します||
+||animatedStyle||アニメーションスタイルを指定します||
+
+アニメーションスタイルには次の４つがあります。
+
+ * Titanium.UI.iPhone.AnimationStyle.CURL_UP
+ * Titanium.UI.iPhone.AnimationStyle.CURL_DOWN
+ * Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+ * Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+
+== Viewの取得方法 ==
+Viewの取得方法には名前ベースで取得する方法と、配列インデックスで取得する方法の２種類があります。
+
+それぞれ百聞は一見に如かずということでサンプルソースで解説もかねさせてもらいます。
+
+=== 名前によるView取得 ===
+{{{
+// number1という名前のviewをmyView変数にセットし、これを表示します。
+var myView = Titanium.UI.currentWindow.getViewByName('number1');
+Titanium.UI.currentWindow.showView(myView);
+}}}
+
+
+=== 配列インデックスによるView取得 ===
+{{{
+// View一覧を取得し、その１番目（０オリジンなので実質２番目）のViewを表示します。
+var views = Titanium.UI.currentWindow.getViews();
+Titanium.UI.currentWindow.showView(views[1]);
+}}}
+
+== Viewのイベント ==
+window同様にフォーカスの取得時、喪失時のイベントをもっています。
+{{{
+Titanium.UI.currentView.addEventListener('unfocused', function(e) {
+   // do something
+});
+Titanium.UI.currentView.addEventListener('focused', function(e) {
+   // do something
+});
+}}}
