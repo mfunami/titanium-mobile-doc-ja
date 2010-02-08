@@ -5,6 +5,7 @@ Grouped Viewは「設定」アプリケーションのようなグレイ色の�
 それぞれの区分けされた領域には「オプション」「ボタン」「入力」の３種類のセクションがあり、これらを混在させることができます。またそれぞれにヘッダとフッタを付与できます。
 
 たとえばこんな感じです。
+
 http://img.skitch.com/20090708-ebb3py23thu9ikunc15f5ef1gj.jpg
 {{{
 // ...ここまででoptionSection, buttonSection, inputSectionが宣言・設定されている ....
