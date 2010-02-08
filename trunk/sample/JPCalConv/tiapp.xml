@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+  <id>jp.hsj.iphone.jpcalconv</id>
+  <name>JPCalConv</name>
+  <version>1.0</version>
+  <icon>appicon.png</icon>
+  <persistent-wifi>false</persistent-wifi>
+  <prerendered-icon>false</prerendered-icon>
+  <statusbar-style>opaque</statusbar-style>
+  <windows>
+    <window>
+      <id>index</id>
+      <url>index.html</url>
+      <backgroundColor>#111</backgroundColor>
+      <barColor>#000</barColor>
+      <fullscreen>false</fullscreen>
+    </window>
+  </windows>
+  <guid>baea5414-7958-46e2-872c-003d11383e70</guid>
+</ti:app>
