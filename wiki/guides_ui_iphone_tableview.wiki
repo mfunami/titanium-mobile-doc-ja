@@ -1,0 +1,55 @@
+#summary Native UI案内 - iPhone - TableView
+#labels ui
+= Native UI案内 - iPhone - TableView =
+TableViewは「Safari」のブックマーク画面のようなリスト状にコンテンツを表示するための領域です。
+それぞれの行にはテキスト・画像・NativeUIコントロール、そしてHTMLを混在させることができます。
+
+http://img.skitch.com/20090708-jm32crku87wkhr9s9jf2m91sij.jpg
+
+{{{
+// 表示データ（配列の要素として、JSONオブジェクトをもっている感じ）
+var data = [
+    {title:'Row 1', hasDetail:true, image:'Phone.png'},
+    {title:'Row 2', hasChild:true, image:'Safari.png'},
+    {title:'Row 3', image: 'iTunes.png'},
+    {title:'Row 4', image: 'Mail.png'}
+];
+
+// TableViewの作成
+var tableView = Titanium.UI.createTableView({data:data, title:'テスト'}, function(eventObject){
+     // 行選択時のイベントを記述します
+     var dialog = Titanium.UI.createAlertDialog();
+     dialog.setTitle('Table View')
+     dialog.setMessage('row:' + eventObject.row + ', index:' + eventObject.index + ' , section:' + eventObject.section + ', rowData:' + eventObject.rowData);
+     dialog.show(); 
+});
+
+// View追加の定石ですね
+Titanium.UI.currentWindow.addView(tableView);
+Titanium.UI.currentWindow.showView(tableView);
+}}}
+
+上記の例では{{{data}}}の配列オブジェクト、{{{title}}}と行選択時の応答コールバック関数を引き渡しています。
+
+次の例ではHTMLを各行に表示し、さらにセクション表示と各行の高さ指定も組み込んでしまいます。
+
+http://img.skitch.com/20090708-ryjtifpiayhgh7p729skruhss2.jpg
+
+{{{
+var data = [
+    {html:'<div><div style="font-size:18px;font-weight:bold;">Row 1</div><div style="font-size:12px;color:#999">I am row 1 detail</div></div> ', hasDetail:true, header:'Section 0'},
+    {html:'<div><div style="font-size:18px;font-weight:bold;">Row 2</div><div style="font-size:12px;color:#999">I am row 2 detail</div></div> ', hasChild:true},
+    {html:'<div><div style="font-size:18px;font-weight:bold;">Row 3</div><div style="font-size:12px;color:#999">I am row 3 detail</div></div> '},
+    {html:'<div><div style="font-size:18px;font-weight:bold;">Row 4</div><div style="font-size:12px;color:#999">I am row 4 detail</div></div> '},
+    {html:'<div><div style="font-size:18px;font-weight:bold;">Row 5</div><div style="font-size:12px;color:#999">I am row 5 detail</div></div> '}
+];
+var tableView = Titanium.UI.createTableView({
+    data:data,
+    title:'テスト２',
+    rowHeight:80
+}, function(eventObject) {
+	// ここはさっきと同じロジックなので割愛
+});
+Titanium.UI.currentWindow.addView(tableView);
+Titanium.UI.currentWindow.showView(tableView);
+}}}
