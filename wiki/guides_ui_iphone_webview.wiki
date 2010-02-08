@@ -4,7 +4,7 @@
 
 WebViewには純粋にHTML, CSS, Javascriptのみで構成されるWebViewとそれらとNativeUIのコントロールが混在するCompositeView(TItanium Mobileの用語と考えてください)の２種類があります。
 
-画面例（上：Pure WebView、下：CompositeView）
+画面例（左：Pure WebView、右：CompositeView）
 
 http://img.skitch.com/20090708-f7mu39f3h98n7tidsm84m7dk8f.jpg
 http://img.skitch.com/20090708-8nygrufdciptpiu25wekni2p42.jpg
