@@ -1,0 +1,26 @@
+#summary Native UI案内 - iPhone - WebView
+#labels ui
+= Native UI案内 - iPhone - WebView =
+
+WebViewには純粋にHTML, CSS, Javascriptのみで構成されるWebViewとそれらとNativeUIのコントロールが混在するCompositeView(TItanium Mobileの用語と考えてください)の２種類があります。
+
+画面例（上：Pure WebView、下：CompositeView）
+
+http://img.skitch.com/20090708-f7mu39f3h98n7tidsm84m7dk8f.jpg
+http://img.skitch.com/20090708-8nygrufdciptpiu25wekni2p42.jpg
+
+
+CompositeViewはCSSベースのHTMLデザインの容易さとリッチなUIとを融合したものであることが分かるかと思います。
+Pure WebViewでは為し得ることができないことも実現できます。たとえば、いわゆるふつうの{{{input}}}}要素のテキストフィールドを使っていたとして、入力時のテキスト種別はもちろん標準の範囲内でしか指定できません。しかし、NativeUIのテキストフィールドの場合、キーボード種別などや表示・挙動を事細かに制御する事ができます。
+
+ちなみにPure WebViewをプログラム的に作るには次のようにします。
+{{{
+// 新しいWebViewを作成する
+var webView = Titanium.UI.createWebView({url:'view.html', name:'myview'});
+// WindowにあたらしくWebViewを追加する
+Titanium.UI.currentWindow.addView(webView);
+// WebViewを表示する
+Titanium.UI.currentWindow.showView(webView);
+}}}
+上記の例ではcreateView時に{{{name: 'myview'}}}という記述をしていますが、これはviewへのラベリングという機能になります。名前ベースでviewを検索・取得し、表示・操作をするための仕掛けです。
+この指定は任意ですが、指定しなかった場合viewを格納した配列のインデックスを指定する形になります（順序は追加順）。0番目は必ずデフォルトのWebViewです。
