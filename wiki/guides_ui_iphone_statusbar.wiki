@@ -1,0 +1,15 @@
+#summary Native UI案内 - iPhone - StatusBar
+#labels ui
+= Native UI案内 - iPhone - StatusBar =
+Status Barは３種類の設定を切り替えることができます。
+{{{
+// これはTRANSLUCENT_BLACK指定時
+Titanium.UI.iPhone.setStatusBarStyle(Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK);
+}}}
+
+== デフォルト ( Titanium.UI.iPhone.StatusBar.GREY ) ==
+http://img.skitch.com/20090708-cma3hx6tusnyaw9mw5e6qd4frg.jpg
+== Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK ==
+http://img.skitch.com/20090708-x3rbdnmysgyhmkaufnr4gdbfmu.jpg
+== Titanium.UI.iPhone.StatusBar.OPAQUE_BLACK ==
+http://img.skitch.com/20090708-mx53dehqc4dcr4fb6jypb56h31.jpg
