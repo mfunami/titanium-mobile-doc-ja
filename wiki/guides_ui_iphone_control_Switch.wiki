@@ -1,0 +1,18 @@
+#summary Native UI案内 - iPhone - Switch
+#labels ui
+= Native UI案内 - iPhone - Switch =
+オンとオフの状態切り替えを行うためだけの部品になります。
+設定画面ぐらいでしか出番がないかもしれません。
+
+http://img.skitch.com/20090708-mey6y29wqa55965b7pyp9rrkmc.jpg
+{{{
+// HTMLのdiv要素で id = 's1' があるものとする
+var s1 = Titanium.UI.createSwitch({
+  id:'s1',
+  value:true
+});
+// create a switch change listener
+s1.addEventListener('change', function(e) {
+    // e.valueにはスイッチの新しい値が true もしくは falseとして設定されます。
+});
+}}}
