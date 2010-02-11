@@ -20,7 +20,7 @@ http://img.skitch.com/20090708-rmbim4dm9p5ss116nyt83iky8p.jpg
 
 http://img.skitch.com/20090708-dpfhrf4hc1k2h9b1xeixxp5jtq.jpg
 
-{{{{
+{{{
 Titanium.UI.setTabBadge(10);
 }}}
 
