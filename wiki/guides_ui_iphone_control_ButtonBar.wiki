@@ -1,0 +1,50 @@
+#summary Native UI案内 - iPhone - Button Bar
+#labels ui
+= Native UI案内 - iPhone - Button Bar =
+Button Barとは次の画像のNav Barの中央, コンテンツエリアの上段、ToolBarのそれぞれに配置されているコントロールのことをさします。
+
+http://img.skitch.com/20090708-bdkt5yc5gnx28fsxadddx4w5ks.jpg
+
+このコントロールは同じ系統のボタンを複数並べるのに用います。
+状態の管理は[guides_ui_iphone_control_TabbedBar Tabbed Bar]の機能になるため、このコントロールでは利用できません。
+
+上記の画面のコード例は以下のようになります。
+{{{
+// スペイサーとして用いる特殊なボタンを宣言しておく
+var flexSpace = Titanium.UI.createButton({
+   systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+});
+
+// NavBarに配置するインスタンス
+var buttonBar1 = Titanium.UI.createButtonBar({
+    labels: ['Button1', 'Button2'],
+    color: '#336699'
+});
+buttonBar1.addEventListener('click', function(e){
+   // e.indexにクリックされたボタンのindexがセットされます
+});
+
+// Toolbarに配置するインスタンス
+var buttonBar2 = Titanium.UI.createButtonBar({
+    labels: ['Button5', 'Button6','Button7', 'Button8','Button9'],
+    color: '#336699'
+});
+buttonBar2.addEventListener('click', function(e){
+   // e.indexにクリックされたボタンのindexがセットされます
+});
+
+// Navbarの中央に配置
+Titanium.UI.currentWindow.setTitleControl(buttonBar1);
+// Toolbarの中央に配置
+Titanium.UI.currentWindow.setToolbar([flexSpace, buttonBar2, flexSpace]);
+
+// HTML div要素 id = 'buttonbar' の部分に配置
+var buttonbar = Titanium.UI.createButtonBar({
+    id:'buttonbar',
+    labels:['Button3', 'Button4'],
+    backgroundColor:'#336699'
+});
+buttonbar.addEventListener('click', function(e){
+   // e.indexにクリックされたボタンのindexがセットされます
+});
+}}}
