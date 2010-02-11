@@ -1,0 +1,33 @@
+#summary Native UI案内 - iPhone - Tab Bar
+#labels ui
+= Native UI案内 - iPhone - Tab Bar =
+Tab Barは複数のwindowを束ねるアプリケーションUIの根幹を担います。
+
+タブはtiapp.xmlの{{{<window>}}}要素の定義により発生します。
+
+http://img.skitch.com/20090708-8p1pjfyncp3jt8hs8aihf6qr5y.jpg
+
+http://img.skitch.com/20090708-1qpwi2pj72xnmbw24fwtniyspk.jpg
+
+タブは同時に４つまでの表示しかできません。５つ以上の表示をしようとすると５つ目以上は「more」タブの中に入り、そこから選択する動きになります。
+
+http://img.skitch.com/20090708-rmbim4dm9p5ss116nyt83iky8p.jpg
+
+== バッジ機能 ==
+
+個々のタブには状態を通知するためのするための「タブバッジ」と呼ばれるものをもつ事ができます。
+一応、文字列も表示できるのですが、数値を表示するのに適していますので、そのように使ったほうがよいでしょう。
+
+http://img.skitch.com/20090708-dpfhrf4hc1k2h9b1xeixxp5jtq.jpg
+
+{{{{
+Titanium.UI.setTabBadge(10);
+}}}
+
+{{{
+// すべてのタブに対してバッジを付与する。
+var tabs = Titanium.UI.getTabs(); 
+tabs[0].setBadge(1); 
+tabs[1].setBadge(2); 
+tabs[2].setBadge(3);
+}}}
