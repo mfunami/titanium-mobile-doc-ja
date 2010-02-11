@@ -1,0 +1,42 @@
+#summary Native UI案内 - iPhone - Tabbed Bar
+#labels ui
+= Native UI案内 - iPhone - Tabbed Bar =
+Tabbed Barとは次の画像のNav Barの中央, コンテンツエリアの上段、ToolBarのそれぞれに配置されているコントロールのことをさします。
+
+http://img.skitch.com/20090708-kam6tp22hki1jksp379i1nt8kd.jpg
+
+このコントロールは複数の状態を切り替えるのに用います。単なるON/OFFの場合は[guides_ui_iphone_control_Switch Switch]が適していますが、それ以外の状態の切り替えにはこれを利用したほうがよいでしょう。
+
+上記の画面のコード例は以下のようになります。
+{{{
+// スペイサーとして用いる特殊なボタンを宣言しておく
+var flexSpace = Titanium.UI.createButton({
+   systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+});
+
+// NavBarに配置するインスタンス
+var tabbar = Titanium.UI.createTabbedBar({
+    labels: ['Tab1', 'Tab2'],
+    index:1
+});
+
+// Toolbarに配置するインスタンス
+var tabbar2 = Titanium.UI.createTabbedBar({
+  labels:['Tab5', 'Tab6','Tab7', 'Tab8','Tab9'],
+  backgroundColor:'#336699',
+  index:2
+});
+
+// Toolbarの中央に配置
+Titanium.UI.currentWindow.setToolbar([flexSpace, tabbar2, flexSpace]);
+
+// Navbarの中央に配置
+Titanium.UI.currentWindow.setTitleControl(tabbar);
+
+// HTML div要素 id = 'tabbar' の部分に配置
+var tabbar = Titanium.UI.createTabbedBar({
+    id:'tabbar',
+    index:1,
+    labels:['Tab3', 'Tab4']
+});
+}}}
