@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+<id>jp.hsj.subwaynow</id>
+<name>subwaynow</name>
+<version>1.0</version>
+<icon>default_app_logo.png</icon>
+  <persistent-wifi>false</persistent-wifi>
+  <prerendered-icon>false</prerendered-icon>
+  <statusbar-style>opaque</statusbar-style>
+  <windows>
+    <window>
+      <id>twitter</id>
+      <url>index.html</url>
+      <backgroundColor>#fff</backgroundColor>
+      <icon>09-chat2.png</icon>
+      <title>タイムライン</title>
+      <barColor>#060</barColor>
+      <fullscreen>false</fullscreen>
+    </window>
+    <window>
+      <id>coverflow</id>
+      <url>coverflow.html</url>
+      <backgroundColor>#fff</backgroundColor>
+      <icon>42-photos.png</icon>
+      <title>ギャラリー</title>
+      <barColor>#060</barColor>
+      <fullscreen>false</fullscreen>
+    </window>
+    <window>
+      <id>shoplist</id>
+      <url>shoplist.html</url>
+      <backgroundColor>#fff</backgroundColor>
+      <icon>07-map-marker.png</icon>
+      <title>店舗情報</title>
+      <barColor>#060</barColor>
+      <fullscreen>false</fullscreen>
+    </window>
+    <window>
+      <id>config</id>
+      <url>config.html</url>
+      <backgroundColor>#fff</backgroundColor>
+      <icon>20-gear2.png</icon>
+      <title>設定</title>
+      <barColor>#060</barColor>
+      <fullscreen>false</fullscreen>
+    </window>
+  </windows>
+  <guid>ff9b04c1-255a-4051-b234-82ab431c0cb3</guid>
+</ti:app>
