@@ -24,3 +24,7 @@ Titanium.UI.currentWindow.showView(webView);
 }}}
 上記の例ではcreateView時に{{{name: 'myview'}}}という記述をしていますが、これはviewへのラベリングという機能になります。名前ベースでviewを検索・取得し、表示・操作をするための仕掛けです。
 この指定は任意ですが、指定しなかった場合viewを格納した配列のインデックスを指定する形になります（順序は追加順）。0番目は必ずデフォルトのWebViewです。
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
