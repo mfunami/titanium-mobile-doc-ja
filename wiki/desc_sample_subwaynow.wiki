@@ -1,0 +1,7 @@
+#summary サンプルソース解説 - subwaynow
+= サンプルソース解説 - subwaynow =
+
+0.9対応のために保留中です。
+
+
+<wiki:video url="http://www.youtube.com/watch?v=SfYBo-USHkI" />
