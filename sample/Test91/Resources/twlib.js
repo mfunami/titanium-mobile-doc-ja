@@ -17,10 +17,14 @@ var twitter = {
         xhr.onload = function(){
             var json = eval('(' + this.responseText + ')');
 	    if(json.error != null){
-	        errorEventHandler();
+                if(errorEventHandler){
+	            errorEventHandler();
+                }
 	    }
 	    else{
-                successEventHandler();
+                if(successEventHandler){
+                    successEventHandler();
+                }
             }
 	};
         xhr.open('GET', url);

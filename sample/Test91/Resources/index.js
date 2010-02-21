@@ -100,6 +100,7 @@ tweetButton.addEventListener('click', function(){
  	    title  : '認証情報未登録',
  	    message: '設定画面でTwitterのIDとパスワードを設定してください。'
 	}).show();
+        Titanium.UI.currentWindow.tabGroup.setActiveTab(4);
 	return;
     }
     var tweetWindow = Titanium.UI.createWindow({
