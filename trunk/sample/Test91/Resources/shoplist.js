@@ -80,8 +80,8 @@ function showShopMapAndData(key){
 	data: shopRowData,
         minRowHeight:80
     });
-    
-    var mapview = Titanium.Map.createView({
+    var mapview = Ti.UI.createView();
+    var mapviewCore = Titanium.Map.createView({
 	mapType : Titanium.Map.STANDARD_TYPE,
 	region : {
 	    latitude : shopdata.LAT,
@@ -101,6 +101,34 @@ function showShopMapAndData(key){
 	    animate:true
 	}]
     });
+    mapview.add(mapviewCore);
+    // ツールバー
+    var flexSpace = Titanium.UI.createButton({
+	systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+    });
+    var btnZoomIn = Titanium.UI.createButton({
+	title: '+',
+	height:33,
+	width:33
+    });
+    var btnZoomOut = Titanium.UI.createButton({
+	title: '-',
+	height:33,
+	width:33
+    });
+    btnZoomIn.addEventListener('click', function(){
+        mapviewCore.zoom(1);
+    });
+    btnZoomOut.addEventListener('click', function(){
+        mapviewCore.zoom(-1);
+    });
+    var toolbar = Titanium.UI.createToolbar({
+	items:[flexSpace, btnZoomIn, btnZoomOut, flexSpace],
+        bottom:0,
+	borderTop:true,
+	borderBottom:false
+    });	
+    mapview.add(toolbar);
     shopWindow.add(detailview);
     shopWindow.add(mapview);
     // イベントハンドラ定義部
