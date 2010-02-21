@@ -1,7 +1,6 @@
 //--------------------------------------
 // 共通処理読込
 //--------------------------------------
-// ＤＢの共通処理を取り込みます。
 Titanium.include('shopdb.js');
 
 //--------------------------------------
@@ -59,7 +58,7 @@ function showShopMapAndData(key){
     }
 
     // UI 宣言部
-    var shopWindow = Titanium.UI.createWindow();
+    var shopWindow = Titanium.UI.createWindow({title:'店舗情報'});
     
     var tabbar = Titanium.UI.createTabbedBar({
 	labels:['地図', '詳細'],
@@ -134,13 +133,18 @@ function showShopMapAndData(key){
     // イベントハンドラ定義部
     tabbar.addEventListener('click', function(e){
 	if(e.index == 0){
-	    shopWindow.animate({view: mapview, transition:Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT});
+	    shopWindow.animate({
+                view: mapview,
+                transition:Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+            });
 	}
 	else if(e.index == 1){
-            shopWindow.animate({view: detailview, transition:Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+            shopWindow.animate({
+                view: detailview,
+                transition:Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+            });
 	}
     });
-    shopWindow.title = '店舗情報';
     Titanium.UI.currentTab.open(shopWindow,{animated:true});    
 }
 
@@ -149,37 +153,28 @@ function showShopMapAndData(key){
 //--------------------------------------
 try{
     var areaView = Titanium.UI.createTableView({
-        data: selectArea(),
-        title: '地域'
+        data: selectArea()
     });
     //--------------------------------------
     // イベントハンドラ定義部
     //--------------------------------------
     areaView.addEventListener('click', function(areaViewEventObject){
-        var prefData = selectPref(areaViewEventObject.rowData.title); 
-        var prefWin = Titanium.UI.createWindow({
-            backgroundColor:'#000'
-        });
+        var prefWin = Titanium.UI.createWindow({title:'都道府県選択'});
         var prefView =  Titanium.UI.createTableView({
-	    data: prefData
+	    data: selectPref(areaViewEventObject.rowData.title)
         });
         prefView.addEventListener('click', function(prefViewEventObject){
-	    var shopData = selectShop(prefViewEventObject.rowData.title);
-            var shopWin = Titanium.UI.createWindow({
-                backgroundColor:'#000'
-            });
+            var shopWin = Titanium.UI.createWindow({title:'店舗選択'});
             var shopView = Titanium.UI.createTableView({
-	        data: shopData
+	        data: selectShop(prefViewEventObject.rowData.title)
 	    });
             shopView.addEventListener('click', function(shopViewEventObject){
                 showShopMapAndData(shopViewEventObject.rowData.shopid);
 	    });
             shopWin.add(shopView);
-            shopWin.title = '店舗選択';
             Titanium.UI.currentTab.open(shopWin,{animated:true});
         });
         prefWin.add(prefView);
-        prefWin.title = '都道府県選択';    
         Titanium.UI.currentTab.open(prefWin,{animated:true});
     });	
     Titanium.UI.currentWindow.add(areaView);

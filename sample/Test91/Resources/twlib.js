@@ -1,4 +1,4 @@
-// twlib.js 
+// twlib.js
 var twitter = {
     //--------------------------------------------------------------
     // method[verify_credentials]
