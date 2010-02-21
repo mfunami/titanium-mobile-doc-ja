@@ -11,38 +11,61 @@ var ehodb = [
     {name : '戊', compass : 165, compassName: '南南東微南'},
     {name : '己', compass :  75, compassName: '東北東微東'}
 ];
-
-
 var eho  = ehodb[(2000 + ((new Date()).getYear() % 100)) % 10];
 
+
+//--------------------------------------
+// UI定義部
+//--------------------------------------
 var win = Titanium.UI.currentWindow;
-var view = Ti.UI.createView();
+var ehoView = Ti.UI.createView();
+var aboutView = Ti.UI.createView();
+var scrollView = Titanium.UI.createScrollableView({
+    views:[ehoView, aboutView],
+    showPagingControl:true,
+    pagingControlHeight:30,
+    maxZoomScale:2.0
+});
 var labelCompassName = Ti.UI.createLabel({
     top:60,
     text : '今年の恵方は' + eho.compassName
 });
-view.add(labelCompassName);
-
+ehoView.add(labelCompassName);
 var labelDirection = Ti.UI.createLabel({
-    top: 180,
+    top: 120,
     text : ''
 });
-view.add(labelDirection);
-
+ehoView.add(labelDirection);
 var buttonAbout = Ti.UI.createButton({
     title: '恵方サブについて',
     height: 32,
     width: 200,
-    top: 300
+    top: 200
 });
-buttonAbout.addEventListener('click', function(){
-    Titanium.Platform.openURL('http://www.831lab.com/ehouSub.html');
+ehoView.add(buttonAbout);
+var labelAbout1 = Ti.UI.createLabel({
+    top: 60,
+    text: 'Titanium Mobile 0.9.1 Sample Application'
 });
-view.add(buttonAbout);
-
-win.add(view);
+var labelAbout2 = Ti.UI.createLabel({
+    top: 120,
+    text: 'Created by @donayama'
+});
+var buttonAuthor = Ti.UI.createButton({
+    top: 200,
+    width:180,
+    height:32,
+    title: 'Twitterで連絡する'
+});
+aboutView.add(labelAbout1);
+aboutView.add(labelAbout2);
+aboutView.add(buttonAuthor);
+win.add(scrollView);
 win.title = '恵方サブ支援';
 
+//--------------------------------------
+// イベントハンドラ部
+//--------------------------------------
 // コンパス機能がついていれば恵方チェックを行います。
 if (Titanium.Geolocation.hasCompass){
     Titanium.Geolocation.addEventListener('heading', function(e){
@@ -58,3 +81,17 @@ if (Titanium.Geolocation.hasCompass){
         }
     });
 }
+buttonAbout.addEventListener('click', function(){
+    Titanium.Platform.openURL('http://www.831lab.com/ehouSub.html');
+});
+buttonAuthor.addEventListener('click', function(){
+    Titanium.Platform.openURL('http://twitter.com/donayama/');
+});
+scrollView.addEventListener('scroll', function(e){
+    if(e.currentPage == 0){
+        win.title = '恵方サブ支援';
+    }
+    else{
+        win.title = 'About';
+    }
+});
