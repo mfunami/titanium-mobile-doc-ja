@@ -40,7 +40,9 @@ var taText = Titanium.UI.createTextArea({
     bgcolor:'#fff',
     borderStyle:Titanium.UI.INPUT_BORDERSTYLE_NONE,
     keyboardToolbar:[btnClear,flexSpace,btnCamera,fixSpace,btnTweet],
-    keyboardToolbarHeight: 40
+    keyboardToolbarHeight: 40,
+    autocorrect: false,
+    autocapitalization : Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE
 });
 Ti.UI.currentWindow.add(taText);
 var indUpload = Titanium.UI.createProgressBar({
