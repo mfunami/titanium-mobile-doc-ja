@@ -43,6 +43,20 @@ var taText = Titanium.UI.createTextArea({
     keyboardToolbarHeight: 40
 });
 Ti.UI.currentWindow.add(taText);
+var indUpload = Titanium.UI.createProgressBar({
+    width:200,
+    height:50,
+    min:0,
+    max:1,
+    value:0,
+    style:Titanium.UI.iPhone.ProgressBarStyle.PLAIN,
+    top:100,
+    message:'Uploading Image',
+    font:{fontSize:12, fontWeight:'bold'},
+    color:'#666'
+});
+Ti.UI.currentWindow.add(indUpload);
+
 
 //--------------------------------------
 // 関数宣言部
@@ -127,7 +141,7 @@ btnTweet.addEventListener('click', function(){
     // 画像の有無によって処理を分岐
     if(forUploadImage != null){
         // 画像のアップロード後tweetする
-        twitter.uploadImage(username, password, forUploadImage, function(xml){
+        twitter.uploadImage(username, password, forUploadImage, indUpload, function(xml){
 	    var imageurl = xml.documentElement.getElementsByTagName("mediaurl")
                 .item(0).nodeValue;
             twitter.tweet(username, password, taText.value + " " + imageurl, function(){

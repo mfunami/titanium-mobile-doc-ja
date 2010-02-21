@@ -53,7 +53,7 @@ var twitter = {
     //      3. 画像データ
     //      4. アップロード完了後イベントハンドラ(引数としてxmlを返す)
     //--------------------------------------------------------------
-    uploadImage: function(username, password, image, successEventHandler){
+    uploadImage: function(username, password, image, progressBar,  successEventHandler){
         // オフラインなら処理中断
         if(Ti.Network.online == false){
 	    return false;
@@ -67,10 +67,23 @@ var twitter = {
 	};
         var xhr = Titanium.Network.createHTTPClient();
         xhr.onload = function(){
+            if(progressBar != null){
+                progressBar.hide();
+            }
             var xml = Ti.XML.parseString(this.responseText, "text/xml");
-            successEventHandler(xml);            
+            successEventHandler(xml);
         };
+        // progressBarの指定をしている場合のみ進捗表示をする
+        if(progressBar != null){
+            xhr.onsendstream = function(e){
+		progressBar.value = e.progress;
+	    };
+        }
         xhr.open('POST', url);
+        if(progressBar != null){
+	    progressBar.value = 0;
+            progressBar.show();
+        }
         xhr.send(param);
         return true;
     },
