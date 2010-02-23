@@ -51,9 +51,10 @@ var buttonAbout = Ti.UI.createButton({
 ehoView.add(buttonAbout);
 var labelAbout1 = Ti.UI.createLabel({
     top: 60,
-    height:32,
+    height:40,
     width: 300,
-    text: 'Titanium Mobile 0.9.1 Sample Application'
+    textAlign:'center',
+    text: "Titanium Mobile 0.9.2\nSample Application"
 });
 var labelAbout2 = Ti.UI.createLabel({
     top: 120,

@@ -15,7 +15,7 @@ twitter.search('%23subwayjp%20twitpic%20-RT', 20, 1, function(json){
 	var picid = tweet.text;
 	picid = picid.replace(/.*(http\:\/\/twitpic\.com\/(\w+)).*/i, "$2");
 	if(i < 20){
-	    buffer.images.push('http://twitpic.com/show/thumb/' + picid);
+	    buffer.images.push('http://twitpic.com/show/large/' + picid);
 	    buffer.larges.push('http://twitpic.com/show/large/' + picid);
             buffer.users.push(tweet.from_user);
 	}
