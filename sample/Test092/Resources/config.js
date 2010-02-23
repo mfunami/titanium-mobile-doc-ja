@@ -77,9 +77,7 @@ sections[1].add(row00);
 var row10 = Ti.UI.createTableViewRow({height:'auto'});
 var row11 = Ti.UI.createTableViewRow({height:'auto'});
 var row12 = Ti.UI.createTableViewRow({height:'auto'});
-row10.add(Ti.UI.createLabel({left:40, top:5, text:'ID'}));
 row10.add(tfTwitterID);
-row11.add(Ti.UI.createLabel({left:40, top:5, text:'PW'}));
 row11.add(tfTwitterPW);
 row12.add(btnAuth);
 sections[0].add(row10);
@@ -87,9 +85,7 @@ sections[0].add(row11);
 sections[0].add(row12);
 var tableView = Ti.UI.createTableView({
     data: sections,
-    style: Ti.UI.iPhone.TableViewStyle.GROUPED,
-    headerTitle:'　',
-    footerTitle:'　'
+    style: Ti.UI.iPhone.TableViewStyle.GROUPED
 });
 Ti.UI.currentWindow.add(tableView);    
 
@@ -97,7 +93,7 @@ var actInd = Titanium.UI.createActivityIndicator({
     bottom:10, 
     height:50,
     width:10,
-    style:Titanium.UI.iPhone.ActivityIndicatorStyle.PLAIN
+    style:Titanium.UI.iPhone.ActivityIndicatorStyle.DARK
 });
 Ti.UI.currentWindow.add(actInd);
 
@@ -105,9 +101,9 @@ Ti.UI.currentWindow.add(actInd);
 // イベントハンドラ定義部
 //--------------------------------------
 btnCreateShopList.addEventListener('click', function(e){
-    actInd.style = Titanium.UI.iPhone.ActivityIndicatorStyle.PLAIN;
-    actInd.font = {fontFamily:'Helvetica Neue', fontSize:15,fontWeight:'bold'};
-    actInd.color = 'white';
+    actInd.style = Titanium.UI.iPhone.ActivityIndicatorStyle.DARK;
+    actInd.font = {fontFamily:'Helvetica Neue', fontSize:16,fontWeight:'bold'};
+    actInd.color = '#333';
     actInd.message = 'Loading...';
     actInd.width = 210;
     actInd.show();
