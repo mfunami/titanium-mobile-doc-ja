@@ -1,0 +1,130 @@
+#summary Titanium Mobile 0.9で注目に値するAPIについて(未完訳)
+
+= Titanium Mobile 0.9で注目に値するAPIについて(未完訳) =
+元記事は[http://www.codestrong.com/timobile/changelog/0_9/ The Hitchhikers Guide to porting applications to Titanium 1.0]の「Notable new APIs」になります。
+
+== 動画撮影／再生 ==
+ * カスタムオーバーレイに対応
+ * 動画再生時に次のイベントを追加： complete, error, preload, load, resize
+
+== カメラ（静止画）撮影 ==
+ * カスタムオーバーレイに対応
+ * API追加：Ti.Media.takePicture, Ti.Media.hideCamera
+ * 撮影後にカメラUIを自動的に閉じることを設定できる autohide プロパティを追加した
+ * The showControls property can control whether or not the system provided chrome is shown
+ * オーバーレイ表示を制御する overlay プロパティを追加した
+ * KichenSinkでの実装例
+  ** カスタムオーバーレイ(examples/camera_overlay.js)
+  ** AR(examples/camera_ar.js)
+
+ちなみにカメラ撮影時のコールバック関数の引数の数や中身が変わってるので0.8からの移植時には注意が必要です。
+
+== 音声再生・録音 ==
+ * 再生時のURL指定にリモートURLが指定できるようになった
+ * You can now play sound from a Ti.Filesystem.getFile file blob
+ * 音声再生時に次のイベントを追加： complete, interrupted, resume, error
+ * KichenSinkでの実装例
+  ** ストリーミング再生(Ti.Media.createAudioPlayer) (examples/sound_remote.js)
+  ** 録音(Ti.Media.createAudioRecorder) (examples/sound_record.js)
+ * 音声検知APIの追加
+  ** Ti.Media.startMicrophoneMonitor
+  ** Ti.Media.stopMicrophoneMonito
+  ** Ti.Media.peakMicrophonePower
+  ** Ti.Media.averageMicrophonePower
+
+== ネットワーク ==
+ * コンテンツのエンコーディング追加対応：shift-jis, windows-1250, windows-1251, windows-1253, windows-1254, x-euc
+ * KichenSinkでの実装例
+  ** ondatastreamイベントによるファイルダウンロード進捗表示(examples/xhr_filedownload.js)
+  ** onsendstreamイベントによるファイルアップロード進捗表示(examples/xhr_fileupload.js)
+
+== GPS/コンパス ==
+ * パフォーマンスを大幅に改善した。
+ * (iPhone専用) 設定「位置情報サービス」オフにしている場合、GPS機能を有効にするかどうか訊ねるダイアログを表示するようになった。
+ * 方向（コンパス）・場所の変化に追従する新しいイベントリスナを追加した。
+ * プロパティの追加
+  ** 精密さを設定する Ti.Geolocation.accuracy
+  ** You can now control a finer grain of location filtering via the Ti.Geolocation.distanceFilter property.
+  ** You can now control a finer grain of heading filtering via the Ti.Geolocation.headingFilter property.
+ * You can control the display of the compass interference UI (on by default) by calling Ti.Geolocation.showCalibation.
+ * You can dismiss the calibration interface UI via the API Ti.Geolocation.dismissHeadingCalibrationDisplay method.
+ * You can receive an event named calibration whenever the compass interference UI comes on screen
+ * The property locationServicesEnabled can be called to determine if the User has enabled Location services on the device (not for the application but globally for the device).
+
+== 地図表示 ==
+ * Map annotations can be created as objects and their properties dynamically changed. See examples/map_view.js in Kitchen Sink.
+ * New events are exposed: loading, complete, error, click
+
+== デバイスプラットフォーム ==
+ * バッテリ状態に関するイベントとプロパティが追加された。
+  ** バッテリ容量・充電状態の変化を通知するイベント
+  ** Ti.Platform.batteryState ... バッテリ状態を取得するプロパティ
+  ** Ti.Platform.batteryLevel ... バッテリ容量を取得するプロパティ
+
+== UI ==
+ * The API Ti.UI.setBackgroundImage to set the main window background image
+ * The API Ti.UI.setBackgroundColor to set the main window background color
+ * The API Ti.UI.create2DMatrix to create a 2D Matrix for animations
+ * The API Ti.UI.create3DMatrix to create a 3D Matrix for animations
+ * The API Ti.UI.createAnimation to create an animation instance
+ * The API Ti.UI.setOrientation to programmatically change the device orientation
+ * The API Ti.UI.isLandscape to see if the application UI is in the landscape orientation
+ * The API Ti.UI.isPortrait to see if the application UI is in the portrait orientation
+ * The API Ti.UI.orientation to determine the orientation of the UI
+ * Composite views are no longer necessary and the API has been removed
+
+== iPhone UI ==
+ * プロパティの追加
+  ** Ti.UI.iPhone.statusBarHidden ... ステータスバーの表示切替(true/false)
+  ** Ti.UI.iPhone.statusBarStyle  ... ステータスバーの表示方法
+  ** Ti.UI.iPhone.appSupportsShakeToEdit ... 編集時のシェイクジェスチャ処理を利用するか否か
+
+== Scroll View ==
+
+We now support the following a new scroll view which supports low-level control of a scroll region. The Ti.UI.createScollableView is the same API as before which supports page controlling, etc. See examples/scroll_views.js for numerous examples of the new API.
+
+== Web Views ==
+
+Web views are now just pure web views. As a result, you can no longer use Titanium APIs inside of them with two exceptions: events and logging. You can use the Titanium.App.fireEvent and Titanium.App.addEventListener APIs to send/receive events to and from a web view, and you can use the Titanium.API logging APIs to log information from within a web view. The APIs should provide enough programmatic control to do the things you need in a web view. The benefit of moving to a pure web view implementation is that now all of the things you would expect to work in a web, now work - e.g., viewing PDF files, touch events, etc. Prior to 0.9, our web view didn't behave quite like expected because we morphed it a bit to fit within our programming model.
+
+== Image Views ==
+
+We now support animation of a series of images in an Image View.
+
+== Table Views & Group Views ==
+
+We now support a richer Table View API and we have consolidated Table Views and Grouped Views (iPhone only API) in to the same API. We also support direct controls and views directly on to a Table View row as well as the ability to customize table view headers and footers and section headers and footers.
+
+== UI View ==
+
+We now support a generic View API. This generic view is what all views in the Titanium API extend from. All UI views have the following:
+
+=== Common properties ===
+||borderColor||the views border color||
+||borderRadius||the views border radius||
+||borderWidth||the views border width||
+||backgroundImage||the views background image||
+||backgroundColor||the views background color (default is transparent)||
+||center||the views center point (as x,y)||
+||opacity||the views transparency (float from 0.0-1.0)||
+||visible||the view's visibility (boolean, defaults to true)||
+||anchorPoint||the view's point at which to rotate - defaults to 0.5,0.5 (center)||
+||transform||the view's transformation matrix||
+||zIndex||the view's zIndex relative to sibling views||
+
+=== Common methods ===
+||animate||animate the view||
+||addEventListener||add an event listener||
+||removeEventListener||remove an event listener||
+
+=== Common events ===
+||swipe||fired when a swipe (either left or right) gesture is detected||
+||click||fired when a click gesture is detected||
+||dblclick||fired when a double click gesture is detected||
+||singletap||fired when a single finger tap gesture is detected||
+||doubletap||fired when a double finger tap gesture is detected (one finger, two taps)||
+||twofingertap||fired when a two finger down tap gesture is detected||
+||touchstart||fired when a touch event starts||
+||touchmove||fired when a touch move occurs||
+||touchend||fired when a touch event ends||
+||touchcancel||fired when a touch event is interrupted||
