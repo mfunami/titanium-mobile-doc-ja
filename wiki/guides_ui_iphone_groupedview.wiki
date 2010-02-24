@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Grouped View
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - Grouped View =
 Grouped Viewは「設定」アプリケーションのようなグレイ色の背景にいくつかのコンテンツが区分けされ並んでいる状態を表現するのに使います。
 それぞれの区分けされた領域には「オプション」「ボタン」「入力」の３種類のセクションがあり、これらを混在させることができます。またそれぞれにヘッダとフッタを付与できます。
