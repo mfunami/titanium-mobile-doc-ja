@@ -14,14 +14,22 @@
 $('#photo').click(function(){
     Titanium.Media.showCamera({
         // JSON形式の引数です
-        success:function(image, details)
+        success:function(event)
         {
-            // 成功時の関数にはイメージデータのオブジェクトと詳細情報が引き渡されます。
+            // 成功時の関数にはイメージデータのオブジェクトや詳細情報が引き渡されます。
             // ここでプレビューしたり、アップロードしたり（そのためのキューに貯めるとか）
             // する感じです。
+
+            // cropRectにはx,y,height,widthといったデータがはいる。
+            var cropRect = event.cropRect;
+            var image = event.media;
+            var thumbnail = event.thumbnail;
+		
+            // 撮影データを表示する
+            var imageView = Ti.UI.createImageView({image:event.media});
+            Ti.UI.currentWindow.add(imageView);
+
             
-            // img要素(id=preview)のsrc属性にパス情報を渡してみます。
-            $('img#preview').attr('src', image.url);
         },
         cancel:function()
         {
@@ -32,7 +40,6 @@ $('#photo').click(function(){
             // errorとしてカメラがデバイスにないようなケース(iPod touchなどがそうでしょうか)では
             // error.code が Titanium.Media.NO_CAMERA として返るようです。
         },
-        // trueにしてもiPhoneでは無効ですよ
         allowImageEditing:true
     });
 });
@@ -41,8 +48,8 @@ $('#photo').click(function(){
 == カメラロール側から写真選択 ==
 {{{
 Titanium.Media.openPhotoGallery({
-    success: function(image, details) {
-        // カメラロールで写真を選択した時の挙動
+    success: function(event) {
+        // カメラロールで写真を選択した時の挙動(カメラと同様)
     },
     error: function(error) {
         // notify(e.message);
@@ -50,7 +57,6 @@ Titanium.Media.openPhotoGallery({
     cancel: function() {
         // キャンセル時の挙動
     },
-    // 対応してるのはAndroidだけっすね…
     allowImageEditing: true
 });
 }}}
