@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Text Field
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - Text Field =
 言わずもがなのテキスト入力を行うためのコントロールです。HTMLのテキストフィールドに比べて、キーボードの制御など事細かに設定できる点、またキーボードツールバーを設定できる点などが大きく異なるメリットになります。
 
