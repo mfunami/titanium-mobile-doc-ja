@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - StatusBar
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - StatusBar =
 Status Barは３種類の設定を切り替えることができます。
 {{{
