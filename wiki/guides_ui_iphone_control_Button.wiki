@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Button
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - Button =
 
 ボタンは次の４つの形のいずれかとなります。
