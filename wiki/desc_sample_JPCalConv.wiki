@@ -1,6 +1,9 @@
 #summary サンプルソース解説 - JPCalConv
-#labels sample
+#labels sample,obsoluted
 = サンプルソース解説 - JPCalConv =
+
+(Ver.0.8系の解説になります)
+
 単画面のユーティリティアプリケーションの例として、次のパスのソースをベースに解説していきます。
 
 http://code.google.com/p/titanium-mobile-doc-ja/source/browse/trunk/sample/JPCalConv
