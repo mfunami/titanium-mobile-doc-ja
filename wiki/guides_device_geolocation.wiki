@@ -1,5 +1,5 @@
 #summary API案内 - デバイスハードウェア編 - 位置測定
-#labels api,device
+#labels api,device,obsoluted
 
 = API案内 - デバイスハードウェア編 - 位置測定 =
 参考文献：[http://www.codestrong.com/timobile/guides/mobile_api/ Titanium Mobile API Guide]
