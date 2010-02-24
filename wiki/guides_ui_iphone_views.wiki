@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - View(共通)
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - View(共通) =
 Titanium MobileのwindowにはViewとしてWebViewかNative UIのViewを格納できます。
 
