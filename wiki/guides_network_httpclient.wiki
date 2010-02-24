@@ -83,6 +83,14 @@ Titanium.Media.showCamera({
     }
 });
 }}}
+
+上記で書いているアップロード進捗の反対、ダウンロードの進捗も別のイベントでフォローされています。
+{{{
+xhr.ondatastream = function(e){
+    // e.progressで進捗を取得できる
+};
+}}}
+
 == 標準認証 ==
 実はあまりこのHTTPClient、あまりスマートにできていません。
 
