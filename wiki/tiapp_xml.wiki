@@ -1,4 +1,5 @@
 #summary Titanium Moibleのアプリケーション情報を定義するtiapp.xmlについて
+#labels obsoluted
 = tiapp.xml =
 == 例 ==
 {{{
