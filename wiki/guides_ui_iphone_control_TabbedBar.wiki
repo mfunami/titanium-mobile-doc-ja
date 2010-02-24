@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Tabbed Bar
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - Tabbed Bar =
 Tabbed Barとは次の画像のNav Barの中央, コンテンツエリアの上段、ToolBarのそれぞれに配置されているコントロールのことをさします。
 
