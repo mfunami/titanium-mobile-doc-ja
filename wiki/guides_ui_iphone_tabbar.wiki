@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Tab Bar
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - Tab Bar =
 Tab Barは複数のwindowを束ねるアプリケーションUIの根幹を担います。
 
