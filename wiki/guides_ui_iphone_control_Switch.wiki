@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Switch
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - Switch =
 オンとオフの状態切り替えを行うためだけの部品になります。
 設定画面ぐらいでしか出番がないかもしれません。
