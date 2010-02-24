@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - TableView
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - TableView =
 TableViewは「Safari」のブックマーク画面のようなリスト状にコンテンツを表示するための領域です。
 それぞれの行にはテキスト・画像・NativeUIコントロール、そしてHTMLを混在させることができます。
