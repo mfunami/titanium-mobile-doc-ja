@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Slider
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - Slider =
 Sliderは音量や数量を調整するのに使われるアナログ入力コントロールです。
 
