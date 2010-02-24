@@ -62,7 +62,7 @@ xhr.onload = function(){
 カメラ撮影をしたものをTwitPicサーバにアップロードする例です。
 {{{
 Titanium.Media.showCamera({
-    success : function(image,details){
+    success : function(event){
         try{
             var xhr = Titanium.Network.createHTTPClient();
             xhr.onload = function(){
@@ -70,8 +70,12 @@ Titanium.Media.showCamera({
                 var url = xml.documentElement.getElementsByTagName("mediaurl")[0].nodeValue;
                 // ...
             };
+            // 送信時処理(進捗表示など)
+            xhr.onsendstream = function(e){
+                Ti.API.info(e.progress);
+            };
             xhr.open("POST","http://twitpic.com/api/upload");
-            xhr.send({media:image, username:'username', password:'password'});
+            xhr.send({media:event.media, username:'username', password:'password'});
         }
         catch(error){
             // ...
