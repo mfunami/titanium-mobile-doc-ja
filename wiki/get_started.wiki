@@ -1,5 +1,5 @@
 #summary Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう！
-#labels about
+#labels about,obsoleted
 = Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう！ =
 一応、[http://www.codestrong.com/timobile/guides/get_started/ Getting Started with Titanium Mobile]に基づいて準備段階をまとめようと思います。
 
