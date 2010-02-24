@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Window
-#labels ui
+#labels ui,obsoluted
 = Native UI案内 - iPhone - Window =
 
 == モード ==
