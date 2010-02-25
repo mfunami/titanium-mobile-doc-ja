@@ -26,8 +26,10 @@ if(Titanium.Network.online){
 }
 
 // 接続状態が変わる度にイベントを発生させるリスナーです。
-Titanium.Network.addConnectivityListener(function() {
-    console.log(Titanium.Network.online); 
+Titanium.Network.addEventListener('change', function(e) {
+    var online = e.online;
+    var type = e.networkType;
+    var networkTypeName = e.networkTypeName;
 });
 }}}
 
