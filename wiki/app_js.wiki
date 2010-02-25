@@ -2,12 +2,26 @@
 
 = app.jsについて（予定地） =
 
-Add your content here.
+<wiki:comment>
 
 
-= Details =
+=== icon要素 ===
+Titanium側がシステムバッジとして用意しているものがいくつかあります。
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ * ti://bookmarks
+ * ti://contacts
+ * ti://downloads
+ * ti://favorites
+ * ti://featured
+ * ti://more
+ * ti://most recent
+ * ti://most viewed
+ * ti://recents
+ * ti://search
+ * ti://top rated
+
+またこれら以外にも下記素材などをResourcesフォルダに入れて利用する事もできます。
+
+ * http://glyphish.com/
+ * http://blog.twg.ca/2009/09/free-iphone-toolbar-icons/
+</wiki:comment>
