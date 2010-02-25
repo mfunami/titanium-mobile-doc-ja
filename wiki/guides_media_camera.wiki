@@ -1,7 +1,7 @@
-#summary API案内 - メディア編 - カメラ撮影・カメラロール
+#summary API案内 - メディア編 - カメラ撮影・カメラロール・スクリーンショット
 #labels api,media
 
-= API案内 - メディア編 - カメラ撮影・カメラロール =
+= API案内 - メディア編 - カメラ撮影・カメラロール・スクリーンショット =
 参考文献：[http://www.codestrong.com/timobile/guides/rich_media_api/Titanium Mobile Rich Media API Guide]
 
 
@@ -58,6 +58,16 @@ Titanium.Media.openPhotoGallery({
         // キャンセル時の挙動
     },
     allowImageEditing: true
+});
+}}}
+
+== スクリーンショットの取得 ==
+使いどころが難しいのですが、デバイス画面をカメラ同様に取得することができます。
+{{{
+Titanium.Media.takeScreenshot(function(event){
+    var image = event.media;
+    var imageView = Ti.UI.createImageView({image:event.media});
+    Ti.UI.currentWindow.add(imageView);
 });
 }}}
 
