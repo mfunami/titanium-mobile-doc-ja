@@ -64,16 +64,15 @@
   ** Ti.Platform.batteryLevel ... バッテリ容量を取得するプロパティ
 
 == UI ==
- * The API Ti.UI.setBackgroundImage to set the main window background image
- * The API Ti.UI.setBackgroundColor to set the main window background color
- * The API Ti.UI.create2DMatrix to create a 2D Matrix for animations
- * The API Ti.UI.create3DMatrix to create a 3D Matrix for animations
- * The API Ti.UI.createAnimation to create an animation instance
- * The API Ti.UI.setOrientation to programmatically change the device orientation
- * The API Ti.UI.isLandscape to see if the application UI is in the landscape orientation
- * The API Ti.UI.isPortrait to see if the application UI is in the portrait orientation
- * The API Ti.UI.orientation to determine the orientation of the UI
- * Composite views are no longer necessary and the API has been removed
+ * マスターUIView(メインウィンドウ)に背景色・背景画像を設定するメソッドを追加(Ti.UI.setBackgroundImage, Ti.UI.setBackgroundColor)
+ * アニメーション用オブジェクト(2DMatrix, 3DMatrix)を生成するファクトリメソッドを追加(Ti.UI.create2DMatrix, Ti.UI.create3DMatrix)
+ * アニメーション処理オブジェクトのファクトリメソッドを追加(Ti.UI.createAnimation)
+ * デバイス方向制御関連
+  ** Ti.UI.setOrientation メソッドによるデバイス方向強制設定ができるようになった。
+  ** 横向きかを判断するプロパティ Ti.UI.isLandscape
+  ** 縦向きかを判断するプロパティ Ti.UI.isPortrait
+  ** 向き（上下も含めて）を取得するプロパティ Ti.UI.orientation
+ * （重要）Composite views は不要になったのでAPIから削除されました。
 
 == iPhone UI ==
  * プロパティの追加
@@ -82,16 +81,18 @@
   ** Ti.UI.iPhone.appSupportsShakeToEdit ... 編集時のシェイクジェスチャ処理を利用するか否か
 
 == Scroll View ==
+スクロールする領域の制御が可能になりました。
 
-We now support the following a new scroll view which supports low-level control of a scroll region. The Ti.UI.createScollableView is the same API as before which supports page controlling, etc. See examples/scroll_views.js for numerous examples of the new API.
+（従来のページ制御などをする機能はTi.UI.createScollableViewで置き換えることになります）
+
+詳細はKitchenSinkの examples/scroll_views.js を確認してください。
 
 == Web Views ==
 
 Web views are now just pure web views. As a result, you can no longer use Titanium APIs inside of them with two exceptions: events and logging. You can use the Titanium.App.fireEvent and Titanium.App.addEventListener APIs to send/receive events to and from a web view, and you can use the Titanium.API logging APIs to log information from within a web view. The APIs should provide enough programmatic control to do the things you need in a web view. The benefit of moving to a pure web view implementation is that now all of the things you would expect to work in a web, now work - e.g., viewing PDF files, touch events, etc. Prior to 0.9, our web view didn't behave quite like expected because we morphed it a bit to fit within our programming model.
 
 == Image Views ==
-
-We now support animation of a series of images in an Image View.
+ビュー内で画像のアニメーションをサポートした。
 
 == Table Views & Group Views ==
 
