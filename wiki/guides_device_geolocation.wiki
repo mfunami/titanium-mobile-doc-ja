@@ -17,7 +17,7 @@ if(Titanium.Geolocation.locationServicesEnabled){
 if(Titanium.Geolocation.hasCompass){
     // 電子コンパスが必要な処理
 }
-
+}}}
 
 == 測定方法 ==
 
