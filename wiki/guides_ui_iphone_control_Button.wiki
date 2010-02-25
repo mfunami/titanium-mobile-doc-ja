@@ -1,5 +1,5 @@
 #summary Native UI案内 - iPhone - Button
-#labels ui,obsoluted
+#labels ui
 = Native UI案内 - iPhone - Button =
 
 ボタンは次の４つの形のいずれかとなります。
@@ -10,28 +10,26 @@
  * 画像とテキストの組み合わせ
 
 {{{
-// HTMLのdiv要素に id = 'button1' が存在しているとします
-// また背景画像としてblue.png, blue_pressed.pngが用意されているものとします。
+// 背景画像としてblue.png, blue_pressed.pngが用意されているものとします。
 var button1 = Titanium.UI.createButton({
-  id:'button1',
   backgroundImage:'blue.png',
   backgroundSelectedImage:'blue_pressed.png',
   title:'Hello',
   color:'#ff0000',
   height:47,
+  top:30
 });
 button1.addEventListener('click', function(e) {
   // ボタンクリック時のイベント
 });
 
-// HTMLのdiv要素に id = 'button2' が存在しているとします
 // こちらはシンプルなボタンです。
 var button2 = Titanium.UI.createButton({
-  id:'button2',
   title:'Hello',
   color:'#ff0000',
   height:30,
-  width:100
+  width:100,
+  top:100
 });
 button2.addEventListener('click', function(e){
     // ...
