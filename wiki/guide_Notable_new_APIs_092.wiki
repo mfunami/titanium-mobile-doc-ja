@@ -43,20 +43,22 @@
  * (iPhone専用) 設定「位置情報サービス」オフにしている場合、GPS機能を有効にするかどうか訊ねるダイアログを表示するようになった。
  * 方向（コンパス）・場所の変化に追従する新しいイベントリスナを追加した。
  * プロパティの追加
-  ** 精密さを設定する Ti.Geolocation.accuracy
-  ** You can now control a finer grain of location filtering via the Ti.Geolocation.distanceFilter property.
-  ** You can now control a finer grain of heading filtering via the Ti.Geolocation.headingFilter property.
- * You can control the display of the compass interference UI (on by default) by calling Ti.Geolocation.showCalibation.
- * You can dismiss the calibration interface UI via the API Ti.Geolocation.dismissHeadingCalibrationDisplay method.
- * You can receive an event named calibration whenever the compass interference UI comes on screen
- * The property locationServicesEnabled can be called to determine if the User has enabled Location services on the device (not for the application but globally for the device).
+  ** デバイス全体で位置情報サービスを有効にしているかを取得する Ti.Geolocation.locationServicesEnabled
+  ** 精密さを設定 Ti.Geolocation.accuracy
+  ** 移動イベントの発生させる「しきい値」設定 Ti.Geolocation.distanceFilter
+  ** 方向変化イベントの発生させる「しきい値」設定 Ti.Geolocation.headingFilter
+  ** 磁場干渉があった際にメッセージを表示するかどうか設定する Ti.Geolocation.showCalibation
+ * メソッドの追加
+  ** 磁場干渉メッセージを抑制する Ti.Geolocation.dismissHeadingCalibrationDisplay
+ * イベントの追加
+  ** 磁場干渉発生時 "calibration" イベントが発生する
 
 == 地図表示 ==
- * Map annotations can be created as objects and their properties dynamically changed. See examples/map_view.js in Kitchen Sink.
- * New events are exposed: loading, complete, error, click
+ * 地図上の注釈を動的に変化できるようにした。 （KichenSinkでの実装例 examples/map_view.js）
+ * イベントの追加： loading, complete, error, click
 
 == デバイスプラットフォーム ==
- * バッテリ状態に関するイベントとプロパティが追加された。
+ * バッテリ状態に関するイベントとプロパティが追加された。[guides_device_battery →APIガイドの記事へ]
   ** バッテリ容量・充電状態の変化を通知するイベント
   ** Ti.Platform.batteryState ... バッテリ状態を取得するプロパティ
   ** Ti.Platform.batteryLevel ... バッテリ容量を取得するプロパティ
