@@ -1,5 +1,4 @@
 #summary tiapp.xmlについて
-#labels obsoluted
 = tiapp.xmlについて =
 tiapp.xmlファイルはプロジェクトルートにあり、mafinestファイルと並んで、アプリケーションに関する情報を保存するためのファイルとなっています。
 
