@@ -1,6 +1,6 @@
-#summary Titanium Mobile 0.9で注目に値するAPIについて(未完訳)
+#summary Titanium Mobile 0.9で注目に値するAPIについて
 
-= Titanium Mobile 0.9で注目に値するAPIについて(未完訳) =
+= Titanium Mobile 0.9で注目に値するAPIについて =
 元記事は[http://www.codestrong.com/timobile/changelog/0_9/ The Hitchhikers Guide to porting applications to Titanium 1.0]の「Notable new APIs」になります。
 
 == 動画撮影／再生 ==
@@ -88,46 +88,51 @@
 詳細はKitchenSinkの examples/scroll_views.js を確認してください。
 
 == Web Views ==
+WebViewはこれまでのCompositeViewなどとの兼ね合いのない純粋にHTMLを表示するためのものになりました。イベントとログ出力以外のTitanium APIは使えなくなりました。
+これによりPDFを表示したり、タッチイベントを検知したりすることができるようになりますが、プログラミングモデルは変更する必要があります。
 
-Web views are now just pure web views. As a result, you can no longer use Titanium APIs inside of them with two exceptions: events and logging. You can use the Titanium.App.fireEvent and Titanium.App.addEventListener APIs to send/receive events to and from a web view, and you can use the Titanium.API logging APIs to log information from within a web view. The APIs should provide enough programmatic control to do the things you need in a web view. The benefit of moving to a pure web view implementation is that now all of the things you would expect to work in a web, now work - e.g., viewing PDF files, touch events, etc. Prior to 0.9, our web view didn't behave quite like expected because we morphed it a bit to fit within our programming model.
+イベントについては Titanium.App.fireEvent と Titanium.App.addEventListener により、webviewでの送受信が可能になります。
+またログについてはTitanium.API.loglevelなメソッド類を使うことができます。
+
 
 == Image Views ==
 ビュー内で画像のアニメーションをサポートした。
 
 == Table Views & Group Views ==
-
-We now support a richer Table View API and we have consolidated Table Views and Grouped Views (iPhone only API) in to the same API. We also support direct controls and views directly on to a Table View row as well as the ability to customize table view headers and footers and section headers and footers.
+ * GroupdViewはTableViewにAPI統合されました。
+ * ヘッダ・フッタにコントロール配置するカスタム表示が可能になった。
 
 == UI View ==
+すべてのUIViewには以下の共通APIが搭載されることになりました。
 
-We now support a generic View API. This generic view is what all views in the Titanium API extend from. All UI views have the following:
+=== 共通プロパティ ===
+CSSと同じような指定になります。
 
-=== Common properties ===
-||borderColor||the views border color||
-||borderRadius||the views border radius||
-||borderWidth||the views border width||
-||backgroundImage||the views background image||
-||backgroundColor||the views background color (default is transparent)||
-||center||the views center point (as x,y)||
-||opacity||the views transparency (float from 0.0-1.0)||
-||visible||the view's visibility (boolean, defaults to true)||
-||anchorPoint||the view's point at which to rotate - defaults to 0.5,0.5 (center)||
+||borderColor||枠線色||
+||borderRadius||枠線の角丸径||
+||borderWidth||枠の太さ||
+||backgroundImage||背景画像||
+||backgroundColor||背景色（デフォルトは透過 ＝ transparent)||
+||center||ビューの中心(as x,y)||
+||opacity||透明度(0.0～1.0)||
+||visible||表示非表示 (boolean, デフォルト：true)||
+||anchorPoint||回転時の基準点（デフォルト：0.5,0.5（中央））||
 ||transform||the view's transformation matrix||
 ||zIndex||the view's zIndex relative to sibling views||
 
-=== Common methods ===
-||animate||animate the view||
-||addEventListener||add an event listener||
-||removeEventListener||remove an event listener||
+=== 共通メソッド ===
+||animate||viewをアニメーション表示する||
+||addEventListener||イベントリスナを登録する||
+||removeEventListener||イベントリスナを削除する||
 
-=== Common events ===
-||swipe||fired when a swipe (either left or right) gesture is detected||
-||click||fired when a click gesture is detected||
-||dblclick||fired when a double click gesture is detected||
-||singletap||fired when a single finger tap gesture is detected||
-||doubletap||fired when a double finger tap gesture is detected (one finger, two taps)||
-||twofingertap||fired when a two finger down tap gesture is detected||
-||touchstart||fired when a touch event starts||
-||touchmove||fired when a touch move occurs||
-||touchend||fired when a touch event ends||
-||touchcancel||fired when a touch event is interrupted||
+=== 共通イベント ===
+||swipe||スワイプジェスチャ(右向きか左向きかも含めて検知)||
+||click||クリックジェスチャ||
+||dblclick||ダブルクリックジェスチャ||
+||singletap||一本指でのタップジェスチャ||
+||doubletap||一本指でのダブルタップジェスチャ||
+||twofingertap||二本指でのタップジェスチャ||
+||touchstart||タッチ開始||
+||touchmove||タッチして指を移動||
+||touchend||タッチ終了||
+||touchcancel||タッチ中止||
