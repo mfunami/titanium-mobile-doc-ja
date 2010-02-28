@@ -1,70 +1,26 @@
 #summary Native UI案内 - iPhone - Window
-#labels ui,obsoluted
-この内容はTitanium 0.8以前向けのものです。そのため最新版には適合していない事をご注意ください。
-
+#labels ui
 = Native UI案内 - iPhone - Window =
 
 == モード ==
 Windowには通常モードとフルスクリーンモードの二つがあります。
 
-フルスクリーンモード下では、Status Bar・Nav Bar・Tool Bar・ Tab Barといった部品をもつ事ができませんが、デバイスの表示領域一杯を使う事ができます。
+フルスクリーンモード下では、Status Bar・Nav Bar・Tool Bar・ Tab Groupといった部品をもつ事ができませんが、デバイスの表示領域一杯を使う事ができます。
 
 一方、通常モードはStatus BarとNav Barが標準で表示されます。Tab Barを配置する場合、Windowオブジェクト群はTab Barの子オブジェクトとして配置されます。
 
 == Windowの作成 ==
-Windowの作成方法としてtiapp.xmlによる定義とJavascriptによる動的な生成のいずれかを使う事になります。
+windowを生成するために{{{Titanium.UI.createWindow}}}というAPIが用意されています。
 
-=== tiapp.xmlでの作り方 ===
-Titanium Mobileの開発プロジェクトフォルダのルートにあるtiapp.xmlには{{{<windows>}}}というXML要素があります。この子要素として{{{<window>}}}要素を配置することにより、アプリケーション初期状態からWindowをもつ事ができるようになります。
-ちなみに、ひとつしか{{{<window>}}}要素を持たない場合、TabBarは表示されません。２個以上の{{{<window>}}}要素を持つ場合には自動的にTabBarが表示されるようになります。
-
-定義例として次のようなものをあげてみます。
+仕様上ひとつのwindowしか同時に表示できないため、作成されたwindowはwindowスタックに格納されるだけになります。
+現在表示されているwindowを閉じると、スタックの一つ手前にあるwindowが再び表示されるようになります。
 {{{
-<windows>
-    <window>
-        <id>initial</id>
-        <url>phone.html</url>
-        <title>Phone API</title>
-        <icon>profile.png</icon>
-        <orientation>either</orientation>
-    </window>
-    <window>
-        <id>two</id>
-        <url>ui.html</url>
-        <title>UI API</title>
-        <icon>profile.png</icon>
-        <orientation>either</orientation>
-    </window>
-    <window>
-        <id>three</id>
-        <url>platform.html</url>
-        <title>Platform API</title>
-        <icon>profile.png</icon>
-        <orientation>either</orientation>
-    </window>
-</windows>
-}}}
-この例では３つの{{{<window>}}}要素があるため、自動的にTabBarが生成されます。
-{{{<title>}}}要素の内容はTabBar内のTabのラベルとして使用され、同様に{{{<icon>}}}要素の内容はTabのアイコンとして使用されます。
-
-{{{<url>}}}要素の内容(HTMLの中身)でwindowをレンダリングします。レンダリングのタイミングはTabがアクティブになった段階になります（そのため初回タブ切り替えの際にはローディングインジケータが表示され、若干の待ちが発生します）。
-
-なお、{{{<orientation>}}}要素はデバイスの向きを縦長、横長のいずれに、もしくは両方に対応しているかを定義するものになります。デフォルトは「両方」(either) になってます。
-
-=== Javascriptでのwindow生成 ===
-実行時に動的にwindowを生成するために{{{Titanium.UI.createWindow}}}というAPIが用意されています。
-
-仕様上ひとつのwindowしか同時に表示できないため、作成されたwindowはwindowスタックに格納されるだけになります。現在表示されているwindowを閉じると、スタックの一つ手前にあるwindowが再び表示されるようになります。
-{{{
-// myfile.htmlの内容をwindowとして表示する例。
-// 切り替え時にはアニメーションする。
+// 切り替え時にはアニメーションする。独立した表示
 var win = Titanium.UI.createWindow();
-win.setURL('myfile.html');
-// 上記は次のように省略して書く事もできる。
-// var win = Titanium.UI.createWindow({url:'myfile.html'});
-// さらに前述しているようなフルスクリーン表示をするには次のように書く。
-// var win = Titanium.UI.createWindow({url:'myfile.html', fullscreen:true});
 win.open({animated:true});
+
+// 現在のTabに所属させるのなら次のとおり。
+Titanium.UI.currentTab.open(win,{animated:true});
 }}}
 
 上記のように{{{open}}}メソッドの引数として{{{animeted}}}プロパティを指定する事により、アニメーション制御できます。この例ではwindowが左へスライドしていくような動きをします。{{{false}}}}指定時は切り替わるだけの動きになります。
@@ -78,13 +34,9 @@ win.open({animated:true});
 Titanium.UI.currentWindow.close();
 }}}
 
-=== Nav Barの表示切替 ===
-いくつかのパターンがあるので、ソースベースでご紹介します。
+=== Nav Barの操作 ===
+表示非表示の切り替えは次のようにします。
 {{{
-// window生成時に指定するパターン
-var win = Titanium.UI.createWindow({url:'myfile.html',hideNavBar:true});
-win.open({animated:true});
-
 // 現在のwindowから表示→非表示
 Titanium.UI.currentWindow.hideNavBar();
 
@@ -92,50 +44,27 @@ Titanium.UI.currentWindow.hideNavBar();
 Titanium.UI.currentWindow.showNavBar();
 }}}
 
-=== Tab Barの非表示化 ===
-TabBarを非表示へ切替えるには、window生成時に指定する必要があります。
-{{{
-var win = Titanium.UI.createWindow({url:'myfile.html',hideTabBar:true});
-win.open({animated:true});
-}}}
-
-=== NavBarの表示色を変更したい ===
-制御方法としてはまずtiapp.xmlの{{{barColor}}}要素への記述が一番簡単な方法として揚げられます。
-{{{
-<window>
-  <id>index</id>
-  <url>index.html</url>
-  <barColor>#060</barColor>
-</window>
-}}}
-
-Javascriptによる制御は以下のコードサンプルをご覧ください。
+NavBarの表示色を変更したい場合はつぎのようなコードになります。
 {{{
 // window生成時に指定する。
-var win = Titanium.UI.createWindow({url:'myfile.html'});
-win.setBarColor('#336699');
-win.open({animated:true});
+var win = Titanium.UI.createWindow({barColor:'#336699'});
 
 // 現在表示中のWindowのNavBarの背景色を変更する。
-Titanium.UI.currentWindow.setBarColor('#336699');
+Titanium.UI.currentWindow.barColor = '#336699';
 
 // デフォルト色に戻す。
-Titanium.UI.currentWindow.setBarColor(null);
+Titanium.UI.currentWindow.barColor = null;
 }}}
 
-== Windowのイベント ==
-windowのイベントとしては「選択状態になる」「選択外状態になる」のいずれかしかありません。
-たとえば表示時に作成したオブジェクトをクリアしたり、タイマー処理 (setInterval) でポーリングするような動きをする場合に他のwindowの処理を阻害しないようにするなどといった用い方などが想定されると思います。
+== Windowに関する特殊なイベント ==
+windowも配下になるviewの一環なのでviewがもつすべてのイベントをハンドルすることができますが、それとは別に
+windowのイベントとしては次のようなものがあります。
 
-レンダリング時(document.onload)しか動かないようになっている処理も、選択状態になった際のイベントとしても同様の処理をすることで表示更新するようにすることも可能です。
-{{{
-Titanium.UI.currentWindow.addEventListener('focused', function() {
-    // 選択状態になったときの処理
-});
-Titanium.UI.currentWindow.addEventListener('unfocused', function() {
-    // 選択外状態になったときの処理
-});
-}}}
+||*イベント*||*発生するタイミング*||
+||open||開く||
+||close||閉じる||
+||focus||選択状態になる||
+||blur||選択外状態になる||
 
 ----
 本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
