@@ -63,13 +63,30 @@ Ti.UI.currentWindow.add(indUpload);
 //--------------------------------------
 // 関数宣言部
 //--------------------------------------
-
 function clearEntry(closeThisWindow){
     taText.setValue('');
     forUploadImage = null;
     if(closeThisWindow){
         win.close();
     }
+}
+
+// 画像をムリクリ640x480にする(cameraからだとNGっぽい？)
+function resizeImage(blobImage){
+    var width = eval(blobImage.width);
+    var height = eval(blobImage.height);
+    if(width > 640 || height > 640){
+        if(width < height){
+            width  = 640 * (width / height);
+            height = 640;
+        }
+        else{
+            height = 640 * (height / width);
+            width  = 640;
+        }
+        return blobImage.imageAsResized(width, height);
+    }
+    return blobImage;
 }
 
 //--------------------------------------
@@ -92,14 +109,17 @@ btnCamera.addEventListener('click', function(){
     // 処理選択後の分岐
     dialog.addEventListener('click', function(event){
 	if(event.index == 0){
-	    // カメラ撮影
-	    Titanium.Media.showCamera({
+	    // カメラ撮影	
+            Titanium.Media.showCamera({
 		success:function(e){
-		    forUploadImage = e.media;
+                    // forUploadImage = resizeImage(e.media);
+                    forUploadImage = e.media;
 		},
 		cancel:function(){
+		    taText.focus();
 		},
 		error:function(error){
+		    taText.focus();
 		},
                 allowImageEditing:false
 	    });
@@ -108,12 +128,14 @@ btnCamera.addEventListener('click', function(){
 	    // カメラロールから取得
 	    Titanium.Media.openPhotoGallery({
 		success: function(e) {
-		    forUploadImage = e.media;
+                    forUploadImage = resizeImage(e.media);
+		    taText.focus();
+		},
+		cancel: function() {
 		    taText.focus();
 		},
 		error: function(error) {
-		},
-		cancel: function() {
+		    taText.focus();
 		},
                 allowImageEditing:false
 	    });
