@@ -37,6 +37,8 @@ twitter.search('%23subwayjp%20twitpic%20-RT', 20, 1, function(json){
         web.url = buffer.larges[e.index];
         // b. HTML指定の場合
         // web.html = '<html><head><title></title></head><body><img src="' + buffer.larges[e.index] + '" /></body></html>';
+        // scale and fitをするようにする
+        web.scalesPageToFit = true;
 	imageWindow.add(web);
         // windowをモーダル表示するので閉じるためのボタンをnav barに配置します。
         var closeButton = Titanium.UI.createButton({
