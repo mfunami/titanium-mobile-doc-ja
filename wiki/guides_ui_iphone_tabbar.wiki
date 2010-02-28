@@ -1,9 +1,7 @@
-#summary Native UI案内 - iPhone - Tab Bar
-#labels ui,obsoluted
-= Native UI案内 - iPhone - Tab Bar =
-Tab Barは複数のwindowを束ねるアプリケーションUIの根幹を担います。
-
-タブはtiapp.xmlの{{{<window>}}}要素の定義により発生します。
+#summary Native UI案内 - iPhone - Tab Group(旧:Tab Bar)
+#labels ui
+= Native UI案内 - iPhone - Tab Group =
+Tab Groupは複数のwindowを束ねるアプリケーションUIの根幹を担います。
 
 http://img.skitch.com/20090708-8p1pjfyncp3jt8hs8aihf6qr5y.jpg
 
@@ -13,20 +11,48 @@ http://img.skitch.com/20090708-1qpwi2pj72xnmbw24fwtniyspk.jpg
 
 http://img.skitch.com/20090708-rmbim4dm9p5ss116nyt83iky8p.jpg
 
-== バッジ機能 ==
+== TabGroupとTabの生成 ==
+基本的にapp.js上での記述になりますが、次のような形が定石となります。
+{{{
+// ただ生成する。
+var tabGroup = Titanium.UI.createTabGroup();
 
+// Tabの生成はヒモづくWindowとのセットという感じになります。
+var win = Ti.UI.createWindow({title:'New Tab Window',barColor:'#000'});
+var newtab = Titanium.UI.createTab({  
+    icon:'../images/tabs/KS_nav_mashup.png',
+    title:'New Tab',
+    win:win
+});
+tabGroup.addTab(newtab);
+
+// 表示する
+tabGroup.open();
+}}}
+
+== TabGroupの操作 ==
+Tab Groupは次のように取得できます。
+{{{
+// TabGroupの取得
+var tabGroup = Titanium.UI.currentWindow.tabGroup;
+
+// 所属するタブはtabsプロパティにある
+alert(tabGroup.tabs[0].title);
+
+// 強制的にtab切り替えもできる
+tabGroup.setActiveTab(1);
+tabGroup.setActiveTab(tabGroup.tabs[2]);
+}}}
+
+== バッジ機能 ==
 個々のタブには状態を通知するためのするための「タブバッジ」と呼ばれるものをもつ事ができます。
 一応、文字列も表示できるのですが、数値を表示するのに適していますので、そのように使ったほうがよいでしょう。
 
 http://img.skitch.com/20090708-dpfhrf4hc1k2h9b1xeixxp5jtq.jpg
 
 {{{
-Titanium.UI.setTabBadge(10);
-}}}
-
-{{{
 // すべてのタブに対してバッジを付与する。
-var tabs = Titanium.UI.getTabs(); 
+var tabs = Titanium.UI.currentWindow.tabGroup.tabs;
 tabs[0].setBadge(1); 
 tabs[1].setBadge(2); 
 tabs[2].setBadge(3);
