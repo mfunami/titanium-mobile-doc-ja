@@ -17,7 +17,7 @@ var flexSpace = Titanium.UI.createButton({
 });
 
 // NavBarに配置するインスタンス
-var tabbar = Titanium.UI.createTabbedBar({
+var tabbar1 = Titanium.UI.createTabbedBar({
     labels: ['Tab1', 'Tab2'],
     index:1
 });
@@ -29,20 +29,27 @@ var tabbar2 = Titanium.UI.createTabbedBar({
   index:2
 });
 
+// Navbarの中央に配置
+Titanium.UI.currentWindow.setTitleControl(tabbar1);
+
 // Toolbarの中央に配置
 Titanium.UI.currentWindow.setToolbar([flexSpace, tabbar2, flexSpace]);
 
-// Navbarの中央に配置
-Titanium.UI.currentWindow.setTitleControl(tabbar);
 
-// HTML div要素 id = 'tabbar' の部分に配置
+// コンテンツエリアに配置
 var tabbar = Titanium.UI.createTabbedBar({
-    id:'tabbar',
     index:1,
-    labels:['Tab3', 'Tab4']
+    labels:['Tab3', 'Tab4'],
+    top:50,
+    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+    height:25,
+    width:200
 });
+Titanium.UI.currentWindow.add(tabbar);
+
 }}}
 
 ----
 本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
