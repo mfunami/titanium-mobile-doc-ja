@@ -1,261 +1,724 @@
-#summary Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう！
-#labels about,obsoleted
-= Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう！ =
-一応、[http://www.codestrong.com/timobile/guides/get_started/ Getting Started with Titanium Mobile]に基づいて準備段階をまとめようと思います。
-
-英語力のなさは前段で露呈していると思いますが、思い込み等で１８０度ねじ曲がった訳になってる可能性も有るので、最後に信じるのは自分（あなたのことです！）ぐらいの気持ちでご覧ください。
-
-また自分の興味がiPhoneにしか向いていないので、そこに特化したような書き方をしておりますが、おそらくAndroidでも同じようにすれば動くはずです（それが謳い文句の製品でもあるので）。
-
-== …の前にすることがあるだろうが！ ==
-さて、原文サイトにはいきなりTitanium Developerをインストールしたあとの動きが書いてありますが、その前にやっておかないといけない事があります。
-
-それは各デバイス向けのSDKのインストールに他なりません。
-
-Titanium Mobileの環境はあくまでもデバイスSDKありきで動きますので、確実に事前準備するべきところです。
-
-つまりiPhone向けアプリ開発をするということはSDKが動作するIntel Mac環境(Leopard以上)が必要になります。Windowsユーザの方、Tiger以前のMac OS Xな方はお引き取りくださいませ....
-
-=== iPhone SDKのインストールとか。 ===
-iPhone SDKをADC(Apple Developer Connection)からダウンロードしておきましょう。
-
-セットアップから開発環境構築、Provisioning ProfileまわりのアレコレについてはiPhone開発関係の先達たちがまとめてくれてるので、それを参考につきすすんでください(^^;
-
-==== 目指せ！iPhoneアプリ開発エキスパート | gihyo.jp ====
- * http://gihyo.jp/dev/serial/01/iphone/0002
-  ** Xcodeは一回起動しておいたほうがいいと思います。オーガナイザとか使う事になりますので...
- * http://gihyo.jp/dev/serial/01/iphone/0009
-  ** 実機で動かしますよね？　ならばお布施を払うのです。多分いろいろ躓くところが出てくると思いますが...
- * http://gihyo.jp/dev/serial/01/iphone/0010
-  ** 最終的な流れの参考に。
-
-もちろんシミュレータのレベルでしか動作させないのならSDKを放り込むところまでだけで十分です。
-
-それでもObjective-Cを触らずにiPhoneシミュレータ上でアプリを動かす事ができますので。
-
-== Titanium Developer のインストール ==
-http://www.appcelerator.com/products/download/ こちらのページを開くと自動的にdmgファイルをダウンロードし、インストールします。ここらの手順はいつも通りでしょう。
-
-インストール後、起動すると、次のような画面が表示されます。
-
-http://img.skitch.com/20090616-ky7u32k56hcabdqr1b7r71ys4r.png
-
-Titaniumを使うに当たって、アカウントを作る必要があります。
-
-入れる情報としてはメアド、パスワード（これらが認証情報です）と姓名といった個人情報です。twitterのscreen nameをいれておくと勝手に公式アカウントがフォローしてくれます。ちなみにぼくは@donayamaですｗ
-
-このアカウントがないとAppceleratorのサポートページやAPIレファレンスといった情報閲覧に影響が出ます。
-
-というかないと開発できませんので、キチンと登録しておきましょう。
-
-起動後、こんな画面がでます。正直分かりづらいです。
-
-http://img.skitch.com/20090616-mpyfsamdg9np1514hbd62keyp2.png
-
-左上の三つのボタンが画面の切り替えなんですが、おそらく一番左のかばんのアイコンのところしか使わないと思います。
-（一応Projects, Community, Profileという位置づけです）
-
-あと、ぼくも最初勘違いしていたのですが、Titanium Developerというソフト、*これはIDEではありません*。
-どっちかというとコンパイラのフロントエンドみたいなシロモノなので、ここでは開発は一切できません。
-
-Aptanaみたいなでっかい環境でもCarbon EmacsみたいなものでもCotEditorや開発者たちのようにTextMateでも、何でも構わないからそういったエディタを用意しましょう。
-
-閑話休題。New Project画面でのお話に戻ります。
-
-ここではソフトのproject作成を行います。ひな形に基づいたフォルダ・ファイル群が自動生成されると考えていただいていいかと思います。
-
-ここで重要なのはProject typeを「Mobile」に選ぶ事。そして選んだ直後に画面下段にあるInstalled Mobile Platformsで目当てのSDKがキチンと認識されていること（「iPhone SDK found」と表示されてないとツライです…）です。
-
-キチンと認識されていれば、他の項目をうめていくカンタンなお仕事ですよ。
-
- * Name
-  ** アプリケーションの名前です。これあとから変更するの地味に面倒なのでできればキチンと付けましょう。ちなみにiPhoneのHome画面にもこの名前で出てきます。長すぎると...とかで省略されるよ！
- * App Id
-  ** iPhone用です。実機動作などをさせる場合にはprovisioning profileというものを使うのですが、それを作るときにもこのApp IDが必要になります。一意である必要が有るので、Javaのユーザ名前空間同様にドメイン名を反転させた名前の付け方をすることが推奨されています。com.twitter.yourscreenname.testappとかそんな感じにしておけばいいと思います。
- * Directory
-  ** アプリケーションのソースが展開されるフォルダを指定します。
- * Company/Personal URL
-  ** 会社や個人のURLということで、そのままですね。ぼくは http://twitter.com/donayama/ などと放り込んでいます。
- * Titanium SDK version
-  ** 最新のSDKを使いましょう。
- * JS Libraries
-  ** 必須では有りませんが、いくつかの著名なJavascript fwやlibが列挙されています。お好きなものを選択してください。この解説ではぼくの趣味でjQueryが使われていきますので、ここではjQueryを選んでおきましょうか！
-
-これでCreate Projectすると、Directory欄で指定したフォルダにName欄で指定したフォルダが生成されているはずです。
-
-（これ気をつけないとムダにフォルダ階層が深くなるんですよね…）
-
- * /Users/account/Dropbox/Dev/Titanium/testapp ここがさっきのDirectory/Nameで構成されます。
-  ** /build 特に触る必要のないフォルダ。中間ソース的にあれこれが。
-  ** /Resouces あとでがりがり触るフォルダ。主戦場です。中のファイルは自動生成されるもの。
-   *** index.html
-   *** index.js
-   *** index.css
-   *** about.html
-   *** /iphone アイコンや起動時のスプラッシュスクリーン画像(Default.png)などが入っている。
- ** tiapp.xml アプリの定義とかを行うファイル。
-
-http://img.skitch.com/20090616-ewt986g5nbafifdbttb9pddp7s.png
-
-こういう画面が表示されると思います。
-（iPhone・Androidのシミュレータ環境の有無でかわるだけです）
-
-そのまま二番目のアイコン(Run iPhone Emulator)をクリックして画面切り替え後、下の方にあるSDKバージョン(3.1.2など）を選択して、Launch Appボタンをクリックします。
-
-http://img.skitch.com/20090616-5u6gr8tkf7hfayra35a5wtgsb.png
-
-しばらくするとこんな画面になって、iPhoneシミュレータが起動してくると思います。
-
-これでとりあえずは動作確認完了です。
-
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100126/20100126070736.png
-
-実際操作して挙動確認できるのは「シェイクジェスチャー」の実行によるアラート表示のみです。
-
-実機動作まで行えば、vibrationsボタンをクリックしたときにバイブ動作することもできるんですけどね。その辺は震えたツモリ…ということで。
-（カメラ・加速度センサー・GPSといったあたりは実機検証しないと動作確認すらできません）
-
-== 生成されたソース ==
-Javascriptのソースにたびたび出てくるTitanium.～というのはTitanium MobileのAPIになります。
-Titanium.Media.vibrate()は本体をバイブするためのメソッドですし、Titanium.Gestureというオブジェクトの高級イベントにあたるshakeに対してイベントハンドラを追加しているという寸法です。
-shakeイベント内で宣言されているTitanium.UI.createAlertDialogというメソッドはデバイスNative UIの警告ダイアログを生成するためのものです。
-（iPhoneかAndroidかというところは抽象化されています）
-
-ついついJavascriptでalert関数を使って表示しようとしてしまうのですが、Titaniumの環境下でalertしてもデバッグログとして出力されるだけになります。要注意。
-
-=== /testapp/tiapp.xml ===
-{{{
-<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.twitter.donayama.testapp</id>
-    <name>testapp</name>
-    <version>1.0</version>
-    <icon>default_app_logo.png</icon>
-    <persistent-wifi>false</persistent-wifi>
-    <prerendered-icon>false</prerendered-icon>
-    <statusbar-style>opaque</statusbar-style>
-    <windows>
-        <window>
-            <id>initial</id>
-            <url>index.html</url>
-            <backgroundColor>#111</backgroundColor>
-			<icon>ti://featured</icon>
-			<barColor>#000</barColor>
-			<fullscreen>false</fullscreen>
-        </window>
-        <window>
-            <id>about</id>
-            <url>about.html</url>
-            <backgroundColor>#111</backgroundColor>
-			<icon>ti://top rated</icon>
-            <barColor>#000</barColor>
-			<fullscreen>false</fullscreen>
-        </window>
-    </windows>
-    <guid>877913e9-a903-4dd3-b111-f0fbfd29ffcc</guid>
-</ti:app>
-}}}
-=== /testapp/Resources/index.html ===
-{{{
-<html>
-<head>
-<script type="text/javascript" src="jquery-1.3.2.js"></script>
-
-
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-	<title>Hello Mobile</title>
-	<script type="text/javascript" src="index.js"></script>
-	<link href="index.css" rel="stylesheet" type="text/css"/>
-</head>
-<body>
-	<h2>Welcome to Titanium Mobile</h2>
-	<p>
-		Titanium Mobile is a next generation application platform
-		for building native mobile applications using web technologies
-		such as HTML and JavaScript.
-	</p>
-	<p>
-		You are using Titanium version <span id="version">...</span> 
-		on <span id="phone"></span>.
-	</p>
-	<p>
-		Why not have some good <button id="b">vibrations</button> on us?
-	</p>
-	<p> thank you  &#35874;&#35874;〓 Спасибо Danke ありがとうございました &#44048;&#49324;&#54633;&#45768;&#45796; gracias merci c&#7843;m &#417;n b&#7841;n
-		kiitos grazie salamat tak dzi〓kuj〓 terima kasih tak хвала 謝謝〓
-		go raibh maith agat
-	</p>
-</body>
-</html>
-}}}
-=== /testapp/Resources/index.js ===
-{{{
-window.onload = function()
-{
-	document.getElementById('version').innerHTML = Titanium.version;
-	document.getElementById('phone').innerHTML = Titanium.Platform.name + ' '+Titanium.Platform.version;
-	document.getElementById('b').onclick = function() { Titanium.Media.vibrate(); };
-
-	Titanium.Gesture.addEventListener('shake',function(){
-		var alerty = Titanium.UI.createAlertDialog();
-		alerty.setTitle("Not stirred!");
-		alerty.show();
-	},false);
-	
-};
-}}}
-=== /testapp/Resources/index.css ===
-{{{
-body
-{
-	background-color:#111;
-	color:#bbb;
-	font-family:sans-serif;
-}
-
-h1,h2
-{
-	color:#900;
-}
-
-p
-{
-	margin-bottom:20px;
-}
-}}}
-=== /testapp/Resources/about.html ===
-{{{
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-	<title>About Titanium</title>
-	<link href="index.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-	<h2>About Titanium Mobile</h2>
-	<p>
-		Titanium is brought to you by Appcelerator and many
-		contributions and love from our open source community.
-	</p>
-	<p>
-		We'd like to especially thank the following key contributions 
-		from:
-		
-		<ul>
-			<li>Blain Hamon</li>
-			<li>Don Thorp</li>
-			<li>Nolan Wright</li>
-			<li>Jeff Haynie</li>
-			<li>Marshall Culpepper</li>
-			<li>Martin Robinson</li>
-			<li>Kevin Whinnery</li>
-			<li>Nika Jones</li>
-			<li>Daniel Sternberg</li>
-		</ul>
-	</p>
-</body>
-</html>
-}}}
+#summary Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!!
+#labels about
+= Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!! =
+----
+*注意*
+ 本稿の記述内容を試すにはMac OSX 10.5以上が動作する端末、iPhone SDK 3.1以上が必要になります。
+ 
+ Windowsでは開発は できませんのでご注意ください。
+ 
+ 
+ また（本稿ではそこまで行きませんが）実機での動作検証・AppStoreへのアプリケーションの登録配布には[http://developer.apple.com/jp/iphone/program/ iPhone Developer Program]への参加(有償)が必要となります。
+ 
+ 
+ なお、Appcelerator Titanium Mobileは本文中でも触れている通りAndroid向けの開発も可能ですが、iPhone向けの開発にフォーカスして記述されていますので、その点ご容赦ください。
+ 
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
+*目次*
+<wiki:toc max_depth="3" />
+
+== Appcelerator Titanium Mobileについて ==
+Appcelerator Titanium Mobile(以下、Titanium Mobile)とは[http://www.appcelerator.com/ Appcelerator社]が提供するモバイルデバイス向けのソフトウェア開発環境です。
+
+(ちなみにTitaniumは「チタニウム」ではなく「タイタニウム」と発音するようです)
+
+
+プログラミング言語としてはJavaScriptのみを利用します。
+
+それだけでiPhone/Android向けのネイティブアプリケーションを開発できることがウリとなっています。
+
+Objective-CやJavaでコーディングする必要は一切ありません。
+
+
+もちろんJavaScriptだからといってWebインタフェイスのみをサポートしているわけではありません。
+
+以下に挙げる全ての機能を実現できるようになっています。
+
+ * ラベル・テキスト入力・ボタン・スライダーなどの豊富なネイティブUI部品
+ * 地図表示
+ * 画像・動画の再生・撮影・録画
+ * ファイルシステム
+ * ネットワーク通信
+ * ハードウェアデバイス(カメラ・GPS・電子コンパス・加速度センサ)の利用
+ * デバイス内データベース(連絡先など)の操作
+ * SQLiteデータベースのI/O
+
+プラットフォームに依存した機能を利用しない限り、基本的にサポートされるプラットフォーム全てに対してにコードを転用できると謳われていますので、JavaScriptによる開発効率の向上だけではなくマルチプラットフォーム展開を少ないコストで実現できることも魅力のひとつとなっています。
+
+
+現時点で対応しているプラットフォームとしては前掲したiPhone OSとAndroidのみになりますが、今後も追加されていく予定があります。
+
+(iPadは2010年3月中に対応するようです)
+
+また本稿では取り上げませんが、兄弟製品として[http://www.appcelerator.com/products/titanium-desktop-application-development/ Titanium Desktop]があり、こちらはWindows, Mac OSX, Linuxというマルチプラットフォームで動作するデスクトップアプリケーションを開発できる環境も提供されています。
+
+((これについては [http://d.hatena.ne.jp/yuichi_katahira/searchdiary?word=*[Titanium]]の記事群が詳しいですので、興味があればぜひご覧ください))
+
+== 前提環境(iPhone SDK) ==
+Titanium Mobile自体はTitanium DeveloperというDesktop, Mobileでそれぞれ共用する開発環境を利用します。TItanium Developerの動作するプラットフォームとして、Windows, Mac OSX, Linuxをサポートしています。
+
+
+しかし本稿で取り上げるiPhoneアプリケーションの開発に関してはiPhone SDKが必要になります。
+そのため必然的に動作する環境としては Mac OSXのみとなってしまいます。
+
+その点、ご注意ください。
+
+=== iPhone SDKのインストールについて ===
+Titanium Mobileでの開発を始める前に、上記のようにiPhone SDKのインストールを行っておく必要があります。
+
+このSDKのセットアップから開発環境構築については下記記事をご参照ください。
+||目指せ！iPhoneアプリ開発エキスパート | gihyo.jp||[http://gihyo.jp/dev/serial/01/iphone/0002]||
+
+また、本稿では取り上げませんが、実機での動作検証（ならびにAppStoreでの配布）を行うためにはiPhone Developer Programへの登録が必要となります。
+
+それについては次の記事をご参照ください。
+||目指せ！iPhoneアプリ開発エキスパート | gihyo.jp||[http://gihyo.jp/dev/serial/01/iphone/0009]||
+
+=== エディタの準備 ===
+私も最初勘違いしていたのですが、Titanium DeveloperはIDEではありません。
+
+
+むしろビルド専用環境といってもいいフロントエンドプログラムなので、ソースプログラムの修正すらできません。
+なんらかのエディタを準備してください。
+
+
+Appceleratorの中の人たちはTextMateを使ってるようですが、エディタなら何でも構いません。
+
+
+手になじんだエディタをご用意ください。
+
+できればJavaScriptの文法ハイライト機能や入力支援があるソフトの方が開発効率もグンとあがると思います。
+
+
+ちなみに私はCarbon Emacs + JS2環境で開発をしています。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100221/20100221210219.png
+
+== Titanium Developerのインストールと起動 ==
+[http://www.appcelerator.com/products/download/ こちらのページ]を開くと自動的にインストーライメージファイル(Titanium Developer.dmg)をダウンロード開始しますので、完了後インストールしてください。
+
+アプリケーションとしては「Titanium Developer」としてインストールされます。
+
+*(註記)0.9.2について*
+
+現在リリースされているTitanium Mobile 0.9.2については手動でzip形式で配布されているパッケージを所定のパスにコピーする必要があります。
+
+- [http://timobile.appcelerator.com.s3.amazonaws.com/mobilesdk-0.9.2-osx.zip:title=mobilesdk-0.9.2-osx.zip]をダウンロードします。(7.49MBぐらい)
+- ZIPファイルを展開して、Finderなどで/Library/Application Support/Titaniumフォルダにコピーします。
+- Titanium Developerを起動すると、Mobile SDKの選択肢として0.9.2が追加されます。（すでに立ち上がっている場合は再起動する）
+
+=== 起動画面 ===
+インストール後にTitanium Developer起動すると、次のような画面が表示されます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224833.png
+
+
+Titaniumを使うに当たって、この画面でアカウントを作る必要があります。
+
+登録しないとTitanium Developer環境が利用できませんので必ず登録してください。
+
+
+入れる情報としてはログインIDとなるメールアドレスとパスワード、姓名といった個人情報です。
+
+（twitter idをいれておくと勝手に公式アカウントがフォローしてくれます）
+
+
+ここで登録したアカウントでAppceleratorのサポートページなどへのログインにも利用します。
+
+アカウント作成が完了すると、Titanium Developerの新規プロジェクト作成画面を開きます。
+
+ここから、新規プロジェクトを作成したり、既存のプロジェクトをインポートできます。
+
+
+アプリケーション終了／(Titanium Developer上での)ログアウト後はログインタブに切り替え、登録したメールアドレスとパスワードを入力して、立ち上げる流れになります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224834.png
+
+== KitchenSinkを触ってみる～iPhoneシミュレータの起動 ==
+さて、いきなりHello, world的なプログラムを始めたい…と言いたいところですが、まずは開発元のAppceleratorから提供されているデモアプリケーション「KitchenSink」を利用して、アプリケーションのビルドから動作確認（iPhoneシミュレータ上で、ですが）の流れを体験したいと思います。
+
+
+KitchenSinkはTitanium MobileのUI部品、APIのカテゴリ単位に機能を個別に紹介した機能カタログ的なアプリケーションです。
+
+
+実際にTitanium Mobileで開発を始めると「KitchenSinkのこれと同じようなことをやりたい」ということが多々出てくると思いますが、APIリファレンスをひも解くよりも、KitchenSinkの該当部分のソースをコードスニペットとして利用するほうが早かったりします。実際のソースファイルの中身を見ていくのは本稿の最後にしたいとおもいます。
+
+=== KitchenSinkをダウンロードする ===
+KitchenSinkだけではなく、Appceleratorの製品はオープンソースソフトウェアとして開発がされており、ソースコードは[http://github.com/appcelerator githubのレポジトリ]で公開されています。
+
+KitchenSinkも同様にgithubで公開されています。
+
+http://github.com/appcelerator/KitchenSink
+
+
+取得にはgitクライアントは不要です。
+
+
+まず上記リンクにアクセスし、githubの右上「Download Source」を選択します。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226231335.png
+
+
+続いて表示される画面でzipアイコンか、tarアイコンのいずれかを選択し、ダウンロードします。完了後、展開してください。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226231336.png
+
+*(註記)0.9.2では個別にダウンロードする必要があります。*
+
+以下のアドレスから直接ダウンロードしてください。
+
+http://timobile.appcelerator.com.s3.amazonaws.com/KS-0.9.2.zip
+
+=== KitchenSinkを動かす ===
+続いて、KitchenSinkプロジェクトをTitanium Developerに取り込みます。
+
+
+Titanium Developerのツールバー「Import Project」を選択して、先ほど展開した先の /demos/KitchenSink フォルダを選択後「OK」ボタンをクリックすると、KitchenSinkプロジェクトがPROJECTS一覧に追加され、プロジェクト設定の編集画面が表示されます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226231913.png
+
+
+続いて、画面上部中央の「Test & Package」を選択すると、処理選択が表示されます。
+(Android SDKを登録していないと、Run Android Emulatorは表示されません)
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224840.png
+
+
+ここで「Run iPhone Emulator」を選択すると、無味乾燥な画面が表示されます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224841.png
+
+
+画面中央を陣取る黒い部分は実行時のログ表示部になります。
+
+ログレベルによって、情報であったりエラーメッセージが表示されたりします。
+
+
+画面下部には使用するSDKのバージョンやログレベルを選択するコンボボックスとシミュレータの起動と終了をするためのボタンが付いています。
+
+
+「Launch App」（ウィンドウ下部左側のボタン）をクリックすると、ビルドが開始されます。
+マシンスペックなどにも依存しますが、初回時（とTitanium Developerの立ち上げ直後）は比較的ビルド時間がかかる傾向があるようです。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224843.png
+
+
+表示内容を見ていただけば、内部でXcodeのコンパイラを呼び出しておりiPhoneネイティブのバイナリに変換しているということが分かっていただけのではないでしょうか。
+
+
+そして、自動的にiPhoneシミュレータが起動し、ビルドされたアプリケーションもまた自動で起動します。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226233327.png
+
+
+あれこれ言うより実際にシミュレータ上のデモを見て、どのようなことがTitanium Mobileで実現できるかを体感してください。((残念ながらデバイスハードウェア系（カメラ・加速度センサ・GPS・電子コンパスなど）を中心にiPhoneシミュレータでの動作がサポートされていない機能は使用できません。実機に転送する必要がありますが、本稿では触れません))
+
+http://f.hatena.ne.jp/donayama/20100226233639
+
+== テストプロジェクトの作成からプロジェクト作成後のフォルダ構成 ==
+さて、KitchenSinkの体験は一旦終了して、実際にプログラムしていきましょう。
+
+=== プロジェクトの作成 ===
+まずはプロジェクトの新規作成をします。
+
+Titanium Developerのツールバーから「New Project」をクリックすると、New Project画面が立ち上がるので、必ずProject typeをデフォルトの「Desktop」から「Mobile」にするようにしてください。
+（Mobileに切り替えた後、iPhone SDKとAndroid SDKの検出を行うため、切替え直後、画面の下部のInstalled Mobile Platformsは緑チェックマークではありません）
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224836.png
+
+ここではひとまずサンプルなので次のように入れてみましょう。
+||*項目*||*設定値*|||*補足*||
+||Project type||Mobile||モバイルデバイス向けの際は必ずMobileを選択します||
+||Name||GetStarted||アプリケーションの名前です。残念ながら日本語文字を入れると現バージョンではビルド時にエラーになります。また長すぎる名前をつけるとホーム画面で「…」で省略されるので注意しましょう||
+||App Id||com.yourdomain.applicationname||アプリケーションを一意に判別するためのIDです。Javaの名前空間のようにドメイン名を反転させた名前の付け方をすることが推奨されています。（例：com.twitter.your_id.testapp）||
+||Directory||/Users/your_account||ソースの生成先フォルダ。このフォルダに上記Nameで指定した名前のフォルダが作られます||
+||Company / Personal URL||http://www.yourdomain.com/||Publisher URLという項目に反映されます||
+||Titanium SDK version||0.9.2||特段の問題がない限り、デフォルトになっている最新バージョンを使います||
+||JS Libraries (optional)||何も選択しない||ここでは選択していませんが、jQueryなどを使いたい場合これを選択します。(prototype.jsはなぜかビルド時にエラーになってしまうので選択しない事を現状おすすめせざるを得ません)||
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224837.png
+
+
+そして「Create Project」ボタンをクリックすると、ひな形に基づいたフォルダ・ファイル群が Directory/Name なフォルダに自動生成され、画面もプロジェクト編集画面に遷移します。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224838.png
+
+
+このプロジェクト編集画面の上部にあるパス名(終端は省略されてますが)をクリックすると、Finderが起動し、該当フォルダを開いてくれます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224839.png
+
+=== プロジェクトのフォルダ構成 ===
+フォルダには以下のようなファイルが生成されています。
+ * CHANGELOG.txt
+ * LICENSE
+ * LICENSE.txt
+ * README
+ * manifest
+ * tiapp.xml
+ * /Resources
+  ** KS_nav_ui.png
+  ** KS_nav_views.png
+  ** app.js
+  ** /android
+  ** /iphone
+   *** Default.png
+   *** appicon.png
+ * /build
+  ** (以下略)
+
+それぞれについて代表的なものをかなり簡単に説明します。
+||manifest||アプリケーション定義が記述されています。||
+||tiapp.xml||こちらもアプリケーション定義がされています。||
+||/build||ビルド結果を格納するフォルダ。直接触る事はあまりないはずです||
+||/Resources||実際のアプリケーション開発をするソースなどはここに格納します||
+||/Resources/app.js||アプリケーションのエントリポイントです||
+||/Resources/andoroid||Andoroid向けに依存したソース・リソースを格納します||
+||/Resources/iphone||iPhone向けに依存したソース・リソースを格納します||
+
+最初のふたつはアプリケーション定義に関するファイルです。
+
+一部の例外を除き、プロジェクト編集画面で設定できる内容なので、本稿では触れません。
+
+
+最後のふたつに付いてはビルド時に一時的にiPhone用は/Resourcesに/Resources/iphoneをマージされた（Androidも同様）状態とすることで、機種依存機能を吸収できるようになっています。（上記状態ではiPhone用のスプラッシュスクリーン画像とアプリケーションアイコンが収納されています）
+
+=== ちなみに実行すると... ===
+次のようなシンプルな画面が立ち上がります。
+
+すでにKitchenSinkの動きを見てる我々にはいささかツライというかツマラナイと感じるかもしれません。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224846.png
+
+== app.jsからすべてはじまる ==
+Titanium MobileのアプリケーションはすべてResources/app.jsから起動されます。
+
+=== app.jsを見る ===
+実際に生成されたソースコードを見てみましょう。(空行を間引いています)
+{{{
+// this sets the background color of the master UIView (when there are no windows/tab groups on it)
+Titanium.UI.setBackgroundColor('#000');
+
+// create tab group
+var tabGroup = Titanium.UI.createTabGroup();
+
+// create base UI tab and root window
+var win1 = Titanium.UI.createWindow({  
+    title:'Tab 1',
+    backgroundColor:'#fff'
+});
+var tab1 = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'Tab 1',
+    window:win1
+});
+var label1 = Titanium.UI.createLabel({
+    color:'#999',
+    text:'I am Window 1',
+    font:{fontSize:20,fontFamily:'Helvetica Neue'}
+});
+win1.add(label1);
+
+// create controls tab and root window
+var win2 = Titanium.UI.createWindow({  
+    title:'Tab 2',
+    backgroundColor:'#fff'
+});
+var tab2 = Titanium.UI.createTab({  
+    icon:'KS_nav_ui.png',
+    title:'Tab 2',
+    window:win2
+});
+var label2 = Titanium.UI.createLabel({
+    color:'#999',
+    text:'I am Window 2',
+    font:{fontSize:20,fontFamily:'Helvetica Neue'}
+});
+win2.add(label2);
+
+//  add tabs
+tabGroup.addTab(tab1);  
+tabGroup.addTab(tab2);  
+
+// open tab group
+tabGroup.open();
+}}}
+
+やっていることは次のような流れです。
+
+ * ベースの背景色を黒(#000)にする
+ * TabGroupを生成し、
+  ** そこに格納するためのTab(タブのアイコンやタイトルも指定している)とWindowを生成する
+   *** WindowにはLabelを配置する
+   *** TabにWindowを格納し
+  ** TabGroupにTabを格納し、
+ * TabGroupを表示する
+
+この結果、次のような親子関係になっています。
+
+ * app.js(MasterUIView)
+  ** tabGroup
+   *** tab1
+     **** win1
+       ***** label1
+   *** tab2
+    **** win2
+     ***** label2
+
+=== app.jsからwindow単位のJavaScriptファイルへの分離 ===
+このように画面生成・ロジック記述（そしてここには含まれませんがイベント処理）も含めてすべてJavaScriptで記述するというシンプルな思想によってTitanium Mobileアプリケーションは開発していくことになります。
+
+
+とはいえ、このままではひたすらapp.jsが膨らんでいきますし、スコープ管理も大変ということになります。
+そこでJavaScriptのファイルを切り出すことができます。
+
+
+まず現状のtab1関連を再度抜き出してみます。
+{{{
+var win1 = Titanium.UI.createWindow({  
+    title:'Tab 1',
+    backgroundColor:'#fff'
+});
+var tab1 = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'Tab 1',
+    window:win1
+});
+var label1 = Titanium.UI.createLabel({
+    color:'#999',
+    text:'I am Window 1',
+    font:{fontSize:20,fontFamily:'Helvetica Neue'}
+});
+win1.add(label1);
+}}}
+
+現在ラベルがひとつだからいいですが、複数のUI部品が混ざってくるとソースの可読性は一気に悪くなります。
+
+
+そのため、上記ソースを次のように変えます。
+{{{
+var win1 = Titanium.UI.createWindow({  
+    title:'Tab 1',
+    backgroundColor:'#fff',
+    url: 'win1.js'
+});
+var tab1 = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'Tab 1',
+    window:win1
+});
+}}}
+変わったのはcreateWindowの引数にurlプロパティが追加されている部分、label1の定義とwin1への追加部分が削除されている部分です。
+
+これによりwin1の表示時にwin1.jsという外部のJavaScriptファイルをロードし、実行するという流れになります。
+
+
+呼び出される側のwin1.jsを同じ Resorces フォルダに作成します。内容は次のようになります。
+{{{
+// win1.js
+var label1 = Titanium.UI.createLabel({
+    color:'#999',
+    text:'I am Window 1',
+    font:{fontSize:20,fontFamily:'Helvetica Neue'}
+});
+Titanium.UI.currentWindow.add(label1);
+}}}
+win1.jsで新しく登場したのがTitanium.UI.currentWindowというプロパティです。
+
+win1.jsを評価している最中の currentWindow とはすなわち app.js における win1 なので、ここには win1 のオブジェクトがセットされます。
+
+そのため最終的な結果は同じようになります。
+
+(実際には生成処理の評価タイミングが違うために表示の待ち時間が発生するようになる)
+
+
+このようにwindow単位でjsファイルを分割していくと、処理と画面をコンパクトに記述でき、また管理もしやすくなります。
+
+=== 部品配置とイベントリスナへの登録 ===
+もう少し win1.js に画面部品を追加してしていこうと思います。
+
+{{{
+// よく使うのでこのように再定義しておくと便利です。
+var win    = Titanium.UI.currentWindow;
+
+// 一段Viewを間に挟むようにします。
+var view   = Ti.UI.createView();
+
+// label1に表示位置の指定を追加します。
+var label1 = Titanium.UI.createLabel({
+    color:'#999',
+    text:'I am Window 1',
+    font:{fontSize:20,fontFamily:'Helvetica Neue'},
+    height: 32,
+    width: 200,
+    top:80
+});
+
+// button1を生成します。
+var button1 = Ti.UI.createButton({
+    title: 'touch me',
+    height: 32,
+    width: 120,
+    top: 120
+});
+
+// win←viewに部品を追加します
+view.add(label1);
+view.add(button1);
+win.add(view);
+
+// ボタンクリック時のイベント
+button1.addEventListener('click', function(){
+    Titanium.UI.createAlertDialog({
+        title:   'タイトル',
+        message: 'クリックされました'
+    }).show();
+});
+}}}
+
+ボタンを一つ追加し、そのクリックイベントを定義してみました。
+
+部品の位置の指定方法はCSSでの指定に準拠しています。
+
+幅や高さを指定しないと目一杯取られたりする点だけ注意しましょう。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227085107.png
+
+
+またイベントリスナの登録については（一部の例外をのぞき）次のように記述されます。
+
+{{{
+object.addEventListener('EVENT_NAME', function(event){
+    // コールバック無名関数
+});
+}}}
+
+まずはwin2側もjsファイル化してみて、同じようにボタンをいくつか配置してみて慣れてみましょう。
+
+== Tinitanium MobileでサポートされているUI部品の紹介 ==
+基本的にiPhone SDKのUIKitでサポートされているものがベースとなります。
+
+そこから離れた描画などは現時点ではあまり得意ではなさそうですが、今後OpenGLへの対応がモジュール的にされそうではあります。
+
+
+ともあれ、どのようなものがサポートされているかを駆け足になりますがご紹介していこうと思います。
+
+=== BaseUI - TabGroup → Tab → Window ===
+TabGroupとは次の画像で画面下部の黒背景でアイコンが並んでいる部分を総称します。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190651.png
+
+
+TabGroupには複数のTabを所属させる事ができます。
+
+Tab自体はTabGroup上のアイコンとして表現され、その実態はそれぞれのTabが保有するWindowになるという入れ子構造になっています。
+
+
+上記の例ではTabGroupには5つのTabがあり、そのうち一番左に位置する"Base UI"というタイトルの付いているTabが選択されており、TabGroupの上方に表示されているのは"Base UI"Tabが保有するWindowであるという状態になります。
+
+ちなみにapp.jsでTabGroupを宣言せず、いきなりWindowを生成し表示する事も可能です。
+その場合は画面上にTabGroupはもちろん表示されずにWindowのみが表示されるようになります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190652.png
+{{{
+//app.js
+var win1 = Titanium.UI.createWindow({  
+    title:'Tab 1',
+    backgroundColor:'#fff'
+});
+var label1 = Titanium.UI.createLabel({
+    color:'#999',
+    text:'I am Window 1',
+    font:{fontSize:20,fontFamily:'Helvetica Neue'}
+});
+win1.add(label1);
+win1.open();
+}}}
+
+=== BaseUI - Dialog ===
+対話式のボタン選択画面としてTitanium Mobileでは２種類のDialogを持っています。
+
+Alert Dialogはこのような表示であり、
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190653.png
+
+Options Dialogはこのような表示になります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190654.png
+
+
+それぞれclickイベントでボタンのindexを返すため処理の分岐を行う事ができます。
+
+
+また、Email作成用の専用ダイアログ(Email Dialog)が別途用意されています。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227194846.png
+
+=== BaseUI - Statusbar, NavBar, Toolbar === 
+以下の画像でそれぞれの部品を説明します。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190702.png
+
+
+まず一番上の電波状態や時刻などが表示されている部分がStatusbarといいます。
+
+Statusbar自体はあまりプログラム的な制御をかけることができません。可能なのは3種類の表示色のいずれかを選択するか、表示させないかの否かの制御だけです。
+
+
+続いて「Window Constructor」やドクロアイコンなどが並んでいる場所がNavbarといいます。
+
+NavbarにはLeftButton、Title、RightButtonの三つのエリアがあり、それぞれ部品を配置できます。Buttonと称していますがButtonでなくても別に構いません。
+
+
+そしてTabGroupの上に「Left」「Right」というボタンが並んでいる部分がToolbarです。
+
+ちなみにiPhoneではUIのデザインについて基準を提示しており、それに適していない画面設計をしているとAppStoreの審査でrejectされることがありますので、そういったことも画面作成時に意識する必要があります。
+
+=== BaseUI - Views === 
+Viewは(原則的に)Windowの内側に配置される表示部です。
+
+場合によってはViewを含む他のコントロールのコンテナ（親）になります。
+
+=== Views - CoverflowView ===
+画像を左右にスクロールさせながら拡大表示するカバーフローもこのViewを利用すれば、画像の配列を渡すだけで簡単に実現できます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190655.png
+
+=== Views - WebView ===
+純粋にHTMLサイトを表示するためのViewです。
+safariアプリで開けるサイト／情報はすべて表示できると考えてください。
+
+また直接HTML文字列を引き渡す事も可能ですので、動的に生成したHTMLによる多彩な表現をすることができます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195104.png
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195105.png
+
+=== Views - TableView ===
+TableViewは出来る事が多岐にわたっているため、大変奥が深いものになっています。
+
+
+このような端的な行選択だけでなく...
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190656.png
+
+このように各行に対するレイアウトデザインすることも可能です。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190657.png
+
+また、「設定」画面のようなグループ表示もTableViewの一環としてサポートされていますので、作法もTableViewに則る必要があったりします。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190658.png
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190659.png
+
+=== Views - ScrollView ===
+スクロール可能なViewです。スワイプやボタンによるアクションでスクロールさせることが可能になります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190700.png
+
+=== Views - ImageView ===
+画像表示が可能なViewです。画像のアニメーションもさせることができます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190701.png
+
+=== Views - MapView ===
+地図表示が可能なViewです。単体では下の例のようなツールバーはついていません。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195106.png
+
+=== Controls - Label ===
+文字を表示するコントロールですが、clickイベントも受け取る事が出来るので疑似的なボタンとしての活用も可能です。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190703.png
+
+=== Controls - Button/SystemButtons ===
+ボタンを表示するコントロールです。文字表示だけではなくアイコン表示も可能です。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190704.png
+
+一部の規定のアイコンを使用する場合はSystemBottons列挙体で宣言されている定数を利用する形になります。（下の例ではNavbarやToolbarに使用されている画像がそれにあたります）
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190707.png
+
+=== Controls - TextField ===
+テキスト入力（1行）をするためのコントロールです。多岐にわたる初期設定により随分表情の変わるコントロールだと言えるでしょう。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190705.png
+
+=== Controls - TextArea ===
+こちらは複数行のテキスト入力を行うためのコントロールです。
+
+TextFieldに比べると若干設定可能な内容は減ります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190706.png
+
+=== Controls - Switch ===
+ON/OFFの切り替えのみを行うコントロールです。主に設定画面で使う形になるでしょうか。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190712.png
+
+=== Controls - TabbedBar ===
+こちらはON/OFFに限らない状態を切り替えるコントロールです。(iPhone依存)
+
+他のOSやWebアプリケーションにおけるラジオボタンと同等の位置づけと考えればよいでしょう。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190713.png
+
+=== Controls - ButtonBar(iPhone依存) ===
+見た目はTabbedBarにそっくりですが、こちらは状態を持ちません。
+
+ボタンの集合として利用します。NavbarやToolbarとの相性がよいと思われます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190714.png
+
+=== Controls - Toolbar(iPhone依存) ===
+Windowの直下にあるToolbarとは別に局所的な機能としてのToolbarになります。
+
+キーボードツールバーはTextField/TextAreaでサポートされているので、いまいち使いどころが難しいかもしれませんが。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190715.png
+
+=== Controls - Slider ===
+数値をアナログに指定するコントロール。ボリュームや数量などの値を指定するのに利用されます。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190717.png
+
+=== Controls - Picker ===
+コンボボックスに相当する複数の候補から項目をドラム式に選択させるコントロールです。
+
+項目が多すぎると正直使い勝手が悪いので、そういうときはTableViewなどで外に出せないか考慮する必要があるかもしれません。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190718.png
+
+=== Controls - SearchBar ===
+検索用のツールバーです。大体TableViewなどとセットで登場するかたちになります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190719.png
+
+=== Controls - ActivityIndicator ===
+現在（なんらかの）処理中であることを示すアイコンとメッセージを表示するコントロール。
+
+ロード中など何かしているように動きをみせないとフリーズしているようにしか見えないから要注意とかつてログインで木屋さんが言っていた気がします（古すぎる）。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190720.png
+
+=== Controls - Progress Bar ===
+進捗表示を行うコントロールです。
+
+進捗を返すイベントリスナとセットで利用することになるでしょう。
+
+たとえば、ダウンロードやアップロードの状態を返すイベントなどが対象になります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190721.png
+
+== KitchenSinkを覗いてみる ==
+「あのコントロールはどうやって配置するのか？」とか「もっと生成時の引数に指定がいろいろできるんじゃないのか」といった疑問が出てくると思います。
+
+そんなときは初めに触ったKitchenSinkの中身（ソースプログラム）をみるのが一番のお勉強になります。
+
+まずはapp.jsを開き、そこから辿っていってもいいのですが、/Resources/examplesフォルダ内に各jsファイルがそれなりのキーワードで転がっていることが分かると思います。UI部品ならその部品名で見たり、あるいはcameraやnetworkといったキーワードベースで見る事もできるでしょう。
+
+コードサンプルとして積極的に活用しましょう。
+（APIリファレンスも整ってないので...）
