@@ -1,5 +1,7 @@
 #summary Native UI案内 - iPhone - Text Field
 #labels ui,obsoluted
+この内容はTitanium 0.8以前向けのものです。そのため最新版には適合していない事をご注意ください。
+
 = Native UI案内 - iPhone - Text Field =
 言わずもがなのテキスト入力を行うためのコントロールです。HTMLのテキストフィールドに比べて、キーボードの制御など事細かに設定できる点、またキーボードツールバーを設定できる点などが大きく異なるメリットになります。
 
