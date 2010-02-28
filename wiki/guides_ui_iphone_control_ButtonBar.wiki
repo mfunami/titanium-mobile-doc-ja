@@ -39,12 +39,16 @@ Titanium.UI.currentWindow.setTitleControl(buttonBar1);
 // Toolbarの中央に配置
 Titanium.UI.currentWindow.setToolbar([flexSpace, buttonBar2, flexSpace]);
 
-// HTML div要素 id = 'buttonbar' の部分に配置
+// コンテンツエリアに配置
 var buttonbar = Titanium.UI.createButtonBar({
-    id:'buttonbar',
     labels:['Button3', 'Button4'],
-    backgroundColor:'#336699'
+    backgroundColor:'#336699',
+    top:50,
+    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+    height:25,
+    width:200
 });
+Titanium.UI.currentWindow.add(buttonbar);
 buttonbar.addEventListener('click', function(e){
    // e.indexにクリックされたボタンのindexがセットされます
 });
