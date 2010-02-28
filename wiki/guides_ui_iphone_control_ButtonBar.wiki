@@ -1,7 +1,5 @@
 #summary Native UI案内 - iPhone - Button Bar
-#labels ui,obsoluted
-
-この内容はTitanium 0.8以前向けのものです。そのため最新版には適合していない事をご注意ください。
+#labels ui
 
 = Native UI案内 - iPhone - Button Bar =
 Button Barとは次の画像のNav Barの中央, コンテンツエリアの上段、ToolBarのそれぞれに配置されているコントロールのことをさします。
