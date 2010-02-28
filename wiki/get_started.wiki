@@ -504,7 +504,7 @@ object.addEventListener('EVENT_NAME', function(event){
 
 ともあれ、どのようなものがサポートされているかを駆け足になりますがご紹介していこうと思います。
 
-=== BaseUI - TabGroup → Tab → Window ===
+=== BaseUI - Tab Group → Tab → Window ===
 TabGroupとは次の画像で画面下部の黒背景でアイコンが並んでいる部分を総称します。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190651.png
@@ -555,7 +555,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190654.png
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227194846.png
 
-=== BaseUI - Statusbar, NavBar, Toolbar === 
+=== BaseUI - Statusbar, Nav Bar, Toolbar === 
 以下の画像でそれぞれの部品を説明します。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190702.png
@@ -721,4 +721,5 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190721.png
 まずはapp.jsを開き、そこから辿っていってもいいのですが、/Resources/examplesフォルダ内に各jsファイルがそれなりのキーワードで転がっていることが分かると思います。UI部品ならその部品名で見たり、あるいはcameraやnetworkといったキーワードベースで見る事もできるでしょう。
 
 コードサンプルとして積極的に活用しましょう。
+
 （APIリファレンスも整ってないので...）
