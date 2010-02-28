@@ -1,5 +1,7 @@
 #summary Native UI案内 - iPhone - WebView
 #labels ui,obsoluted
+この内容はTitanium 0.8以前向けのものです。そのため最新版には適合していない事をご注意ください。
+
 = Native UI案内 - iPhone - WebView =
 
 WebViewには純粋にHTML, CSS, Javascriptのみで構成されるWebViewとそれらとNativeUIのコントロールが混在するCompositeView(TItanium Mobileの用語と考えてください)の２種類があります。
