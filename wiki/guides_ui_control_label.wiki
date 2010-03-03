@@ -1,0 +1,57 @@
+#summary Native UI案内 - Label
+#labels ui
+= Native UI案内 - Label =
+文字を表示するコントロールです。
+
+一応、clickイベントも受け取る事が出来るので疑似的なボタンとしての活用も可能ですが、あまりお勧めできません。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190703.png
+
+{{{
+var win = Titanium.UI.currentWindow;
+
+var l1 = Titanium.UI.createLabel({
+	text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+	width:200,
+	height:150,
+	top:10,
+	color:'#336699',
+	textAlign:'center'
+});
+
+win.add(l1);
+
+var l2 = Titanium.UI.createLabel({
+	text:'Appcelerator',
+	height:50,
+	width:'auto',
+	shadowColor:'#aaa',
+	shadowOffset:{x:5,y:5},
+	color:'#900',
+	font:{fontSize:48},
+	top:170,
+	textAlign:'center'
+});
+
+win.add(l2);
+
+// 中略
+
+var b2 = Titanium.UI.createButton({
+	title:'Change Label 2',
+	height:40,
+	width:200,
+	top:280
+});
+b2.addEventListener('click', function(){
+	l2.color = '#ff9900';
+	l2.shadowColor = '#336699';
+	l2.font = {fontSize:20};
+});
+win.add(b2);
+}}}
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
