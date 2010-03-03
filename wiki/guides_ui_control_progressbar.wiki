@@ -1,0 +1,39 @@
+#summary Native UI案内 - Progress Bar
+#labels ui
+= Native UI案内 - Progress Bar =
+進捗表示を行うコントロールです。
+
+進捗を返すイベントリスナとセットで利用することになるでしょう。
+
+たとえば、ダウンロードやアップロードの状態を返すイベントなどが対象になります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190721.png
+
+{{{
+var ind=Titanium.UI.createProgressBar({
+	width:150,
+	min:0,
+	max:10,
+	value:0,
+	height:70,
+	color:'#888',
+	message:'Downloading 0 of 10',
+	font:{fontSize:14, fontWeight:'bold'},
+	style:Titanium.UI.iPhone.ProgressBarStyle.PLAIN,
+	top:60	
+});
+var interval = setInterval(function(){
+	if (ind.val == 10){
+		clearInterval(interval);
+		ind.hide();
+		return;
+	}
+	ind.value = ind.value + 1;
+	ind.message = 'Downloading ' + val + ' of 10';
+},1000);
+}}}
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
