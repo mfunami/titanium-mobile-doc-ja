@@ -1,7 +1,7 @@
 #summary Appcelerator Titanium Mobileについて
 #labels about
 = Appcelerator Titanium Mobileについて =
-Appcelerator Titanium Mobile(以下、Titanium Mobile)とは[http://www.appcelerator.com/ Appcelerator社]が提供するモバイルデバイス向けのソフトウェア開発環境です。
+Appcelerator Titanium Mobileとは[http://www.appcelerator.com/ Appcelerator社]が提供するモバイルデバイス向けのソフトウェア開発環境です。
 
 (ちなみにTitaniumは「チタニウム」ではなく「タイタニウム」と発音するようです)
 
