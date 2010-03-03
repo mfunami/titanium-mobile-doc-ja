@@ -115,6 +115,17 @@ catch(error){
 URLに直接ユーザ名とパスワードを埋め込む方式です。
 このあたりは今後改善されていくと信じたいところです。
 
+== リクエストヘッダの追加 ==
+{{{
+// UAの指定
+xhr.setRequestHeader('User-Agent','Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A537a Safari/419.3');
+
+// 認証系情報
+xhr.setRequestHeader('Authorization','Basic '+Ti.Utils.base64encode(username.value+':'+password.value));
+}}}
+
+
+
 == ちなみにサーバ化はできません。 ==
 現状(Ver.0.8.1)のTitanium Mobileで提供されている標準機能ではサーバとなる機能はありませんので、他のデバイスと連携するようなアプリケーションを構築することはできません。(Desktop版にはあるのですが)
 
