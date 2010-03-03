@@ -1,46 +1,36 @@
 #summary Appcelerator Titanium Mobileについて
 #labels about
 = Appcelerator Titanium Mobileについて =
-Titanium Mobile（タイタニウム・モバイル）がそもそもなんなのかというところなのですが、次のslideshareのスライドで端的にまとまっています。
+Appcelerator Titanium Mobile(以下、Titanium Mobile)とは[http://www.appcelerator.com/ Appcelerator社]が提供するモバイルデバイス向けのソフトウェア開発環境です。
 
-http://www.slideshare.net/marshall_law/titanium-mobile-intro
+(ちなみにTitaniumは「チタニウム」ではなく「タイタニウム」と発音するようです)
 
-== 特徴 ==
 
- * HTML5, CSS, CanvasといったWebの標準技術でUIを構成できる
- * JavascriptのソースをiPhone(3.x)とAndroid(1.5)をネイティブコードに変換
-  ** ブリッジとしての動作もしているようなので、すべてがObjective-CやJavaのソースになってるわけではなさそう
- * 高速なJavascript APIでwidgetやviewを操作
+プログラミング言語としてはJavaScriptのみを利用します。
 
-通常のHTML5でWebアプリケーションを作る際に制約がありできないことが可能になります。
+それだけでiPhone/Android向けのネイティブアプリケーションを開発できることがウリとなっています。
 
- * Native UI（Javascriptから生成・操作）
- * 音楽・動画再生
- * カメラ撮影（動画も可）
- * GPS、コンパス（safariからは使えますが…）
- * 加速度センサー（簡易的にシェイク・縦横回転を認識するイベントもあり）
- * XMLHttpRequest風のHTTPClient API(crossdomainも可能)
+Objective-CやJavaでコーディングする必要は一切ありません。
 
-こういうものでMobileアプリケーションを開発していきましょう！っていう環境・ミドルウェアをTitanium Mobileというわけです。
 
-== 情報源 ==
+もちろんJavaScriptだからといってWebインタフェイスのみをサポートしているわけではありません。
 
-主な情報源は順当過ぎるのですが、公式サイトになります。
+以下に挙げる全ての機能を実現できるようになっています。
 
- * http://www.appcelerator.com/
- * http://www.codestrong.com/timobile/
- * http://github.com/appcelerator/titanium_mobile/tree/master/demos/KitchenSink/
+ * ラベル・テキスト入力・ボタン・スライダーなどの豊富なネイティブUI部品
+ * 地図表示
+ * 画像・動画の再生・撮影・録画
+ * ファイルシステム
+ * ネットワーク通信
+ * ハードウェアデバイス(カメラ・GPS・電子コンパス・加速度センサ)の利用
+ * デバイス内データベース(連絡先など)の操作
+ * SQLiteデータベースのI/O
 
-が、思いのほか点在しているため、知りたい情報がそこにない！みたいなことが多々発生します。
+プラットフォームに依存した機能を利用しない限り、基本的にサポートされるプラットフォーム全てに対してにコードを転用できると謳われていますので、JavaScriptによる開発効率の向上だけではなくマルチプラットフォーム展開を少ないコストで実現できることも魅力のひとつとなっています。
 
-だからこそぼくもこうやって情報をまとめようとしているわけですが(^^；
 
-ってことで、今後は上記のドキュメント類を目次・逆引きベースでたどれるようにまとめていくことが目的になります。
+現時点で対応しているプラットフォームとしては前掲したiPhone OSとAndroidのみになりますが、今後も追加されていく予定があります。
 
-なので、もっと先に知りたいって向きは上記サイト群を目を皿のようにしてチェックしていきましょう！
+(iPadは2010年3月中に対応するようです)
 
-そして情報共有しましょう！！
-
-----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
+また、兄弟製品として[http://www.appcelerator.com/products/titanium-desktop-application-development/ Titanium Desktop]があり、こちらはWindows, Mac OSX, Linuxというマルチプラットフォームで動作するデスクトップアプリケーションを開発できる環境も提供されています。
