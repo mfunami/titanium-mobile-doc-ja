@@ -1,0 +1,25 @@
+#summary Native UI案内 - Table View(未完)
+#labels ui
+= Native UI案内 - Table View =
+標準的なTableViewは次のような単純な行選択をするためのUIになります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190656.png
+
+このように各行に対するレイアウトデザインすることも可能です。 
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190657.png
+
+また「設定」画面のようなグループ表示もTableViewの一環としてサポートされていますので、作法もTableViewに則る必要があります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190658.png
+
+== 標準的なTableView ==
+
+== レイアウト ==
+
+== 設定 ==
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
