@@ -1,0 +1,53 @@
+#summary Native UI案内 - Map View
+#labels UI
+= Native UI案内 - Map View =
+地図表示が可能なViewです。
+
+単体では下の例のようなツールバーはついていません。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195106.png
+
+{{{
+// マーカーはAnnotationオブジェクトとして表現される。
+var atlanta = Titanium.Map.createAnnotation({
+	latitude:33.74511,
+	longitude:-84.38993,
+	title:"Atlanta, GA",
+	subtitle:'Atlanta Braves Stadium',
+	pincolor:Titanium.Map.ANNOTATION_PURPLE,
+	animate:true,
+	leftButton:'images/atlanta.jpg',
+	rightButton: Titanium.UI.iPhone.SystemButton.DISCLOSURE,
+	myid:3 // CUSTOM ATTRIBUTE THAT IS PASSED INTO EVENT OBJECTS	
+});
+// MapViewオブジェクトを作成する。
+var mapview = Titanium.Map.createView({
+	mapType: Titanium.Map.STANDARD_TYPE,
+	region: {latitude:33.74511, longitude:-84.38993, latitudeDelta:0.01, longitudeDelta:0.01},
+	animate:true,
+	regionFit:true,
+	userLocation:true,
+	annotations:[atlanta]
+});
+Ti.UI.currentWindow.add(mapview);
+}}}
+
+== MapType ==
+地図の表示方法には3種類用意されています。
+ * Titanium.Map.STANDARD_TYPE
+ * Titanium.Map.SATELLITE_TYPE
+ * Titanium.Map.HYBRID_TYPE
+
+== 拡大縮小 ==
+zoomメソッドがあり、引数に縮尺の変化を指示するかたちとなっています。
+{{{
+// zoom in
+mapview.zoom(1);
+// zoom out
+mapview.zoom(-1);
+}}}
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
