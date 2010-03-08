@@ -1,4 +1,5 @@
 #summary Native UI案内 - Image View
+#labels ui
 = Native UI案内 - Image View =
 画像表示が可能なViewです。
 
