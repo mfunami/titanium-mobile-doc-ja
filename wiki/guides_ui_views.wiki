@@ -28,10 +28,10 @@ Titanium.UI.currentWindow.animate({
 
 アニメーションスタイルには次の４つがあります。
 
- * Titanium.UI.iPhone.AnimationStyle.CURL_UP
- * Titanium.UI.iPhone.AnimationStyle.CURL_DOWN
- * Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
- * Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+ * {{{Titanium.UI.iPhone.AnimationStyle.CURL_UP}}}
+ * {{{Titanium.UI.iPhone.AnimationStyle.CURL_DOWN}}}
+ * {{{Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT}}}
+ * {{{Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT}}}
 
 == Viewのイベント ==
 View系のオブジェクトには共通して以下のようなイベントをハンドリングできるようになっています。
