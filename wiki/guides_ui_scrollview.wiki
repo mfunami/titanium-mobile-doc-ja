@@ -1,0 +1,37 @@
+#summary Native UI案内 - Scroll View(未完)
+#labels ui
+= Native UI案内 - Scroll View =
+スクロール可能なViewです。
+
+スワイプやボタンによるアクションでスクロールさせることが可能になります。 
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190700.png
+
+{{{
+var view1 = Ti.UI.createView({
+    backgroundColor: 'red'
+});
+var view2 = Ti.UI.createView({
+    backgroundColor: 'blue'
+});
+var view3 = Ti.UI.createView({
+    backgroundColor: 'green'
+});
+var view4 = Ti.UI.createView({
+    backgroundColor: 'black'
+});
+// 上記のviewを配列としてviewsプロパティに引き渡します。
+var scrollView = Titanium.UI.createScrollableView({
+    views: [view1,view2,view3,view4],
+    showPagingControl: true,
+    pagingControlHeight: 30,
+    maxZoomScale: 2.0
+});
+// スクロールビューを配置する
+Titanium.UI.currentWindow.add(scrollView);
+}}}
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
