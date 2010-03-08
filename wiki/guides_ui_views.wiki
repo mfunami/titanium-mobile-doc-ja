@@ -1,0 +1,87 @@
+#summary Native UI案内 - iPhone - View(共通)
+#labels ui
+
+= Native UI案内 - iPhone - View(共通) =
+Titanium MobileのwindowにはView、もしくはControlを格納できます。
+
+複雑なUI制御をする際にはWindow上に直接Controlを配置するのではなく、Viewの上に配置していくのが妥当となります。
+
+== WindowへのViewの追加と表示 ==
+生成されたViewは必ずWindowもしくはViewに追加しなければ利用できません。
+{{{
+// 新たに作られた myView を追加する
+Titanium.UI.currentWindow.add(myView);
+}}}
+
+== Viewを表示する ==
+最後に追加されたViewがWindow上では初期表示されますが、他の追加しておいたViewに切り替えたり、最初から{{{visible: false}}}として追加したViewを表示させるには{{{window#animate}}}を実行する事により、表示させる事が出来ます。
+
+その際にtransitionプロパティを指定する事により、すでに用意されているアニメーションを簡単に実行できます。
+
+次の例では左へフリップするアニメーションで表示します。
+{{{
+// myViewはすでにあるものとする
+Titanium.UI.currentWindow.animate({
+    view: myView,
+    transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+});
+}}}
+
+アニメーションスタイルには次の４つがあります。
+
+ * Titanium.UI.iPhone.AnimationStyle.CURL_UP
+ * Titanium.UI.iPhone.AnimationStyle.CURL_DOWN
+ * Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+ * Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+
+== Viewのイベント ==
+View系のオブジェクトには共通して以下のようなイベントをハンドリングできるようになっています。
+{{{
+// タッチ開始
+view.addEventListener('touchstart', function(e){
+    // e.x, e.y：座標
+});
+// タッチしながら移動
+view.addEventListener('touchmove', function(e){
+    // e.x, e.y：座標
+});
+// タッチ終了
+view.addEventListener('touchend', function(e){
+    // e.x, e.y：座標
+});
+// タッチ中止
+view.addEventListener('touchcancel', function(e){
+    // e.x, e.y：座標
+});
+// シングルタップ
+view.addEventListener('singletap', function(e){
+    // e.x, e.y：座標
+});
+// ダブルタップ
+view.addEventListener('doubletap', function(e){
+    // e.x, e.y：座標
+});
+// 二本指でのシングルタップ
+view.addEventListener('twofingertap', function(e){
+    // e.x, e.y：座標
+});
+// スワイプ
+view.addEventListener('swipe', function(e){
+    // e.x, e.y：座標
+    // e.direction：スワイプの向き(left | right)
+});
+// クリック
+view.addEventListener('click', function(e){
+    // e.x, e.y：座標
+});
+// ダブルクリック
+view.addEventListener('dblclick', function(e)
+{
+    // e.x, e.y：座標
+});
+}}}
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
