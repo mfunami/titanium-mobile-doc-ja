@@ -1,5 +1,5 @@
 #summary Native UI案内 - Map View
-#labels UI
+#labels ui
 = Native UI案内 - Map View =
 地図表示が可能なViewです。
 
