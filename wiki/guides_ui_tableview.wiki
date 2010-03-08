@@ -12,6 +12,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190657.png
 また「設定」画面のようなグループ表示もTableViewの一環としてサポートされていますので、作法もTableViewに則る必要があります。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190658.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190659.png
 
 == 標準的なTableView ==
 
