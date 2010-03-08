@@ -1,6 +1,5 @@
 #summary Native UI案内 - iPhone - View(共通)
 #labels ui
-
 = Native UI案内 - iPhone - View(共通) =
 Titanium MobileのwindowにはView、もしくはControlを格納できます。
 
@@ -75,8 +74,7 @@ view.addEventListener('click', function(e){
     // e.x, e.y：座標
 });
 // ダブルクリック
-view.addEventListener('dblclick', function(e)
-{
+view.addEventListener('dblclick', function(e){
     // e.x, e.y：座標
 });
 }}}
