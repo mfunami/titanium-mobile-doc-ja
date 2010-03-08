@@ -1,4 +1,4 @@
-#summary Native UI案内 - Scroll View(未完)
+#summary Native UI案内 - Scroll View
 #labels ui
 = Native UI案内 - Scroll View =
 スクロール可能なViewです。
