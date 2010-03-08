@@ -1,9 +1,9 @@
-#summary Native UI案内 - iPhone - View(共通)
+#summary Native UI案内 - View(共通)
 #labels ui
-= Native UI案内 - iPhone - View(共通) =
+= Native UI案内 - View(共通) =
 Titanium MobileのwindowにはView、もしくはControlを格納できます。
 
-複雑なUI制御をする際にはWindow上に直接Controlを配置するのではなく、Viewの上に配置していくのが妥当となります。
+複雑なUI制御をする際にはWindow上に直接Controlを配置するのではなく、Viewの上に配置していくほうが制御しやすいです。
 
 == WindowへのViewの追加と表示 ==
 生成されたViewは必ずWindowもしくはViewに追加しなければ利用できません。
