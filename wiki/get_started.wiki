@@ -8,10 +8,10 @@
  Windowsでは開発は できませんのでご注意ください。
  
  
- また（本稿ではそこまで行きませんが）実機での動作検証・AppStoreへのアプリケーションの登録配布には[http://developer.apple.com/jp/iphone/program/ iPhone Developer Program]への参加(有償)が必要となります。
+ また（本稿ではそこまで行きませんが）実機での動作検証・App Storeへのアプリケーションの登録配布には[http://developer.apple.com/jp/iphone/program/ iPhone Developer Program]への参加(有償)が必要となります。
  
  
- なお、Appcelerator Titanium Mobileは本文中でも触れている通りAndroid向けの開発も可能ですが、iPhone向けの開発にフォーカスして記述されていますので、その点ご容赦ください。
+ なお、Appcelerator Titanium Mobileは本文中でも触れている通りAndroid向けの開発も可能ですが、iPhone SDK向けの開発にフォーカスして記述されていますので、その点ご容赦ください。
  
 
 ----
@@ -26,7 +26,7 @@ Appcelerator Titanium Mobile(以下、Titanium Mobile)とは[http://www.appceler
 
 プログラミング言語としてはJavaScriptのみを利用します。
 
-それだけでiPhone/Android向けのネイティブアプリケーションを開発できることがウリとなっています。
+それだけでiPhone SDK/Android SDK向けのネイティブアプリケーションを開発できることがウリとなっています。
 
 Objective-CやJavaでコーディングする必要は一切ありません。
 
@@ -76,14 +76,15 @@ Titanium Mobileでの開発を始める前に、上記のようにiPhone SDKの�
 ||目指せ！iPhoneアプリ開発エキスパート | gihyo.jp||[http://gihyo.jp/dev/serial/01/iphone/0009]||
 
 === エディタの準備 ===
-私も最初勘違いしていたのですが、Titanium DeveloperはIDEではありません。
+Titanium DeveloperはIDEではありません。(私は最初勘違いしていたのですが...)
 
 
 むしろビルド専用環境といってもいいフロントエンドプログラムなので、ソースプログラムの修正すらできません。
+
 なんらかのエディタを準備してください。
 
 
-Appceleratorの中の人たちはTextMateを使ってるようですが、エディタなら何でも構いません。
+Appceleratorの中の人たちはTextMateなどを使ってるようですが、エディタなら何でも構いません。
 
 
 手になじんだエディタをご用意ください。
@@ -99,14 +100,6 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100221/20100221210219.png
 [http://www.appcelerator.com/products/download/ こちらのページ]を開くと自動的にインストーライメージファイル(Titanium Developer.dmg)をダウンロード開始しますので、完了後インストールしてください。
 
 アプリケーションとしては「Titanium Developer」としてインストールされます。
-
-*(註記)0.9.2について*
-
-現在リリースされているTitanium Mobile 0.9.2については手動でzip形式で配布されているパッケージを所定のパスにコピーする必要があります。
-
- * [http://timobile.appcelerator.com.s3.amazonaws.com/mobilesdk-0.9.2-osx.zip:title=mobilesdk-0.9.2-osx.zip]をダウンロードします。(7.49MBぐらい)
- * ZIPファイルを展開して、Finderなどで/Library/Application Support/Titaniumフォルダにコピーします。
- * Titanium Developerを起動すると、Mobile SDKの選択肢として0.9.2が追加されます。（すでに立ち上がっている場合は再起動する）
 
 === 起動画面 ===
 インストール後にTitanium Developer起動すると、次のような画面が表示されます。
@@ -152,7 +145,7 @@ KitchenSinkも同様にgithubで公開されています。
 http://github.com/appcelerator/KitchenSink
 
 
-取得にはgitクライアントは不要です。
+取得だけをする場合 gitクライアントは不要です。
 
 
 まず上記リンクにアクセスし、githubの右上「Download Source」を選択します。
@@ -164,30 +157,21 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226231335.png
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226231336.png
 
-*(註記)0.9.2では個別にダウンロードする必要があります。*
-
-以下のアドレスから直接ダウンロードしてください。
-
-http://timobile.appcelerator.com.s3.amazonaws.com/KS-0.9.2.zip
-
 === Kitchen Sinkを動かす ===
 続いて、KitchenSinkプロジェクトをTitanium Developerに取り込みます。
 
 
 Titanium Developerのツールバー「Import Project」を選択して、先ほど展開した先の /demos/KitchenSink フォルダを選択後「OK」ボタンをクリックすると、KitchenSinkプロジェクトがPROJECTS一覧に追加され、プロジェクト設定の編集画面が表示されます。
 
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226231913.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309230651.png
 
+続いて、画面上部右の「Test & Package」を選択すると、処理選択が表示されます。
 
-続いて、画面上部中央の「Test & Package」を選択すると、処理選択が表示されます。
-(Android SDKを登録していないと、Run Android Emulatorは表示されません)
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309224444.png
 
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224840.png
+ここでシミュレータを起動するプラットフォームを選択します。
 
-
-ここで「Run iPhone Emulator」を選択すると、無味乾燥な画面が表示されます。
-
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224841.png
+ここでは「iPhone」を選択します。
 
 
 画面中央を陣取る黒い部分は実行時のログ表示部になります。
@@ -198,11 +182,10 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224841.png
 画面下部には使用するSDKのバージョンやログレベルを選択するコンボボックスとシミュレータの起動と終了をするためのボタンが付いています。
 
 
-「Launch App」（ウィンドウ下部左側のボタン）をクリックすると、ビルドが開始されます。
+「Launch 」（ウィンドウ下部左側のボタン）をクリックすると、ビルドが開始されます。
 マシンスペックなどにも依存しますが、初回時（とTitanium Developerの立ち上げ直後）は比較的ビルド時間がかかる傾向があるようです。
 
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224843.png
-
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309231133.png
 
 表示内容を見ていただけば、内部でXcodeのコンパイラを呼び出しておりiPhoneネイティブのバイナリに変換しているということが分かっていただけのではないでしょうか。
 
@@ -212,7 +195,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224843.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226233327.png
 
 
-あれこれ言うより実際にシミュレータ上のデモを見て、どのようなことがTitanium Mobileで実現できるかを体感してください。((残念ながらデバイスハードウェア系（カメラ・加速度センサ・GPS・電子コンパスなど）を中心にiPhoneシミュレータでの動作がサポートされていない機能は使用できません。実機に転送する必要がありますが、本稿では触れません))
+あれこれ言うより実際にシミュレータ上のデモを見て、どのようなことがTitanium Mobileで実現できるかを体感してください。(残念ながらデバイスハードウェア系（カメラ・加速度センサ・GPS・電子コンパスなど）を中心にiPhoneシミュレータでの動作がサポートされていない機能は使用できません。実機に転送する必要がありますが、本稿では触れません)
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226233639.png
 
@@ -234,15 +217,13 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224836.png
 ||App Id||com.yourdomain.applicationname||アプリケーションを一意に判別するためのIDです。Javaの名前空間のようにドメイン名を反転させた名前の付け方をすることが推奨されています。（例：com.twitter.your_id.testapp）||
 ||Directory||/Users/your_account||ソースの生成先フォルダ。このフォルダに上記Nameで指定した名前のフォルダが作られます||
 ||Company / Personal URL||http://www.yourdomain.com/||Publisher URLという項目に反映されます||
-||Titanium SDK version||0.9.2||特段の問題がない限り、デフォルトになっている最新バージョンを使います||
-||JS Libraries (optional)||何も選択しない||ここでは選択していませんが、jQueryなどを使いたい場合これを選択します。(prototype.jsはなぜかビルド時にエラーになってしまうので選択しない事を現状おすすめせざるを得ません)||
+||Titanium SDK version||1.0.0||特段の問題がない限り、デフォルトになっている最新バージョンを使います||
 
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224837.png
-
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309231630.png
 
 そして「Create Project」ボタンをクリックすると、ひな形に基づいたフォルダ・ファイル群が Directory/Name なフォルダに自動生成され、画面もプロジェクト編集画面に遷移します。
 
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224838.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309230651.png
 
 
 このプロジェクト編集画面の上部にあるパス名(終端は省略されてますが)をクリックすると、Finderが起動し、該当フォルダを開いてくれます。
