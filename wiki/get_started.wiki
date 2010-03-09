@@ -208,7 +208,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226233639.png
 Titanium Developerのツールバーから「New Project」をクリックすると、New Project画面が立ち上がるので、必ずProject typeをデフォルトの「Desktop」から「Mobile」にするようにしてください。
 （Mobileに切り替えた後、iPhone SDKとAndroid SDKの検出を行うため、切替え直後、画面の下部のInstalled Mobile Platformsは緑チェックマークではありません）
 
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224836.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309231630.png
 
 ここではひとまずサンプルなので次のように入れてみましょう。
 ||*項目*||*設定値*|||*補足*||
@@ -218,8 +218,6 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224836.png
 ||Directory||/Users/your_account||ソースの生成先フォルダ。このフォルダに上記Nameで指定した名前のフォルダが作られます||
 ||Company / Personal URL||http://www.yourdomain.com/||Publisher URLという項目に反映されます||
 ||Titanium SDK version||1.0.0||特段の問題がない限り、デフォルトになっている最新バージョンを使います||
-
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309231630.png
 
 そして「Create Project」ボタンをクリックすると、ひな形に基づいたフォルダ・ファイル群が Directory/Name なフォルダに自動生成され、画面もプロジェクト編集画面に遷移します。
 
