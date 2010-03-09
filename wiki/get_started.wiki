@@ -53,7 +53,7 @@ Objective-CやJavaでコーディングする必要は一切ありません。
 
 また本稿では取り上げませんが、兄弟製品として[http://www.appcelerator.com/products/titanium-desktop-application-development/ Titanium Desktop]があり、こちらはWindows, Mac OSX, Linuxというマルチプラットフォームで動作するデスクトップアプリケーションを開発できる環境も提供されています。
 
-((これについては [http://d.hatena.ne.jp/yuichi_katahira/searchdiary?word=*[Titanium]]の記事群が詳しいですので、興味があればぜひご覧ください))
+これについては [http://d.hatena.ne.jp/yuichi_katahira/searchdiary?word=*[Titanium]]の記事群が詳しいですので、興味があればぜひご覧ください
 
 == 前提環境(iPhone SDK) ==
 Titanium Mobile自体はTitanium DeveloperというDesktop, Mobileでそれぞれ共用する開発環境を利用します。TItanium Developerの動作するプラットフォームとして、Windows, Mac OSX, Linuxをサポートしています。
@@ -165,14 +165,11 @@ Titanium Developerのツールバー「Import Project」を選択して、先ほ
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309230651.png
 
-続いて、画面上部右の「Test & Package」を選択すると、処理選択が表示されます。
+続いて、画面上部右の「Test & Package」を選択すると、タブで構成された処理選択が表示されます。
 
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309224444.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309232347.png
 
-ここでシミュレータを起動するプラットフォームを選択します。
-
-ここでは「iPhone」を選択します。
-
+「Run Emulator」で起動するプラットフォームを選択します。ここでは「iPhone」を選択します。
 
 画面中央を陣取る黒い部分は実行時のログ表示部になります。
 
