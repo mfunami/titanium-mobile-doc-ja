@@ -689,13 +689,20 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190720.png
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190721.png
 
-== Kitchen Sinkを覗いてみる ==
+== 次の一歩は? ==
 「あのコントロールはどうやって配置するのか？」とか「もっと生成時の引数に指定がいろいろできるんじゃないのか」といった疑問が出てくると思います。
 
 そんなときは初めに触ったKitchenSinkの中身（ソースプログラム）をみるのが一番のお勉強になります。
 
-まずはapp.jsを開き、そこから辿っていってもいいのですが、/Resources/examplesフォルダ内に各jsファイルがそれなりのキーワードで転がっていることが分かると思います。UI部品ならその部品名で見たり、あるいはcameraやnetworkといったキーワードベースで見る事もできるでしょう。
+まずはapp.jsを開き、そこから辿っていってもいいのですが、/Resources/examplesフォルダ内に各jsファイルがそれなりのキーワードで転がっていることが分かると思います。UI部品ならその部品名で見たり、あるいはcameraやnetworkといったキーワードベースで見る事もできますので、手近なコードサンプルとして積極的に活用しましょう。
 
-コードサンプルとして積極的に活用しましょう。
+APIリファレンスについては公式サイトが充実しています。
 
-（APIリファレンスも整ってないので...）
+http://developer.appcelerator.com/apidoc/mobile/
+
+分からない事があれば公式のオープンサポート掲示板を訪ねてみましょう。解決の糸口が見つかると思います。
+
+http://developer.appcelerator.com/questions
+
+
+また、Twitterのハッシュタグ #titanium という手もあります。本稿についてのご質問なども @donayama宛か #titaniumでつぶやいてください。
