@@ -33,6 +33,9 @@ Titanium.Network.addEventListener('change', function(e) {
 });
 }}}
 
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Network
+
 ----
 本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
