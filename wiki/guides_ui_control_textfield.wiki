@@ -1,5 +1,5 @@
 #summary Native UI案内 - Text Field
-#labels ui
+#labels ui,api
 = Native UI案内 - Text Field =
 言わずもがなのテキスト入力を行うためのコントロールです。
 
@@ -232,6 +232,8 @@ var textfield = Titanium.UI.createTextField({
 
 win.add(textfield);
 }}}
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TextField
 
 
 ----
