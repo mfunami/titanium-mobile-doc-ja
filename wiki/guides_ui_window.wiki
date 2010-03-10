@@ -53,7 +53,7 @@ var win = Titanium.UI.createWindow({barColor:'#336699'});
 Titanium.UI.currentWindow.barColor = '#336699';
 
 // デフォルト色に戻す。
-ｃbarColor = null;
+Titanium.UI.currentWindow.barColor = null;
 }}}
 
 Navbarのテキスト、プロンプトを表示する場合は次のようにします。
