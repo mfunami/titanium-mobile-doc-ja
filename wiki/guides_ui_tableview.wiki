@@ -14,11 +14,83 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190657.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190658.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190659.png
 
-== 標準的なTableView ==
+== 標準的なTable View ==
+{{{
+// Table Viewに表示するデータを作成しておきます
+// hasChild, hasDetail, hasCheckプロパティがあると上の例のような表示になります。
+var rows = [
+    {title:'Row 1', hasChild:true},
+    {title:'Row 2', hasDetail:true},
+    {title:'Row 3', hasCheck:true},
+    {title:'Row 4'}
+];
+// 先ほどのデータに基づいてTable Viewを起こします。
+var tableview = Titanium.UI.createTableView({
+    data: rows
+});
+// イベントリスナにクリック時のイベントを登録します。
+tableview.addEventListener('click', function(e){
+    var index     = e.index;
+    var section  = e.section;
+    var row       = e.row;
+    var rowdata = e.rowData;
+});
+// Windowに追加する
+Titanium.UI.currentWindow.add(tableview);
+}}}
 
 == レイアウト ==
 
 == 設定 ==
+グループ表示をするにはTableViewSectionとTableViewStyleの指定を用います。
+{{{
+var groupData = Ti.UI.createTableViewSection({
+    headerTitle: 'Group 1'
+});
+// ここではダミーデータを追加する...
+for (var x = 0; x < 10; x++){
+    var row = Ti.UI.createTableViewRow({
+        title: 'Group 1, Row ' + (x + 1)
+    });
+    // TableViewSectionにTableViewRowを追加する
+    groupData.add(row);
+}
+// テーブルビューのstyleを指定する。
+var tableview = Titanium.UI.createTableView({
+    data: gruopData,
+    style: Titanium.UI.iPhone.TableViewStyle.GROUPED
+});
+}}}
+またコントロールの配置ももちろん出来ます。
+{{{
+// 格納する行データ配列を用意する
+var rowData = [];
+
+// １つ目のスイッチとボタン
+var row1 = Ti.UI.createTableViewRow({height:50});
+var sw1  = Ti.UI.createSwitch({
+    right:10,
+    value:false
+});
+row1.add(sw1);
+
+var button1 = Ti.UI.createButton({
+    style:Titanium.UI.iPhone.SystemButton.DISCLOSURE,
+    left:10
+});
+row1.add(button1);
+row1.className = 'control';
+rowData.push(row1);
+
+// ２つ目は省略
+
+// 先ほど同様にGROUPEDstyleを指定する
+var tableView = Ti.UI.createTableView({
+    data: rowData,
+    style: Titanium.UI.iPhone.TableViewStyle.GROUPED,
+    top:50
+});
+}}}
 
 https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableView
 
