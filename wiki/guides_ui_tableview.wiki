@@ -1,5 +1,5 @@
 #summary Native UI案内 - Table View(未完)
-#labels ui
+#labels ui,api
 = Native UI案内 - Table View =
 標準的なTableViewは次のような単純な行選択をするためのUIになります。
 
@@ -19,6 +19,12 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190659.png
 == レイアウト ==
 
 == 設定 ==
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableView
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableViewRow
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableViewSection
 
 ----
 本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
