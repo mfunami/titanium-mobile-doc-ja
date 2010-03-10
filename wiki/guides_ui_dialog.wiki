@@ -16,6 +16,32 @@ dialog.show();
 }}}
 setButtonNamesをしなくてもOKボタンは表示されますので、基本的に指定するべきプロパティは２つだけになります。
 
+
+このような引数を引き渡す生成方法もあります。
+{{{
+var alertDialog = Titanium.UI.createAlertDialog({
+    title: 'キャンセルのテスト',
+    message: 'テスト',
+    buttonNames: ['OK','きゃんせる'],
+    // キャンセルボタンがある場合、何番目(0オリジン)のボタンなのかを指定できます。
+    cancel: 1
+});
+alertDialog.addEventListener('click',function(event){
+    // Cancelボタンが押されたかどうか
+    if(event.cancel){
+        // cancel時の処理
+    }
+    // 選択されたボタンのindexも返る
+    if(event.index == 0){
+        // "OK"時の処理
+    }
+});
+alertDialog.show();
+
+}}}
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.AlertDialog
+
 == 処理選択をするダイアログ(Option Dialog) ==
 http://img.skitch.com/20090708-m9wjycq3ar92ikep3ds5yadpcq.jpg
 
@@ -39,19 +65,21 @@ dialog.setCancel(2);
 
 // ボタン選択時の処理はイベントハンドラを記述します。
 // 第一引数のindexプロパティで選択されたボタンのindexが設定されます。
-dialog.addEventListener('click',function(event)
-{
+dialog.addEventListener('click',function(event){
     if(event.index == 0){
         // 更新処理
     }
     else if(event.index == 1){
-        // 削除処理
+        // 削除処理(event.desctructive == trueでも可能)
     }
+    // キャンセル時はevent.cancel == trueとなる
 });
 
 // ダイアログを表示します。
 dialog.show();
 }}}
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.OptionDialog
 
 == E-mail作成ダイアログ ==
 いわゆるe-mailの作成画面です。
@@ -76,6 +104,8 @@ emailDialog.addAttachment(image);
 emailDialog.setBarColor('#336699');
 emailDialog.open();
 }}}
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.EmailDialog
 
 ----
 本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
