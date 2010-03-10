@@ -1,5 +1,5 @@
 #summary Native UI案内 - View(共通)
-#labels ui
+#labels ui,api
 = Native UI案内 - View(共通) =
 Titanium MobileのwindowにはView、もしくはControlを格納できます。
 
@@ -78,6 +78,8 @@ view.addEventListener('dblclick', function(e){
     // e.x, e.y：座標
 });
 }}}
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.View
 
 ----
 本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
