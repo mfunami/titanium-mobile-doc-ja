@@ -53,7 +53,15 @@ var win = Titanium.UI.createWindow({barColor:'#336699'});
 Titanium.UI.currentWindow.barColor = '#336699';
 
 // デフォルト色に戻す。
-Titanium.UI.currentWindow.barColor = null;
+ｃbarColor = null;
+}}}
+
+Navbarのテキスト、プロンプトを表示する場合は次のようにします。
+{{{
+// タイトル変更
+Titanium.UI.currentWindow.title = 'タイトル';
+// プロンプトの表示
+Titanium.UI.currentWindow.titlePrompt = 'プロンプトが表示されます。';
 }}}
 
 == Windowに関する特殊なイベント ==
