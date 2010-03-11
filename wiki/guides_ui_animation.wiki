@@ -146,6 +146,33 @@ button.addEventListener('click', function(){
 
 このように2DMatrixオブジェクトにエフェクトを重ねていき、Animationオブジェクトに設定するだけで変形を行えます。
 
+回転エフェクトをする場合、回転するUI部品のanchorPointプロパティに設定することで回転軸をどこにするか設定できます。
+
+{{{
+var v = Titanium.UI.createView({
+    backgroundColor:'#336699',
+    top:10,
+    left:220,
+    height:50,
+    width:50,
+    anchorPoint:{x:0,y:0}
+});
+var t = Ti.UI.create2DMatrix();
+t = t.rotate(90);
+
+var a = Titanium.UI.createAnimation();
+a.transform = t;
+a.duration = 1000;
+a.autoreverse = true;
+
+v.animate(a);
+}}}
+
+この場合、左上を中心に９０度回転します。
+
+
+anchorPointプロパティはx, yで回転軸を指定します。右下が{{{ {x:1, y:1} }}}となります。中心では{{{ {x:0.5, y:0.5} }}}です。
+
 
 続いて3DMatrixによる３次元変形の例です。
 
