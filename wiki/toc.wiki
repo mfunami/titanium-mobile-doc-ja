@@ -1,19 +1,21 @@
-#summary 目次
+#summary titanium-mobile-doc-jaの目次
 = 目次 =
- * 1st Step 
-  ** [about_timobile Appcelerator Titanium Mobileについて]
-  ** [get_started Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!!]
- * 2nd Step - UIを知る
-  ** [guides_ui_iphone_abstruct iPhoneのUI構造] （内容見直し中）
-  ** Native UI 案内(Window〜View, TabGroup, StatusBar, ToolBar)
-   *** [guides_ui_window Window]
-   *** [guides_ui_views View(共通)]
-   *** [guides_ui_tabbar Tab Group]
-   *** [guides_ui_iphone_statusbar Status Bar]
-   *** [guides_ui_control_toolbar Tool Bar]
-  ** Native UI 案内(Viewいろいろ)
-  ** Native UI 案内(Controlいろいろ)
- * 3rd Step
+ * *1st Step - 入門的な。*
+  * [about_timobile Appcelerator Titanium Mobileについて]
+  * [get_started Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!!]
+ * *2nd Step - UIを知る*
+  * [guides_ui_iphone_abstruct iPhoneのUI構造] （内容見直し中）
+  * Native UI 案内(Window〜View, TabGroup, StatusBar, ToolBar)
+   * [guides_ui_window Window]
+   * [guides_ui_views View(共通)]
+   * [guides_ui_tabbar Tab Group]
+   * [guides_ui_iphone_statusbar Status Bar]
+   * [guides_ui_control_toolbar Tool Bar]
+  * Native UI 案内(Viewいろいろ)
+  * Native UI 案内(Controlいろいろ)
+  * API案内
+ * *3rd Step*
+  * 未定(^^;
 {{{
 guides_ui_webview 	Native UI案内 - Web View
 guides_ui_scrollview 	Native UI案内 - Scroll View
