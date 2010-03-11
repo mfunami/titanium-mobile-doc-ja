@@ -22,7 +22,7 @@ Window, View, Controlなどの各オブジェクトには{{{animate}}}という�
 ||right||float||変形アニメーション：right位置||
 ||top||float||変形アニメーション：top位置||
 ||transform||object||2DMatrix, 3DMatrixの値を設定し、変形アニメーション指定をする||
-||transition||int||during a transition animation, this is the constant to the type of transition to use||
+||transition||int||規定のパターンに基づくアニメーション||
 ||visible||boolean||表示・非表示の切替アニメーション||
 ||width||float||変形アニメーション：幅||
 ||zIndex||int||移動アニメーション：zIndex||
@@ -79,9 +79,28 @@ circle.animate({center:{x:100,y:100},curve:Ti.UI.ANIMATION_CURVE_EASE_IN_OUT,dur
 }}}
 
 == transitionアニメーション ==
+WindowやViewに対してフリップ移動やカールするアニメーションがありますが、ああいうことを行うための指定がtransitionアニメーションになります。
 
-(現在作成中...)
+指定できるのは次のとおり４つです。
 
+ * Ti.UI.iPhone.AnimationStyle.CURL_UP
+ * Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+ * Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
+ * Ti.UI.iPhone.AnimationStyle.CURL_DOWN
+
+{{{
+var button = Titanium.UI.createButton({
+    title:'Animate Me', 
+    width:300,
+    height:40,
+    top:10
+});
+button.addEventListener('click', function(){
+    button.animate({
+        transition:Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+    });
+});
+}}}
 
 == 2DMatrix, 3DMatrixによる変形アニメーション ==
 
