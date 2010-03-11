@@ -41,8 +41,8 @@
    * [guides_device_network ネットワークの状態]
    * [guides_network_httpclient HTTPClient]
   * I/O編
-   * [guides_app_properties アプリケーションプロパティ](TODO)
-   * [guides_filesystem ファイルシステム](TODO)
+   * [guides_app_properties アプリケーションプロパティ]
+   * [guides_filesystem ファイルシステム](作業中)
    * [guides_database  データベース]
   * メディア編
    * [guides_media_camera カメラ撮影・カメラロール・スクリーンショット]
