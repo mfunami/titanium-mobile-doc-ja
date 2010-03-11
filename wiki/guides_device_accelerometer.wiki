@@ -63,6 +63,8 @@ XYZの軸に関する状態について口で説明するよりもこれを見�
  * Digital Agua's Blog : Accelerometer x,y,z based on iPhone position
   ** http://blog.digitalagua.com/2008/07/15/accelerometer-xyz-based-on-iphone-position/
 
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Gesture
+
 https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Accelerometer
 
 ----
