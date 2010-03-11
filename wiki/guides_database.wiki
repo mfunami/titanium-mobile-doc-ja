@@ -1,54 +1,62 @@
 #summary API案内 - データベース編(作成中!!)
 #labels api
 = API案内 - データベース編 =
+デバイス上の[http://www.sqlite.org/ SQLiteデータベース]への接続をするをするための機能が用意されています。
 
-現在作成中です...
+ORマッピング的なものはないので、自前でSQLの操作をする必要があるため、SQLの知識が必要になってきます。
 
 {{{
+// データベースファイルを開きます（ない場合、作成されます）
 var db = Titanium.Database.open('mydb');
 
+// DB内にテーブルが無い場合、定義に基づいてテーブルを作成します。
 db.execute('CREATE TABLE IF NOT EXISTS DATABASETEST  (ID INTEGER, NAME TEXT)');
-db.execute('DELETE FROM DATABASETEST');
+// ちなみにTABLEを削除するときはDROP TABLE DATABASETESTみたいにします
 
+
+// テストなので全行消してから、テストデータを追加→更新＋削除します。
+// プレースホルダはありますが、名前ベースじゃなくて?の発生順での置換です。
+db.execute('DELETE FROM DATABASETEST');
 db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)',1,'Name 1');
 db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)',2,'Name 2');
 db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)',3,'Name 3');
 db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)',4,'Name 4');
-
-var updateName = 'I was updated';
-var updateId = 4;
-db.execute('UPDATE DATABASETEST SET NAME = ? WHERE ID = ?', updateName, updateId);
-
+db.execute('UPDATE DATABASETEST SET NAME = ? WHERE ID = ?', 'I was updated', 4);
 db.execute('UPDATE DATABASETEST SET NAME = "I was updated too" WHERE ID = 2');
-
 db.execute('DELETE FROM DATABASETEST WHERE ID = ?',1);
 
-Titanium.API.info('JUST INSERTED, rowsAffected = ' + db.rowsAffected);
+// 直前の実行に伴う影響行数と最後に追加されたrowIdを取得
+Titanium.API.info('JUST INSERTED, rowsAffected = '    + db.rowsAffected);
 Titanium.API.info('JUST INSERTED, lastInsertRowId = ' + db.lastInsertRowId);
 
+// 照会は普通にSELECT文を実行します。結果はResultSetオブジェクトとして返ります。
 var rows = db.execute('SELECT * FROM DATABASETEST');
 Titanium.API.info('ROW COUNT = ' + rows.getRowCount());
-Titanium.API.info('ROW COUNT = ' + rows.getRowCount());
-Titanium.API.info('ROW COUNT = ' + rows.getRowCount());
 
+// ResultSetはカーソル的な挙動をしますので、こういったループで走査していきます。
 while(rows.isValidRow()){
+    // rows.field(field_no)で値を取得します。
+    // カラム名ベースでも取れるみたいです。
     Titanium.API.info('ID: ' + rows.field(0) + ' NAME: ' + rows.fieldByName('name'));
     rows.next();
 }
+// 走査が終わったらResultSetを閉じておきます。
 rows.close();
 }}}
 
 == 既存のSQLiteDBの取込み ==
+あらかじめ用意しておいたSQLiteのデータベースファイルを取り込むことができます。
+
 {{{
+// ../testdb.dbの内容をquotesデータベースに取り込み、開きます。
 var db = Titanium.Database.install('../testdb.db','quotes');
 
+// あとの流れは同じですね。
 var rows = db.execute('SELECT * FROM TIPS');
-
 while (rows.isValidRow()){
     Titanium.API.info(rows.field(1) + '\n' + rows.field(0));
     rows.next();
 }
-
 rows.close();
 }}}
 
