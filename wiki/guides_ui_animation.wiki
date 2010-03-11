@@ -1,5 +1,5 @@
-#summary Native UI案内 - アニメーション(進捗度50%)
-#labels api,underconstruction
+#summary Native UI案内 - アニメーション(3DMatrix除く)
+#labels api
 = Native UI案内 - アニメーション =
 Window, View, Controlなどの各オブジェクトには{{{animate}}}という関数が用意されており、対象となるオブジェクトに対するアニメーション描画を行うことができます。
 
@@ -55,11 +55,11 @@ view.animate(animation);
 // 枠線によって円形にしているViewを配置し、
 // これに対するアニメーションを指示する、というものです。
 var circle = Titanium.UI.createView({
-	height:100,
-	width:100,
-	borderRadius:50,
-	backgroundColor:'#336699',
-	top:10
+    height:100,
+    width:100,
+    borderRadius:50,
+    backgroundColor:'#336699',
+    top:10
 });
 
 //
@@ -104,28 +104,53 @@ button.addEventListener('click', function(){
 
 == 2DMatrix, 3DMatrixによる変形アニメーション ==
 
-(現在作成中...)
+2DMatrix, 3DMatrixは変形内容の指示を構成するオブジェクトで、Animationオブジェクトに与えることを目的としています。
+
+さっそく比較的理解しやすい平面変形をする例を見てみましょう。
 
 {{{
-var t = Ti.UI.create2DMatrix();
-t.a = 1;
-t.b = 2;
-t.c = 3;
-t.d = 4;
 
-// pass inline animation objects and get callback when done
-circle.animate({
-    opacity:0,
-    transform:t,
-    duration:500
-}, function(){
-    var t = Ti.UI.create2DMatrix();
-    circle.animate({opacity:1, transform:t, duration:500})
+// 画像を表示したviewを変形させます
+var cloud = Titanium.UI.createView({
+    backgroundImage:'../images/cloud.png',
+    height:178,
+    width:261,
+    top:10
 });
+var button = Titanium.UI.createButton({
+    title:'Animate',
+    width:200,
+    height:40,
+    bottom:20
+});
+
+button.addEventListener('click', function(){
+    // 先ほどの画像を変形アニメーションします。
+    var t = Ti.UI.create2DMatrix();
+    t = t.rotate(20);
+    t = t.scale(1.5);
+
+    var animation = Titanium.UI.createAnimation();
+    animation.transform = t;
+    animation.duration = 3000;
+    animation.autoreverse = true;
+    animation.repeat = 3;
+
+    // 上記の設定は以下のようなものです。
+    // ----------------------------------
+    // 「全体的に20度右回転(t.rotate)し、1.5倍に拡大(t.scale)する」変形(transform)を
+    // 3000ミリ秒(duration)かけて行い、その後同じ時間かけて元に戻す(autoreverse)
+    // 処理を3回繰り返す(repeat)
+    cloud.animate(animation);
 }}}
 
+このように2DMatrixオブジェクトにエフェクトを重ねていき、Animationオブジェクトに設定するだけで変形を行えます。
+
+
+続いて3DMatrixによる３次元変形の例です。
 
 {{{
+// ここから先の解説はAPIリファレンス待ちです (>_<)
 var button = Titanium.UI.createButton({
     title:'Animate Me', 
     width:300,
@@ -134,9 +159,9 @@ var button = Titanium.UI.createButton({
 });
 button.addEventListener('click', function(){
     var t = Titanium.UI.create3DMatrix();
-    t = t.rotate(200,0,1,1);
+    t = t.rotate(200, 0, 1, 1);
     t = t.scale(3);
-    t = t.translate(20,50,170);
+    t = t.translate(20, 50, 170);
     t.m34 = 1.0/-2000;
     button.animate({
         transform:t,
