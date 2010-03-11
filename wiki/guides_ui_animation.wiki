@@ -78,6 +78,11 @@ circle.animate({center:{x:100,y:100},curve:Ti.UI.ANIMATION_CURVE_EASE_IN_OUT,dur
 });
 }}}
 
+== transitionアニメーション ==
+
+(現在作成中...)
+
+
 == 2DMatrix, 3DMatrixによる変形アニメーション ==
 
 (現在作成中...)
