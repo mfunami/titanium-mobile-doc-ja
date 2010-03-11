@@ -54,15 +54,15 @@
    * [guides_device_accelerometer 加速度センサ]
    * [guides_device_geolocation 位置測定・電子コンパス]
   * プラットフォーム編
-   * [guides_platform_appbadge アプリケーションバッジ](TODO)
+   * [guides_platform_appbadge アプリケーションバッジ]
    * [guides_platform_information 環境情報取得]
    * [guides_platform_openurl 他アプリケーション連携(OpenURL)]
   * ユーティリティ編
-   * [guides_app_log ログ出力] (TODO)
-   * [guides_embeded_timer タイマー処理] (TODO)
-   * [guides_embeded_include ライブラリ取込] (TODO)
+   * [guides_app_log ログ出力]
+   * [guides_embeded_timer タイマー処理]
+   * [guides_embeded_include ライブラリ取込]
    * [guides_xml_dom XML DOM Parser]
    * [guides_util_string 文字列変換(BASE64, MD5)]
  * *4th Step - アプリケーション設定 *
-  * tiapp.xml, manifestファイルについて
+  * tiapp.xml, manifestファイルについて (TODO)
   * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
