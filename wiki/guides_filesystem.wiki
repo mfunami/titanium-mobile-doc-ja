@@ -2,20 +2,28 @@
 #labels api,underconstruction
 = API案内 - I/O編 - ファイルシステム(作成中) =
 
-
+== パス関連情報の取得 ==
 {{{
-var win = Titanium.UI.currentWindow;
-
-// path variables
 Titanium.API.info('Resources Directory :' + Titanium.Filesystem.resourcesDirectory);
 Titanium.API.info('Temp Directory :' + Titanium.Filesystem.tempDirectory);
 Titanium.API.info('Application Directory :' + Titanium.Filesystem.applicationDirectory);
 Titanium.API.info('Application Data Directory :' + Titanium.Filesystem.applicationDataDirectory);
 Titanium.API.info('External Storage Available :' + Titanium.Filesystem.isExteralStoragePresent);
-Titanium.API.info('Separator :' + Titanium.Filesystem.separator);
+Titanium.API.info('Path Separator :' + Titanium.Filesystem.separator);
 Titanium.API.info('Line Ending :' + Titanium.Filesystem.lineEnding);
 
-
+/*
+[INFO] Resources Directory :/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app
+[INFO] Temp Directory :/var/folders/fy/fyJLG5EWEcSF52GCubOqmU+++TI/-Tmp-/
+[INFO] Application Directory :/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Applications
+[INFO] Application Data Directory :/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Documents
+[INFO] External Storage Available :false
+[INFO] Path Separator :/
+[INFO] Line Ending :
+*/
+}}}
+== ファイル情報の取得 ==
+{{{
 var f = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, 'text.txt');
 Ti.API.info('file = ' + f)
 var contents = f.read();
@@ -34,14 +42,37 @@ Ti.API.info('name = ' + f.name);
 Ti.API.info('extension = ' + f.extension());
 Ti.API.info('resolve = ' + f.resolve());
 
+/*
+[INFO] file = /Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt
+[INFO] contents blob object = [object TiBlob]
+[INFO] contents = Hello World. this is a filesystem read test.
+[INFO] mime type = text/plain
+[INFO] nativePath = /Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt
+[INFO] exists = true
+[INFO] size = 44
+[INFO] readonly = true
+[INFO] symbolicLink = false
+[INFO] executable = false
+[INFO] hidden = false
+[INFO] writable = false
+[INFO] name = text.txt
+[INFO] extension = txt
+[INFO] resolve = /Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt
+*/
+}}}
+== ディレクトリ情報の取得 ==
+{{{
 var dir = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory);
 Ti.API.info('directoryListing = ' + dir.getDirectoryListing());
 Ti.API.info('getParent = ' + dir.getParent());
 Ti.API.info('spaceAvailable = ' + dir.spaceAvailable());
-	
-var l = Titanium.UI.createLabel({text:'Check Log for details', width:300, height:'auto', textAlign:'center'});
-win.add(l)
+
+[INFO] directoryListing = cricket.wav,Default.png,default_app_logo.png,dependencies.map,Entitlements.plist,images,Info.plist,KitchenSink,MainWindow.nib,modules,movie.mp4,PkgInfo,pop.caf,Settings.bundle,testdb.db,text.txt
+[INFO] getParent = /Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C
+[INFO] spaceAvailable = true
 }}}
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Filesystem
 
 ----
 本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
