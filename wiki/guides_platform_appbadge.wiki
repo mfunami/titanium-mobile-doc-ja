@@ -1,0 +1,22 @@
+#summary API案内 - プラットフォーム編 - アプリケーションバッジ(iPhoneのみ)
+#labels api,iphone
+= API案内 - プラットフォーム編 - アプリケーションバッジ(iPhoneのみ) =
+アプリケーションバッジとは以下の図の右についている状態のものを指します。
+
+表示できるのはタブバッジとは異なり数値のみとなりますので、未読数などを表示する以外になかなか使い道がなさそうです。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100311/20100311213210.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100311/20100311213209.png
+
+{{{
+// 20と表示する。（ホーム画面に戻らないと確認できない）
+Titanium.UI.iPhone.appBadge = 20;
+
+// バッジを外す
+Titanium.UI.iPhone.appBadge = null;
+}}}
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
