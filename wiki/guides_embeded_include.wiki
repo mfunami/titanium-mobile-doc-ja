@@ -1,8 +1,21 @@
 #summary API案内 - ユーティリティ編 - 外部JavaScript取込み
 #labels api,embeded
 = API案内 - ユーティリティ編 - 外部`JavaScript`取込み =
+配列処理をスマートに実現したり、あるいは毎度同じように書いているtwitterへのpost処理などをライブラリ化して読み込ませたいといったことも多々あると思います。
+
+Cにおける{{{#include}}}のような機能が{{{Titanium.include}}}関数で実現します。
+
+読み込まれたjsファイルは同じコンテキストで処理されるため、外部ファイル側で定義された変数などがそのまま使えます。
 
 {{{
+// 複数のjsファイルを "," 区切りで列挙できる
+Titanium.include('../my_js_include.js', '../my_js_include_2.js', 'local_include.js');
+
+// 中で使われているそれぞれの変数は外部ファイルで定義されているものと考えてください
+Ti.UI.createAlertDialog({
+    title:'JS Includes',
+    message:'first name: ' + myFirstName + ' middle name: ' + myMiddleName +' last name: ' + myLastName
+}).show();
 }}}
 
 ----
