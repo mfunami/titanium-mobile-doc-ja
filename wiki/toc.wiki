@@ -5,6 +5,7 @@
   * [get_started Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!!]
  * *2nd Step - UIを知る*
   * [guides_ui_iphone_abstruct iPhoneのUI構造] （内容見直し中）
+  * [guides_ui_dialog ダイアログ]
   * Native UI 案内(Window〜TabGroup, StatusBar, ToolBar)
    * [guides_ui_window Window]
    * [guides_ui_tabbar Tab Group]
@@ -20,45 +21,45 @@
    * [guides_ui_coverflowview CoverflowView]
    * [guides_ui_verticallayout VirticalLayout]
   * Native UI 案内(Controlいろいろ)
+   * [guides_ui_control_label Label]
+   * [guides_ui_control_button Button]
+   * [howto_button_icon システムボタンアイコンの使い方]
+   * [howto_button_style ボタン形状の指定]
+   * [guides_ui_control_textfield TextField]
+   * [guides_ui_control_textarea TextArea]
+   * [guides_ui_control_Switch Switch]
+   * [guides_ui_control_Slider Slider]
+   * [guides_ui_control_picker Picker]
+   * [guides_ui_iphone_control_ButtonBar Button Bar(iPhoneのみ)]
+   * [guides_ui_iphone_control_TabbedBar Tabbed Bar(iPhoneのみ)]
+   * [guides_ui_control_searchbar Search Bar]
+   * [guides_ui_control_activityindicator ActivityIndicator]
+   * [guides_ui_control_progressbar ProgressBar]
  * *3rd Step - API案内 *
+  * ネットワーク編
+   * [guides_device_network ネットワークの状態]
+   * [guides_network_httpclient HTTPClient]
+  * メディア編
+   * [guides_media_camera カメラ撮影・カメラロール・スクリーンショット]
+   * [guides_media_audiovideo 動画再生・音声再生]
+  * デバイスハードウェア編
+   * [guides_device_battery 電源状態]
+   * [guides_device_accelerometer 加速度センサ]
+   * [guides_device_geolocation 位置測定・電子コンパス]
+  * プラットフォーム編
+   * [guides_platform_information 環境情報取得]
+   * [guides_platform_openurl 他アプリケーション連携(OpenURL)]
+  * ユーティリティ編
+   * [guides_xml_dom XML DOM Parser]
+   * [guides_util_string 文字列変換]
  * *4th Step - 未定(^^; *
 
+
+
 {{{
-	
-guides_ui_iphone_control_ButtonBar 	Native UI案内 - Button Bar(iPhoneのみ)
-guides_ui_iphone_control_TabbedBar 	Native UI案内 - Tabbed Bar(iPhoneのみ)
-guides_ui_control_searchbar 	Native UI案内 - Search Bar
+/*
 
-guides_ui_control_label 	Native UI案内 - Label
-guides_ui_control_button 	Native UI案内 - Button
-howto_button_icon 	システムボタンアイコンの使い方
-howto_button_style 	ボタン形状の指定
-
-guides_ui_control_textfield 	Native UI案内 - Text Field
-guides_ui_control_textarea 	Native UI案内 - Text Area
-guides_ui_control_Switch 	Native UI案内 - Switch
-guides_ui_control_Slider 	Native UI案内 - Slider
-guides_ui_control_picker 	Native UI案内 - Picker
-
-guides_ui_control_activityindicator 	Native UI案内 - Activity Indicator
-guides_ui_control_progressbar 	Native UI案内 - Progress Bar
-
-guides_ui_dialog 	API案内 - UI編 - ダイアログ
-
-guides_network_httpclient 	API案内 - HTTPClient編
-
-guides_media_camera 	API案内 - メディア編 - カメラ撮影・カメラロール・スクリーンショット
-guides_media_audiovideo 	API案内 - メディア編 - 動画再生・音声再生
-
-guides_device_battery 	API案内 - デバイスハードウェア編 - 電源状態
-guides_device_network 	API案内 - デバイスハードウェア編 - ネットワークの状態
-guides_device_accelerometer 	API案内 - デバイスハードウェア編 - 加速度センサ
-guides_device_geolocation 	API案内 - デバイスハードウェア編 - 位置測定・電子コンパス
-guides_platform_information	 API案内 - プラットフォーム編 - 環境情報取得
-guides_platform_openurl	 API案内 - プラットフォーム編 - 他アプリケーション連携(OpenURL)
-guides_xml_dom API案内 - XML編 - DOM Parser
-
+//
 howto_change_splashscreen 	起動時画像(スプラッシュスクリーン)の変更方法
-
-
+*/
 }}}
