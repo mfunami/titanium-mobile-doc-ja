@@ -1,4 +1,4 @@
-#summary API案内 - データベース編(作成中!!)
+#summary API案内 - データベース編
 #labels api
 = API案内 - データベース編 =
 デバイス上の[http://www.sqlite.org/ SQLiteデータベース]への接続をするをするための機能が用意されています。
