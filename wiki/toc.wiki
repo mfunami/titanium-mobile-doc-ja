@@ -35,6 +35,7 @@
    * [guides_ui_control_searchbar Search Bar]
    * [guides_ui_control_activityindicator ActivityIndicator]
    * [guides_ui_control_progressbar ProgressBar]
+  * [guides_ui_animation アニメーション]
  * *3rd Step - API案内 *
   * ネットワーク編
    * [guides_device_network ネットワークの状態]
