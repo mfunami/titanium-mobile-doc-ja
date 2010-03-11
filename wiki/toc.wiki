@@ -5,25 +5,25 @@
   * [get_started Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!!]
  * *2nd Step - UIを知る*
   * [guides_ui_iphone_abstruct iPhoneのUI構造] （内容見直し中）
-  * Native UI 案内(Window〜View, TabGroup, StatusBar, ToolBar)
+  * Native UI 案内(Window〜TabGroup, StatusBar, ToolBar)
    * [guides_ui_window Window]
-   * [guides_ui_views View(共通)]
    * [guides_ui_tabbar Tab Group]
    * [guides_ui_iphone_statusbar Status Bar]
    * [guides_ui_control_toolbar Tool Bar]
   * Native UI 案内(Viewいろいろ)
+   * [guides_ui_views View(共通)]
+   * [guides_ui_webview WebView]
+   * [guides_ui_scrollview ScrollView]
+   * [guides_ui_imageview ImageView]
+   * [guides_ui_tableview TableView]
+   * [guides_ui_mapview MapView]
+   * [guides_ui_coverflowview CoverflowView]
+   * [guides_ui_verticallayout VirticalLayout]
   * Native UI 案内(Controlいろいろ)
-  * API案内
- * *3rd Step*
-  * 未定(^^;
+ * *3rd Step - API案内 *
+ * *4th Step - 未定(^^; *
+
 {{{
-guides_ui_webview 	Native UI案内 - Web View
-guides_ui_scrollview 	Native UI案内 - Scroll View
-guides_ui_imageview 	Native UI案内 - Image View
-guides_ui_tableview 	Native UI案内 - Table View
-guides_ui_mapview 	Native UI案内 - Map View
-guides_ui_coverflowview 	Native UI案内 - Coverflow View
-guides_ui_verticallayout 	Native UI案内 - Virtical Layout
 	
 guides_ui_iphone_control_ButtonBar 	Native UI案内 - Button Bar(iPhoneのみ)
 guides_ui_iphone_control_TabbedBar 	Native UI案内 - Tabbed Bar(iPhoneのみ)
