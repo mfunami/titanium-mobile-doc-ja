@@ -1,0 +1,38 @@
+#summary API案内 - I/O編 - アプリケーションプロパティ
+#labels api
+= API案内 - I/O編 - アプリケーションプロパティ =
+アプリケーション上での設定を保存するためのの仕掛けが用意されています。
+
+{{{Titanium.App.Properties}}}にはset〜とget〜という関数が型単位で用意されています。
+
+|| * 型 * || * get〜 * || * set〜 * ||
+|| * string * || getString || setString ||
+|| * int * || getInt || setInt ||
+|| * boolean * || getBool || setBool ||
+|| * double * || getDouble || setDouble ||
+|| * Array * || getList || setList ||
+
+第一引数はプロパティ名で、set〜の場合、第二引数にプロパティに設定する値をセットします。
+
+プロパティを削除する場合は第二引数に {{{null}}} を設定してください。
+
+{{{
+// 出力
+Titanium.App.Properties.setString('String','I am a String Value ');
+Titanium.App.Properties.setInt('Int',10);
+Titanium.App.Properties.setBool('Bool',true);
+Titanium.App.Properties.setDouble('Double',10.6);
+Titanium.App.Properties.setList('MyList',array);
+
+// 入力（表示はログレベルinfoで)
+Titanium.API.info('String: '+ Titanium.App.Properties.getString('String'));
+Titanium.API.info('Int: '+ Titanium.App.Properties.getString('Int'));
+Titanium.API.info('Bool: '+ Titanium.App.Properties.getString('Bool'));
+Titanium.API.info('Double: '+ Titanium.App.Properties.getString('Double'));
+Titanium.API.info('List:');
+}}}
+
+----
+本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
