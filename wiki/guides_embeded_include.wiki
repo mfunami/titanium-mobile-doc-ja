@@ -1,6 +1,6 @@
 #summary API案内 - ユーティリティ編 - 外部JavaScript取込み
 #labels api,embeded
-= API案内 - ユーティリティ編 - 外部JavaScript取込み =
+= API案内 - ユーティリティ編 - 外部`JavaScript`取込み =
 
 {{{
 }}}
