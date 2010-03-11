@@ -56,6 +56,7 @@ guides_device_accelerometer 	API案内 - デバイスハードウェア編 - 加
 guides_device_geolocation 	API案内 - デバイスハードウェア編 - 位置測定・電子コンパス
 guides_platform_information	 API案内 - プラットフォーム編 - 環境情報取得
 guides_platform_openurl	 API案内 - プラットフォーム編 - 他アプリケーション連携(OpenURL)
+guides_xml_dom API案内 - XML編 - DOM Parser
 
 howto_change_splashscreen 	起動時画像(スプラッシュスクリーン)の変更方法
 
