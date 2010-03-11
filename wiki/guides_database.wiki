@@ -4,6 +4,54 @@
 
 現在作成中です...
 
+{{{
+var db = Titanium.Database.open('mydb');
+
+db.execute('CREATE TABLE IF NOT EXISTS DATABASETEST  (ID INTEGER, NAME TEXT)');
+db.execute('DELETE FROM DATABASETEST');
+
+db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)',1,'Name 1');
+db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)',2,'Name 2');
+db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)',3,'Name 3');
+db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)',4,'Name 4');
+
+var updateName = 'I was updated';
+var updateId = 4;
+db.execute('UPDATE DATABASETEST SET NAME = ? WHERE ID = ?', updateName, updateId);
+
+db.execute('UPDATE DATABASETEST SET NAME = "I was updated too" WHERE ID = 2');
+
+db.execute('DELETE FROM DATABASETEST WHERE ID = ?',1);
+
+Titanium.API.info('JUST INSERTED, rowsAffected = ' + db.rowsAffected);
+Titanium.API.info('JUST INSERTED, lastInsertRowId = ' + db.lastInsertRowId);
+
+var rows = db.execute('SELECT * FROM DATABASETEST');
+Titanium.API.info('ROW COUNT = ' + rows.getRowCount());
+Titanium.API.info('ROW COUNT = ' + rows.getRowCount());
+Titanium.API.info('ROW COUNT = ' + rows.getRowCount());
+
+while(rows.isValidRow()){
+    Titanium.API.info('ID: ' + rows.field(0) + ' NAME: ' + rows.fieldByName('name'));
+    rows.next();
+}
+rows.close();
+}}}
+
+== 既存のSQLiteDBの取込み ==
+{{{
+var db = Titanium.Database.install('../testdb.db','quotes');
+
+var rows = db.execute('SELECT * FROM TIPS');
+
+while (rows.isValidRow()){
+    Titanium.API.info(rows.field(1) + '\n' + rows.field(0));
+    rows.next();
+}
+
+rows.close();
+}}}
+
 
 https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Database
 
