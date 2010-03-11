@@ -5,7 +5,7 @@
 
 デバイスのOSや解像度などの情報は{{{Titanium.Platform}}}のプロパティとして取得できます。
 
-||*プロパティ名||*型||*説明||
+|| *プロパティ名* || *型* || *説明* ||
 ||address||string||IPアドレス||
 ||architecture||string||CPUのアーキテクチャ(ARMなど)||
 ||availableMemory||double||使用可能なメモリ||
