@@ -67,7 +67,7 @@
    * [guides_xml_dom XML DOM Parser]
    * [guides_util_string 文字列変換(BASE64, MD5)]
  * * 4th Step : アプリケーション設定 *
-  * [tiapp.xml, manifestファイルについて tiapp_xml] (TODO)
+  * [tiapp_xml tiapp.xml, manifestファイルについて] (TODO)
   * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
  * * 5th Step : コードリーディング(Snapost) *
   * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
