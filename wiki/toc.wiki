@@ -7,7 +7,7 @@
   * [about_timobile Titanium Mobileについて]
   * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]
  * * 2nd Step : UIカタログ *
-  * [guides_ui_iphone_abstruct iPhoneのUI構造] （内容見直し中）
+  * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
   * Window編
    * [guides_ui_window Window]
    * [guides_ui_tabbar Tab Group]
