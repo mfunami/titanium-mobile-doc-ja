@@ -3,71 +3,74 @@
 
 == Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発 == 
 
- * * 1st Step : Titanium デビュー *
-  * [about_timobile Titanium Mobileについて]
-  * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]
- * * 2nd Step : UIカタログ *
-  * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
-  * Window編
-   * [guides_ui_window Window]
-   * [guides_ui_tabbar TabGroup]
-   * [guides_ui_iphone_statusbar StatusBar]
-   * [guides_ui_control_toolbar ToolBar]
-   * [guides_ui_dialog ダイアログ]
-  * View編
-   * [guides_ui_views View(共通)]
-   * [guides_ui_webview WebView]
-   * [guides_ui_scrollview ScrollView]
-   * [guides_ui_imageview ImageView]
-   * [guides_ui_tableview TableView]
-   * [guides_ui_mapview MapView]
-   * [guides_ui_coverflowview CoverflowView]
-   * [guides_ui_verticallayout VirticalLayout]
-  * Control編
-   * [guides_ui_control_label Label]
-   * [guides_ui_control_button Button]
-    * [howto_button_icon システムボタンアイコンの使い方]
-    * [howto_button_style ボタン形状の指定]
-   * [guides_ui_control_textfield TextField]
-   * [guides_ui_control_textarea TextArea]
-   * [guides_ui_control_Switch Switch]
-   * [guides_ui_control_Slider Slider]
-   * [guides_ui_control_picker Picker]
-   * [guides_ui_iphone_control_ButtonBar Button Bar(iPhoneのみ)]
-   * [guides_ui_iphone_control_TabbedBar Tabbed Bar(iPhoneのみ)]
-   * [guides_ui_control_searchbar Search Bar]
-   * [guides_ui_control_activityindicator ActivityIndicator]
-   * [guides_ui_control_progressbar ProgressBar]
-  * [guides_ui_animation アニメーション]
- * * 3rd Step : APIカタログ *
-  * ネットワーク編
-   * [guides_device_network ネットワークの状態]
-   * [guides_network_httpclient HTTPClient]
-  * I/O編
-   * [guides_app_properties アプリケーションプロパティ]
-   * [guides_filesystem ファイルシステム]
-   * [guides_database  データベース]
-  * メディア編
-   * [guides_media_camera カメラ撮影・カメラロール・スクリーンショット]
-   * カメラオーバレイ (追加予定)
-   * カメラロール書き出し (追加予定)
-   * [guides_media_audiovideo 動画再生・音声再生]
-  * デバイスハードウェア編
-   * [guides_device_battery 電源状態]
-   * [guides_device_accelerometer 加速度センサ]
-   * [guides_device_geolocation 位置測定・電子コンパス]
-  * プラットフォーム編
-   * [guides_platform_appbadge アプリケーションバッジ]
-   * [guides_platform_information 環境情報取得]
-   * [guides_platform_openurl 他アプリケーション連携(OpenURL)]
-  * ユーティリティ編
-   * [guides_app_log ログ出力]
-   * [guides_embeded_timer タイマー処理]
-   * [guides_embeded_include ライブラリ取込]
-   * [guides_xml_dom XML DOM Parser]
-   * [guides_util_string 文字列変換(BASE64, MD5)]
- * * 4th Step : アプリケーション設定 *
-  * [tiapp_xml tiapp.xml, manifestファイルについて]
-  * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
- * * 5th Step : コードリーディング(Snapost) *
-  * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
+=== 1st Step : Titanium デビュー ===
+ * [about_timobile Titanium Mobileについて]
+ * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]
+=== 2nd Step : UIカタログ ===
+ * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
+ * Window編
+  * [guides_ui_window Window]
+  * [guides_ui_tabbar TabGroup]
+  * [guides_ui_iphone_statusbar StatusBar]
+  * [guides_ui_control_toolbar ToolBar]
+  * [guides_ui_dialog ダイアログ]
+ * View編
+  * [guides_ui_views View(共通)]
+  * [guides_ui_webview WebView]
+  * [guides_ui_scrollview ScrollView]
+  * [guides_ui_imageview ImageView]
+  * [guides_ui_tableview TableView]
+  * [guides_ui_mapview MapView]
+  * [guides_ui_coverflowview CoverflowView]
+  * [guides_ui_verticallayout VirticalLayout]
+ * Control編
+  * [guides_ui_control_label Label]
+  * [guides_ui_control_button Button]
+   * [howto_button_icon システムボタンアイコンの使い方]
+   * [howto_button_style ボタン形状の指定]
+  * [guides_ui_control_textfield TextField]
+  * [guides_ui_control_textarea TextArea]
+  * [guides_ui_control_Switch Switch]
+  * [guides_ui_control_Slider Slider]
+  * [guides_ui_control_picker Picker]
+  * [guides_ui_iphone_control_ButtonBar Button Bar(iPhoneのみ)]
+  * [guides_ui_iphone_control_TabbedBar Tabbed Bar(iPhoneのみ)]
+  * [guides_ui_control_searchbar Search Bar]
+  * [guides_ui_control_activityindicator ActivityIndicator]
+  * [guides_ui_control_progressbar ProgressBar]
+ * [guides_ui_animation アニメーション]
+
+=== 3rd Step : APIカタログ ===
+ * ネットワーク編
+  * [guides_device_network ネットワークの状態]
+  * [guides_network_httpclient HTTPClient]
+ * I/O編
+  * [guides_app_properties アプリケーションプロパティ]
+  * [guides_filesystem ファイルシステム]
+  * [guides_database  データベース]
+ * メディア編
+  * [guides_media_camera カメラ撮影・カメラロール・スクリーンショット]
+  * カメラオーバレイ (追加予定)
+  * カメラロール書き出し (追加予定)
+  * [guides_media_audiovideo 動画再生・音声再生]
+ * デバイスハードウェア編
+  * [guides_device_battery 電源状態]
+  * [guides_device_accelerometer 加速度センサ]
+  * [guides_device_geolocation 位置測定・電子コンパス]
+ * プラットフォーム編
+  * [guides_platform_appbadge アプリケーションバッジ]
+  * [guides_platform_information 環境情報取得]
+  * [guides_platform_openurl 他アプリケーション連携(OpenURL)]
+ * ユーティリティ編
+  * [guides_app_log ログ出力]
+  * [guides_embeded_timer タイマー処理]
+  * [guides_embeded_include ライブラリ取込]
+  * [guides_xml_dom XML DOM Parser]
+  * [guides_util_string 文字列変換(BASE64, MD5)]
+
+=== 4th Step : アプリケーション設定 ===
+ * [tiapp_xml tiapp.xml, manifestファイルについて]
+ * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
+
+=== 5th Step : コードリーディング(Snapost) ===
+ * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
