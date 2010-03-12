@@ -23,6 +23,7 @@ picker.selectionIndicator = true;
 // スタイルを指定します。
 picker.type = Ti.UI.PICKER_TYPE_PLAIN;
 /*
+// iPhoneでは現在PLAINしか対応していません！
 Ti.UI.PICKER_TYPE_COUNT_DOWN_TIMER
 Ti.UI.PICKER_TYPE_DATE
 Ti.UI.PICKER_TYPE_DATE_AND_TIME
