@@ -1,8 +1,11 @@
 #summary titanium-mobile-doc-jaの目次
 = 目次 =
+
+== Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発 == 
+
  * * 1st Step : Titanium デビュー *
-  * [about_timobile Appcelerator Titanium Mobileについて]
-  * [get_started Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!!]
+  * [about_timobile Titanium Mobileについて]
+  * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]
  * * 2nd Step : UIカタログ *
   * [guides_ui_iphone_abstruct iPhoneのUI構造] （内容見直し中）
   * Window編
