@@ -45,7 +45,7 @@
    * [guides_network_httpclient HTTPClient]
   * I/O編
    * [guides_app_properties アプリケーションプロパティ]
-   * [guides_filesystem ファイルシステム](作業中)
+   * [guides_filesystem ファイルシステム]
    * [guides_database  データベース]
   * メディア編
    * [guides_media_camera カメラ撮影・カメラロール・スクリーンショット]
