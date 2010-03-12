@@ -10,9 +10,9 @@
   * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
   * Window編
    * [guides_ui_window Window]
-   * [guides_ui_tabbar Tab Group]
-   * [guides_ui_iphone_statusbar Status Bar]
-   * [guides_ui_control_toolbar Tool Bar]
+   * [guides_ui_tabbar TabGroup]
+   * [guides_ui_iphone_statusbar StatusBar]
+   * [guides_ui_control_toolbar ToolBar]
    * [guides_ui_dialog ダイアログ]
   * View編
    * [guides_ui_views View(共通)]
