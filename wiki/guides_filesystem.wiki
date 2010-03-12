@@ -1,76 +1,56 @@
-#summary API案内 - I/O編 - ファイルシステム(作成中)
-#labels api,underconstruction
-= API案内 - I/O編 - ファイルシステム(作成中) =
+#summary API案内 - I/O編 - ファイルシステム
+#labels api
+= API案内 - I/O編 - ファイルシステム =
+
+ファイルシステムの操作には今のところプロパティ取得と内容の読取りしかないので、次のような速見表でのご紹介に留めさせていただきます。
+
 
 == パス関連情報の取得 ==
-{{{
-Titanium.API.info('Resources Directory :' + Titanium.Filesystem.resourcesDirectory);
-Titanium.API.info('Temp Directory :' + Titanium.Filesystem.tempDirectory);
-Titanium.API.info('Application Directory :' + Titanium.Filesystem.applicationDirectory);
-Titanium.API.info('Application Data Directory :' + Titanium.Filesystem.applicationDataDirectory);
-Titanium.API.info('External Storage Available :' + Titanium.Filesystem.isExteralStoragePresent);
-Titanium.API.info('Path Separator :' + Titanium.Filesystem.separator);
-Titanium.API.info('Line Ending :' + Titanium.Filesystem.lineEnding);
 
-/*
-[INFO] Resources Directory :/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app
-[INFO] Temp Directory :/var/folders/fy/fyJLG5EWEcSF52GCubOqmU+++TI/-Tmp-/
-[INFO] Application Directory :/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Applications
-[INFO] Application Data Directory :/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Documents
-[INFO] External Storage Available :false
-[INFO] Path Separator :/
-[INFO] Line Ending :
-*/
-}}}
+|| * API * || * 内容 * || * 実行例 * ||
+|| * Titanium.Filesystem.resourcesDirectory * ||Resources Directory||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app||
+|| * Titanium.Filesystem.tempDirectory * ||Temp Directory||/var/folders/fy/fyJLG5EWEcSF52GCubOqmU+++TI/-Tmp-/||
+|| * Titanium.Filesystem.applicationDirectory * ||Application Directory||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Applications||
+|| * Titanium.Filesystem.applicationDataDirectory * ||Application Data Directory||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Documents||
+|| * Titanium.Filesystem.isExteralStoragePresent * ||External Storage Available ||false||
+|| * Titanium.Filesystem.separator * ||Path Separator ||/||
+|| * Titanium.Filesystem.lineEnding * ||Line Ending ||||
+
+
 == ファイル情報の取得 ==
+次の処理で取得されたファイルオブジェクトのプロパティとして取得します。
 {{{
-var f = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, 'text.txt');
-Ti.API.info('file = ' + f)
-var contents = f.read();
-Ti.API.info("contents blob object = "+contents);
-Ti.API.info('contents = ' + contents.text)
-Ti.API.info('mime type = ' + contents.mimeType)
-Ti.API.info('nativePath = ' + f.nativePath);
-Ti.API.info('exists = ' + f.exists());
-Ti.API.info('size = ' + f.size);
-Ti.API.info('readonly = ' + f.readonly);
-Ti.API.info('symbolicLink = ' + f.symbolicLink);
-Ti.API.info('executable = ' + f.executable);
-Ti.API.info('hidden = ' + f.hidden);
-Ti.API.info('writable = ' + f.writable);
-Ti.API.info('name = ' + f.name);
-Ti.API.info('extension = ' + f.extension());
-Ti.API.info('resolve = ' + f.resolve());
-
-/*
-[INFO] file = /Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt
-[INFO] contents blob object = [object TiBlob]
-[INFO] contents = Hello World. this is a filesystem read test.
-[INFO] mime type = text/plain
-[INFO] nativePath = /Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt
-[INFO] exists = true
-[INFO] size = 44
-[INFO] readonly = true
-[INFO] symbolicLink = false
-[INFO] executable = false
-[INFO] hidden = false
-[INFO] writable = false
-[INFO] name = text.txt
-[INFO] extension = txt
-[INFO] resolve = /Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt
-*/
+var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, 'text.txt');
+var contents = file.read();
 }}}
+|| * API * || * 内容 * || * 実行例 * ||
+|| * file * ||file||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt||
+|| * contents * ||contents blob object||[object TiBlob]||
+|| * contents.text * ||contents||Hello World. this is a filesystem read test.||
+|| * contents.mimeType * ||mime type||text/plain||
+|| * file.nativePath * ||nativePath||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt||
+|| * file.exists() * ||exists||true||
+|| * file.size * ||size||44||
+|| * file.readonly * ||readonly||true||
+|| * file.symbolicLink * ||symbolicLink||false||
+|| * file.executable * ||executable||false||
+|| * file.hidden * ||hidden||false||
+|| * file.writable * ||writable||false||
+|| * file.name * ||name||text.txt||
+|| * file.extension() * ||extension||txt||
+|| * file.resolve() * ||resolve||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/KitchenSink.app/text.txt||
+
 == ディレクトリ情報の取得 ==
+ファイル同様、ディレクトリオブジェクトからのプロパティ取得となります。
 {{{
 var dir = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory);
-Ti.API.info('directoryListing = ' + dir.getDirectoryListing());
-Ti.API.info('getParent = ' + dir.getParent());
-Ti.API.info('spaceAvailable = ' + dir.spaceAvailable());
 
-[INFO] directoryListing = cricket.wav,Default.png,default_app_logo.png,dependencies.map,Entitlements.plist,images,Info.plist,KitchenSink,MainWindow.nib,modules,movie.mp4,PkgInfo,pop.caf,Settings.bundle,testdb.db,text.txt
-[INFO] getParent = /Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C
-[INFO] spaceAvailable = true
 }}}
+|| * API * || * 内容 * || * 実行例 * ||
+|| * dir.getDirectoryListing() * ||directoryListing||cricket.wav,Default.png,default_app_logo.png,dependencies.map,Entitlements.plist,images,Info.plist,KitchenSink,MainWindow.nib,modules,movie.mp4,PkgInfo,pop.caf,Settings.bundle,testdb.db,text.txt||
+|| * dir.getParent() * ||getParent||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C||
+|| * dir.spaceAvailable() * ||spaceAvailable||true||
+
 
 https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Filesystem
 
