@@ -1,17 +1,17 @@
 #summary titanium-mobile-doc-jaの目次
 = 目次 =
- * *1st Step - 入門的な。*
+ * * 1st Step : Titanium デビュー *
   * [about_timobile Appcelerator Titanium Mobileについて]
   * [get_started Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!!]
- * *2nd Step - UIを知る*
+ * * 2nd Step : UIカタログ *
   * [guides_ui_iphone_abstruct iPhoneのUI構造] （内容見直し中）
-  * [guides_ui_dialog ダイアログ]
-  * Native UI 案内(Windowとそれにまつわるエトセトラ)
+  * Window編
    * [guides_ui_window Window]
    * [guides_ui_tabbar Tab Group]
    * [guides_ui_iphone_statusbar Status Bar]
    * [guides_ui_control_toolbar Tool Bar]
-  * Native UI 案内(View関連)
+   * [guides_ui_dialog ダイアログ]
+  * View編
    * [guides_ui_views View(共通)]
    * [guides_ui_webview WebView]
    * [guides_ui_scrollview ScrollView]
@@ -20,11 +20,11 @@
    * [guides_ui_mapview MapView]
    * [guides_ui_coverflowview CoverflowView]
    * [guides_ui_verticallayout VirticalLayout]
-  * Native UI 案内(Control関連)
+  * Control編
    * [guides_ui_control_label Label]
    * [guides_ui_control_button Button]
-   * [howto_button_icon システムボタンアイコンの使い方]
-   * [howto_button_style ボタン形状の指定]
+    * [howto_button_icon システムボタンアイコンの使い方]
+    * [howto_button_style ボタン形状の指定]
    * [guides_ui_control_textfield TextField]
    * [guides_ui_control_textarea TextArea]
    * [guides_ui_control_Switch Switch]
@@ -36,7 +36,7 @@
    * [guides_ui_control_activityindicator ActivityIndicator]
    * [guides_ui_control_progressbar ProgressBar]
   * [guides_ui_animation アニメーション]
- * *3rd Step - API案内 *
+ * * 3rd Step : APIカタログ *
   * ネットワーク編
    * [guides_device_network ネットワークの状態]
    * [guides_network_httpclient HTTPClient]
@@ -47,7 +47,7 @@
   * メディア編
    * [guides_media_camera カメラ撮影・カメラロール・スクリーンショット]
    * カメラオーバレイ (追加予定)
-   * カメラロールへのI/O (追加予定)
+   * カメラロール書き出し (追加予定)
    * [guides_media_audiovideo 動画再生・音声再生]
   * デバイスハードウェア編
    * [guides_device_battery 電源状態]
@@ -63,6 +63,8 @@
    * [guides_embeded_include ライブラリ取込]
    * [guides_xml_dom XML DOM Parser]
    * [guides_util_string 文字列変換(BASE64, MD5)]
- * *4th Step - アプリケーション設定 *
+ * * 4th Step : アプリケーション設定 *
   * tiapp.xml, manifestファイルについて (TODO)
   * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
+ * * 5th Step : コードリーディング(Snapost) *
+  * AppStoreに登録されているアプリケーションソースに基づくコードリーディング
