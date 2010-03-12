@@ -81,12 +81,13 @@ circle.animate({center:{x:100,y:100},curve:Ti.UI.ANIMATION_CURVE_EASE_IN_OUT,dur
 == transitionアニメーション ==
 WindowやViewに対してフリップ移動やカールするアニメーションがありますが、ああいうことを行うための指定がtransitionアニメーションになります。
 
-指定できるのは次のとおり４つです。
+指定できるのは次のとおり５つです。
 
  * Ti.UI.iPhone.AnimationStyle.CURL_UP
  * Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
  * Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
  * Ti.UI.iPhone.AnimationStyle.CURL_DOWN
+ * Ti.UI.iPhone.AnimationStyle.NONE
 
 {{{
 var button = Titanium.UI.createButton({
@@ -101,6 +102,8 @@ button.addEventListener('click', function(){
     });
 });
 }}}
+
+https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.iPhone.AnimationStyle
 
 == 2DMatrix, 3DMatrixによる変形アニメーション ==
 
