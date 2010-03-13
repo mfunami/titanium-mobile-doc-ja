@@ -1,6 +1,6 @@
-#summary Native UI案内 - Progress Bar
-#labels ui,api
-= Native UI案内 - Progress Bar =
+#summary UIカタログ(コントロール) - ProgressBar
+#labels ui,api,control
+= UIカタログ(コントロール) - !ProgressBar =
 進捗表示を行うコントロールです。
 
 進捗を返すイベントリスナとセットで利用することになるでしょう。
@@ -33,9 +33,8 @@ var interval = setInterval(function(){
 },1000);
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ProgressBar
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ProgressBar
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
