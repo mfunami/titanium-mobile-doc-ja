@@ -5,7 +5,7 @@
 
 === はじめに ===
 
- * [about_timobile Titanium Mobileについて]
+ * [about_titanium_mobile Titanium Mobileについて]
 
 === 1st Step : はじめの一歩 ===
 
