@@ -463,7 +463,7 @@ object.addEventListener('EVENT_NAME', function(event){
 
 ともあれ、どのようなものがサポートされているかを駆け足になりますがご紹介していこうと思います。
 
-=== BaseUI - Tab Group → Tab → Window ===
+=== BaseUI - !TabGroup → Tab → Window ===
 TabGroupとは次の画像で画面下部の黒背景でアイコンが並んでいる部分を総称します。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190651.png
@@ -514,7 +514,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190654.png
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227194846.png
 
-=== BaseUI - Statusbar, Nav Bar, Toolbar === 
+=== BaseUI - !StatusBar, !NavBar, !ToolBar === 
 以下の画像でそれぞれの部品を説明します。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190702.png
@@ -535,12 +535,12 @@ Viewは(原則的に)Windowの内側に配置される表示部です。
 
 場合によってはViewを含む他のコントロールのコンテナ（親）になります。
 
-=== Views - Coverflow View ===
+=== Views - !CoverflowView ===
 画像を左右にスクロールさせながら拡大表示するカバーフローもこのViewを利用すれば、画像の配列を渡すだけで簡単に実現できます。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190655.png
 
-=== Views - Web View ===
+=== Views - !WebView ===
 純粋にHTMLサイトを表示するためのViewです。
 safariアプリで開けるサイト／情報はすべて表示できると考えてください。
 
@@ -549,7 +549,7 @@ safariアプリで開けるサイト／情報はすべて表示できると考�
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195104.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195105.png
 
-=== Views - Table View ===
+=== Views - !TableView ===
 TableViewは出来る事が多岐にわたっているため、大変奥が深いものになっています。
 
 
@@ -563,17 +563,17 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190657.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190658.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190659.png
 
-=== Views - Scroll View ===
+=== Views - !ScrollView ===
 スクロール可能なViewです。スワイプやボタンによるアクションでスクロールさせることが可能になります。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190700.png
 
-=== Views - Image View ===
+=== Views - !ImageView ===
 画像表示が可能なViewです。画像のアニメーションもさせることができます。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190701.png
 
-=== Views - Map View ===
+=== Views - !MapView ===
 地図表示が可能なViewです。単体では下の例のようなツールバーはついていません。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195106.png
@@ -583,7 +583,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195106.png
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190703.png
 
-=== Controls - Button / System Buttons ===
+=== Controls - Button / !SystemButtons ===
 ボタンを表示するコントロールです。文字表示だけではなくアイコンの併記や画像をボタン化することも可能です。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190704.png
@@ -591,7 +591,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190707.png
 
 一部の規定のアイコンを使用する場合はSystemBottons列挙体で宣言されている定数を利用する形になります。（右の例ではNavbarやToolbarに使用されている画像がそれにあたります）
 
-=== Controls - `TextField`, `TextArea` ===
+=== Controls - !TextField, !TextArea ===
 TextFieldはテキスト入力（1行）をするためのコントロールです。多岐にわたる初期設定により随分表情の変わるコントロールだと言えるでしょう。
 
 一方、TextAreaは複数行のテキスト入力を行うためのコントロールです。
@@ -606,21 +606,21 @@ ON/OFFの切り替えのみを行うコントロールです。主に設定画�
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190712.png
 
-=== Controls - TabbedBar (iPhone依存) ===
+=== Controls - !TabbedBar (iPhone依存) ===
 こちらはON/OFFに限らない状態を切り替えるコントロールです。
 
 他のOSやWebアプリケーションにおけるラジオボタンと同等の位置づけと考えればよいでしょう。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190713.png
 
-=== Controls - ButtonBar (iPhone依存) ===
+=== Controls - !ButtonBar (iPhone依存) ===
 見た目はTabbedBarにそっくりですが、こちらは状態を持ちません。
 
 ボタンの集合として利用します。NavbarやToolbarとの相性がよいと思われます。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190714.png
 
-=== Controls - Toolbar (iPhone依存) ===
+=== Controls - !ToolBar (iPhone依存) ===
 Windowの直下にあるToolbarとは別に局所的な機能としてのToolbarになります。
 
 キーボードツールバーはTextField/TextAreaでサポートされているので、いまいち使いどころが難しいかもしれませんが。
@@ -639,17 +639,17 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190717.png
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190718.png
 
-=== Controls - Search Bar ===
+=== Controls - !SearchBar ===
 検索用のツールバーです。大体TableViewなどとセットで登場するかたちになります。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190719.png
 
-=== Controls - Activity Indicator ===
+=== Controls - !ActivityIndicator ===
 現在なんらかの処理中であることを示すアイコンとメッセージを表示するコントロールです。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190720.png
 
-=== Controls - Progress Bar ===
+=== Controls - !ProgressBar ===
 進捗表示を行うコントロールです。
 
 進捗を返すイベントリスナとセットで利用することになるでしょう。
