@@ -1,12 +1,12 @@
-#summary Native UI案内 - Button Bar(iPhoneのみ)
-#labels ui,api,iphone
-= Native UI案内 - Button Bar(iPhoneのみ) =
-Button Barとは次の画像のNav Barの中央, コンテンツエリアの上段、ToolBarのそれぞれに配置されているコントロールのことをさします。
+#summary UIカタログ(コントロール) - ButtonBar(iPhoneのみ)
+#labels ui,api,iphone,control
+= UIカタログ(コントロール) - !ButtonBar(iPhoneのみ) =
+ButtonBarとは次の画像のNavBarの中央, コンテンツエリアの上段、ToolBarのそれぞれに配置されているコントロールのことをさします。
 
 http://img.skitch.com/20090708-bdkt5yc5gnx28fsxadddx4w5ks.jpg
 
 このコントロールは同じ系統のボタンを複数並べるのに用います。
-状態の管理は[guides_ui_iphone_control_TabbedBar Tabbed Bar]の機能になるため、このコントロールでは利用できません。
+状態の管理はTabbedBarの機能になるため、このコントロールでは利用できません。
 
 上記の画面のコード例は以下のようになります。
 {{{
@@ -53,9 +53,8 @@ buttonbar.addEventListener('click', function(e){
 });
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ButtonBar
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ButtonBar
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
