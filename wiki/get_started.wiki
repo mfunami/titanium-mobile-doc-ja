@@ -463,18 +463,21 @@ object.addEventListener('EVENT_NAME', function(event){
 
 ともあれ、どのようなものがサポートされているかを駆け足になりますがご紹介していこうと思います。
 
-=== BaseUI - !TabGroup → Tab → Window ===
+=== BaseUI - Windowを構成する!TabGroup, Tab, !StatusBar, !NavBar, !ToolBar ===
 TabGroupとは次の画像で画面下部の黒背景でアイコンが並んでいる部分を総称します。
 
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190651.png
-
+http://img.skitch.com/20100313-dgn2fdktkw76n8crinym55emce.jpg
 
 TabGroupには複数のTabを所属させる事ができます。
 
 Tab自体はTabGroup上のアイコンとして表現され、その実態はそれぞれのTabが保有するWindowになるという入れ子構造になっています。
 
-
 上の例ではTabGroupに5つのTabがあり、そのうち一番左に位置する"Base UI"というタイトルの付いているTabが選択されており、TabGroupの上方に表示されているのは"Base UI" Tabが保有するWindowであるという状態になります。
+
+また、一番上の電波状態や時刻などが表示されている部分がStatusbarといいます。Statusbar自体にプログラム的な制御はほとんどできません。可能なのは3種類の表示色のいずれかを選択するか、表示・非表示の制御だけです。
+
+その他、画面の上下にボタンなどが並んでいるエリアがNavBarとToolBarです。NavBarには!LeftButton、Title、!RightButtonの三つのエリアがあり、それぞれ部品を配置できます。Buttonと称していますがButtonでなくても別に構いません。
+
 
 ちなみにapp.jsでTabGroupを宣言せず、いきなりWindowを生成し表示する事も可能です。
 その場合は画面上にTabGroupはもちろん表示されずにWindowのみが表示されるようになります。
@@ -513,22 +516,6 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190654.png
 また、Email作成用の専用ダイアログ(Email Dialog)が別途用意されています。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227194846.png
-
-=== BaseUI - !StatusBar, !NavBar, !ToolBar === 
-以下の画像でそれぞれの部品を説明します。
-
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190702.png
-
-
-まず一番上の電波状態や時刻などが表示されている部分がStatusbarといいます。
-
-Statusbar自体にプログラム的な制御はほとんどできません。可能なのは3種類の表示色のいずれかを選択するか、表示・非表示の制御だけです。
-
-続いて「Window Constructor」やドクロアイコンなどが並んでいる場所がNavbarといいます。
-
-NavbarにはLeftButton、Title、RightButtonの三つのエリアがあり、それぞれ部品を配置できます。Buttonと称していますがButtonでなくても別に構いません。
-
-そしてTabGroupの上に「Left」「Right」というボタンが並んでいる部分がToolbarです。
 
 === BaseUI - Views === 
 Viewは(原則的に)Windowの内側に配置される表示部です。
