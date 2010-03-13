@@ -1,6 +1,6 @@
-#summary Native UI案内 - Scroll View
-#labels ui,api
-= Native UI案内 - Scroll View =
+#summary UIカタログ - ScrollView
+#labels ui,api,view
+= UIカタログ - !ScrollView =
 スクロール可能なViewです。
 
 スワイプやボタンによるアクションでスクロールさせることが可能になります。 
@@ -31,11 +31,9 @@ var scrollView = Titanium.UI.createScrollableView({
 Titanium.UI.currentWindow.add(scrollView);
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ScrollView
-
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ScrollableView
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ScrollView
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ScrollableView
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
