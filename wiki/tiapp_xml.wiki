@@ -8,13 +8,13 @@ tiapp.xmlファイルはプロジェクトルートにあり、mafinestファイ
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-  <id>jp.hsj.test092</id>
-  <name>Test092</name>
+  <id>jp.hsj.test100</id>
+  <name>Test100</name>
   <version>1.0</version>
-  <publisher>kitao</publisher>
+  <publisher>donayama</publisher>
   <url>http://twitter.com/donayama/</url>
   <description>No description provided</description>
-  <copyright>2010 by kitao</copyright>
+  <copyright>2010 by donayama</copyright>
   <icon>appicon.png</icon>
   <persistent-wifi>false</persistent-wifi>
   <prerendered-icon>false</prerendered-icon>
@@ -45,18 +45,15 @@ tiapp.xmlファイルはプロジェクトルートにあり、mafinestファイ
 このファイルはTitanium Developer上で設定されたプロジェクトの情報を保存しておくファイルであり、基本的に変更することはありません。
 
 {{{
-#appname: Test092
-#publisher: kitao
+#appname: Test100
+#publisher: donayama
 #url: http://twitter.com/donayama/
 #image: appicon.png
-#appid: jp.hsj.test092
+#appid: jp.hsj.test100
 #desc: undefined
 #type: mobile
 #guid: 1bef9b04-0362-4bfb-a68a-1a3635d5734a
 }}}
 
-
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
