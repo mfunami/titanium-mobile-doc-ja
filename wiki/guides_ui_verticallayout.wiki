@@ -1,6 +1,6 @@
-#summary Native UI案内 - Virtical Layout
-#labels ui,api
-= Native UI案内 - Virtical Layout =
+#summary UIカタログ - Virtical Layout
+#labels ui,api,layout
+= UIカタログ - Virtical Layout =
 指定したWindowやViewの中に配置したコントロールやViewが垂直に自動配置されていくレイアウト指定です。
 
 次の例では左がWindowと中心部のVIew, 右がTable View内のRowでVirtical Layoutを指定したものになります。
@@ -54,6 +54,4 @@ win.add(footer);
 }}}
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
