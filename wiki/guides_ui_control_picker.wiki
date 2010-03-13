@@ -1,6 +1,6 @@
-#summary Native UI案内 - Picker
-#labels ui,api
-= Native UI案内 - Picker =
+#summary UIカタログ(コントロール) - Picker
+#labels ui,api,control
+= UIカタログ(コントロール) - Picker =
 コンボボックスに相当する複数の候補から項目をドラム式に選択させるコントロールです。
 
 項目が多すぎると正直使い勝手が悪いので、そういうときはTableViewなどで外に出せないか考慮する必要があるかもしれません。
@@ -39,9 +39,8 @@ picker.addEventListener('change',function(e){
 });
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Picker
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Picker
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
