@@ -26,14 +26,14 @@ http://img.skitch.com/20090707-eq7pganihxiidf7n3ysxx25j3c.jpg
 表示部には次のような階層構造になってると考えれば（オブジェクトアクセス的にも）いいでしょう。
 
  * Application全体(tiapp.xml含む)
-  * Window[s]
+  * !Window[s]
    * !StatusBar
    * !NavBar
-    * Control[s]
-   * View[s]
-    * View[s]/Control[s]...
+    * !Control[s]
+   * !View[s]
+    * !View[s]/!Control[s]...
    * !ToolBar
-    * Control[s]
+    * !Control[s]
   * !TabBar
 
 === 代表的なView ===
