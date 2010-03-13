@@ -1,7 +1,7 @@
-#summary Native UI案内 - Coverflow View
-#labels ui,api
-= Native UI案内 - Coverflow View =
-画像を左右にスクロールさせながら拡大表示するカバーフローもこのViewを利用することにより、画像の配列を渡すだけで簡単に実現できます。
+#summary UIカタログ - CoverflowView
+#labels ui,api,view
+= UIカタログ - !CoverflowView =
+iPodやiTunesでおなじみの処理である画像を左右にスクロールさせながら拡大表示するカバーフローですが、このViewを利用することにより、画像の配列を渡すだけで簡単に実現できます。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190655.png
 
@@ -33,9 +33,9 @@ view.addEventListener('change',function(e){
 Ti.UI.currentWindow.add(view);
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.CoverFlowView
+== 関連するAPIドキュメント ==
+
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.CoverFlowView
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
