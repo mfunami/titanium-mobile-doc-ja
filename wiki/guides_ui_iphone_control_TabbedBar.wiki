@@ -1,6 +1,6 @@
 #summary UIカタログ(コントロール) - TabbedBar(iPhoneのみ)
 #labels ui,api,iphone,control
-= UIカタログ(コントロール) - TabbedBar(iPhoneのみ) =
+= UIカタログ(コントロール) - !TabbedBar(iPhoneのみ) =
 TabbedBarとは次の画像のNavBarの中央, コンテンツエリアの上段、ToolBarのそれぞれに配置されているコントロールのことをさします。
 
 http://img.skitch.com/20090708-kam6tp22hki1jksp379i1nt8kd.jpg
