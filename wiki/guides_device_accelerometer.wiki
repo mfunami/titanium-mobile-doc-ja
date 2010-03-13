@@ -1,17 +1,10 @@
-#summary API案内 - デバイスハードウェア編 - 加速度センサ
+#summary APIカタログ(デバイスハードウェア編) - 加速度センサ
 #labels api,device
-= API案内 - デバイスハードウェア編 - 加速度センサ =
-参考文献：[http://www.codestrong.com/timobile/guides/mobile_api/ Titanium Mobile API Guide]
-
-iPhone, Androidのいずれでも加速度センサに基づく、向きや移動に関する情報を取得できます。
-
-Titaniumでは詳細情報を取得するための低級APIとスマートにそれらの情報を扱えるようにイベント化された高級APIが提供されています。厳密な傾き判定などを行う場合は低級APIが必要になってきますが、「縦横の向きが変わった」ことや「シェイクしている」といったことを判断するだけなら高級APIだけで事足ります。
+= APIカタログ(デバイスハードウェア編) - 加速度センサ =
+Titaniumでは加速度センサについての詳細情報を取得するための低級APIとスマートにそれらの情報を扱えるようにイベント化された高級APIが提供されています。厳密な傾き判定などを行う場合は低級APIが必要になってきますが、「縦横の向きが変わった」ことや「シェイクしている」といったことを判断するだけなら高級APIだけで事足ります。
 
 == 高級API ==
 提供されているイベントは"shake"と"orientationchange"の二つだけです。
-
-ゲームとかじゃない限り、これで十分のような。
-
 ||イベント名||説明||
 ||shake||２～３回デバイスを振るとイベントが発生します。||
 ||orientationchange||縦横の向きを変えるとイベントが発生します。||
@@ -63,11 +56,9 @@ XYZの軸に関する状態について口で説明するよりもこれを見�
  * Digital Agua's Blog : Accelerometer x,y,z based on iPhone position
   ** http://blog.digitalagua.com/2008/07/15/accelerometer-xyz-based-on-iphone-position/
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Gesture
-
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Accelerometer
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Gesture
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Accelerometer
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
