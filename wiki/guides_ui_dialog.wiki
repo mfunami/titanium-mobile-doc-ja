@@ -1,6 +1,6 @@
-#summary UIカタログ - ダイアログ関連API
+#summary UIカタログ(API) - ダイアログ関連
 #labels api,ui,dialog
-= UIカタログ - ダイアログ関連API =
+= UIカタログ(API) - ダイアログ関連 =
 
 == シンプルなアラート(Alert Dialog) ==
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313205050.png
