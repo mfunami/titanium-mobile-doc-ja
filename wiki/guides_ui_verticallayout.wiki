@@ -1,6 +1,6 @@
-#summary UIカタログ - Virtical Layout
+#summary UIカタログ(API) - Virtical Layout
 #labels ui,api,layout
-= UIカタログ - Virtical Layout =
+= UIカタログ(API) - Virtical Layout =
 指定したWindowやViewの中に配置したコントロールやViewが垂直に自動配置されていくレイアウト指定です。
 
 次の例では左がWindowと中心部のVIew, 右がTable View内のRowでVirtical Layoutを指定したものになります。
