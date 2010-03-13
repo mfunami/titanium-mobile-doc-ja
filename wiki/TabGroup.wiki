@@ -1,5 +1,5 @@
 #summary UIカタログ - TabGroup
-#labels ui,api
+#labels ui,api,view
 = UIカタログ - !TabGroup =
 TabGroupは複数のwindowを束ねるアプリケーションUIの根幹を担います。
 
