@@ -15,10 +15,10 @@
 
  * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
  * Window編
-  * [guides_ui_window Window]
-  * [guides_ui_tabbar TabGroup]
-  * [guides_ui_iphone_statusbar StatusBar]
-  * [guides_ui_control_toolbar ToolBar]
+  * [Window]
+  * [TabGroup]
+  * [StatusBar]
+  * [ToolBar]
   * [guides_ui_dialog ダイアログ]
  * View編
   * [guides_ui_views View(共通)]
