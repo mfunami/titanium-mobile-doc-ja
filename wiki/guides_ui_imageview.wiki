@@ -8,7 +8,8 @@
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190701.png
 
 {{{
-// ローカルにある画像を指定する場合。（http://〜で始まるパスを入れるとリモートから取得されます）
+// ローカルにある画像を指定する場合。
+//  (http://〜で始まるパスを入れるとリモートから取得されます)
 var imageView = Titanium.UI.createImageView({
     url:'../images/cloud.png',
     width:261,
