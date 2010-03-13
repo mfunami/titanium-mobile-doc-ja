@@ -13,7 +13,7 @@ Titanium Mobileはイメージ的にObjective-Cへのプリプロセッサとし
 
 それぞれの部品をなんというかというところについては次の画像を見ていただくのが一番早いと思います。
 
-http://img.skitch.com/20100313-dgn2fdktkw76n8crinym55emce.jpg
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313205053.jpg
 
 === 画面を構成する表示領域 ===
 || * Window * ||すべてのUI部品やViewを格納する親オブジェクト||
