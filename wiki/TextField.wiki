@@ -236,3 +236,7 @@ win.add(textfield);
 == 関連するAPIドキュメント ==
 
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TextField
+
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
