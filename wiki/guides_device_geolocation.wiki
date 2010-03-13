@@ -162,10 +162,9 @@ Titanium.Geolocation.headingFilter = 90;
 Titanium.Geolocation.distanceFilter = 10;
 }}}
 
-精度についての設定です。（追記予定）
-
-//  SET ACCURACY - THE FOLLOWING VALUES ARE SUPPORTED
 {{{
+// 精度についての設定です。（追記予定）
+//  SET ACCURACY - THE FOLLOWING VALUES ARE SUPPORTED
 // Titanium.Geolocation.ACCURACY_BEST
 // Titanium.Geolocation.ACCURACY_NEAREST_TEN_METERS
 // Titanium.Geolocation.ACCURACY_HUNDRED_METERS
