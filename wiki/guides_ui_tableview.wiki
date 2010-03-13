@@ -1,20 +1,14 @@
-#summary Native UI案内 - Table View
-#labels ui,api
-= Native UI案内 - Table View =
+#summary UIカタログ - TableView (基本編)
+#labels ui,api,view,tableview
+= UIカタログ - !TableView (基本編) =
+TableViewは単純な行選択から複雑なレイアウト、グループ表示など多岐に渡る奥の深いものです。
+
+ここではまず基本的な部分について見ていきます。
+
+== 標準的なTable View ==
 標準的なTableViewは次のような単純な行選択をするためのUIになります。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190656.png
-
-このように各行に対するレイアウトデザインすることも可能です。 
-
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190657.png
-
-また「設定」画面のようなグループ表示もTableViewの一環としてサポートされていますので、作法もTableViewに則る必要があります。
-
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190658.png
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190659.png
-
-== 標準的なTable View ==
 {{{
 // Table Viewに表示するデータを作成しておきます
 // hasChild, hasDetail, hasCheckプロパティがあると上の例のような表示になります。
@@ -40,6 +34,9 @@ Titanium.UI.currentWindow.add(tableview);
 }}}
 
 == レイアウト ==
+このように各行に対するレイアウトデザインすることも可能です。 
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190657.png
 {{{
 // Navbarの色を変えつつ...
 var win = Titanium.UI.currentWindow;
@@ -164,6 +161,11 @@ tableView = Titanium.UI.createTableView({
 }}}
 
 == 設定 ==
+また「設定」画面のようなグループ表示もTableViewの一環としてサポートされていますので、作法もTableViewに則る必要があります。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190658.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190659.png
+
 グループ表示をするにはTableViewSectionとTableViewStyleの指定を用います。
 {{{
 // 外枠となるTable View Sectionを生成する。
@@ -215,13 +217,10 @@ var tableView = Ti.UI.createTableView({
 });
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableView
-
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableViewRow
-
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableViewSection
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableView
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableViewRow
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TableViewSection
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
