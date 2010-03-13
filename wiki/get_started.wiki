@@ -466,7 +466,7 @@ object.addEventListener('EVENT_NAME', function(event){
 === BaseUI - Windowを構成する!TabGroup, Tab, !StatusBar, !NavBar, !ToolBar ===
 TabGroupとは次の画像で画面下部の黒背景でアイコンが並んでいる部分を総称します。
 
-http://img.skitch.com/20100313-dgn2fdktkw76n8crinym55emce.jpg
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313205053.jpg
 
 TabGroupには複数のTabを所属させる事ができます。
 
