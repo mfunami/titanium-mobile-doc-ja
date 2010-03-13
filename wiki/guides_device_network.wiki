@@ -1,8 +1,6 @@
-#summary API案内 - デバイスハードウェア編 - ネットワークの状態
-#labels api,device
-
-= API案内 - デバイスハードウェア編 - ネットワークの状態 =
-参考文献：[http://www.codestrong.com/timobile/guides/mobile_api/ Titanium Mobile API Guide]
+#summary APIカタログ(デバイスハードウェア編) - ネットワークの状態
+#labels api,device,network
+= APIカタログ(デバイスハードウェア編) - ネットワークの状態 =
 == コード例・解説 ==
 {{{
 // 通信状態じゃないと使えないアプリ(AppStoreとかもそうですが)がありますが、
@@ -33,9 +31,8 @@ Titanium.Network.addEventListener('change', function(e) {
 });
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Network
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Network
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
