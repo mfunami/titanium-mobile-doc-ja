@@ -1,6 +1,6 @@
 #summary UIカタログ - TextField
 #labels ui,api,control
-= UIカタログ - TextField =
+= UIカタログ - !TextField =
 言わずもがなのテキスト入力を行うためのコントロールです。
 
 キーボードの制御設定やキーボードツールバーを設定できます。
