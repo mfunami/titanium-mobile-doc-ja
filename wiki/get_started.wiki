@@ -591,7 +591,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190707.png
 
 一部の規定のアイコンを使用する場合はSystemBottons列挙体で宣言されている定数を利用する形になります。（右の例ではNavbarやToolbarに使用されている画像がそれにあたります）
 
-=== Controls - TextField, TextArea ===
+=== Controls - `TextField`, `TextArea` ===
 TextFieldはテキスト入力（1行）をするためのコントロールです。多岐にわたる初期設定により随分表情の変わるコントロールだと言えるでしょう。
 
 一方、TextAreaは複数行のテキスト入力を行うためのコントロールです。
