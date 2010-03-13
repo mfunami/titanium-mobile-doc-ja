@@ -5,9 +5,11 @@ Titaniumでは加速度センサについての詳細情報を取得するため
 
 == 高級API ==
 提供されているイベントは"shake"と"orientationchange"の二つだけです。
+
 ||イベント名||説明||
 ||shake||２～３回デバイスを振るとイベントが発生します。||
 ||orientationchange||縦横の向きを変えるとイベントが発生します。||
+
 {{{
 // shakeイベント
 Ti.Gesture.addEventListener("shake", function(){
