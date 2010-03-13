@@ -1,6 +1,6 @@
 #summary API案内 - ユーティリティ編 - 外部JavaScript取込み
 #labels api,embeded
-= API案内 - ユーティリティ編 - 外部`JavaScript`取込み =
+= API案内 - ユーティリティ編 - 外部 !JavaScript 取込み =
 配列処理をスマートに実現したり、あるいは毎度同じように書いているtwitterへのpost処理などをライブラリ化して読み込ませたいといったことも多々あると思います。
 
 Cにおける{{{#include}}}のような機能が{{{Titanium.include}}}関数で実現します。
@@ -18,7 +18,9 @@ Ti.UI.createAlertDialog({
 }).show();
 }}}
 
-----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
+Titanium.includeは使用したコンテキストに対して指定したスクリプトを当てはめて評価されるため、同じ名前のオブジェクト(functionやclassも含む)はすべて上書きされます。
 
+意図しない挙動の原因にもなるので名前空間の汚染をしないように常々心がけ、また命名には細心の注意を払う必要があるでしょう。
+
+----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
