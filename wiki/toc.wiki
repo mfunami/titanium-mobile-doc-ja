@@ -3,10 +3,16 @@
 
 == Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発 == 
 
-=== 1st Step : Titanium デビュー ===
+=== はじめに ===
+
  * [about_timobile Titanium Mobileについて]
+
+=== 1st Step : はじめの一歩 ===
+
  * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]
+
 === 2nd Step : UIカタログ ===
+
  * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
  * Window編
   * [guides_ui_window Window]
@@ -41,6 +47,7 @@
  * [guides_ui_animation アニメーション]
 
 === 3rd Step : APIカタログ ===
+
  * ネットワーク編
   * [guides_device_network ネットワークの状態]
   * [guides_network_httpclient HTTPClient]
@@ -69,8 +76,10 @@
   * [guides_util_string 文字列変換(BASE64, MD5)]
 
 === 4th Step : アプリケーション設定 ===
+
  * [tiapp_xml tiapp.xml, manifestファイルについて]
  * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
 
 === 5th Step : コードリーディング(Snapost) ===
+
  * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
