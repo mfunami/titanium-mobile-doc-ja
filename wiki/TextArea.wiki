@@ -1,4 +1,4 @@
-#summary UIカタログ- !TextArea
+#summary UIカタログ- TextArea
 #labels ui,api,control
 = UIカタログ- !TextArea =
 TextFieldと異なり、こちらは複数行のテキスト入力を行うためのコントロールです。
