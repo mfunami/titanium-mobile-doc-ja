@@ -32,7 +32,7 @@ var mapview = Titanium.Map.createView({
 Ti.UI.currentWindow.add(mapview);
 }}}
 
-== MapType ==
+== 地図表示形式 ==
 地図の表示方法には3種類用意されています。
 
  * Titanium.Map.STANDARD_TYPE
