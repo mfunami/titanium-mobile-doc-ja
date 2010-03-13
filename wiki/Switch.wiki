@@ -1,0 +1,25 @@
+#summary UIカタログ(コントロール) - Switch
+#labels api,ui,control
+= UIカタログ(コントロール) - Switch =
+オンとオフの状態切り替えを行うためだけの部品になります。
+設定画面ぐらいでしか出番がないかもしれません。
+
+http://img.skitch.com/20090708-mey6y29wqa55965b7pyp9rrkmc.jpg
+{{{
+var s1 = Titanium.UI.createSwitch({
+	value:false,
+	top:30,
+});
+Ti.UI.currentWindow.add(s1);
+
+// create a switch change listener
+s1.addEventListener('change', function(e) {
+    // e.valueにはスイッチの新しい値が true もしくは falseとして設定されます。
+});
+}}}
+
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Switch
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
