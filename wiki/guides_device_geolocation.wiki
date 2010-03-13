@@ -1,10 +1,6 @@
-#summary API案内 - デバイスハードウェア編 - 位置測定・電子コンパス
+#summary APIカタログ(デバイスハードウェア編) - 位置測定・電子コンパス
 #labels api,device
-
-= API案内 - デバイスハードウェア編 - 位置測定・電子コンパス =
-参考文献：[http://www.codestrong.com/timobile/guides/mobile_api/ Titanium Mobile API Guide]
-
-
+= APIカタログ(デバイスハードウェア編) - 位置測定・電子コンパス =
 == 利用可能か判断する ==
 位置測定とコンパス機能が利用できるかどうかを判断するプロパティがあります。
 まずそちらでイベントリスナへの登録を制御するようにしましょう。
@@ -20,15 +16,12 @@ if(Titanium.Geolocation.hasCompass){
 }}}
 
 == 測定方法 ==
-
 GPS、電子コンパスから現在状態を測定するため、2つの方法が提供されています。
 
 端的に今どこにいるのかを取得する一度きりの処理、もうひとつは方向や場所の変化を検知し継続的に情報を更新し続ける処理になります。
 
 === 一度きりの処理(Titanium.Geolocation.getCurrent****) ===
-
-いかにも値を返しそうなメソッド名なんですが、voidです(^^;
-実際の座標取得、エラー処理はコールバック関数で行います。
+いかにも値を返しそうなメソッド名なんですが非同期処理のため、実際の座標取得、エラー処理はコールバック関数で行います。
 
 ==== GPS(Titanium.Geolocation.getCurrentPosition) ====
 {{{
@@ -63,8 +56,6 @@ Titanium.Geolocation.getCurrentPosition(function(e)
     */
 );
 }}}
-
-
 
 ==== 電子コンパス(Titanium.Geolocation.getCurrentHeading() ====
 {{{
@@ -184,7 +175,5 @@ Titanium.Geolocation.distanceFilter = 10;
 Titanium.Geolocation.accuracy = Titanium.Geolocation.ACCURACY_BEST;
 }}}
 
-
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
