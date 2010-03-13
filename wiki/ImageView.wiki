@@ -1,0 +1,51 @@
+#summary UIカタログ - ImageView
+#labels api,ui,view
+= UIカタログ - !ImageView =
+画像表示が可能なViewです。
+
+画像のアニメーションもさせることができます。 
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190701.png
+
+{{{
+// ローカルにある画像を指定する場合。
+//  (http://〜で始まるパスを入れるとリモートから取得されます)
+var imageView = Titanium.UI.createImageView({
+    url:'../images/cloud.png',
+    width:261,
+    height:178,
+    top:20
+});
+Ti.UI.currentWindow.add(imageView);
+}}}
+
+== アニメーション ==
+imagesプロパティを設定する事により、パラパラマンガの要領でアニメーションされます。
+{{{
+var animationFrames = [
+    '../images/frame01.jpg',
+    '../images/frame02.jpg',
+    '../images/frame03.jpg',
+    '../images/frame04.jpg'
+];
+var animationView =  Titanium.UI.createImageView({
+    height: 200,
+    width: 200,
+    top: 30,
+    images: animationFrames,
+    // ミリ秒単位で次のフレームまでの間隔を指定します
+    duration: 100, 
+    // 繰り返し回数を指定します（0の場合は無限に繰り返します）
+    repeatCount: 0
+});
+Ti.UI.currentWindow.add(animationView);
+
+// パラパラマンガを開始する
+animationView.start();
+}}}
+
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ImageView
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
