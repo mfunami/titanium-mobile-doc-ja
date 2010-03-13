@@ -13,14 +13,14 @@ Titanium Mobileはイメージ的にObjective-Cへのプリプロセッサとし
 
 それぞれの部品をなんというかというところについては次の画像を見ていただくのが一番早いと思います。
 
-http://img.skitch.com/20090707-eq7pganihxiidf7n3ysxx25j3c.jpg
+http://img.skitch.com/20100313-dgn2fdktkw76n8crinym55emce.jpg
 
 === 画面を構成する表示領域 ===
-|| * !Window * ||すべてのUI部品やViewを格納する親オブジェクト||
-|| * !View * ||コンテンツ表示部の総称。いろいろな種類がある。||
+|| * Window * ||すべてのUI部品やViewを格納する親オブジェクト||
+|| * View * ||コンテンツ表示部の総称。いろいろな種類がある。||
 || * !StatusBar * ||デバイスの表示部最上方にある表示領域||
 || * !NavBar * ||Status Barの直下にある表示領域||
-|| * !Toolbar * ||画面下部に配置される表示領域||
+|| * !ToolBar * ||画面下部に配置される表示領域||
 || * !TabGroup *||(図では`TabBar`)最下部に配置される特殊な表示領域。複数のWindowを切り替える操作をする機能を持つ||
 
 表示部には次のような階層構造になってると考えれば（オブジェクトアクセス的にも）いいでしょう。
@@ -37,7 +37,6 @@ http://img.skitch.com/20090707-eq7pganihxiidf7n3ysxx25j3c.jpg
   * !TabBar
 
 === 代表的なView ===
-
 || * [WebView] * ||HTML部品を表示するためのView。NativeUIを使わずにHTML+Javascript+CSSでアプリケーションを開発する場合でもこのViewが配置されている寸法になります。||
 || * [TableView] * ||縦１列にデータが並んでいる形式です。Safariのブックマークなどが代表になるでしょうか。「設定」アプリケーションのような表組みもこちらにあたります。||
 || * [ImageView] * ||画像表示を行うためのView。CoverflowのためにはCoverFlowViewという別のものがあります。||
@@ -52,7 +51,4 @@ http://img.skitch.com/20090707-eq7pganihxiidf7n3ysxx25j3c.jpg
 ViewにもControlにもその他大勢の種類があるのでUIカタログ内でどういうものがあるのかを見ていこうと思います。
 
 ----
-
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
