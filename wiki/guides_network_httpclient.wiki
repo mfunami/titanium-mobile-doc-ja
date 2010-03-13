@@ -1,9 +1,7 @@
-#summary API案内 - HTTPClient編
+#summary APIカタログ(ネットワーク編) - HTTPClient
 #labels api,network
-= API案内 - HTTPClient編 =
-参考文献：[http://www.codestrong.com/timobile/guides/platform_api/ Titanium Mobile API Guide]
-
-HTTPClientと称していますが、AJAXでおなじみのXMLHttpClient(xhr)と同じ仕組みで動くので、prototype.jsやjQueryなどのラッパーなしで素のAJAXをしていた向きには理解しやすいかもしれませんね。
+= APIカタログ(ネットワーク編) - HTTPClient = 
+HTTPClientはAJAXでおなじみのXMLHttpClient(xhr)と同じ仕組みで動くので、prototype.jsやjQueryなどのラッパーなしで素のAJAXをしていた向きには理解しやすいかもしれません。
 
 == 基本構文 ==
 {{{
@@ -47,19 +45,20 @@ xhr.send();
  });
  */
 }}}
-基本的にonloadでレスポンスをごにょごにょいじるという路線です。
+基本的にonloadでレスポンスを操作するという流れです。
+
 responseTextのほかにDOMParserに予め通した形で受け取るresponseXMLというプロパティもあります。
 
-残念ながらJSON化するためのメソッドがないため、JSON変換には定石の以下の手続きをすることになります。
+JSON化する場合は次のようにメソッドを使います。
 {{{
 xhr.onload = function(){
-    var json = eval('(' + this.responseText + ')');
+    var json = JSON.parse(this.responseText);
     // 後続処理
 };
 }}}
 
 == 写真をPOSTする例 ==
-カメラ撮影をしたものをTwitPicサーバにアップロードする例です。
+カメラ撮影をしたものを[http://www.twitpic.com/ TwitPic]サーバにアップロードする例です。
 {{{
 Titanium.Media.showCamera({
     success : function(event){
@@ -113,9 +112,12 @@ catch(error){
 }
 }}}
 URLに直接ユーザ名とパスワードを埋め込む方式です。
+
 このあたりは今後改善されていくと信じたいところです。
 
 == リクエストヘッダの追加 ==
+HTTPリクエストヘッダに対する操作も可能です。
+
 {{{
 // UAの指定
 xhr.setRequestHeader('User-Agent','Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A537a Safari/419.3');
@@ -124,9 +126,8 @@ xhr.setRequestHeader('User-Agent','Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en
 xhr.setRequestHeader('Authorization','Basic '+Ti.Utils.base64encode(username.value+':'+password.value));
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Network.HTTPClient
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Network.HTTPClient
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
-
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
