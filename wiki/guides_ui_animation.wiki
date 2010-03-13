@@ -78,7 +78,7 @@ circle.animate({center:{x:100,y:100},curve:Ti.UI.ANIMATION_CURVE_EASE_IN_OUT,dur
 });
 }}}
 
-== transitionアニメーション ==
+== Transitionアニメーション ==
 WindowやViewに対してフリップ移動やカールするアニメーションがありますが、ああいうことを行うための指定がtransitionアニメーションになります。
 
 指定できるのは次のとおり５つです。
