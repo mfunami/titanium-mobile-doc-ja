@@ -1,6 +1,6 @@
-#summary UIカタログ - TextField
+#summary UIカタログ(コントロール) - TextField
 #labels ui,api,control
-= UIカタログ - !TextField =
+= UIカタログ(コントロール) - !TextField =
 言わずもがなのテキスト入力を行うためのコントロールです。
 
 キーボードの制御設定やキーボードツールバーを設定できます。
@@ -100,16 +100,14 @@ enabledプロパティで状態を制御できます。
 
 === 枠の表示 ===
 フィールドの周辺の囲み線をどのように描画するかをborderStyleプロパティで指定します。
-==== Titanium.UI.INPUT_BORDERSTYLE_ROUNDED ====
-==== Titanium.UI.INPUT_BORDERSTYLE_LINE ====
-http://img.skitch.com/20090708-g6qi5p31b334u3tpk2c74eg9q8.jpg
-==== Titanium.UI.INPUT_BORDERSTYLE_BEZEL ====
-http://img.skitch.com/20090708-qici8nyj4bffm42dnputgjyy5e.jpg
-==== Titanium.UI.INPUT_BORDERSTYLE_NONE ====
-http://img.skitch.com/20090708-818quksasxjagyamrw1hy2c74b.jpg
+|| `Titanium.UI.INPUT_BORDERSTYLE_ROUNDED` ||http://img.skitch.com/20090708-dy5d8enj4j53g9pxh7xde3w8ge.jpg||
+|| `Titanium.UI.INPUT_BORDERSTYLE_LINE` ||http://img.skitch.com/20090708-g6qi5p31b334u3tpk2c74eg9q8.jpg||
+|| `Titanium.UI.INPUT_BORDERSTYLE_BEZEL` ||http://img.skitch.com/20090708-qici8nyj4bffm42dnputgjyy5e.jpg||
+|| `Titanium.UI.INPUT_BORDERSTYLE_NONE` ||http://img.skitch.com/20090708-818quksasxjagyamrw1hy2c74b.jpg||
 
 === 色の制御 ===
 colorならびにbackgroundColorプロパティを16進数指定することで表示色・背景色を指定できます。
+
 http://img.skitch.com/20090708-ddcjrmbhf3gq3f6psenshchq7j.jpg
 
 === パスワードマスク ===
@@ -121,20 +119,10 @@ http://img.skitch.com/20090708-ddcjrmbhf3gq3f6psenshchq7j.jpg
 === クリアボタンの表示タイミング ===
 入力文字列や初期値のクリアを行うボタンをいつ表示するかをclearButtonModeプロパティで指定できます。
 
-==== Titanium.UI.INPUT_BUTTONMODE_NEVER ====
-常に表示しないというモードです。
-
-http://img.skitch.com/20090708-dy5d8enj4j53g9pxh7xde3w8ge.jpg
-
-==== Titanium.UI.INPUT_BUTTONMODE_ALWAYS ====
-常に表示するというモードです。
-
-http://img.skitch.com/20090708-rnftdnwyt691qc9p4w9xb7fam6.jpg
-
-==== Titanium.UI.INPUT_BUTTONMODE_ONFOCUS ====
-フォーカスの持っているときだけ表示します。
-==== Titanium.UI.INPUT_BUTTONMODE_ONBLUR ====
-フォーカスを失っている間だけ表示します。
+|| `Titanium.UI.INPUT_BUTTONMODE_NEVER` ||常に表示しないというモードです。||http://img.skitch.com/20090708-dy5d8enj4j53g9pxh7xde3w8ge.jpg||
+|| `Titanium.UI.INPUT_BUTTONMODE_ALWAYS` ||常に表示するというモードです。||http://img.skitch.com/20090708-rnftdnwyt691qc9p4w9xb7fam6.jpg||
+|| `Titanium.UI.INPUT_BUTTONMODE_ONFOCUS` ||フォーカスの持っているときだけ表示します。||||
+|| `Titanium.UI.INPUT_BUTTONMODE_ONBLUR` ||フォーカスを失っている間だけ表示します。||||
 
 === 左右ボタンの表示タイミング ===
 クリアボタン同様に任意のボタンイメージをTextFieldの両端に設定できます。
