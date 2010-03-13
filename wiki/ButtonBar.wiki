@@ -1,6 +1,6 @@
-#summary UIカタログ(コントロール) - ButtonBar(iPhoneのみ)
+#summary UIカタログ(コントロール) - ButtonBar (iPhoneのみ)
 #labels api,ui,control,iphone
-= UIカタログ(コントロール) - !ButtonBar(iPhoneのみ) =
+= UIカタログ(コントロール) - !ButtonBar (iPhoneのみ) =
 ButtonBarとは次の画像のNavBarの中央, コンテンツエリアの上段、ToolBarのそれぞれに配置されているコントロールのことをさします。
 
 http://img.skitch.com/20090708-bdkt5yc5gnx28fsxadddx4w5ks.jpg
