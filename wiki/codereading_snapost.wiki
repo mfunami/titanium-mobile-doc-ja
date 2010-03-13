@@ -7,6 +7,8 @@ Titanium Mobileを利用して開発され、AppStoreに登録されているア
 
 http://github.com/kwhinnery/Snapost
 
+http://github.com/kwhinnery/Snapost/tree/master/0.9.x/Snapost/Resources/
+
 これから書きます＞＜
 
 ----
