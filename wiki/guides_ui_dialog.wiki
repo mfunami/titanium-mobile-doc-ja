@@ -1,23 +1,22 @@
-#summary API案内 - UI編 - ダイアログ
-#labels api,ui
-= API案内 - UI編 - ダイアログ =
-参考文献：[http://www.codestrong.com/timobile/guides/iphone/ui/ iPhone UI Programming Guide - Dialogs], [http://github.com/kwhinnery/KitchenSink/blob/master/0.8.1/KitchenSink/Resources/email.html Titanium Mobile Kitchen Sink Example]
+#summary UIカタログ - ダイアログ関連API
+#labels api,ui,dialog
+= UIカタログ - ダイアログ関連API =
 
-== 単なるアラート(Alert Dialog) ==
+== シンプルなアラート(Alert Dialog) ==
+
 http://img.skitch.com/20090708-t6pc3h3jfhrnxj38sr6wi7i9k3.jpg
 
-タイトルとメッセージ、OKボタンだけというような簡易的なダイアログのパターンはこちら。
+タイトルとメッセージ、OKボタンだけというようなダイアログのパターンは次のように記述します。
+
 {{{
 var dialog = Titanium.UI.createAlertDialog();
 dialog.setTitle('アラートのテスト');
 dialog.setMessage('メッセージはここに指定します。'); 
-dialog.setButtonNames(['OK']);
 dialog.show();
 }}}
-setButtonNamesをしなくてもOKボタンは表示されますので、基本的に指定するべきプロパティは２つだけになります。
 
+このような引数を引き渡すことにより、ボタンを増やしたりキャンセルボタンの認識が可能になる生成方法もあります。
 
-このような引数を引き渡す生成方法もあります。
 {{{
 var alertDialog = Titanium.UI.createAlertDialog({
     title: 'キャンセルのテスト',
@@ -39,8 +38,6 @@ alertDialog.addEventListener('click',function(event){
 alertDialog.show();
 
 }}}
-
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.AlertDialog
 
 == 処理選択をするダイアログ(Option Dialog) ==
 http://img.skitch.com/20090708-m9wjycq3ar92ikep3ds5yadpcq.jpg
@@ -79,8 +76,6 @@ dialog.addEventListener('click',function(event){
 dialog.show();
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.OptionDialog
-
 == E-mail作成ダイアログ ==
 いわゆるe-mailの作成画面です。
 
@@ -105,8 +100,11 @@ emailDialog.setBarColor('#336699');
 emailDialog.open();
 }}}
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.EmailDialog
+== 関連するAPIドキュメント ==
+
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.AlertDialog
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.OptionDialog
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.EmailDialog
 
 ----
-本ドキュメントは [http://creativecommons.org/licenses/by/3.0/deed.ja Creative Commons Attribution License, Version 3] に基づいて和訳・編集し、公開しています。
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
