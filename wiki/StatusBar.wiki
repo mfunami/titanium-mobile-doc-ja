@@ -1,6 +1,6 @@
-#summary UIカタログ - StatusBar(iPhone)
-#labels api,ui,view
-= UIカタログ - !StatusBar(iPhone) =
+#summary UIカタログ - StatusBar(iPhoneのみ)
+#labels api,ui,view,iPhone
+= UIカタログ - !StatusBar(iPhoneのみ) =
 StatusBarは３種類の設定を切り替えることができます。
 
 また、表示非表示も切り替える事が出来ます。
