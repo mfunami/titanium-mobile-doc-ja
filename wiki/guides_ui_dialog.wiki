@@ -3,8 +3,7 @@
 = UIカタログ - ダイアログ関連API =
 
 == シンプルなアラート(Alert Dialog) ==
-
-http://img.skitch.com/20090708-t6pc3h3jfhrnxj38sr6wi7i9k3.jpg
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313205050.png
 
 タイトルとメッセージ、OKボタンだけというようなダイアログのパターンは次のように記述します。
 
@@ -40,7 +39,7 @@ alertDialog.show();
 }}}
 
 == 処理選択をするダイアログ(Option Dialog) ==
-http://img.skitch.com/20090708-m9wjycq3ar92ikep3ds5yadpcq.jpg
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313205051.png
 
 プロンプトと共に処理内容を選択させるような画面です。
 {{{
@@ -77,6 +76,8 @@ dialog.show();
 }}}
 
 == E-mail作成ダイアログ ==
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313205052.png
+
 いわゆるe-mailの作成画面です。
 
 ぼくはMMSに対応してからめっきり使わなくなりましたが(^^;
