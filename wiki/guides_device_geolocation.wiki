@@ -174,5 +174,8 @@ Titanium.Geolocation.distanceFilter = 10;
 Titanium.Geolocation.accuracy = Titanium.Geolocation.ACCURACY_BEST;
 }}}
 
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Geolocation
+
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
