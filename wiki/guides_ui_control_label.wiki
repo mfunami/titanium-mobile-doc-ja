@@ -1,9 +1,7 @@
-#summary Native UI案内 - Label
-#labels ui,api
-= Native UI案内 - Label =
+#summary UIカタログ(コントロール) - Label
+#labels ui,api,control
+= UIカタログ(コントロール) - Label =
 文字を表示するコントロールです。
-
-一応、clickイベントも受け取る事が出来るので疑似的なボタンとしての活用も可能ですが、あまりお勧めできません。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190703.png
 
