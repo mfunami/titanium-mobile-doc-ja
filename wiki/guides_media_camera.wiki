@@ -1,7 +1,7 @@
-#summary APIカタログ(メディア編) - カメラ撮影・カメラロール・スクリーンショット
+#summary APIカタログ(メディア編) - カメラ撮影・フォトギャラリーからの取得・スクリーンショット
 #labels api,media,camera
-= APIカタログ(メディア編) - カメラ撮影・カメラロール・スクリーンショット =
-カメラでの撮影、カメラロールからのデータ取得はいずれも非同期に行われるため、コールバック関数によって取得するかたちになります。そこで引き渡される画像・サムネイルのデータ、補助情報を利用し、プレビューしたりアップロードしたりします。
+= APIカタログ(メディア編) - カメラ撮影・フォトギャラリーからの取得・スクリーンショット =
+カメラでの撮影、フォトギャラリーからのデータ取得はいずれも非同期に行われるため、コールバック関数によって取得するかたちになります。そこで引き渡される画像・サムネイルのデータ、補助情報を利用し、プレビューしたりアップロードしたりします。
 
 ちなみに allowImageEditing プロパティをtrueと指定した場合は拡大や移動をするための画面を一段挟み、その結果がsuccuessプロパティで呼び出される関数に引き渡されます。
 
@@ -35,7 +35,7 @@ btnCamera.addEventListener('click', function(){
 });
 }}}
 
-撮影成功時に本体に画像を保存するだけの場合は、showCameraの引数として saveToPhotoGallery を trueとして設定するだけです。
+撮影成功時に本体フォトギャラリーに画像を保存するだけの場合は、showCameraの引数として saveToPhotoGallery を trueとして設定するだけです。
 
 ファイルへの書き出しをする場合、succuess内で次のように出力処理を記述します。
 {{{
@@ -47,7 +47,11 @@ f.write(event.media);
 Titanium.UI.currentWindow.backgroundImage = f.nativePath;
 }}}
 
-== カメラロール側から写真選択 ==
+== フォトギャラリー側から写真選択 ==
+撮影済みのデータから処理対象を選択する場合、次のように記述します。
+
+結果がevent.mediaとして返ってくるので、それをアップロードしたりする感じになります。
+
 {{{
 Titanium.Media.openPhotoGallery({
     success: function(event) {
@@ -65,6 +69,7 @@ Titanium.Media.openPhotoGallery({
 
 == スクリーンショットの取得 ==
 使いどころが難しいのですが、デバイス画面をカメラ同様に取得することができます。
+
 {{{
 Titanium.Media.takeScreenshot(function(event){
     var image = event.media;
