@@ -1,5 +1,5 @@
 #summary APIカタログ(メディア編) - 動画再生・音声再生
-#labels api,media,audio,video
+#labels api,media,audio,video,Deprecated
 = APIカタログ(メディア編) - 動画再生・音声再生 =
 
 == 動画ストリーミング再生 ==
