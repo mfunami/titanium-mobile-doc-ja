@@ -9,7 +9,7 @@
 
 === 1st Step : はじめの一歩 ===
 
- * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]
+ * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]（単体でも成立するよう「はじめに」と「UIカタログ」と内容が一部重複しています）
 
 === 2nd Step : UIカタログ ===
 
