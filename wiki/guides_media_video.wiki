@@ -68,7 +68,7 @@ Titanium.Media.showCamera({
 });
 }}}
 
-*** 録画品質 ***
+=== 録画品質 ===
 || * QUALITY_HIGH * ||media type constant to use high-quality video recording. Recorded files are suitable for on-device playback and for wired transfer to the Desktop using Image Capture; they are likely to be too large for transfer using Wi-Fi.||
 || * QUALITY_LOW * ||media type constant to use use low-quality video recording. Recorded files can usually be transferred over the cellular network.||
 || * QUALITY_MEDIUM * ||media type constant to use medium-quality video recording. Recorded files can usually be transferred using Wi-Fi. This is the default video quality setting.||
