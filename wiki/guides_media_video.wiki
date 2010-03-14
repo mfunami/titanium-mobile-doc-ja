@@ -12,6 +12,13 @@ var video = Titanium.Media.createVideoPlayer({
 });
 video.play();
 }}}
+
+=== 動画最盛時のアスペクト比の指定
+|| * VIDEO_SCALING_ASPECT_FILL * ||constant for video aspect where the movie will be scaled until the movie fills the entire screen. Content at the edges of the larger of the two dimensions is clipped so that the other dimension fits the screen exactly. The aspect ratio of the movie is preserved.||
+|| * VIDEO_SCALING_ASPECT_FIT * ||constant for video aspect fit where the movie will be scaled until one dimension fits on the screen exactly. In the other dimension, the region between the edge of the movie and the edge of the screen is filled with a black bar. The aspect ratio of the movie is preserved.||
+|| * VIDEO_SCALING_MODE_FILL * ||constant for video aspect where the movie will be scaled until both dimensions fit the screen exactly. The aspect ratio of the movie is not preserved.||
+|| * VIDEO_SCALING_NONE * ||constant for video scaling where the scaling is turn off. The movie will not be scaled.||
+
 == 動画ストリーミング再生 ==
 {{{
 var video = Titanium.Media.createVideoPlayer({
@@ -60,6 +67,12 @@ Titanium.Media.showCamera({
     videoQuality:Titanium.Media.QUALITY_HIGH
 });
 }}}
+
+*** 録画品質 ***
+|| * QUALITY_HIGH * ||media type constant to use high-quality video recording. Recorded files are suitable for on-device playback and for wired transfer to the Desktop using Image Capture; they are likely to be too large for transfer using Wi-Fi.||
+|| * QUALITY_LOW * ||media type constant to use use low-quality video recording. Recorded files can usually be transferred over the cellular network.||
+|| * QUALITY_MEDIUM * ||media type constant to use medium-quality video recording. Recorded files can usually be transferred using Wi-Fi. This is the default video quality setting.||
+
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Media
 
