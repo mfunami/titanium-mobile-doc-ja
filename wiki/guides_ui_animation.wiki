@@ -1,5 +1,5 @@
 #summary UIカタログ(API) - アニメーション(3DMatrix除く)
-#labels api,view,ui,control,animation
+#labels api,view,ui,control,animation,作業中
 = UIカタログ(API) - アニメーション =
 Window, View, Controlなどの各オブジェクトには{{{animate}}}という関数が用意されており、対象となるオブジェクトに対するアニメーション描画を行うことができます。
 
