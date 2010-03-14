@@ -1,0 +1,9 @@
+#summary UIカタログ - NavBar
+#labels api,ui,view
+= UIカタログ - !NavBar  =
+
+== 関連するAPIドキュメント == 
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
