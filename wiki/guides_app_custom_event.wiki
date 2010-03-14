@@ -63,6 +63,10 @@ var b = Titanium.UI.createButton({
 b.addEventListener('click', function(){
     Titanium.App.fireEvent('show_message', {message: 'サンプル', arg1: 'hogehoge'});
 });
-
-
 }}}
+
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.App
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
