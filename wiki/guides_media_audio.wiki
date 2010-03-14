@@ -1,14 +1,76 @@
-#summary One-sentence summary of this page.
+#summary APIカタログ(メディア編) - 音声再生・録音
 #labels api,media,audio
+= APIカタログ(メディア編) - 音声再生・録音 =
 
-= Introduction =
+== 音声再生 == 
+ループ再生とかボリュームコントロールなどもAPIもありますが、とりあえず再生機能のサンプルをどうぞ。
+{{{
+var sound = Titanium.Media.createSound({
+    // リモートURLも指定できます
+    // url : "http://www.nch.com.au/acm/8kmp38.wav"
+    url: '../cricket.wav'
+});
+sound.addEventListener('complete', function() {
+    sound.removeEventListener('complete', listenerId);
+    var dialog = Titanium.UI.createAlertDialog({
+        'title' : 'Sound Complete',
+        'message' : 'sound completed',
+        'buttonNames' : [ 'OK' ]
+    });
+    dialog.show();
+});
+sound.play();
+}}}
 
-Add your content here.
+== 音声ストリーム再生 == 
+音声のストリーミング再生の場合はstartメソッドでの実行となります。
+{{{
+// 適当な位置に進捗ラベルを表示します(^^;
+var progressLabel = Titanium.UI.createLabel();
+Ti.UI.currentWindow.add(progressLabel);
 
+var stream = Titanium.Media.createSound({
+    url: 'http://202.6.74.107:8060/triplej.mp3'
+});
+stream.addEventListener('progress', function(e) {
+    progressLabel.text = 'Time Played: ' + Math.round(e.progress) + ' seconds';
+});
+sound.start();
+}}}
 
-= Details =
+== 録音(作業中) ==
+{{{
+var recording = Ti.Media.createAudioRecorder();
+var file = null;
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+// default compression is Ti.Media.AUDIO_FORMAT_LINEAR_PCM
+// default format is Ti.Media.AUDIO_FILEFORMAT_CAF
+recording.compression = Ti.Media.AUDIO_FORMAT_ULAW;
+recording.format = Ti.Media.AUDIO_FILEFORMAT_WAVE;
+
+// 5秒間の録音
+recording.start();
+Ti.Media.startMicrophoneMonitor();
+setTimeout(function(e){
+    file = recording.stop();
+    Ti.Media.stopMicrophoneMonitor();
+    
+    var sound = Titanium.Media.createSound({sound:file});
+    sound.addEventListener('complete', function()	{
+        sound = null;
+    });
+    sound.play();
+}, 5000);
+}}}
+
+=== ボリューム・録音レベルに関するプロパティ ===
+
+ * Ti.Media.volume
+ * Ti.Media.peakMicrophonePower
+ * Ti.Media.averageMicrophonePower
+
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Media
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
