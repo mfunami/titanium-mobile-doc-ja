@@ -49,7 +49,7 @@ Titanium.UI.currentWindow.backButtonTitleImage = null;
 == コントロールの配置 ==
 NavBarもコントロールコンテナなので、各種コントロールを載せる事ができます。
 
-ここでは[Button]を配置していますが、[Switch]や[Slider]、[TabbedButton]や[TextField]といったものまで配置できます。
+ここでは[Button]を配置していますが、[Switch]や[Slider]、[TabbedBar]や[TextField]といったものまで配置できます。
 {{{
 var b1 = Titanium.UI.createButton({title:'Left Nav'});
 var b2 = Titanium.UI.createButton({title:'Title'});
@@ -65,7 +65,6 @@ Titanium.UI.currentWindow.setRightNavButton(null);
 }}}
 
 == 関連するAPIドキュメント == 
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI
-
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Window
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
