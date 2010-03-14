@@ -60,7 +60,6 @@
   * [guides_media_camera カメラ撮影・フォトギャラリーからの取得・スクリーンショット]
   * [guides_media_video 動画再生・録画]
   * [guides_media_audio 音声(音楽)再生・録音]
-  * [guides_media_audiovideo 動画再生・音声再生](↑に分割されます)
  * デバイスハードウェア編
   * [guides_device_battery 電源状態]
   * [guides_device_accelerometer 加速度センサ]
