@@ -1,5 +1,5 @@
 #summary APIカタログ(メディア編) - 動画再生・録画
-#labels api,media,video
+#labels api,media,video,作業中
 = APIカタログ(メディア編) - 動画再生・録画 =
 
 == 動画再生 ==
