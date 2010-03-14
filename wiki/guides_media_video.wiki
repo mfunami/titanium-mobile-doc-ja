@@ -1,10 +1,18 @@
-#summary APIカタログ(メディア編) - 動画再生・音声再生
+#summary APIカタログ(メディア編) - 動画再生・録画
 #labels api,media,video
-= APIカタログ(メディア編) - 動画再生・音声再生 =
+= APIカタログ(メディア編) - 動画再生・録画 =
 
+== 動画再生 ==
+{{{
+var video = Titanium.Media.createVideoPlayer({
+    movieControlMode:Titanium.Media.VIDEO_CONTROL_DEFAULT,
+    scalingMode:Titanium.Media.VIDEO_SCALING_ASPECT_FILL,
+    //contentURL:movieFile.nativePath
+    media:movieFile // note you can use either contentURL to nativePath or the file object
+});
+video.play();
+}}}
 == 動画ストリーミング再生 ==
-Titaniumではアプリケーション内動画再生ができます。
-
 {{{
 var video = Titanium.Media.createVideoPlayer({
     // リモート再生も可能です
@@ -23,6 +31,35 @@ video.addEventListener("complete", function() {
 video.play();
 }}}
 
+== 録画 ==
+静止画撮影同様にTitanium.Media.showCameraを用いますが、引数で `mediaTypes: Titanium.Media.MEDIA_TYPE_VIDEO`と指定する点が異なります。
+{{{
+Titanium.Media.showCamera({
+    success: function(event){
+        var video = event.media;
+        movieFile = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'mymovie.mov');
+        movieFile.write(video);
+    },
+    cancel:function(){
+    },
+    error:function(error){
+        // create alert
+        var a = Titanium.UI.createAlertDialog({title:'Video'});
+
+        // set message
+        if (error.code == Titanium.Media.NO_VIDEO){
+            a.setMessage('Device does not have video recording capabilities');
+        }
+        else{
+            a.setMessage('Unexpected error: ' + error.code);
+        }
+        a.show();
+    },
+    mediaTypes: Titanium.Media.MEDIA_TYPE_VIDEO,
+    videoMaximumDuration:10000,
+    videoQuality:Titanium.Media.QUALITY_HIGH
+});
+}}}
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Media
 
