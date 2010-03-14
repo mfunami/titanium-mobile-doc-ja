@@ -1,5 +1,5 @@
 #summary APIカタログ(メディア編) - 音声再生・録音
-#labels api,media,audio
+#labels api,media,audio,作業中
 = APIカタログ(メディア編) - 音声再生・録音 =
 
 == 音声再生 == 
