@@ -57,8 +57,6 @@
   * [guides_database  データベース]
  * メディア編
   * [guides_media_camera カメラ撮影・カメラロール・スクリーンショット]
-  * カメラオーバレイ (追加予定)
-  * カメラロール書き出し (追加予定)
   * [guides_media_audiovideo 動画再生・音声再生]
  * デバイスハードウェア編
   * [guides_device_battery 電源状態]
