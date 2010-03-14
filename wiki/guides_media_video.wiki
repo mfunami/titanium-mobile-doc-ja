@@ -1,14 +1,29 @@
-#summary One-sentence summary of this page.
+#summary APIカタログ(メディア編) - 動画再生・音声再生
 #labels api,media,video
+= APIカタログ(メディア編) - 動画再生・音声再生 =
 
-= Introduction =
+== 動画ストリーミング再生 ==
+Titaniumではアプリケーション内動画再生ができます。使いどころが難しいような気がしないでもありませんが(^^;
+{{{
+var video = Titanium.Media.createVideoPlayer({
+    // リモート再生も可能です
+    // 	contentURL:'http://movies.apple.com/media/us/ipad/2010/tours/apple-ipad-video-us-20100127_r848-9cie.mov'
+    contentURL : "movie.mp4"
+});
+video.addEventListener("complete", function() {
+    video.removeEventListener('complete', listenerId);
+    var dialog = Titanium.UI.createAlertDialog({
+        'title' : '再生終了',
+        'message' : 'video completed',
+        'buttonNames' : [ 'OK' ]
+    });
+    dialog.show();
+});
+video.play();
+}}}
 
-Add your content here.
+== 関連するAPIドキュメント ==
+ * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Media
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
