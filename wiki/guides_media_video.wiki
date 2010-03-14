@@ -13,7 +13,7 @@ var video = Titanium.Media.createVideoPlayer({
 video.play();
 }}}
 
-=== 動画最盛時のアスペクト比の指定
+=== 動画最盛時のアスペクト比の指定 ===
 || * VIDEO_SCALING_ASPECT_FILL * ||constant for video aspect where the movie will be scaled until the movie fills the entire screen. Content at the edges of the larger of the two dimensions is clipped so that the other dimension fits the screen exactly. The aspect ratio of the movie is preserved.||
 || * VIDEO_SCALING_ASPECT_FIT * ||constant for video aspect fit where the movie will be scaled until one dimension fits on the screen exactly. In the other dimension, the region between the edge of the movie and the edge of the screen is filled with a black bar. The aspect ratio of the movie is preserved.||
 || * VIDEO_SCALING_MODE_FILL * ||constant for video aspect where the movie will be scaled until both dimensions fit the screen exactly. The aspect ratio of the movie is not preserved.||
