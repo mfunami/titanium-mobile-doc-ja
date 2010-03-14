@@ -1,5 +1,5 @@
 #summary コードリーディング - Snapost
-#labels codereading,underconstruction
+#labels codereading,underconstruction,作業中
 = コードリーディング - Snapost =
 Titanium Mobileを利用して開発され、AppStoreに登録されているアプリケーション Snapost のソースを読みながら、実際のアプリケーション構築のテクニックを学んでいきましょう。
 
