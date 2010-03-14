@@ -54,7 +54,8 @@ NavBarもコントロールコンテナなので、各種コントロールを�
 var b1 = Titanium.UI.createButton({title:'Left Nav'});
 var b2 = Titanium.UI.createButton({title:'Title'});
 var b3 = Titanium.UI.createButton({title:'Right Nav'});
-// 
+
+// タイトル部にボタン配置
 Titanium.UI.currentWindow.titleControl = b2;
 
 // 左右のボタンにも配置可能です
