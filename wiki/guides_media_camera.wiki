@@ -1,35 +1,31 @@
 #summary APIカタログ(メディア編) - カメラ撮影・カメラロール・スクリーンショット
 #labels api,media,camera
 = APIカタログ(メディア編) - カメラ撮影・カメラロール・スクリーンショット =
+カメラでの撮影、カメラロールからのデータ取得はいずれも非同期に行われるため、コールバック関数によって取得するかたちになります。そこで引き渡される画像・サムネイルのデータ、補助情報を利用し、プレビューしたりアップロードしたりします。
+
+ちなみに allowImageEditing プロパティをtrueと指定した場合は拡大や移動をするための画面を一段挟み、その結果がsuccuessプロパティで呼び出される関数に引き渡されます。
 
 == カメラ撮影 ==
 {{{
 btnCamera.addEventListener('click', function(){
     Titanium.Media.showCamera({
         // JSON形式の引数です
-        success:function(event)
-        {
-            // 成功時の関数にはイメージデータのオブジェクトや詳細情報が引き渡されます。
-            // ここでプレビューしたり、アップロードしたり（そのためのキューに貯めるとか）
-            // する感じです。
-
+        success:function(event){
             // cropRectにはx,y,height,widthといったデータがはいる。
             var cropRect = event.cropRect;
+            // 画像イメージ(Blobデータ)が返される
             var image = event.media;
+            // サムネイルイメージ(Blobデータ)が返される
             var thumbnail = event.thumbnail;
 		
             // 撮影データを表示する
             var imageView = Ti.UI.createImageView({image:event.media});
             Ti.UI.currentWindow.add(imageView);
-
-            
         },
-        cancel:function()
-        {
+        cancel:function(){
             //
         },
-        error:function(error)
-        {
+        error:function(error){
             // errorとしてカメラがデバイスにないようなケース(iPod touchなどがそうでしょうか)では
             // error.code が Titanium.Media.NO_CAMERA として返るようです。
         },
