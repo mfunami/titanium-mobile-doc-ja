@@ -1,6 +1,6 @@
-#summary APIカタログ(ネットワーク編) - HTTPClient
+#summary APIカタログ(ネットワーク編) - HTTPClientによる通信
 #labels api,network
-= APIカタログ(ネットワーク編) - HTTPClient = 
+= APIカタログ(ネットワーク編) - HTTPClientによる通信 = 
 HTTPClientはAJAXでおなじみのXMLHttpClient(xhr)と同じ仕組みで動くので、prototype.jsやjQueryなどのラッパーなしで素のAJAXをしていた向きには理解しやすいかもしれません。
 
 == 基本構文 ==
