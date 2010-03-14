@@ -9,7 +9,7 @@ http://img.skitch.com/20090708-cqc5s7acws9cgs253d14qjt6b7.jpg
 
 初期値・範囲についてはコントロール作成時にのみ指定できます。
 {{{
-// slider1を作成し配置a
+// slider1を作成し配置
 var slider1 = Titanium.UI.createSlider({
    min:50,
    max:100,
