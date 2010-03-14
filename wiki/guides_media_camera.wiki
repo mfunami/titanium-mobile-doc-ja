@@ -27,11 +27,24 @@ btnCamera.addEventListener('click', function(){
         },
         error:function(error){
             // errorとしてカメラがデバイスにないようなケース(iPod touchなどがそうでしょうか)では
-            // error.code が Titanium.Media.NO_CAMERA として返るようです。
+            // error.code が Titanium.Media.NO_CAMERA として返ります。
         },
-        allowImageEditing:true
+        allowImageEditing:true,
+        saveToPhotoGallery: false
     });
 });
+}}}
+
+撮影成功時に本体に画像を保存するだけの場合は、showCameraの引数として saveToPhotoGallery を trueとして設定するだけです。
+
+ファイルへの書き出しをする場合、succuess内で次のように出力処理を記述します。
+{{{
+// アプリケーションデータディレクトリに camera_photo.png として出力する。
+var f = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, 'camera_photo.png');
+f.write(event.media);
+
+// 現在のウィンドウ背景画像としてそのまま使う場合は次のようにする
+Titanium.UI.currentWindow.backgroundImage = f.nativePath;
 }}}
 
 == カメラロール側から写真選択 ==
