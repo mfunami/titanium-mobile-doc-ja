@@ -49,6 +49,7 @@ xhr.send();
 
 responseTextのほかにDOMParserに予め通した形で受け取るresponseXMLというプロパティもあります。
 
+=== JSONの取得 ===
 JSON化する場合は次のようにメソッドを使います。
 {{{
 xhr.onload = function(){
@@ -57,7 +58,22 @@ xhr.onload = function(){
 };
 }}}
 
-== 写真をPOSTする例 ==
+=== バイナリデータの取得 ===
+上の例ではテキストデータの取得ですが、画像やPDFなどをダウンロードする場合は次のように記述します。
+{{{
+xhr.onload = function(){
+    var f = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'tmp.png');
+    f.write(this.responseData);
+
+    // 画像を表示する場合
+    // imageView.url = f.nativePath;
+    //
+    // PDFを表示する場合
+    // webView.url = f.nativePath;
+};
+}}}
+
+== 写真をPOSTする例 + 進捗表示 ==
 カメラ撮影をしたものを[http://www.twitpic.com/ TwitPic]サーバにアップロードする例です。
 {{{
 Titanium.Media.showCamera({
