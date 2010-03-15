@@ -1,5 +1,5 @@
 #summary UIカタログ(API) - アニメーション(3DMatrix除く)
-#labels api,view,ui,control,animation,作業中
+#labels api,view,ui,control,animation
 = UIカタログ(API) - アニメーション =
 Window, View, Controlなどの各オブジェクトには{{{animate}}}という関数が用意されており、対象となるオブジェクトに対するアニメーション描画を行うことができます。
 
@@ -180,7 +180,6 @@ anchorPointプロパティはx, yで回転軸を指定します。右下が{{{ {
 続いて3DMatrixによる３次元変形の例です。
 
 {{{
-// ここから先の解説はAPIリファレンス待ちです (>_<)
 var button = Titanium.UI.createButton({
     title:'Animate Me', 
     width:300,
@@ -189,9 +188,13 @@ var button = Titanium.UI.createButton({
 });
 button.addEventListener('click', function(){
     var t = Titanium.UI.create3DMatrix();
-    t = t.rotate(200, 0, 1, 1);
-    t = t.scale(3);
-    t = t.translate(20, 50, 170);
+    // 回転(200度、XYZのベクトル(0, 1.0, 1.0) )
+    t = t.rotate(200, 0, 1.0, 1.0);
+    // 拡大縮小(X軸に3倍、Y軸に等倍、Z軸に1.5倍する)
+    t = t.scale(3.0, 1.0, 1.5);
+    // 移動(X軸に20、Y軸に-50、Z軸に170移動する)
+    t = t.translate(20, -50, 170);
+    // 行列[3, 4]の位置
     t.m34 = 1.0/-2000;
     button.animate({
         transform:t,
