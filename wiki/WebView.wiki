@@ -30,6 +30,23 @@ var webview = Ti.UI.createWebView({
 webview.html = '<html><body><div style="color:white;">Hello from inline HTML. You should see white text and black background</div></body></html>';
 }}}
 
+== 特殊なイベント ==
+すべて仮引数にurlプロパティを持ったWebViewに特化されたイベントです。
+ * beforeload
+ * error
+ * load
+{{{
+webView.addEventListener('beforeload', function(e){
+     // ロード前に実行される
+});
+webView.addEventListener('error', function(e){
+     // エラー発生時に実行される
+});
+webView.addEventListener('load', function(e){
+     // ロード完了後に実行される
+});
+}}}
+
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.WebView
 
