@@ -32,9 +32,11 @@ webview.html = '<html><body><div style="color:white;">Hello from inline HTML. Yo
 
 == 特殊なイベント ==
 すべて仮引数にurlプロパティを持ったWebViewに特化されたイベントです。
+
  * beforeload
  * error
  * load
+
 {{{
 webView.addEventListener('beforeload', function(e){
      // ロード前に実行される
