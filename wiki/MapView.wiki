@@ -29,29 +29,6 @@ var mapview = Titanium.Map.createView({
 	userLocation:true,
 	annotations:[atlanta]
 });
-mapview.addEventListener('loading', function(e){
-    // ロード中のイベント
-    Ti.API.info('mapview loading...');    
-});
-mapview.addEventListener('complete', function(e){
-    // ロード完了のイベント
-    Ti.API.info('mapview load complete');    
-});
-mapview.addEventListener('regionChanged', function(e){
-    // 表示領域が変わったときのイベント（移動・拡大縮小）
-    Ti.API.info('mapview redionChanged...');
-    Ti.API.info('the new latitude = ' + e.latitude);
-    Ti.API.info('the new latitude delta = ' + e.latitudeDelta);    
-    Ti.API.info('the new longitude = ' + e.longitude);
-    Ti.API.info('the new longitude delta = ' + e.longitudeDelta);
-});
-mapview.addEventListener('click', function(e){
-    if(e.annotation){
-        //e.titleにannotationのタイトルが入る
-        Ti.API.info('mapview annotation[' + e.title + '] click');
-    }
-});
-
 Ti.UI.currentWindow.add(mapview);
 }}}
 
@@ -76,6 +53,34 @@ zoomメソッドがあり、引数に縮尺の変化を指示するかたちと�
 mapview.zoom(1);
 // zoom out
 mapview.zoom(-1);
+}}}
+
+== 独自のイベント ==
+MapViewには表示内容の更新時や移動・拡大縮小をしたタイミングで発生するイベントが独自に用意されています。
+
+{{{
+mapview.addEventListener('loading', function(e){
+    // ロード中のイベント
+    Ti.API.info('mapview loading...');    
+});
+mapview.addEventListener('complete', function(e){
+    // ロード完了のイベント
+    Ti.API.info('mapview load complete');    
+});
+mapview.addEventListener('regionChanged', function(e){
+    // 表示領域が変わったときのイベント（移動・拡大縮小）
+    Ti.API.info('mapview redionChanged...');
+    Ti.API.info('the new latitude = ' + e.latitude);
+    Ti.API.info('the new latitude delta = ' + e.latitudeDelta);    
+    Ti.API.info('the new longitude = ' + e.longitude);
+    Ti.API.info('the new longitude delta = ' + e.longitudeDelta);
+});
+mapview.addEventListener('click', function(e){
+    if(e.annotation){
+        //e.titleにannotationのタイトルが入る
+        Ti.API.info('mapview annotation[' + e.title + '] click');
+    }
+});
 }}}
 
 == 関連するAPIドキュメント ==
