@@ -45,6 +45,7 @@
   * [SearchBar]
   * [ActivityIndicator]
   * [ProgressBar]
+ * [guides_ui_properties 共通プロパティ]
  * [guides_ui_animation アニメーション]
 
 === 3rd Step : APIカタログ ===
