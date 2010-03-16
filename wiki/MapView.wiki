@@ -30,8 +30,12 @@ var mapview = Titanium.Map.createView({
 	annotations:[atlanta]
 });
 mapview.addEventListener('loading', function(e){
-    // ロード中のイベントだがregionChangedとの発生順は微妙なので使いようがないかも？
+    // ロード中のイベント
     Ti.API.info('mapview loading...');    
+});
+mapview.addEventListener('complete', function(e){
+    // ロード完了のイベント
+    Ti.API.info('mapview load complete');    
 });
 mapview.addEventListener('regionChanged', function(e){
     // 表示領域が変わったときのイベント（移動・拡大縮小）
