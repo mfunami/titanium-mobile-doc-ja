@@ -29,6 +29,25 @@ var mapview = Titanium.Map.createView({
 	userLocation:true,
 	annotations:[atlanta]
 });
+mapview.addEventListener('loading', function(e){
+    // ロード中のイベントだがregionChangedとの発生順は微妙なので使いようがないかも？
+    Ti.API.info('mapview loading...');    
+});
+mapview.addEventListener('regionChanged', function(e){
+    // 表示領域が変わったときのイベント（移動・拡大縮小）
+    Ti.API.info('mapview redionChanged...');
+    Ti.API.info('the new latitude = ' + e.latitude);
+    Ti.API.info('the new latitude delta = ' + e.latitudeDelta);    
+    Ti.API.info('the new longitude = ' + e.longitude);
+    Ti.API.info('the new longitude delta = ' + e.longitudeDelta);
+});
+mapview.addEventListener('click', function(e){
+    if(e.annotation){
+        //e.titleにannotationのタイトルが入る
+        Ti.API.info('mapview annotation[' + e.title + '] click');
+    }
+});
+
 Ti.UI.currentWindow.add(mapview);
 }}}
 
