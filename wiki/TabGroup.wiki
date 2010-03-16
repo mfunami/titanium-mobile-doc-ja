@@ -41,8 +41,8 @@ var tabGroup = Titanium.UI.currentWindow.tabGroup;
 alert(tabGroup.tabs[0].title);
 
 // 強制的にtab切り替えもできる
-tabGroup.setActiveTab(1);
-tabGroup.setActiveTab(tabGroup.tabs[2]);
+var tab = tabGroup.activeTab;
+tabGroup.activeTab = tabGroup.tabs[2];
 }}}
 
 == バッジ機能 ==
