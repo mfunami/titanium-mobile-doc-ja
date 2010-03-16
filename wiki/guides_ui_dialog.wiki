@@ -101,6 +101,24 @@ emailDialog.setBarColor('#336699');
 emailDialog.open();
 }}}
 
+=== 独自のイベント ===
+EmailDialogには作成完了を受け取るイベントがあります。
+{{{
+emailDialog.addEventListener('complete', function(e){
+    // e.resultに以下の４つのいずれかが返る
+    // ・Titanium.UI.EmailDialog.SENT
+    // ・Titanium.UI.EmailDialog.SAVED
+    // ・Titanium.UI.EmailDialog.CANCELED
+    // ・Titanium.UI.EmailDialog.FAILED
+    
+    // 送信成功時にはe.success == trueが設定される
+    if(e.success == false){
+        // e.errorにエラー時のメッセージ
+    }
+});
+}}}
+
+
 == 関連するAPIドキュメント ==
 
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.AlertDialog
