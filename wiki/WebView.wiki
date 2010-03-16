@@ -30,6 +30,19 @@ var webview = Ti.UI.createWebView({
 webview.html = '<html><body><div style="color:white;">Hello from inline HTML. You should see white text and black background</div></body></html>';
 }}}
 
+== evalJSによる細かい制御 ==
+webview内のドキュメントに対してJavaScriptで動的な評価を行うevalJSというメソッドが用意されています。
+
+たとえばドキュメントのタイトルを取得するプロパティはありませんが、loadイベントにからめて以下のように記述することで取得が可能です。
+{{{
+webview.addEventListener('load', function(e){
+    // document.titleを取得する。
+    // 評価結果はstringとしてreturnされるのでtitleにセットされる。
+    var title = view.evalJS('document.title');
+    Ti.API.info(title);
+});
+}}}
+
 == 特殊なイベント ==
 すべて仮引数にurlプロパティを持ったWebViewに特化されたイベントです。
 
