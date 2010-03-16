@@ -16,6 +16,10 @@ var imageView = Titanium.UI.createImageView({
     height:178,
     top:20
 });
+// 画像読み込み完了時のイベント
+imageView.addEventListener('load', function(e){
+    // e.stateに状態が返されます
+});
 Ti.UI.currentWindow.add(imageView);
 }}}
 
@@ -38,10 +42,25 @@ var animationView =  Titanium.UI.createImageView({
     // 繰り返し回数を指定します（0の場合は無限に繰り返します）
     repeatCount: 0
 });
+// アニメーション開始時のイベント
+animationView.addEventListener('start', function(e){
+});
+// アニメーション終了時のイベント
+animationView.addEventListener('stop', function(e){
+});
+// フレーム変更時のイベント
+animationView.addEventListener('change', function(e){
+    // e.indexにフレームのindexが返ります
+});
 Ti.UI.currentWindow.add(animationView);
 
 // パラパラマンガを開始する
 animationView.start();
+// アニメーションを中断
+animationView.pause();
+// アニメーションを終了
+animationView.stop();
+
 }}}
 
 == 関連するAPIドキュメント ==
