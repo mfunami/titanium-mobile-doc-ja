@@ -88,3 +88,17 @@
 === 5th Step : コードリーディング(Snapost) ===
 
  * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
+
+
+== 続・Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発 == 
+
+↑から溢れる内容をまとめる方向性で。もしかしたらマージするかも？
+
+以下は予定であり未定であり、決定ではありません（定型文）。
+
+ * TableViewに深入りするｗ
+ * 独自モジュール開発
+ * Contacts
+ * FaceBookとかYahooとかdonayamaが触っていないのでやってない部分。
+ * AR（カメラオーバレイもからめて）
+ * 実デバイスへの配布～AppStore申請話
