@@ -1,10 +1,30 @@
 #summary UIカタログ - ScrollView
-#labels api,ui,view,作業中
+#labels api,ui,view
 = UIカタログ - !ScrollView =
 スクロール可能なViewです。
 
-スワイプやボタンによるアクションでスクロールさせることが可能になります。 
+表示エリアを大きく超えるサイズの独自のviewをつくる場合に使用します。
 
+でも、WebViewにしてもTableViewにしてもこの機能を継承しているので、なかなか使いどころが難しいかもしれません。
+
+{{{
+var scrollView = Titanium.UI.createScrollView({
+    contentWidth:'auto',
+    contentHeight:'auto',
+    top:0,
+    showVerticalScrollIndicator:true,
+    showHorizontalScrollIndicator:true
+});
+var view = Ti.UI.createView({
+    backgroundColor:'#336699',
+    borderRadius:10,
+    width:300,
+    height:2000,
+    top:10
+});
+scrollView.add(view);
+Titanium.UI.currentWindow.add(scrollView);
+}}}
 
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ScrollView
