@@ -31,7 +31,7 @@
   * [MapView]
   * [TableView]
   * [ScrollView]
-  * [ScrollaleView]
+  * [ScrollableView]
   * [guides_ui_verticallayout VirticalLayout]
  * Control編
   * [Label]
