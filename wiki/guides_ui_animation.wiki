@@ -1,4 +1,4 @@
-#summary UIカタログ(API) - アニメーション(3DMatrix除く)
+#summary UIカタログ(API) - アニメーション
 #labels api,view,ui,control,animation
 = UIカタログ(API) - アニメーション =
 Window, View, Controlなどの各オブジェクトには{{{animate}}}という関数が用意されており、対象となるオブジェクトに対するアニメーション描画を行うことができます。
@@ -83,11 +83,11 @@ WindowやViewに対してフリップ移動やカールするアニメーショ�
 
 指定できるのは次のとおり５つです。
 
- * Ti.UI.iPhone.AnimationStyle.CURL_UP
- * Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
- * Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT
- * Ti.UI.iPhone.AnimationStyle.CURL_DOWN
- * Ti.UI.iPhone.AnimationStyle.NONE
+ * `Ti.UI.iPhone.AnimationStyle.CURL_UP`
+ * `Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT`
+ * `Ti.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT`
+ * `Ti.UI.iPhone.AnimationStyle.CURL_DOWN`
+ * `Ti.UI.iPhone.AnimationStyle.NONE`
 
 {{{
 var button = Titanium.UI.createButton({
