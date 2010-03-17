@@ -27,6 +27,10 @@ Appcelerator Titanium Mobileとは[http://www.appcelerator.com/ Appcelerator社]
 
 現時点で対応しているプラットフォームとしては前掲したiPhone SDKとAndroid SDKのみになりますが、今後も追加されていく予定があります。(iPadは2010年3月対応予定)
 
+気になる価格体系ですが、基本的に無料となっています。有償サービス（開発者毎に毎月199USD）は十分にTitaniumのプラットフォームに慣れて、さらにそのサービスが必要と判断して契約するとよいでしょう。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100317/20100317233426.png
+
 また、兄弟製品として[http://www.appcelerator.com/products/titanium-desktop-application-development/ Titanium Desktop]があり、こちらはWindows, Mac OSX, Linuxというマルチプラットフォームで動作するデスクトップアプリケーションを開発できる環境も提供されています。
 
 http://www.appcelerator.com/wp-content/uploads/2009/12/PROD_arch11.png
