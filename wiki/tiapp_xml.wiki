@@ -35,14 +35,15 @@ tiapp.xmlファイルはプロジェクトルートにあり、mafinestファイ
 ||description||アプリケーションの説明||
 ||copyright||著作権表示||
 ||icon||アプリケーションアイコンのパスを指定します。||
-||persistent-wifi||WIFI接続を必須とするか(true/false)||
+||persistent-wifi||(iPhoneのみ)WIFI接続を必須とするか(true/false)。デフォルトはfalse。||
+||prerendered-icon||(iPhoneのみ)すでに光沢加工済みのアイコンを使用しているか(true/false)。。デフォルトはfalse。||
 ||statusBarStyle||最上段のステータスバーの表示形式を指定します。選択はgrey (デフォルト), opaque_black , translucent_blackの3種類。||
 ||statusbar-hidden||ステータスバーを非表示にする場合trueを指定する。||
 ||analytics||分析機能を有効にする場合trueとします。||
 ||guid||自動生成されるguidです。基本的に手をつけません。||
 
 == manifest == 
-このファイルはTitanium Developer上で設定されたプロジェクトの情報を保存しておくファイルであり、基本的に変更することはありません。
+このファイルはTitanium Developer上で設定されたプロジェクトの情報を保存し、パッケージング時に用いるファイルのため、基本的に変更することはありません。
 
 {{{
 #appname: Test100
@@ -54,6 +55,13 @@ tiapp.xmlファイルはプロジェクトルートにあり、mafinestファイ
 #type: mobile
 #guid: 1bef9b04-0362-4bfb-a68a-1a3635d5734a
 }}}
+
+== アプリケーション名について ==
+
+プロジェクト作成時にも触れましたが、英数字以外のマルチバイト文字（漢字・ひらがな・カナ・記号）を使用することができません。
+
+生成後にtiapp.xmlで変更しても同様にエラーとなりますので、今後のバージョンアップでの対応を望む以外にありません。
+
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
