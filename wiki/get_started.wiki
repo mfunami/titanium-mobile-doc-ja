@@ -47,6 +47,12 @@ Objective-CやJavaでコーディングする必要は一切ありません。
 
 (iPadは2010年3月中に対応するようです)
 
+
+気になる価格体系ですが、基本的に無料となっています。有償サービス（開発者毎に毎月199USD）は十分にTitaniumのプラットフォームに慣れて、さらにそのサービスが必要と判断して契約するとよいでしょう。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100317/20100317233426.png
+
+
 また本稿では取り上げませんが、兄弟製品として[http://www.appcelerator.com/products/titanium-desktop-application-development/ Titanium Desktop]があり、こちらはWindows, Mac OSX, Linuxというマルチプラットフォームで動作するデスクトップアプリケーションを開発できる環境も提供されています。
 
 これについては [http://d.hatena.ne.jp/yuichi_katahira/searchdiary?word=*[Titanium]]の記事群が詳しいですので、興味があればぜひご覧ください
