@@ -47,15 +47,32 @@ Objective-CやJavaでコーディングする必要は一切ありません。
 
 (iPadは2010年3月中に対応するようです)
 
-
-気になる価格体系ですが、基本的に無料となっています。有償サービス（開発者毎に毎月199USD）は十分にTitaniumのプラットフォームに慣れて、さらにそのサービスが必要と判断して契約するとよいでしょう。
-
-http://f.hatena.ne.jp/images/fotolife/d/donayama/20100317/20100317233426.png
-
-
 また本稿では取り上げませんが、兄弟製品として[http://www.appcelerator.com/products/titanium-desktop-application-development/ Titanium Desktop]があり、こちらはWindows, Mac OSX, Linuxというマルチプラットフォームで動作するデスクトップアプリケーションを開発できる環境も提供されています。
 
 これについては [http://d.hatena.ne.jp/yuichi_katahira/searchdiary?word=*[Titanium]]の記事群が詳しいですので、興味があればぜひご覧ください
+
+http://www.appcelerator.com/wp-content/uploads/2009/12/PROD_arch11.png
+
+=== 価格体系 ===
+
+気になる価格体系ですが、大きく二つのラインナップに分かれています。
+
+ * Titanium Community
+ * Titanium Professional
+
+大部分の機能は無料で提供されており、有償サービスはプレミアムサービスという位置づけです。
+
+プレミアムサービスとして提供されているのは下図の右側のチェックにある項目です。
+
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100317/20100317233426.png
+
+β版SDKの利用や最新デバイス(iPadやBlackBerryなど)のβプレビューへの参加、開発＆サポートチームによる迅速かつ綿密なサポート体制、アプリケーション分析ログの保存期間の長さなどが挙げられます。
+
+費用も開発者単位に毎月199USDという金額なので十分にTitaniumプラットフォームに慣れて、さらにそのプレミアムサービスが必要と判断して契約するとよいでしょう。
+
+詳細はAppceleratorのサイト内の下記のアドレスをご参照下さい。
+
+http://pages.appcelerator.com/Plans_Pricing.html
 
 == 前提環境(iPhone SDK) ==
 Titanium Mobile自体はTitanium DeveloperというDesktop, Mobileでそれぞれ共用する開発環境を利用します。TItanium Developerの動作するプラットフォームとして、Windows, Mac OSX, Linuxをサポートしています。
@@ -231,8 +248,8 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224839.png
   * (以下略)
 
 それぞれについて代表的なものをかなり簡単に説明します。
-||manifest||アプリケーション定義が記述されています。||
-||tiapp.xml||アプリケーション定義が記述されています。||
+||manifest||パッケージングする際に用いるアプリケーション定義が記述されています。（基本的に変更しません）||
+||tiapp.xml||アプリケーション定義が記述されています。パッケージング・実行時に用いられます。||
 ||/build||ビルド結果を格納するフォルダ。直接触る事はあまりないはずです。||
 ||/Resources||実際のアプリケーション開発をするソースなどはここに格納します。||
 ||/Resources/app.js||アプリケーションのエントリポイントとなるスクリプトファイルです。||
