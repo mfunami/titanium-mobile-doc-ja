@@ -1,5 +1,5 @@
 #summary UIカタログ(API) - アニメーション
-#labels api,view,ui,control,animation,作業中
+#labels api,view,ui,control,animation
 = UIカタログ(API) - アニメーション =
 Window, View, Controlなどの各オブジェクトには{{{animate}}}という関数が用意されており、対象となるオブジェクトに対するアニメーション描画を行うことができます。
 
@@ -177,7 +177,7 @@ v.animate(a);
 anchorPointプロパティはx, yで回転軸を指定します。右下が{{{ {x:1, y:1} }}}となります。中心では{{{ {x:0.5, y:0.5} }}}です。
 
 
-ズームインするアニメーションの例です。
+つづいて、ズームインするアニメーションの例です。
 
 {{{
 var t = Titanium.UI.create2DMatrix().scale(0);
@@ -207,6 +207,8 @@ a.addEventListener('complete', function(){
     var t2 = Titanium.UI.create2DMatrix();
     w.animate({transform:t2, duration:200});
 });
+w.open();
+w.animate(a);
 }}}
 
 
