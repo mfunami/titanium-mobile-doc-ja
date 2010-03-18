@@ -177,6 +177,39 @@ v.animate(a);
 anchorPointプロパティはx, yで回転軸を指定します。右下が{{{ {x:1, y:1} }}}となります。中心では{{{ {x:0.5, y:0.5} }}}です。
 
 
+ズームインするアニメーションの例です。
+
+{{{
+var t = Titanium.UI.create2DMatrix().scale(0);
+ 
+// 0倍の大きさで初期化したWindowを生成します。
+var w = Titanium.UI.createWindow({
+    backgroundColor:'#336699',
+    borderWidth:8,
+    borderColor:'#999',
+    height:400,
+    width:300,
+    borderRadius:10,
+    opacity:0.92,
+    transform:t
+});
+ 
+// 通常のサイズ(1×1)にへの変形指定をします。
+var t1 = Titanium.UI.create2DMatrix().scale(1.1);
+ 
+var a = Titanium.UI.createAnimation();
+a.transform = t1;
+a.duration = 200;
+ 
+// 通常サイズへのアニメーションします。
+a.addEventListener('complete', function(){
+    // 実際のサイズに戻すためには次のような手順もあります。
+    var t2 = Titanium.UI.create2DMatrix();
+    w.animate({transform:t2, duration:200});
+});
+}}}
+
+
 続いて3DMatrixによる３次元変形の例です。
 
 {{{
