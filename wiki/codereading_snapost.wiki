@@ -1,7 +1,7 @@
 #summary コードリーディング - Snapost
 #labels codereading
 = コードリーディング - Snapost =
-Appceleratorの中の人でもあるKevin Whinnery氏がTitanium Mobileを利用し開発しており、AppStore/githubに公開(Apache Public License 2.0)しているサンプルアプリケーション「Snapost」のソースを読み解いていき、実際のアプリケーション構築のテクニックを学んで行きたいと思います。
+Appceleratorの中の人でもあるKevin Whinnery氏がTitanium Mobileを利用し開発しており、!AppStore/githubに公開(Apache Public License 2.0)しているサンプルアプリケーション「Snapost」のソースを読み解いていき、実際のアプリケーション構築のテクニックを学んで行きたいと思います。
 
 http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=358194125&mt=8
 
@@ -30,8 +30,8 @@ http://github.com/kwhinnery/Snapost/tree/master/0.9.x/Snapost/
 
 総勢でこの数ですが、内訳としては以下のとおりで至ってシンプルだったりします。
 
- * app.js＋５つのJavaScriptスクリプト
- * AppStore申請用画像２種(57.png, 512.png)
+ * app.js＋５つの!JavaScriptスクリプト
+ * !AppStore申請用画像２種(57.png, 512.png)
  * appicon.png、デフォルトのTitaniumロゴpng(ゴミファイルだと思われる)
  * 音声ファイル2種(送信時に使ったりするcafファイル)
 
