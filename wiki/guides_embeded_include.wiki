@@ -1,6 +1,6 @@
-#summary API案内 - ユーティリティ編 - 外部JavaScript取込み
+#summary APIカタログ - ユーティリティ編 - 外部JavaScript取込み
 #labels api,embeded
-= API案内 - ユーティリティ編 - 外部 !JavaScript 取込み =
+= APIカタログ - ユーティリティ編 - 外部 !JavaScript 取込み =
 配列処理をスマートに実現したり、あるいは毎度同じように書いているtwitterへのpost処理などをライブラリ化して読み込ませたいといったことも多々あると思います。
 
 Cにおける{{{#include}}}のような機能が{{{Titanium.include}}}関数で実現します。
