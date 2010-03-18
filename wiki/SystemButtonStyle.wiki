@@ -1,1 +1,2 @@
+#labels Deprecated
 [howto_button_style こちらに移動]
