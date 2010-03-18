@@ -1,5 +1,5 @@
 #summary UIカタログ(API) - 共通プロパティ
-#labels api,ui,作業中
+#labels api,ui
 = UIカタログ(API) - 共通プロパティ =
 UI部品(View系・Control系問わず)に共通するプロパティが定義されていますので、まとめてご紹介します。
 
@@ -31,6 +31,7 @@ UI部品(View系・Control系問わず)に共通するプロパティが定義�
 ||font.fontSize||string||フォントサイズ。サポートしている単位はpxと指定無しのみ(cm,inなどは対応していない)||
 ||font.fontFamily||string||フォント名||
 ||font.fontWeight||string||文字の太さ(bold or normal)||
+||font.fontStyle||string||文字スタイル(italic)||
 
 == 枠線 ==
 || * プロパティ名 * || * 型 * || * 説明 * ||
@@ -43,5 +44,3 @@ UI部品(View系・Control系問わず)に共通するプロパティが定義�
 ||opacity||float||透明度 (0.0～1.0)||
 ||visible||boolean||表示非表示 (boolean, デフォルト：true)||
 ||zIndex||int||ビュー内の重なりの順序を指定する||
-
-
