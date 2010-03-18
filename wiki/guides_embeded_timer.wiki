@@ -1,5 +1,5 @@
 #summary APIカタログ(ユーティリティ編) - タイマー処理
-#labels api,embeded,作業中
+#labels api,embeded
 = APIカタログ(ユーティリティ編) - タイマー処理 =
 Titaniumには!JavaScriptの{{{setTimeout}}}と{{{setInterval}}}を使って、タイマー処理をします。
 
@@ -39,7 +39,7 @@ setInterval(function(){
 }}}
 
 == ロック時のタイマー処理 ==
-|| * Titanium.App.idleTimerDisabled * ||boolean||property for controlling whether the phone screen will be locked on idle time. Can be set to true to disable the timer||
+スクリーンロック時にTimerを制御する Titanium.App.idleTimerDisabled というプロパティがあるのですが、どうもTitanium 1.0.0では正しく動作していません。仕様上はtrueにするとtimerを無効にできるのですが...
 
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.App
