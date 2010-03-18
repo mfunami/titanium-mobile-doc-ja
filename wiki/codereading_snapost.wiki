@@ -580,7 +580,7 @@ photoChosenなんてイベントはいまのところ出てきてませんが、
 
 そこを司るconfig.jsを見ていきます。
 
-http://f.hatena.ne.jp/donayama/20100317223555
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100317/20100317223555.png
 
 {{{
 var config = Titanium.UI.createView({
