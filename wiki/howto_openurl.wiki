@@ -1,5 +1,5 @@
 #summary SMS・電話・Safariでページを開く方法
-#labels api
+#labels api,Deprecated
 
 = SMS・電話・Safariでページを開く方法 =
 すべて同じAPI (Titanium.Platform.openURL) を使って行います。
