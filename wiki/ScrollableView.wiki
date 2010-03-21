@@ -31,7 +31,7 @@ var scrollView = Titanium.UI.createScrollableView({
 Titanium.UI.currentWindow.add(scrollView);
 }}}
 
-== 対象となるViewを追加／削除とき ==
+== Viewを追加／削除するには ==
 初期化時にviewを用意するのではなく、動的に後から足す場合は次のようにaddViewメソッドを使います。
 
 同様にすでに存在するviewを削除する場合はremoveViewを利用します。
