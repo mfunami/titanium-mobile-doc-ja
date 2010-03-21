@@ -36,9 +36,12 @@ Titanium.UI.currentWindow.add(scrollView);
 
 同様にすでに存在するviewを削除する場合はremoveViewを利用します。
 {{{
+// viewExtraを追加する
 var viewExtra = Ti.UI.createView();
 scrollView.addView(viewExtra);
-scrollView.removeView(view4);
+
+// 現在表示中のページを削除する
+scrollView.removeView(scrollView.views[scrollView.currentPage]);
 }}}
 
 == 関連するAPIドキュメント ==
