@@ -18,8 +18,7 @@ var tf1 = Titanium.UI.createTextField({
 	hintText:'hintText',
 	keyboardType:Titanium.UI.KEYBOARD_DEFAULT,
 	returnKeyType:Titanium.UI.RETURNKEY_DEFAULT,
-	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-
+	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
 });
 
 
