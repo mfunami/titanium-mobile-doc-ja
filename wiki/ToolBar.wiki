@@ -5,6 +5,7 @@ ToolBarは（主に画面下部に配置する）ボタンなどのコントロ�
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190715.png
 
+== Windowに紐づけるToolBar ==
 {{{
 // ツールバーに載せる部品群を定義します。
 
@@ -41,6 +42,14 @@ send.addEventListener('click', function(){
 	Titanium.UI.createAlertDialog({title:'Toolbar',message:'You clicked send!'}).show();
 });
 
+// Windowの下部にツールバーを設定する。
+Titanium.UI.currentWindow.toolbar = [flexSpace,camera, flexSpace,tf,flexSpace, send,flexSpace];
+}}}
+
+== 個別配置する場合 ==
+
+{{{
+// 上記の例と同じコントロール生成後...
 // ツールバーを新たにつくり、上記で定義したコントロールを並べます。
 var toolbar1 = Titanium.UI.createToolbar({
 	items:[flexSpace,camera, flexSpace,tf,flexSpace, send,flexSpace],
@@ -48,7 +57,7 @@ var toolbar1 = Titanium.UI.createToolbar({
 	borderTop:true,
 	borderBottom:false,
 	translucent:true,
-	barColor:'#999',
+	barColor:'#999'
 });	
 Titanium.UI.currentWindow.add(toolbar1);
 }}}
