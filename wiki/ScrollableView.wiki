@@ -31,6 +31,16 @@ var scrollView = Titanium.UI.createScrollableView({
 Titanium.UI.currentWindow.add(scrollView);
 }}}
 
+== 対象となるViewを追加／削除とき ==
+初期化時にviewを用意するのではなく、動的に後から足す場合は次のようにaddViewメソッドを使います。
+
+同様にすでに存在するviewを削除する場合はremoveViewを利用します。
+{{{
+var viewExtra = Ti.UI.createView();
+scrollView.addView(viewExtra);
+scrollView.removeView(view4);
+}}}
+
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.ScrollableView
 
