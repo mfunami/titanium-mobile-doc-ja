@@ -54,7 +54,7 @@
  * [guides_ui_animation アニメーション]
 
 === 3rd Step : APIカタログ ===
-
+ * Titanium Mobile APIの全体像を俯瞰する
  * ネットワーク編
   * [guides_device_network ネットワークの状態]
   * [guides_network_httpclient HTTPClientによる通信]
