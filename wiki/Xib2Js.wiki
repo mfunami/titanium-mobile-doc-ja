@@ -2,7 +2,9 @@
 #labels tool
 = Xib2Js =
 
-[http://twitter.com/daoki2/ @daoki2さん]が公開されているInterfaceBuilderのGUIデザイナで生成する.xibファイルからTitanium Mobile用のJSコードを生成するツール(AIRランタイムが必要です)です。
+[http://twitter.com/daoki2/ @daoki2さん]が公開されているInterfaceBuilderのGUIデザイナで生成する.xibファイルからTitanium Mobile用のJSコードを生成するツールです。
+
+(※動作にはAIRランタイムが必要となります)
 
 http://blog.frogonmobile.com/apps/xib2js/
 
