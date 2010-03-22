@@ -64,6 +64,7 @@
   * [guides_media_camera カメラ撮影・フォトギャラリーからの取得・スクリーンショット]
   * [guides_media_video 動画再生・録画]
   * [guides_media_audio 音声(音楽)再生・録音]
+  * (追記予定) カメラオーバレイ・AR
  * デバイスハードウェア編
   * [guides_device_battery 電源状態]
   * [guides_device_accelerometer 加速度センサ]
@@ -80,25 +81,20 @@
   * [guides_xml_dom XML DOM Parser]
   * [guides_util_string 文字列変換(BASE64, MD5)]
 
-=== 4th Step : アプリケーション設定 ===
-
- * [tiapp_xml tiapp.xml, manifestファイルについて]
- * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
+=== 4th Step : アプリケーション詳細設定と公開・配布 ===
+ * アプリケーション詳細設定
+  * [tiapp_xml tiapp.xml, manifestファイルについて]
+  * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
+ * (追記予定) 実デバイスでの動作検証
+ * (追記予定) AppStoreでの公開
 
 === 5th Step : コードリーディング(Snapost) ===
-
  * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
+ * (追記予定) KitchenSink TableView関連ソース解説
 
-
-== 続・Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発 == 
-
-↑から溢れる内容をまとめる方向性で。もしかしたらマージするかも？
-
-以下は予定であり未定であり、決定ではありません（定型文）。
-
- * TableViewに深入りするｗ
- * 独自モジュール開発
- * Contacts
- * FaceBookとかYahooとかdonayamaが触っていないのでやってない部分。
- * AR（カメラオーバレイもからめて）
- * 実デバイスへの配布～AppStore申請話
+=== Appendix(全体的に追記予定) ===
+ * Objective-CによるTitanium Mobile独自モジュール開発
+ * Contacts API解説
+ * 外部サービスMashUp API
+  * FaceBook
+  * Yahoo(YQL)
