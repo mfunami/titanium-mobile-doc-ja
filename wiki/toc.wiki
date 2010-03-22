@@ -90,7 +90,7 @@
 
 === 5th Step : コードリーディング(Snapost) ===
  * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
- * (追記予定) KitchenSink TableView関連ソース解説
+ * (追記予定) KitchenSink内のTableView関連ソース解説
 
 === Appendix(全体的に追記予定) ===
  * Objective-CによるTitanium Mobile独自モジュール開発
