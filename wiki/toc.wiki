@@ -100,3 +100,4 @@
 
 === Appendix(全体的に追記予定) ===
  * Objective-CによるTitanium Mobile独自モジュール開発
+  * http://developer.appcelerator.com/doc/mobile/iphone/module_sdk の和訳ベース
