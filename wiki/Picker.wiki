@@ -54,6 +54,16 @@ row.add(label);
 picker.add(row);
 }}}
 
+== 素材(解説予定) ==
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235201.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235202.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235203.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235204.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235205.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235206.png
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235207.png
+
+
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Picker
  * https://developer.appcelerator.com/apidoc/mobile/1.1/Titanium.UI.PickerRow
