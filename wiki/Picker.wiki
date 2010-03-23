@@ -1,5 +1,5 @@
 #summary UIカタログ(コントロール) - Picker
-#labels ui,api,control
+#labels ui,api,control,作業中
 = UIカタログ(コントロール) - Picker =
 コンボボックスに相当する複数の候補から項目をドラム式に選択させるコントロールです。
 
@@ -39,8 +39,25 @@ picker.addEventListener('change',function(e){
 });
 }}}
 
+== 行表示にカスタムViewを使う ==
+{{{
+var picker = Titanium.UI.createPicker();
+var row = Titanium.UI.createPickerRow();
+var label = Titanium.UI.createLabel({
+    text:text,
+    font:{fontSize:24,fontWeight:'bold'},
+    color:text,
+    width:'auto',
+    height:'auto'
+});
+row.add(label);
+picker.add(row);
+}}}
+
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Picker
+ * https://developer.appcelerator.com/apidoc/mobile/1.1/Titanium.UI.PickerRow
+ * https://developer.appcelerator.com/apidoc/mobile/1.1/Titanium.UI.PickerColumn
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
