@@ -68,6 +68,39 @@ Titanium.Media.showCamera({
 });
 }}}
 
+録画した内容をフォトギャラリーから取得する場合は次のようになります。
+{{{
+Titanium.Media.showCamera({
+    success:function(event){
+        var video = event.media;
+        Titanium.Media.saveToPhotoGallery(video);
+        
+        Titanium.UI.createAlertDialog({title:'Photo Gallery',message:'Check your photo gallery'}).show();		
+    
+    },
+    cancel:function(){
+    },
+    error:function(error){
+        // create alert
+        var a = Titanium.UI.createAlertDialog({title:'Video'});
+
+        // set message
+        if (error.code == Titanium.Media.NO_VIDEO){
+            a.setMessage('Device does not have video recording capabilities');
+        }
+        else{
+            a.setMessage('Unexpected error: ' + error.code);
+        }
+
+        // show alert
+            a.show();
+    },
+    mediaTypes: Titanium.Media.MEDIA_TYPE_VIDEO,
+    videoMaximumDuration:10000,
+    videoQuality:Titanium.Media.QUALITY_HIGH
+});
+}}}
+
 === 録画品質 ===
 || * QUALITY_HIGH * ||media type constant to use high-quality video recording. Recorded files are suitable for on-device playback and for wired transfer to the Desktop using Image Capture; they are likely to be too large for transfer using Wi-Fi.||
 || * QUALITY_LOW * ||media type constant to use use low-quality video recording. Recorded files can usually be transferred over the cellular network.||
