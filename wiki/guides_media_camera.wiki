@@ -15,8 +15,8 @@ btnCamera.addEventListener('click', function(){
             var cropRect = event.cropRect;
             // 画像イメージ(Blobデータ)が返される
             var image = event.media;
-            // サムネイルイメージ(Blobデータ)が返される
-            var thumbnail = event.thumbnail;
+            // サムネイルイメージ(Blobデータ)が返され...ません。
+            //var thumbnail = event.thumbnail;
 		
             // 撮影データを表示する
             var imageView = Ti.UI.createImageView({image:event.media});
