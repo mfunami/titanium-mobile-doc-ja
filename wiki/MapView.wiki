@@ -48,7 +48,7 @@ boolean to indicate if the map should show the user's current device location as
 */
 }}}
 
-== ピン(Annotation)の走査 ==
+== ピン(Annotation)の操作 ==
 
 === 選択 ===
 {{{
