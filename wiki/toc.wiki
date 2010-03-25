@@ -62,6 +62,7 @@
   * (追記予定) 外部サービスMashUp API
    * FaceBook
    * Yahoo(YQL)
+  * (追記予定) !PushNotifications
  * I/O編
   * [guides_app_properties アプリケーションプロパティ]
   * [guides_filesystem ファイルシステム]
@@ -70,7 +71,7 @@
   * [guides_media_camera カメラ撮影・フォトギャラリーからの取得・スクリーンショット]
   * [guides_media_video 動画再生・録画]
   * [guides_media_audio 音声(音楽)再生・録音]
-  * (追記予定) カメラオーバレイ・AR
+  * (追記予定) [guides_media_camera_overlay カメラオーバレイ・AR]
  * デバイスハードウェア編
   * [guides_device_battery 電源状態]
   * [guides_device_accelerometer 加速度センサ]
@@ -99,6 +100,6 @@
  * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
  * (追記予定) KitchenSink内のTableView関連ソース解説
 
-=== Appendix(全体的に追記予定) ===
- * Objective-CによるTitanium Mobile独自モジュール開発
+=== Appendix ===
+ * (追記予定) Objective-CによるTitanium Mobile独自モジュール開発
   * http://developer.appcelerator.com/doc/mobile/iphone/module_sdk の和訳ベース
