@@ -1,5 +1,5 @@
 #summary UIカタログ - MapView
-#labels ui,api,view,作業中
+#labels ui,api,view,map
 = UIカタログ - !MapView =
 地図表示を行うViewです。
 
@@ -40,34 +40,62 @@ Ti.UI.currentWindow.add(mapview);
  * Titanium.Map.HYBRID_TYPE
 
 === ユーザの現在位置取得 ===
-{{{
-// 作業中です...
-/*
-userLocation	boolean	
-boolean to indicate if the map should show the user's current device location as a pin on the map
-*/
-}}}
+デバイス利用者の現在位置を地図上にピンとして表示するかどうかをuserLocationプロパティで設定することができます。
 
 == ピン(Annotation)の操作 ==
 
-=== 選択 ===
+=== 追加と削除 ===
+MapViewの生成時だけではなく動的にAnnotationオブジェクトの追加・削除ができます。
 {{{
-// 作業中です...
-/*
-selectAnnotation	cause the annotation to be selected (shown)
+var mountainView = Titanium.Map.createAnnotation({
+	latitude:37.390749,
+	longitude:-122.081651,
+	title:"Appcelerator Headquarters",
+	subtitle:'Mountain View, CA',
+	pincolor:Titanium.Map.ANNOTATION_RED
+});
+// ピンの追加
+mapview.addAnnotation(mountainView);
+// ピンの削除
+mapview.removeAnnotation(mountainView);
+}}}}
+また、複数のピンを一斉に追加・削除することも可能です。
+{{{
+var mountainView = Titanium.Map.createAnnotation({
+	latitude:37.390749,
+	longitude:-122.081651,
+	title:"Appcelerator Headquarters",
+	subtitle:'Mountain View, CA',
+	pincolor:Titanium.Map.ANNOTATION_RED
+});
+var apple = Titanium.Map.createAnnotation({
+	latitude:37.33168900,
+	longitude:-122.03073100,
+	title:"Steve Jobs",
+	subtitle:'Cupertino, CA',
+	pincolor:Titanium.Map.ANNOTATION_GREEN
+});
+var atlanta = Titanium.Map.createAnnotation({
+	latitude:33.74511,
+	longitude:-84.38993,
+	title:"Atlanta, GA",
+	subtitle:'Atlanta Braves Stadium',
+	pincolor:Titanium.Map.ANNOTATION_PURPLE
+});
 
-*/
+// ピンの追加
+mapview.addAnnotations([mountainView, apple, atlanta]);
+// ピンの削除
+mapview.removeAnnotations([mountainView, apple, atlanta]);
 }}}
 
-=== 追加と削除 ===
+=== 選択 ===
+特定のピンを選択状態にするにはselectAnnotationメソッドを使います。
 {{{
-// 作業中です...
-/*
-addAnnotation	add a new annotation to the map
-addAnnotations	add one or more new annotation to the map
-removeAnnotation	remove an existing annotation from the map
-removeAnnotations	remove one or more existing annotations from the map
-*/
+// アップルボタンをクリックするとappleピンを選択状態にする例
+btnApple.addEventListener('click', function(){
+    mapview.selectAnnotation(apple);
+});
 }}}
 
 === ピンの色 ===
@@ -116,9 +144,9 @@ mapview.addEventListener('click', function(e){
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Map
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Map.MapView
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Map.Annotation
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map.MapView
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map.Annotation
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
