@@ -23,8 +23,8 @@ Titanium.UI.iPhone.showStatusBar();
 ||Titanium.UI.iPhone.StatusBar.OPAQUE_BLACK||http://img.skitch.com/20090708-mx53dehqc4dcr4fb6jypb56h31.jpg||
 
 == 関連するAPIドキュメント == 
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.iPhone
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.iPhone.StatusBar
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.StatusBar
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
