@@ -44,6 +44,24 @@ scrollView.addView(viewExtra);
 scrollView.removeView(scrollView.views[scrollView.currentPage]);
 }}}
 
+== 独自のプロパティ・イベント ==
+
+プロパティとしては以下のものが用意されています。
+
+||currentPage||int||現在表示中のViewのページ番号を取得する。指定したViewに移動するにはscrollToViewメソッドを利用する。||
+||pagingControlColor||string||ページ表示用コントロールの背景色を指定する。デフォルトはblack。||
+||pagingControlHeight||float||ページ表示用コントロールの高さを指定する。デフォルトは20。||
+||showPagingControl||boolean||ページ表示用コントロールの表示制御を行う。||
+
+イベントとしてはスクロールされたあとに発生するscrollイベントがあります。
+{{{
+scrollView.addEventListener('scroll', function(e){
+    // e.currentPage でスクロール後の新しいページ番号が返ります
+    // e.view でスクロール後の新しいページのViewが返ります。
+});
+}}}
+
+
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ScrollableView
 
