@@ -68,8 +68,7 @@
   * [guides_filesystem ファイルシステム]
   * [guides_database  データベース]
  * メディア編
-  * [guides_media_camera カメラ撮影・フォトギャラリーからの取得・スクリーンショット]
-   * [guides_media_camera_overlay カメラのカスタムオーバーレイ・AR]
+  * [guides_media_camera カメラ撮影・フォトギャラリーからの取得・スクリーンショット・カスタムオーバーレイ]
   * [guides_media_video 動画再生・録画]
   * [guides_media_audio 音声(音楽)再生・録音]
  * デバイスハードウェア編
