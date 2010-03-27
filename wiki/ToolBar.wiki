@@ -6,6 +6,10 @@ ToolBarは（主に画面下部に配置する）ボタンなどのコントロ�
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190715.png
 
 == Windowに紐づけるToolBar ==
+TabGroupのすぐ上（Widnowのコンテンツエリアの下部）に配置する場合、Windowのtoolbarプロパティに指定して画面表示します。
+
+NavBarやTabGroupと異なり、hidden制御用のプロパティは現バージョン(記述時点1.1.2)ではサポートされていません。
+
 {{{
 // ツールバーに載せる部品群を定義します。
 
@@ -48,6 +52,8 @@ Titanium.UI.currentWindow.toolbar = [flexSpace,camera, flexSpace,tf,flexSpace, s
 
 == 個別配置する場合 ==
 
+画面上の任意の位置にToolBarを設定する場合、次のように記述します。
+
 {{{
 // 上記の例と同じコントロール生成後...
 // ツールバーを新たにつくり、上記で定義したコントロールを並べます。
@@ -64,7 +70,7 @@ Titanium.UI.currentWindow.add(toolbar1);
 
 == 関連するAPIドキュメント ==
 
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Toolbar
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Toolbar
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
