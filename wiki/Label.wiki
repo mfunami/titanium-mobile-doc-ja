@@ -50,7 +50,7 @@ win.add(b2);
 }}}
 
 == 関連するAPIドキュメント == 
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Label
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Label
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
