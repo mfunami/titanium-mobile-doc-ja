@@ -1,5 +1,5 @@
 #summary UIカタログ - Window
-#labels ui,api,window
+#labels ui,api,window,作業中
 = UIカタログ - Window =
 
 == モード ==
@@ -43,6 +43,24 @@ windowのイベントとしては次のようなものがあります。
 ||close||閉じる||
 ||focus||選択状態になる||
 ||blur||選択外状態になる||
+
+
+== 追記予定 ==
+ * url指定時のコンテキスト(url to a JavaScript file with the windows instructions. this window will create a new JavaScript sub-context that will run in its own thread and global variable space)
+ * modal
+ * fullscreen
+ * orientationModes
+ * translucent
+ * NavBar, TabBar関連リンク
+
+{{{
+Sub-contexts
+Windows can be loaded from another Javascript file by specifying the property url and reference a file relative to your application Resources folder. It's important to note that Titanium will refuse to load Javascript files from a remote URL. Loading remote Javascript from a URL and providing it with the full capabilities of the Titanium API would be very dangerous.
+
+When you Window is loaded from a separate Javascript file, the code will be executed in a separate Javascript context (called a "sub-context") than your app.js global context. It will also execute in its own separate thread.
+
+The special property Titanium.UI.currentWindow is available inside a sub-context that points to the Javascript instance by reference in the global context.
+}}}
 
 == 関連するAPIドキュメント ==
 
