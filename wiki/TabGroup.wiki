@@ -61,8 +61,8 @@ tabs[2].setBadge(3);
 
 == 関連するAPIドキュメント ==
 
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.TabGroup
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.Tab
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TabGroup
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Tab
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
