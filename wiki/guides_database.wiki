@@ -61,11 +61,11 @@ rows.close();
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Database
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Database.open
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Database.install
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Database.DB
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Database.ResultSet
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.open
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.install
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.DB
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.ResultSet
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
