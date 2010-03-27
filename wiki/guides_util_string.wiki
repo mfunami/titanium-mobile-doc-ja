@@ -17,8 +17,8 @@ URIエンコード・デコードを行う関数が用意されています。
  * encodeURIComponent
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Utils
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Network
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Utils
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
