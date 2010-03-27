@@ -40,9 +40,27 @@ var tabGroup = Titanium.UI.currentWindow.tabGroup;
 // 所属するタブはtabsプロパティにある
 alert(tabGroup.tabs[0].title);
 
-// 強制的にtab切り替えもできる
+// 強制的に選択中のタブ切り替えもできる
 var tab = tabGroup.activeTab;
 tabGroup.activeTab = tabGroup.tabs[2];
+}}}
+
+== 独自のイベント ==
+{{{
+// TabGroupがフォーカスを失ったときに発生
+tabGroup.addEventListener('blur', function(e){
+    // e.index
+    // e.tab
+    // e.previousIndex
+    // e.previousTab
+});
+// TabGroupがフォーカスを得たときに発生
+tabGroup.addEventListener('focus', function(e){
+    // e.index
+    // e.tab
+    // e.previousIndex
+    // e.previousTab
+});
 }}}
 
 == バッジ機能 ==
