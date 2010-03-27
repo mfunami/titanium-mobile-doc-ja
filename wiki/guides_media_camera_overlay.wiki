@@ -1,5 +1,5 @@
 #summary APIカタログ(メディア編) - カメラのカスタムオーバーレイ・AR
-#labels media,api,camera,作業中
+#labels media,api,camera,Deprecated
 = APIカタログ(メディア編) - カメラのカスタムオーバーレイ・AR =
 カメラ撮影時のファインダー表示として指定したViewの内容を重ね合わせるカスタムオーバーレイ機能があります。
 
