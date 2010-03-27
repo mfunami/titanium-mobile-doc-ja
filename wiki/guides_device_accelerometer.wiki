@@ -6,7 +6,7 @@ Titaniumでは加速度センサについての詳細情報を取得するため
 == 高級API ==
 提供されているイベントは"shake"と"orientationchange"の二つだけです。
 
-||イベント名||説明||
+|| * イベント名 * || * 説明 * ||
 ||shake||２～３回デバイスを振るとイベントが発生します。||
 ||orientationchange||縦横の向きを変えるとイベントが発生します。||
 
@@ -59,8 +59,8 @@ XYZの軸に関する状態について口で説明するよりもこれを見�
   ** http://blog.digitalagua.com/2008/07/15/accelerometer-xyz-based-on-iphone-position/
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Gesture
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Accelerometer
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Gesture
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Accelerometer
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
