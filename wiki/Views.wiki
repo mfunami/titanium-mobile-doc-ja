@@ -86,7 +86,7 @@ Ti.UI.currentWindow.remove(view);
 
 == 関連するAPIドキュメント ==
 
-https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.View
+https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.View
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
