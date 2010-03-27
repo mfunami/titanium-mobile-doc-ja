@@ -22,6 +22,8 @@ var ind=Titanium.UI.createProgressBar({
 	style:Titanium.UI.iPhone.ProgressBarStyle.PLAIN,
 	top:60	
 });
+
+// タイマーによる進捗シミュレーション
 var interval = setInterval(function(){
 	if (ind.val == 10){
 		clearInterval(interval);
