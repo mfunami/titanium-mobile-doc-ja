@@ -50,7 +50,7 @@ var dir = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory);
 || * dir.spaceAvailable() * ||spaceAvailable||true||
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.Filesystem
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Filesystem
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
