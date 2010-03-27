@@ -1,7 +1,7 @@
 #summary titanium-mobile-doc-jaの目次
 = 目次 =
 
-== Appcelerator Titanium MobileではじめるJavaScriptによるiPhoneアプリケーション開発 == 
+== Appcelerator Titanium Mobileではじめる!JavaScriptによるiPhoneアプリケーション開発 == 
 
  ※日々更新していっていますが、2010年3月14日版のこのパートのまとめを[http://titanium-mobile-doc-ja.googlecode.com/files/20100314.pdf PDF]化しています。
 
