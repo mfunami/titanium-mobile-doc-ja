@@ -11,7 +11,7 @@ http://img.skitch.com/20090708-1qpwi2pj72xnmbw24fwtniyspk.jpg
 
 http://img.skitch.com/20090708-rmbim4dm9p5ss116nyt83iky8p.jpg
 
-== TabGroupとTabの生成 ==
+== !TabGroupとTabの生成 ==
 基本的にapp.js上での記述になりますが、次のような形が定石となります。
 {{{
 // ただ生成する。
@@ -31,7 +31,7 @@ tabGroup.addTab(newtab);
 tabGroup.open();
 }}}
 
-== TabGroupとTabの操作 ==
+== !TabGroupとTabの操作 ==
 TabGroupは次のように取得でき、そこからTabを操作できます。
 {{{
 // TabGroupの取得
