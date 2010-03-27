@@ -121,9 +121,9 @@ emailDialog.addEventListener('complete', function(e){
 
 == 関連するAPIドキュメント ==
 
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.AlertDialog
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.OptionDialog
- * https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.EmailDialog
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.AlertDialog
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.OptionDialog
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.EmailDialog
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
