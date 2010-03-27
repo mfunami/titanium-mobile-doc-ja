@@ -7,6 +7,8 @@
 
 透明なViewを重ね合わせる形になるので、背景色の設定などをしないと見づらいという点を気をつける以外はさほど難しくないと思います。
 
+http://f.hatena.ne.jp/images/fotolife/d/donayama/20100327/20100327105012.jpg
+
 {{{
 var win = Titanium.UI.currentWindow;
 
