@@ -35,6 +35,7 @@
   * [ScrollableView]
   * [DashboardView]
   * [guides_ui_verticallayout VirticalLayout]
+  * (追記予定)[guides_ui_horizontallayout HorizontalLayout]
  * Control編
   * [Label]
   * [Button]
@@ -93,6 +94,7 @@
  * アプリケーション詳細設定
   * [tiapp_xml tiapp.xml, manifestファイルについて]
   * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
+ * (追記予定) Ti.includeによるコンテキスト
  * (追記予定) 実デバイスでの動作検証
  * (追記予定) AppStoreでの公開
 
