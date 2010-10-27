@@ -146,9 +146,9 @@ mapview.addEventListener('click', function(e){
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map.MapView
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map.Annotation
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map-module
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map.MapView-object.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map.Annotation-object.html
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
