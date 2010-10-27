@@ -3,11 +3,19 @@
 = UIカタログ - View共通 =
 Titanium MobileのWindowにはView、もしくはControlを格納できます。
 
-複雑なUI制御をする際にはWindow上に直接Controlを配置するのではなく、Viewの上に配置していくほうが制御しやすいです。
+複雑なUI制御/レイアウトをする際にはWindow上に直接Controlを配置するのではなく、Viewの上に配置していくほうが制御しやすいです。
 
 == Viewの追加と表示 ==
 生成されたViewは必ずWindowもしくは他のViewに追加しなければ利用できません。
 {{{
+// Viewを作成
+Titanium.UI.createView({
+   borderRadius:10,
+   backgroundColor:'red',
+   width:50,
+   height:50
+});
+
 // 新たに作られた myView をWindowに追加する
 Titanium.UI.currentWindow.add(myView);
 }}}
