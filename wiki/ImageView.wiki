@@ -11,7 +11,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190701.png
 // ローカルにある画像を指定する場合。
 //  (http://〜で始まるパスを入れるとリモートから取得されます)
 var imageView = Titanium.UI.createImageView({
-    url:'../images/cloud.png',
+    image:'../images/cloud.png',
     width:261,
     height:178,
     top:20
@@ -63,8 +63,10 @@ animationView.stop();
 
 }}}
 
+ちなみにwidth, heightプロパティ指定時に元画像サイズよりも大きい場合、そのサイズに画像が引き伸ばされます。
+
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ImageView
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ImageView-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
