@@ -50,4 +50,4 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100317/20100317233426.png
 
 詳細はAppceleratorのサイト内の下記のアドレスをご参照下さい。
 
-http://pages.appcelerator.com/Plans_Pricing.html
+http://www.appcelerator.com/products/plans-pricing/
