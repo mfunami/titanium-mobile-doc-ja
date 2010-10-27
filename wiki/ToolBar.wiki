@@ -70,7 +70,7 @@ Titanium.UI.currentWindow.add(toolbar1);
 
 == 関連するAPIドキュメント ==
 
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Toolbar
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Toolbar-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
