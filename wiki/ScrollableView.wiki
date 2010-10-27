@@ -63,7 +63,7 @@ scrollView.addEventListener('scroll', function(e){
 
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ScrollableView
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ScrollableView-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
