@@ -36,6 +36,8 @@
   * [DashboardView]
   * [guides_ui_verticallayout VirticalLayout]
   * (追記予定)[guides_ui_horizontallayout HorizontalLayout]
+  * (追記予定) SplitWindow(iPadのみ)
+  * (追記予定) Popover (iPadのみ)
  * Control編
   * [Label]
   * [Button]
@@ -62,6 +64,8 @@
   * [guides_network_httpclient HTTPClientによる通信]
   * (追記予定) [guides_network_tcpsocket TCPSocketによる通信]
   * (追記予定) 外部サービスMashUp API
+   * Twitter
+   * Forsquare
    * FaceBook
    * Yahoo(YQL)
   * (追記予定) !PushNotifications
@@ -69,19 +73,20 @@
   * [guides_app_properties アプリケーションプロパティ]
   * [guides_filesystem ファイルシステム]
   * [guides_database  データベース]
+  * (追記予定) 連絡先データベース(Contacts)
  * メディア編
-  * [guides_media_camera カメラ撮影・フォトギャラリーからの取得・スクリーンショット・カスタムオーバーレイ]
+  * [guides_media_camera カメラ撮影・フォトギャラリーからの取得/保存・スクリーンショット・カスタムオーバーレイ]
   * [guides_media_video 動画再生・録画]
   * [guides_media_audio 音声(音楽)再生・録音]
  * デバイスハードウェア編
   * [guides_device_battery 電源状態]
   * [guides_device_accelerometer 加速度センサ]
+  * Orientation
   * [guides_device_geolocation 位置測定・電子コンパス]
  * プラットフォーム編
   * [guides_platform_appbadge アプリケーションバッジ]
   * [guides_platform_information 環境情報取得]
   * [guides_platform_openurl 他アプリケーション連携(OpenURL)]
-  * (追記予定) Contacts API解説
  * ユーティリティ編
   * [guides_app_log ログ出力]
   * [guides_embeded_timer タイマー処理]
