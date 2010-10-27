@@ -1,5 +1,5 @@
 #summary UIカタログ - ToolBar
-#labels api,ui,view
+#labels api,ui,view,作業中,要検証
 = UIカタログ - !ToolBar =
 ToolBarは（主に画面下部に配置する）ボタンなどのコントロールを収納するコンテナです。
 
