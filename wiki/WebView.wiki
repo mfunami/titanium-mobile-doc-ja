@@ -63,7 +63,7 @@ webView.addEventListener('load', function(e){
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.WebView
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.WebView-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
