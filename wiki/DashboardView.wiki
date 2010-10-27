@@ -4,5 +4,11 @@
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100406/20100406235032.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100406/20100406235033.png
+
+
+== 関連するAPIドキュメント ==
+
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.DashboardView-object
+
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
