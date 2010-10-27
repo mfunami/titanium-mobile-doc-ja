@@ -1,5 +1,5 @@
 #summary UIカタログ - NavBar
-#labels api,ui,window
+#labels api,ui,window,作業中,要検証
 = UIカタログ - !NavBar  =
 WindowのStatusBarの直下にあり、画面遷移をしていく画面でのナビゲーション・指示を司るUI部品です。
 
