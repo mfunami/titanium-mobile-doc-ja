@@ -7,7 +7,7 @@ http://img.skitch.com/20090708-8p1pjfyncp3jt8hs8aihf6qr5y.jpg
 
 http://img.skitch.com/20090708-1qpwi2pj72xnmbw24fwtniyspk.jpg
 
-タブは同時に5つまでの表示しかできません。6つ以上の表示をしようとすると5つ目以上は「more」タブの中に入り、そこから選択する動きになります。
+タブは同時に5つまでの表示しかできません。6つ以上の表示をしようとすると5つ目以上は「more」タブの中に入り、そこから選択する動きになります。(moreタブのタイトルはeditButtonTitleプロパティで変更可能)
 
 http://img.skitch.com/20090708-rmbim4dm9p5ss116nyt83iky8p.jpg
 
@@ -79,8 +79,8 @@ tabs[2].setBadge(3);
 
 == 関連するAPIドキュメント ==
 
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TabGroup
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Tab
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TabGroup-object
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Tab-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
