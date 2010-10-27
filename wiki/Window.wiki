@@ -53,18 +53,15 @@ windowのイベントとしては次のようなものがあります。
  * translucent
  * NavBar, TabBar関連リンク
 
-{{{
-Sub-contexts
-Windows can be loaded from another Javascript file by specifying the property url and reference a file relative to your application Resources folder. It's important to note that Titanium will refuse to load Javascript files from a remote URL. Loading remote Javascript from a URL and providing it with the full capabilities of the Titanium API would be very dangerous.
-
-When you Window is loaded from a separate Javascript file, the code will be executed in a separate Javascript context (called a "sub-context") than your app.js global context. It will also execute in its own separate thread.
-
-The special property Titanium.UI.currentWindow is available inside a sub-context that points to the Javascript instance by reference in the global context.
-}}}
+ * Passing Data
+ * CustomEvents
+ * Animations/transition
+ * iPad Modal Windows
+ * Android "root" Windows
 
 == 関連するAPIドキュメント ==
 
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Window
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Window-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
