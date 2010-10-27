@@ -218,9 +218,9 @@ var tableView = Ti.UI.createTableView({
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableView
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableViewRow
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableViewSection
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableView-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableViewRow-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableViewSection-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
