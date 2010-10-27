@@ -25,12 +25,13 @@ Titanium.UI.currentWindow.animate({
 });
 }}}
 
-Transitionアニメーションスタイルには次の４つがあります。
+Transitionアニメーションスタイルには次の5つがあります。
 
  * {{{Titanium.UI.iPhone.AnimationStyle.CURL_UP}}}
  * {{{Titanium.UI.iPhone.AnimationStyle.CURL_DOWN}}}
  * {{{Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT}}}
  * {{{Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT}}}
+ * {{{Titanium.UI.iPhone.AnimationStyle.NONE}}}
 
 == Viewのイベント ==
 View系のオブジェクトには共通して以下のようなイベントをハンドリングできるようになっています。
@@ -86,7 +87,9 @@ Ti.UI.currentWindow.remove(view);
 
 == 関連するAPIドキュメント ==
 
-https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.View
+http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.View-object
+http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.AnimationStyle-object.html
+
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
