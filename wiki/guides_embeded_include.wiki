@@ -22,5 +22,9 @@ Titanium.includeは使用したコンテキストに対して指定したスク�
 
 意図しない挙動の原因にもなるので名前空間の汚染をしないように常々心がけ、また命名には細心の注意を払う必要があるでしょう。
 
+== 関連するAPIドキュメント ==
+
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.include-method.html
+
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
