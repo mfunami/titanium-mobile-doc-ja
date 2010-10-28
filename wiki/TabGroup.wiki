@@ -79,8 +79,9 @@ tabs[2].setBadge(3);
 
 == 関連するAPIドキュメント ==
 
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TabGroup-object
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Tab-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TabGroup-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Tab-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.SystemIcon-object.html
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
