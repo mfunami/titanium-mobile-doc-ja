@@ -55,6 +55,7 @@ buttonbar.addEventListener('click', function(e){
 
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ButtonBar-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.SystemButtonStyle-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
