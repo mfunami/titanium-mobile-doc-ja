@@ -58,6 +58,7 @@ windowのイベントとしては次のようなものがあります。
  * Animations/transition
  * iPad Modal Windows
  * Android "root" Windows
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.NavigationGroup-object.html
 
 == 関連するAPIドキュメント ==
 
