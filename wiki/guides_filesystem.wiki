@@ -1,5 +1,5 @@
 #summary APIカタログ(I/O編) - ファイルシステム
-#labels api,io
+#labels api,io,要検証
 = APIカタログ(I/O編) - ファイルシステム =
 ファイルシステムの操作には今のところプロパティ取得と内容の読取りしかないので、次のような一覧表でのご紹介に留めさせていただきます。
 
@@ -50,7 +50,8 @@ var dir = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory);
 || * dir.spaceAvailable() * ||spaceAvailable||true||
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Filesystem
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Filesystem-module
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Filesystem.File-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
