@@ -127,5 +127,9 @@ Titanium.UI.currentWindow.addEventListener('close', function(e) {
 serviceBrowser.search();
 Titanium.UI.currentWindow.add(tableView);
 }}}
+
+== 関連するAPIドキュメント ==
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network.TCPSocket-object.html
+
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
