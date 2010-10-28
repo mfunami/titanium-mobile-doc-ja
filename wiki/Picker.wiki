@@ -191,9 +191,9 @@ var picker = Ti.UI.createPicker({
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Picker
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.PickerRow
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.PickerColumn
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Picker-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.PickerRow-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.PickerColumn-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
