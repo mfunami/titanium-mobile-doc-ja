@@ -66,7 +66,8 @@ b.addEventListener('click', function(){
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.App
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium-module
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.App-module
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
