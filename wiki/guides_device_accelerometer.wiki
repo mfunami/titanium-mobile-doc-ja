@@ -59,8 +59,8 @@ XYZの軸に関する状態について口で説明するよりもこれを見�
   ** http://blog.digitalagua.com/2008/07/15/accelerometer-xyz-based-on-iphone-position/
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Gesture
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Accelerometer
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Gesture-module
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Accelerometer-module
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
