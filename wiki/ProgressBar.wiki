@@ -36,7 +36,8 @@ var interval = setInterval(function(){
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ProgressBar
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ProgressBar-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.ProgressBarStyle-object.html
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
