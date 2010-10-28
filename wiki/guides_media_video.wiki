@@ -107,7 +107,7 @@ Titanium.Media.showCamera({
 || * QUALITY_MEDIUM * ||media type constant to use medium-quality video recording. Recorded files can usually be transferred using Wi-Fi. This is the default video quality setting.||
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media-module
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
