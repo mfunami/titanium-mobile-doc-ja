@@ -40,6 +40,7 @@ button1.addEventListener('click', function(){
 
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ActivityIndicator-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.ActivityIndicatorStyle-object.html
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
