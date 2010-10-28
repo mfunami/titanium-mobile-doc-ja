@@ -26,7 +26,7 @@ Ti.API.debug('デバッグ情報');
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.API
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.API-module
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
