@@ -143,6 +143,7 @@ xhr.setRequestHeader('Authorization','Basic '+Ti.Utils.base64encode(username.val
 }}}
 
 == 関連するAPIドキュメント ==
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network-module
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network.HTTPClient-object.html
 
 ----
