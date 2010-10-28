@@ -69,6 +69,7 @@
    * FaceBook
    * Yahoo(YQL)
   * (追記予定) !PushNotifications
+  * (追記予定) !BonjourBrowser / !BonjourService 
  * I/O編
   * [guides_app_properties アプリケーションプロパティ]
   * [guides_filesystem ファイルシステム]
