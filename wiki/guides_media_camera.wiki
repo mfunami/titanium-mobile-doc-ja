@@ -1,12 +1,12 @@
 #summary APIカタログ(メディア編) - カメラ撮影・フォトギャラリーからの取得・スクリーンショット
-#labels api,media,camera
+#labels api,media,camera,要検証
 = APIカタログ(メディア編) - カメラ撮影・フォトギャラリーからの取得・スクリーンショット =
 
 == 写真データの取得・操作 ==
 
 カメラでの撮影、フォトギャラリーからのデータ取得はいずれも非同期に行われるため、コールバック関数によって取得するかたちになります。そこで引き渡される画像・サムネイルのデータ、補助情報を利用し、プレビューしたりアップロードしたりします。
 
-ちなみに allowImageEditing プロパティをtrueと指定した場合は拡大や移動をするための画面を一段挟み、その結果がsuccuessプロパティで呼び出される関数に引き渡されます。
+ちなみに allowEditing プロパティをtrueと指定した場合は拡大や移動をするための画面を一段挟み、その結果がsuccuessプロパティで呼び出される関数に引き渡されます。
 
 === カメラ撮影 ===
 {{{
@@ -32,7 +32,7 @@ btnCamera.addEventListener('click', function(){
             // errorとしてカメラがデバイスにないようなケース(iPod touchなどがそうでしょうか)では
             // error.code が Titanium.Media.NO_CAMERA として返ります。
         },
-        allowImageEditing:true,
+        allowEditing:true,
         saveToPhotoGallery: false
     });
 });
@@ -66,7 +66,7 @@ Titanium.Media.openPhotoGallery({
     cancel: function() {
         // キャンセル時の挙動
     },
-    allowImageEditing: true
+    allowEditing: true
 });
 }}}
 
@@ -241,7 +241,12 @@ Titanium.Media.showCamera({
 
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media-module
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media.openPhotoGallery-method.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media.saveToPhotoGallery-method.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media.showCamera-method.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media.takePicture-method.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media.takeScreenshot-method.html
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
