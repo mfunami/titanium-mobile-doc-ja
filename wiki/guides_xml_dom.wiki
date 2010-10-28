@@ -46,8 +46,8 @@ if (xml2.evaluate) {
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.XML
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.XML.DOMDocument
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.XML-module
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.XML.DOMDocument-object.html
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
