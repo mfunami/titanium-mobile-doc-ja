@@ -42,7 +42,7 @@ ta1.addEventListener('focus',function(e){
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TextArea
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TextArea-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
