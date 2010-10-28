@@ -90,7 +90,7 @@ setTimeout(function(e){
  * Ti.Media.averageMicrophonePower
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media-module
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
