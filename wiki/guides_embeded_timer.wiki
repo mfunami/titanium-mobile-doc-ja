@@ -1,5 +1,5 @@
 #summary APIカタログ(ユーティリティ編) - タイマー処理
-#labels api,embeded
+#labels api,embeded,要検証
 = APIカタログ(ユーティリティ編) - タイマー処理 =
 Titaniumには!JavaScriptの{{{setTimeout}}}と{{{setInterval}}}を使って、タイマー処理をします。
 
