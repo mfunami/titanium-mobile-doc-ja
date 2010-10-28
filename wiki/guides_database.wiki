@@ -1,5 +1,5 @@
 #summary APIカタログ(I/O編) - データベース
-#labels api,io,database
+#labels api,io,database,要検証
 = APIカタログ(I/O編) - データベース =
 デバイス上の[http://www.sqlite.org/ SQLiteデータベース]への接続をするをするための機能が用意されています。
 
@@ -61,11 +61,11 @@ rows.close();
 }}}
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.open
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.install
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.DB
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.ResultSet
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database-module
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.open-method.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.install-method.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.DB-object.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.ResultSet-object.html
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
