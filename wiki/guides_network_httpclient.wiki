@@ -142,6 +142,19 @@ xhr.setRequestHeader('User-Agent','Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en
 xhr.setRequestHeader('Authorization','Basic '+Ti.Utils.base64encode(username.value+':'+password.value));
 }}}
 
+== メモリリーク回避 ==
+
+参考：http://www.mountposition.co.jp/blog/?p=86
+
+{{{
+xhr.onload = null;
+xhr.onreadystatechange = null;
+xhr.ondatastream = null;
+xhr.onerror = null;
+xhr = null;
+}}}
+
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network-module
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network.HTTPClient-object.html
