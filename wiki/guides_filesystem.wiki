@@ -11,7 +11,7 @@
 || * Titanium.Filesystem.applicationDirectory * ||Application Directory||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Applications||
 || * Titanium.Filesystem.applicationDataDirectory * ||Application Data Directory||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Documents||
 || * Titanium.Filesystem.isExteralStoragePresent * ||External Storage Available ||false||
-|| * Titanium.Filesystem.externalStorageDirectory* ||External Storage(Androidのみ)||...||
+|| * Titanium.Filesystem.externalStorageDirectory* ||External Storage Directory||...(Androidのみ)||
 || * Titanium.Filesystem.separator * ||Path Separator ||/||
 || * Titanium.Filesystem.lineEnding * ||Line Ending ||||
 
