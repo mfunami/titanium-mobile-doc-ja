@@ -89,6 +89,10 @@ setTimeout(function(e){
  * Ti.Media.peakMicrophonePower
  * Ti.Media.averageMicrophonePower
 
+=== ToDo ===
+
+ * Titanium.App.idleTimerDisabled
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media-module
 
