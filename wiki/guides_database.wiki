@@ -1,5 +1,5 @@
 #summary APIカタログ(I/O編) - データベース
-#labels api,io,database,要検証
+#labels api,io,database
 = APIカタログ(I/O編) - データベース =
 デバイス上の[http://www.sqlite.org/ SQLiteデータベース]への接続をするをするための機能が用意されています。
 
@@ -42,6 +42,9 @@ while(rows.isValidRow()){
 }
 // 走査が終わったらResultSetを閉じておきます。
 rows.close();
+
+// 操作が終わったら後片付け
+db.close();
 }}}
 
 == 既存のSQLiteDBの取込み ==
@@ -58,6 +61,7 @@ while (rows.isValidRow()){
     rows.next();
 }
 rows.close();
+db.close();
 }}}
 
 == 関連するAPIドキュメント ==
