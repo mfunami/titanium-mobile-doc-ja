@@ -1,5 +1,5 @@
 #summary UIカタログ - ToolBar
-#labels api,ui,view,作業中,要検証
+#labels api,ui,view
 = UIカタログ - !ToolBar =
 ToolBarは（主に画面下部に配置する）ボタンなどのコントロールを収納するコンテナです。
 
@@ -47,7 +47,7 @@ send.addEventListener('click', function(){
 });
 
 // Windowの下部にツールバーを設定する。
-Titanium.UI.currentWindow.toolbar = [flexSpace,camera, flexSpace,tf,flexSpace, send,flexSpace];
+Titanium.UI.currentWindow.setToolbar([flexSpace,camera, flexSpace,tf,flexSpace, send,flexSpace]);
 }}}
 
 == 個別配置する場合 ==
