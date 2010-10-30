@@ -1,6 +1,8 @@
 #summary APIカタログ(メディア編) - カメラ撮影・フォトギャラリーからの取得・スクリーンショット
-#labels api,media,camera,要検証
+#labels api,media,camera
 = APIカタログ(メディア編) - カメラ撮影・フォトギャラリーからの取得・スクリーンショット =
+
+※ここではカメラロールのことをフォトギャラリーと総称しています。
 
 == 写真データの取得・操作 ==
 
@@ -11,40 +13,50 @@
 === カメラ撮影 ===
 {{{
 btnCamera.addEventListener('click', function(){
-    Titanium.Media.showCamera({
-        // JSON形式の引数です
-        success:function(event){
-            // cropRectにはx,y,height,widthといったデータがはいる。
-            var cropRect = event.cropRect;
-            // 画像イメージ(Blobデータ)が返される
-            var image = event.media;
-            // サムネイルイメージ(Blobデータ)が返され...ません。
-            //var thumbnail = event.thumbnail;
-		
-            // 撮影データを表示する
-            var imageView = Ti.UI.createImageView({image:event.media});
-            Ti.UI.currentWindow.add(imageView);
-        },
-        cancel:function(){
-            //
-        },
-        error:function(error){
-            // errorとしてカメラがデバイスにないようなケース(iPod touchなどがそうでしょうか)では
-            // error.code が Titanium.Media.NO_CAMERA として返ります。
-        },
-        allowEditing:true,
-        saveToPhotoGallery: false
+
+Titanium.Media.showCamera({
+    // JSON形式の引数です
+    success:function(event){
+        // cropRectにはx,y,height,widthといったデータがはいる。
+        var cropRect = event.cropRect;
+        var image    = event.media;
+
+        // 撮影されたデータが写真ならばImageViewとしてWindowに貼り付ける
+        if(event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO){
+            var imageView = Ti.UI.createImageView({
+                width:win.width,
+                height:win.height,
+                image:event.media
+            });
+            win.add(imageView);  
+        }
+    },
+    cancel:function(){
+        // ...
+    },
+    error:function(error){
+        // errorとしてカメラがデバイスにないようなケース(iPod touchなどがそうでしょうか)では
+        // error.code が Titanium.Media.NO_CAMERA として返ります。
+    },
+    // 撮影データのフォトギャラリーへの保存
+    saveToPhotoGallery:true,
+    // 撮影直後に拡大縮小移動をするか否かのフラグ
+    allowEditing:true,
+    // 撮影可能なメディア種別を配列で指定
+    mediaTypes:[Ti.Media.MEDIA_TYPE_VIDEO,Ti.Media.MEDIA_TYPE_PHOTO],
+
     });
 });
+
 }}}
 
-撮影成功時に本体フォトギャラリーに画像を保存するだけの場合は、showCameraの引数として saveToPhotoGallery を trueとして設定するだけです。
+撮影成功時に本体フォトギャラリーに画像を保存するだけの場合は、showCameraの引数として saveToPhotoGalleryを trueとして設定するだけです。
 
 ファイルへの書き出しをする場合、succuess内で次のように出力処理を記述します。
 {{{
 // アプリケーションデータディレクトリに camera_photo.png として出力する。
-var f = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, 'camera_photo.png');
-f.write(event.media);
+var f = Ti.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'camera_photo.png');
+f.write(event.image);
 
 // 現在のウィンドウ背景画像としてそのまま使う場合は次のようにする
 Titanium.UI.currentWindow.backgroundImage = f.nativePath;
@@ -66,9 +78,15 @@ Titanium.Media.openPhotoGallery({
     cancel: function() {
         // キャンセル時の挙動
     },
+    // 選択直後に拡大縮小移動をするか否かのフラグ
     allowEditing: true
+    // 選択可能なメディア種別を配列で指定
+    mediaTypes:[Ti.Media.MEDIA_TYPE_VIDEO,Ti.Media.MEDIA_TYPE_PHOTO],
 });
 }}}
+
+また、iPad向けに引数としてpopoverView, arrowDirectionがあります。
+
 
 === スクリーンショットの取得 ===
 使いどころが難しいのですが、デバイス画面をカメラ同様に取得することができます。
