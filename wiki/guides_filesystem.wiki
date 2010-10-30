@@ -1,5 +1,5 @@
 #summary APIカタログ(I/O編) - ファイルシステム
-#labels api,io,要検証
+#labels api,io
 = APIカタログ(I/O編) - ファイルシステム =
 ファイルシステムの操作には今のところプロパティ取得と内容の読取りしかないので、次のような一覧表でのご紹介に留めさせていただきます。
 
@@ -11,6 +11,7 @@
 || * Titanium.Filesystem.applicationDirectory * ||Application Directory||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Applications||
 || * Titanium.Filesystem.applicationDataDirectory * ||Application Data Directory||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C/Documents||
 || * Titanium.Filesystem.isExteralStoragePresent * ||External Storage Available ||false||
+|| * Titanium.Filesystem.externalStorageDirectory* ||External Storage(Androidのみ)||...||
 || * Titanium.Filesystem.separator * ||Path Separator ||/||
 || * Titanium.Filesystem.lineEnding * ||Line Ending ||||
 
@@ -48,6 +49,33 @@ var dir = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory);
 || * dir.getDirectoryListing() * ||directoryListing||cricket.wav,Default.png,default_app_logo.png,dependencies.map,Entitlements.plist,images,Info.plist,KitchenSink,MainWindow.nib,modules,movie.mp4,PkgInfo,pop.caf,Settings.bundle,testdb.db,text.txt||
 || * dir.getParent() * ||getParent||/Users/username/Library/Application Support/iPhone Simulator/User/Applications/94646704-B9B9-432F-A8CE-640A89A6B55C||
 || * dir.spaceAvailable() * ||spaceAvailable||true||
+
+== ディレクトリ・ファイルの操作 ==
+作成はいずれもTitaniu,FileSystem.getFile(...)により、ファイルハンドラを取得して、作成／書き出しを行うかたちとなります。
+{{{
+// ディレクトリの作成
+var newDir = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'mydir');
+newDir.createDirectory();
+
+// ファイルの作成
+var newFile = Titanium.Filesystem.getFile(newDir.nativePath,'newfile.txt');
+newFile.write("...");
+Ti.API.info('directoryListing for newDir = ' + newDir.getDirectoryListing());
+Ti.API.info("newfile.txt created: " + String(new Date(newFile.createTimestamp())));
+Ti.API.info("newfile.txt modified: " + String(new Date(newFile.modificationTimestamp())));	
+
+// ファイルの削除
+newFile.deleteFile();
+
+// フォルダの削除
+newDir.deleteDirectory();
+}}}
+
+
+
+}}}
+
+
 
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Filesystem-module
