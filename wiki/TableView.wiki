@@ -221,6 +221,10 @@ var tableView = Ti.UI.createTableView({
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableView-object
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableViewRow-object
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableViewSection-object
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.TableViewStyle-object.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.TableViewSeparatorStyle-object.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.TableViewCellSelectionStyle-object.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.TableViewScrollPosition-object.html
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
