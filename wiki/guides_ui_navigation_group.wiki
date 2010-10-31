@@ -1,5 +1,5 @@
 #summary UIカタログ - NavigationGroup
-#labels ui,view
+#labels ui,view,iPhone
 = UIカタログ - !NavigationGroup =
 
 !NavigationGroupは階層化されたコンテンツのナビゲーションを統括する特殊なViewです。
