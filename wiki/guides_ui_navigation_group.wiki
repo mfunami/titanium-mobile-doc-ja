@@ -1,6 +1,6 @@
 #summary UIカタログ - NavigationGroup
 #labels ui,view,作業中
-= UIカタログ - NavigationGroup =
+= UIカタログ - !NavigationGroup =
 
 http://img.skitch.com/20100406-rwe44533tkd94fdnbqqudxynpe.png
 
