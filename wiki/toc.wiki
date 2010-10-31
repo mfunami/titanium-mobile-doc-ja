@@ -1,4 +1,5 @@
 #summary titanium-mobile-doc-jaの目次
+#labels 作業中
 = 目次 =
 
 == Appcelerator Titanium Mobileではじめる!JavaScriptによるiPhoneアプリケーション開発 == 
@@ -55,6 +56,7 @@
   * [ProgressBar]
  * [guides_ui_properties 共通プロパティ]
  * [guides_ui_animation アニメーション]
+ * (追記予定) [guides_ui_navigation_group NavigationGroup]
  * (追記予定) コラム：実践！!Xib2Jsを用いた高速モックアップ作成
 
 === 3rd Step : APIカタログ ===
