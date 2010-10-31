@@ -31,7 +31,7 @@ picker.addEventListener('change',function(e){
 }}}
 
 == 複数の列を持ったPicker ==
-もちろん1列だけではなく、複数列を持ったPickerも校正できます。
+もちろん1列だけではなく、複数列を持ったPickerも構成できます。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235201.png
 
@@ -182,6 +182,8 @@ var picker = Ti.UI.createPicker({
 }}}
 
 === カウントダウン ===
+
+キッチンタイマー的な表示をするのはこちら。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100323/20100323235207.png
 
