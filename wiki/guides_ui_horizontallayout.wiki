@@ -16,6 +16,8 @@ var view = Ti.UI.createView({
 });
 win.add(view);
 
+// leftの指定値ではなく、追加した順番にラベルが配置されているのが、
+// 上のスクリーンショットと対比すると分かる。
 var l1 = Ti.UI.createLabel({
     text:'I am the first label',
     left:5,
