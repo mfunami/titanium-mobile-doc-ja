@@ -1,9 +1,42 @@
 #summary UIカタログ(API) - Horizontal Layout
 #labels ui,view,作業中,iPhone
 = UIカタログ(API) - Horizontal Layout =
+指定したWindowやViewの中に配置したコントロールやViewが追加した順に水平に自動配置されていくレイアウト指定です。 
 
 {{{
-//
+var win = Ti.UI.currentWindow;
+
+// レイアウトプロパティにhorizontalを指定する。
+var view = Ti.UI.createView({
+    height:300,
+    width:320,
+    layout:'horizontal'
+});
+win.add(view);
+
+var l1 = Ti.UI.createLabel({
+    text:'I am the first label',
+    left:5,
+    width:'auto',
+    height:20,
+});
+view.add(l1);
+
+var l2 = Ti.UI.createLabel({
+    text:'I am the second label',
+    left:2,
+    width:'auto',
+    height:20
+});
+view.add(l2);
+
+var l3 = Ti.UI.createLabel({
+    text:'I am the third label',
+    left:2,
+    width:'auto',
+    height:20
+});
+view.add(l3);
 }}}
 
 ----
