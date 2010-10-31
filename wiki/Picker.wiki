@@ -1,11 +1,13 @@
 #summary UIカタログ(コントロール) - Picker
-#labels ui,api,control,作業中
+#labels ui,api,control
 = UIカタログ(コントロール) - Picker =
 コンボボックスに相当する複数の候補から項目をドラム式に選択させるコントロールです。
 
 項目が多すぎると正直使い勝手が悪いので、そういうときはTableViewなどで外に出せないか考慮する必要があるかもしれません。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190718.png
+
+ちなみにiPad向けには直接WindowやViewにPickerを結びつけるのではなく[Popover]を経由して表示するようにガイドラインで決められております。
 
 {{{
 var picker = Ti.UI.createPicker();
