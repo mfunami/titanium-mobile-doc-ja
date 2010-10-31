@@ -1,0 +1,8 @@
+#summary UIカタログ - NavigationGroup
+#labels ui,view,作業中
+= UIカタログ - NavigationGroup =
+
+http://img.skitch.com/20100406-rwe44533tkd94fdnbqqudxynpe.png
+
+ * http://developer.appcelerator.com/blog/2010/06/how-to-create-an-iphone-navigation-group.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.NavigationGroup-object.html
