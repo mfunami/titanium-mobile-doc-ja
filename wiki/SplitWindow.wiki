@@ -1,0 +1,10 @@
+#summary UIカタログ(API) - Split Window
+#labels ui,view,作業中,iPad
+= UIカタログ(API) - Split Window =
+
+{{{
+//
+}}}
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
