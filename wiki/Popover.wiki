@@ -1,0 +1,10 @@
+#summary UIカタログ(API) - Popover
+#labels ui,view,iPad,作業中
+= UIカタログ(API) - Popover =
+
+{{{
+//
+}}}
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
