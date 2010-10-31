@@ -1,8 +1,9 @@
 #summary UIカタログ(API) - Horizontal Layout
-#labels ui,view,作業中
+#labels ui,view,作業中,iPhone
 = UIカタログ(API) - Horizontal Layout =
 
 {{{
+//
 }}}
 
 ----
