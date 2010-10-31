@@ -2,6 +2,9 @@
 #labels ui,view,iPad,作業中
 = UIカタログ(API) - Popover =
 
+http://img.f.hatena.ne.jp/images/fotolife/d/donayama/20101031/20101031182852.png
+http://img.f.hatena.ne.jp/images/fotolife/d/donayama/20101031/20101031182853.png
+
 {{{
 //
 }}}
