@@ -1,0 +1,9 @@
+#summary UIカタログ(API) - Horizontal Layout
+#labels ui,view,作業中
+= UIカタログ(API) - Horizontal Layout =
+
+{{{
+}}}
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
