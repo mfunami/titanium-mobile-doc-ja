@@ -8,7 +8,6 @@
 
 http://img.skitch.com/20100406-rwe44533tkd94fdnbqqudxynpe.png
 
-== 簡単な例 ==
 {{{
 // winはNavigationGroupを格納するトップレベルのコンテナ
 var win = Titanium.UI.createWindow();
