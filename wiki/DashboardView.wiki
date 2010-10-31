@@ -1,8 +1,12 @@
-#summary UIカタログ - DashboardView (作成中)
-#labels ui,view,作業中
+#summary UIカタログ - DashboardView
+#labels ui,view
 = UIカタログ - !DashboardView =
+デバイスのホーム画面のようなアイコンベースのメニューを構成するためのViewです。
+
+アイコンを長押しするとeditイベントが発生し、アイコンの位置変更や削除といった編集作業が可能になります。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100406/20100406235032.png
+http://img.f.hatena.ne.jp/images/fotolife/d/donayama/20101031/20101031182246.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100406/20100406235033.png
 
 {{{
