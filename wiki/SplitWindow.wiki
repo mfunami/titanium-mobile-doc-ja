@@ -2,6 +2,9 @@
 #labels ui,view,作業中,iPad
 = UIカタログ(API) - Split Window =
 
+http://img.f.hatena.ne.jp/images/fotolife/d/donayama/20101031/20101031182850.png
+http://img.f.hatena.ne.jp/images/fotolife/d/donayama/20101031/20101031182851.png
+
 {{{
 //
 }}}
