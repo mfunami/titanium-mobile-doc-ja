@@ -9,5 +9,10 @@ http://img.f.hatena.ne.jp/images/fotolife/d/donayama/20101031/20101031182851.png
 //
 }}}
 
+== 関連するAPIドキュメント ==
+
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPad.SplitWindow-object.html
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.NavigationGroup-object.html
+
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
