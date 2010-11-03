@@ -1,0 +1,37 @@
+#summary トップページのNews履歴
+
+= Titanium Mobile & doc-ja News History =
+
+=== 2010/07/26 ===
+[https://developer.appcelerator.com/apidoc/mobile/1.4/changelog.html Titanium Mobile Ver.1.4.0]がリリースされています。
+
+=== 2010/05/17 ===
+立薗理彦さんの[http://www.atmarkit.co.jp/fwcr/design/index/index_titanium.html Web技術でネイティブアプリを作れるTitanium]の連載[http://www.atmarkit.co.jp/fwcr/design/tool/titanium02/01.html 第2回]にて当プロジェクトをご紹介いただきました。ありがとうございます。
+
+=== 2010/05/14 ===
+Titanium Mobile Ver.1.3.0がリリースされています。
+
+=== 2010/04/06 ===
+Titanium Mobile Ver.1.2.0がリリースされています。
+
+=== 2010/03/23 ===
+Titanium Mobile Ver.1.1.0がリリースされています。
+
+=== 2010/03/22 ===
+[http://twitter.com/daoki2/ @daoki2さん]が!InterfaceBuilderのGUIデザイナで生成する.xibファイルからTitanium Mobile用のJSコードを生成するツール[http://blog.frogonmobile.com/apps/xib2js/ Xib2Js]を公開されました。
+
+[http://twitter.com/misty_rc 新井　龍太郎さん]による[https://code.google.com/p/titanium-desktop-doc-ja/ titanium-desktop-doc-jaプロジェクト]へのリンクを貼りました。
+
+=== 2010/03/15 ===
+[toc 「Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発」]の１～４章についてまとめたPDFを暫定的に公開しています。[http://titanium-mobile-doc-ja.googlecode.com/files/20100314.pdf 2010/03/14版PDF]
+
+応援＆ご意見くださった #Titaniumクラスタの皆さんありがとうございました。今後もがんばります＞＜
+
+=== 2010/03/09 ===
+祝！ Titanium Mobile Ver.1.0.0がリリースされています。
+
+=== 2010/02/28 ===
+Ver.0.9/1.0系に内容を合わせた入門記事[get_started 「Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!!」]を改めて書き起こしました。参考になれば幸いです。
+
+=== 2010/02/18 ===
+[http://www.atmarkit.co.jp/ @IT]にて立薗理彦さんによる[http://www.atmarkit.co.jp/fwcr/design/index/index_titanium.html Web技術でネイティブアプリを作れるTitanium]という連載が始まりました。全力で応援！
