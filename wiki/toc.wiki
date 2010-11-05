@@ -104,6 +104,7 @@
  * (追記予定) Xcodeでのビルド
  * (追記予定) Ti.includeによるコンテキスト
  * (追記予定) 実デバイスでの動作検証
+ * [guides_distributing_app_to_beta_testers βテスタへのアプリケーション配布]
  * (追記予定) AppStoreでの公開
 
 === 5th Step : コードリーディング(Snapost) ===
