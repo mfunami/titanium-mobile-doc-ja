@@ -19,7 +19,6 @@
  * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
  * Window編
   * [Window]
-   * (追記予定) WindowのURL指定, Ti.includeによるJavaScriptコンテキスト
    * [StatusBar]
    * [NavBar]
    * [ToolBar]
