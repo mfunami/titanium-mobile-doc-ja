@@ -1,5 +1,5 @@
 #summary Titanium Mobileのプロジェクトフォルダ構成と詳細設定
-#labels 作業中
+#labels Tips
 
 = Titanium Mobileのプロジェクトフォルダ構成と詳細設定 =
 （原文）https://github.com/appcelerator/titanium_documentation/blob/master/source/en/app_structure.md
