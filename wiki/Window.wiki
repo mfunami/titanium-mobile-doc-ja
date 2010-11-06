@@ -7,7 +7,9 @@ Windowには通常モードとフルスクリーンモードの二つがあり�
 
 フルスクリーンモード下では、StatusBar・NavBar・ToolBar・ TabGroupといった部品をもつ事ができませんが、デバイスの表示領域一杯を使う事ができます。
 
-一方、通常モードはStatusBarとNavBarが標準で表示されます。TabGroupを配置する場合、Windowオブジェクト群はTabGroupの子オブジェクトとして配置されます。
+一方、通常モードはStatusBarとNavBarが標準で表示されます。
+
+TabGroupを配置する場合、Windowオブジェクト群はTabGroupの子オブジェクトとして配置されます。
 
 == Windowの作成 ==
 windowを生成するために{{{Titanium.UI.createWindow}}}というAPIが用意されています。
@@ -47,12 +49,18 @@ window.open({
 }}}
 
 == 副コンテキストへの分割 ==
+別のJavaScriptファイルをurlプロパティで指定（Resourcesフォルダからの相対パス）してWindowを生成する事ができます。あくまでもアプリケーションローカルのファイルしか読み取れません。セキュリティの観点からリモートURLは拒否されます。
 
-Windows can be loaded from another Javascript file by specifying the property url and reference a file relative to your application Resources folder. It's important to note that Titanium will refuse to load Javascript files from a remote URL. Loading remote Javascript from a URL and providing it with the full capabilities of the Titanium API would be very dangerous.
+{{{
+// app.js
+var win = Titanium.UI.createWindow({
+    url: 'foo.js'
+});
+}}}
 
-When you Window is loaded from a separate Javascript file, the code will be executed in a separate Javascript context (called a "sub-context") than your app.js global context. It will also execute in its own separate thread.
+この際、新しいWindowのJavaScriptコードは別のコンテキスト（副コンテキスト）で評価・実行されます。またこれはapp.jsとは別のスレッドでそれぞれ実行される形となります。
 
-The special property Titanium.UI.currentWindow is available inside a sub-context that points to the Javascript instance by reference in the global context.
+特殊なプロパティ {{{Titanium.UI.currentWindow}}} のみ副コンテキストにおいて、グローバルコンテキストのオブジェクトを参照できます。
 
 === グローバルコンテキストのオブジェクト参照 ===
 通常、副コンテキストの変数やファンクションといったオブジェクトはグローバルコンテキストを直接参照できませんが、グローバルコンテキストのオブジェクトを次のように引き渡す事で、副コンテキストからグローバルコンテキストのオブジェクトを参照できるようになります。
@@ -87,34 +95,46 @@ alert("b() = " + Titanium.UI.currentWindow.b());
 
 この手法では値のコピー渡しではなく、参照渡しとなります。そのため、この参照に対して行われたいかなる変更もすべての副コンテキストに反映され、利用可能となります。
 
-== カスタムイベント ==
-If you'd like to send events to a window from the global context and vice versa, you could use the built-in event mechanism. For example, you could define a custom event called foo. The window could listen for this event and then respond with some action. For example, in your sub-context you might define:
+=== 独自のイベント ===
+グローバルコンテキストから個別のWindow（副コンテキスト下）に対して独自のイベントを送る（逆のパターンも含め）ためには、Titaniumに内蔵されているイベント機構を使用します。
+
+たとえば、次のように独自のイベント foo を定義したとします。
 {{{
-Titanium.UI.currentWindow.addEventListener('foo',function(e){
-    Titanium.API.info("foo event received = "+JSON.stringify(e));
+// bar.js
+Titanium.UI.currentWindow.addEventListener('foo', function(e){
+    Titanium.API.info("foo event received = " + JSON.stringify(e));
 });
 }}}
-You could now fire the event from app.js like this:
+次のようにapp.jsからイベント foo を起動します。
 {{{
+// bar.jsを副コンテキストで作成＆表示
 var window = Titanium.UI.createWindow({
     url:'bar.js'
 });
 window.open();
-window.fireEvent('foo',{a:'b'});
-}}}
-It's worth noting two important limitations of the example above:
 
-    * You must open the event before you can send events to it. You also may have to fire the event after a specified amount of time if you intend to immediately send data to the window. This is because windows are opened asynchronously and on a separate thread than the caller thread.
-    * You can only send JSON-serializable data in a fireEvent. If you attempt to send objects that have function references, they will be null.
+// 独自イベントfooにイベント引数(JSON)を指定して起動する。
+window.fireEvent('foo', {a: 'b' });
+}}}
+
+以下の2点に気をつけてください。
+
+ * 独自イベントを起動する前に、イベントリスナに登録しておく必要があります。しかし、windowは呼び出し元(たとえばapp.js)と別スレッドで非同期に処理されているため、windowを作成直後にイベントを起動する必要がある場合、ある程度の時間を置かなければならない可能性があります。
+ * イベント引数(JSON)として引き渡せるのはシリアライズ可能なオブジェクトに限られます。もし、ファンクション参照などをもったオブジェクトを渡そうとしてもそれらはnullとして扱われます。
 
 == アニメーション ==
-Windows can be animated like any normal View. To transition between 2 windows, you can use the transition property on an animation. For example, to flip right-to-left between two windows, you could do the following:
+Windowも他のView同様にアニメーション表示できます。ふたつのWindowの間で遷移する場合はanimeteメソッドのtrasitionプロパティで指定します。
 {{{
-var window2 = Titanium.UI.createWindow({url:'foo.js'});
-var t = Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT;
-window1.animate({view:window2,transition:t});
+// 遷移先のウィンドウ
+var window2 = Titanium.UI.createWindow({
+    url: 'foo.js'
+});
+// 現在のWindowがwindow1とする
+window1.animate({
+    view: window2,
+    transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+});
 }}}
-In the above example, the window2 view will be animated from the right-to-left over window1.
 
 [guides_ui_animation 詳細はこちら]
 
@@ -137,21 +157,18 @@ window.open({
  * MODAL_PRESENTATION_CURRENT_CONTEXT
   * 親ウィンドウと同じスタイルで表示する。
  * MODAL_PRESENTATION_FORMSHEET
-  * The width and height of the presented window are smaller than those of the screen and the view is centered on the screen. If the device is in a landscape orientation and the keyboard is visible, the position of the view is adjusted upward so that the view remains visible. All uncovered areas are dimmed to prevent the user from interacting with them. This is currently only available currently on iPhone/iPad and SDK 3.2+.
+  * 高さ・幅ともにスクリーンサイズより小さいウィンドウを中央寄せで表示します。もし横向きでキーボード表示をしている場合は上余白を詰めて表示されます。 ウィンドウの外側は薄暗くマスクされ、タッチしても反応しません。
  * MODAL_PRESENTATION_FULLSCREEN
-  * The presented window covers the screen. This is currently only available currently on iPhone/iPad and SDK 3.2+.
+  * スクリーン全体を覆う形で表示されます。
  * MODAL_PRESENTATION_PAGESHEET
-  * The height of the presented window is set to the height of the screen and the view's width is set to the width of the screen in a portrait orientation. Any uncovered areas are dimmed to prevent the user from interacting with them. (In portrait orientations, this option is essentially the same as Titanium.UI.iPhone.MODAL_PRESENTATION_FULLSCREEN). This is currently only available currently on iPhone/iPad and SDK 3.2+.
+  * スクリーンの高さと同じ高さ、ウィンドウ幅は縦方向時のスクリーンの幅と同じに設定されたウィンドウを表示します。ウィンドウの外側は薄暗くマスクされ、タッチしても反応しません。（縦方向のときはMODAL_PRESENTATION_FULLSCREENと同じ挙動となります）
 
 === 表示時アニメーション(modalTransitionStyle) ===
+
  * MODAL_TRANSITION_STYLE_COVER_VERTICAL
-  * When the window is presented, its view slides up from the bottom of the screen. On dismissal, the view slides back down. This is the default transition style. This is currently only available currently on iPhone/iPad.
  * MODAL_TRANSITION_STYLE_CROSS_DISSOLVE
-  * When the window is presented, the current view fades out while the new view fades in at the same time. On dismissal, a similar type of cross-fade is used to return to the original view. This is currently only available currently on iPhone/iPad.
  * MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
-  * When the window is presented, the current view initiates a horizontal 3D flip from right-to-left, resulting in the revealing of the new view as if it were on the back of the previous view. On dismissal, the flip occurs from left-to-right, returning to the original view. This is currently only available currently on iPhone/iPad.
  * MODAL_TRANSITION_STYLE_PARTIAL_CURL 
-  * When the window is presented, one corner of the current view curls up to reveal the modal view underneath. On dismissal, the curled up page unfurls itself back on top of the modal view. A modal view presented using this transition is itself prevented from presenting any additional modal views. This transition style is supported only if the window is presenting a Titanium.UI.iPhone.MODAL_PRESENTATION_FULLSCREEN modal presentation style. This is currently only available currently on iPhone/iPad and SDK 3.2+.
 
 == Android "root" Windows ==
 In Android, you may wish to specify that a window which you create (such as the first window) should be considered the root window and that the application should exit when the back button is pressed from that window. This is particularly useful if your application is not using a Tab Group and therefore the splash screen window is appearing whenever you press the back button from your lowest window on the stack.
