@@ -3,11 +3,11 @@
 = Appcelerator Titanium MobileでiPhoneアプリ開発を始めよう!! =
 ----
 *注意*
-本稿の記述内容を実際に試すにはMac OSX 10.5以上が動作する端末、iPhone SDK 3.1以上が必要になります。
+本稿の記述内容を実際に試すにはMac OSX 10.6以上が動作する端末、iOS SDK 3.2/4.1以上が必要になります。
 
 Windowsでは開発できませんのでご注意ください。
 
-また（本稿ではそこまで行きませんが）実機での動作検証・App Storeへのアプリケーションの登録配布には[http://developer.apple.com/jp/iphone/program/ iPhone Developer Program]への参加(有償)が必要となります。
+また（本稿ではそこまで触れませんが）実機での動作検証・App Storeへのアプリケーションの登録配布には[http://developer.apple.com/jp/iphone/program/ iPhone Developer Program]への参加(有償)が必要となります。
 
 なお、Appcelerator Titanium Mobileは本文中でも触れている通りAndroid向けの開発も可能ですが、iPhone SDK向けの開発にフォーカスして記述されていますので、その点ご容赦ください。
 ----
@@ -20,9 +20,9 @@ Appcelerator Titanium Mobile(以下、Titanium Mobile)とは[http://www.appceler
 (ちなみにTitaniumは「チタニウム」ではなく「タイタニウム」と発音するようです)
 
 
-プログラミング言語としてはJavaScriptのみを利用します。
+プログラミング言語としては基本的にJavaScriptのみを利用します。
 
-それだけでiPhone SDK/Android SDK向けのネイティブアプリケーションを開発できることがウリとなっています。
+それだけでiOS SDK/Android SDK向けのネイティブアプリケーションを開発できることがウリとなっています。
 
 Objective-CやJavaでコーディングする必要は一切ありません。
 
@@ -33,9 +33,9 @@ Objective-CやJavaでコーディングする必要は一切ありません。
 
  * ラベル・テキスト入力・ボタン・スライダーなどの豊富なネイティブUI部品
  * 地図表示
- * 画像・動画の再生・撮影・録画
+ * 画像・音声・動画の再生・撮影・録画
  * ファイルシステム
- * ネットワーク通信
+ * ネットワーク通信（XMLHttpRequestだけではなくSocket通信やBonjourにも対応）
  * ハードウェアデバイス(カメラ・GPS・電子コンパス・加速度センサ)の利用
  * デバイス内データベース(連絡先など)の操作
  * SQLiteデータベースのI/O
@@ -43,9 +43,7 @@ Objective-CやJavaでコーディングする必要は一切ありません。
 プラットフォームに依存した機能を利用しない限り、基本的にサポートされるプラットフォーム全てに対してにコードを転用できると謳われていますので、JavaScriptによる開発効率の向上だけではなくマルチプラットフォーム展開を少ないコストで実現できることも魅力のひとつとなっています。
 
 
-現時点で対応しているプラットフォームとしては前掲したiPhone OSとAndroidのみになりますが、今後も追加されていく予定があります。
-
-(iPadは2010年3月中に対応するようです)
+現時点で対応しているプラットフォームとしては前掲したiOS(iPhone, iPad)とAndroidのみになりますが、今後も追加されていく予定があります。
 
 また本稿では取り上げませんが、兄弟製品として[http://www.appcelerator.com/products/titanium-desktop-application-development/ Titanium Desktop]があり、こちらはWindows, Mac OSX, Linuxというマルチプラットフォームで動作するデスクトップアプリケーションを開発できる環境も提供されています。
 
@@ -66,7 +64,7 @@ http://www.appcelerator.com/wp-content/uploads/2009/12/PROD_arch11.png
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100317/20100317233426.png
 
-β版SDKの利用や最新デバイス(iPadやBlackBerryなど)のβプレビューへの参加、開発＆サポートチームによる迅速かつ綿密なサポート体制、アプリケーション分析ログの保存期間の長さなどが挙げられます。
+β版SDKの利用や最新デバイス(BlackBerryなど)のβプレビューへの参加、開発＆サポートチームによる迅速かつ綿密なサポート体制、アプリケーション分析ログの保存期間の長さなどが挙げられます。
 
 費用も開発者単位に毎月199USDという金額なので十分にTitaniumプラットフォームに慣れて、さらにそのプレミアムサービスが必要と判断して契約するとよいでしょう。
 
@@ -77,16 +75,15 @@ http://pages.appcelerator.com/Plans_Pricing.html
 == 前提環境(iPhone SDK) ==
 Titanium Mobile自体はTitanium DeveloperというDesktop, Mobileでそれぞれ共用する開発環境を利用します。TItanium Developerの動作するプラットフォームとして、Windows, Mac OSX, Linuxをサポートしています。
 
-
-しかし本稿で取り上げるiPhoneアプリケーションの開発に関してはiPhone SDKが必要になります。
+しかし本稿で取り上げるiPhoneアプリケーションの開発に関してはiOS SDKが必要になります。
 そのため必然的に動作する環境としては Mac OSXのみとなってしまいます。
 
 その点、ご注意ください。
 
 === iPhone SDKのインストールについて ===
-Titanium Mobileでの開発を始める前に、上記のようにiPhone SDKのインストールを行っておく必要があります。
+Titanium Mobileでの開発を始める前に、前述の通り前もって iOS SDK のインストールを行っておく必要があります。
 
-このSDKのセットアップから開発環境構築については下記記事をご参照ください。
+SDKのセットアップから開発環境構築については下記記事をご参照ください。
 ||目指せ！iPhoneアプリ開発エキスパート | gihyo.jp||[http://gihyo.jp/dev/serial/01/iphone/0002]||
 
 また、本稿では取り上げませんが、実機での動作検証（ならびにAppStoreでの配布）を行うためにはiPhone Developer Programへの登録が必要となります。
@@ -97,11 +94,11 @@ Titanium Mobileでの開発を始める前に、上記のようにiPhone SDKの�
 === エディタの準備 ===
 TitaniumはIDEではありません。
 
-むしろビルド専用環境といってもいいフロントエンドプログラムであるため、ソースプログラムの修正すらすることができません。なんらかのエディタを準備してください。
+むしろビルド・パッケージング専用環境のプログラムであるため、ソースプログラムの修正すらすることができません。なんらかのテキストエディタを準備してください。
 
-Appceleratorの中の人たちは[http://macromates.com/ TextMate]などを使ってるようですが日本語入力に難があるので、手になじんだエディタで結構です。できればJavaScriptの文法ハイライト機能や入力支援があるソフトの方が開発効率もグンとあがると思います。
+Appceleratorの中の人たちは[http://macromates.com/ TextMate]などを使ってるようですが日本語入力に難があるので、手になじんだエディタを用意しましょう。（もちろんTextMateでもOKです）
 
-ちなみに筆者はCarbon Emacs + JS2環境で開発をしています。
+できればJavaScriptの文法ハイライト機能や入力支援があるソフトの方が開発効率もグンとあがると思います。ちなみに筆者はCarbon Emacs + JS2-mode + αで開発をしています。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100221/20100221210219.png
 
@@ -120,26 +117,26 @@ Titaniumを使うに当たって、この画面でアカウントを作る必要
 
 ログインIDとなるメールアドレスとパスワード、姓名といった個人情報を登録しないとTitanium Developer環境が利用できませんので必ず登録してください。（twitter idをいれておくと勝手に公式アカウントがフォローしてくれます）
 
-
 ここで登録したアカウントでAppceleratorのサポートページなどへのログインにも利用します。
 
 アカウント作成が完了すると、Titanium Developerの新規プロジェクト作成画面を開きます。
 
 ここから、新規プロジェクトを作成したり、既存のプロジェクトをインポートできます。
 
-
 アプリケーション終了／(Titanium Developer上での)ログアウト後はログインタブに切り替え、登録したメールアドレスとパスワードを入力して、立ち上げる流れになります。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100226/20100226224834.png
 
+ダウンロードしたファイルのリリース以降に新しいTitanium SDKがリリースされていると、起動後しばらくしてから右上のTitaniumアイコンの部分にその旨が表示されます。クリックすると、ダウンロード・インストールが自動的にされますので、一度ご確認ください。
+
 == Kitchen Sinkを触ってみる ～ iPhoneシミュレータの起動 ==
 インストールしたら早速「Hello, world的なプログラムを始めましょう！」……と言いたいところですが、まずは開発元のAppceleratorから提供されているデモアプリケーション「KitchenSink」を利用して、アプリケーションのビルドから動作確認（iPhoneシミュレータ上で、ですが）の流れを体験したいと思います。
 
-
 KitchenSinkはTitanium MobileのUI部品、APIのカテゴリ単位に機能を個別に紹介した機能カタログにあたるデモアプリケーションです。
 
+実際にTitanium Mobileでの開発を進めていく中で「KitchenSinkのこれと同じようなことをやりたい」ということになると思います。その際、APIリファレンスをひも解くよりも、KitchenSinkの該当部分のソースをコードスニペット（サンプル）として利用するほうが手っ取り早かったりします。
 
-実際にTitanium Mobileでの開発をすすめる「KitchenSinkのこれと同じようなことをやりたい」ということになります。その際、APIリファレンスをひも解くよりも、KitchenSinkの該当部分のソースをコードスニペットとして利用するほうが早かったりしますので、KitchenSinkでTitanium Mobileで「何が」「どこまで」できるのかを知っておく必要があります。
+逆に言うと、KitchenSinkの動きをよく見て「Titanium Mobileで "何が" "どこまで" できるのか」を知っておく必要があります。
 
 === Kitchen Sinkをダウンロードする ===
 KitchenSinkだけではなく、Appceleratorの製品はオープンソースソフトウェアとして開発がされており、ソースコードは[http://github.com/appcelerator githubのレポジトリ]で公開されています。
@@ -148,14 +145,11 @@ KitchenSinkも同様にgithubで公開されています。
 
 http://github.com/appcelerator/KitchenSink
 
-
 取得だけをする場合 gitクライアントは不要です。
-
 
 まず上記リンクにアクセスし、githubの右上「Download Source」を選択します。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313132448.jpg
-
 
 続いて表示される画面でzipアイコンか、tarアイコンのいずれかを選択し、ダウンロードします。完了後、展開してください。
 
@@ -164,8 +158,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313132447.jpg
 === Kitchen Sinkを動かす ===
 展開したKitchenSinkのアーカイブから最新のプロジェクトをTitanium Developerに取り込みます。
 
-
-Titanium Developerのツールバー「Import Project」を選択して、先ほど展開した先の `/1.0.x/KitchenSink` フォルダを選択後「OK」ボタンをクリックすると、KitchenSinkプロジェクトがPROJECTS一覧に追加され、プロジェクト設定の編集画面が表示されます。
+Titanium Developerのツールバー「Import Project」を選択して、先ほど展開した先の {{{/1.0.x/KitchenSink}}} フォルダを選択後「OK」ボタンをクリックすると、KitchenSinkプロジェクトがPROJECTS一覧に追加され、プロジェクト設定の編集画面が表示されます。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309230651.png
 
@@ -175,12 +168,9 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309232347.png
 
 「Run Emulator」タブの下方に並ぶプラットフォームから「iPhone」を選択します。
 
-
 画面中央を陣取る黒い部分は実行時のログ表示部になります。ログレベルによって、表示内容の範囲が代わります（情報であったりエラーメッセージであったり）。
 
-
 画面下部には使用するSDKのバージョンやログレベルを選択するコンボボックスとシミュレータの起動と終了をするためのボタンが付いています。
-
 
 「Launch 」（ウィンドウ下部左側のボタン）をクリックすると、ビルドが開始されます。
 マシンスペックなどにも依存しますが、初回時（とTitanium Developerの立ち上げ直後）は比較的ビルド時間がかかる傾向があるようです。
@@ -188,7 +178,6 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309232347.png
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309231133.png
 
 表示内容を見ていただけば、内部でXcodeのコンパイラを呼び出しておりiPhoneネイティブのバイナリに変換しているということが分かっていただけのではないでしょうか。
-
 
 ビルド完了後、自動的にiPhoneシミュレータが起動し、更にビルドされたアプリケーションも自動起動します。
 
@@ -217,12 +206,11 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309231630.png
 ||App Id||com.yourdomain.applicationname||アプリケーションを一意に判別するためのIDです。Javaの名前空間のようにドメイン名を反転させた名前の付け方をすることが推奨されています。（例：com.twitter.your_id.testapp）||
 ||Directory||/Users/your_account||ソースの生成先フォルダ。このフォルダに上記Nameで指定した名前のフォルダが作られます||
 ||Company / Personal URL||http://www.yourdomain.com/||Publisher URLという項目に反映されます||
-||Titanium SDK version||1.0.0||特段の問題がない限り、デフォルトになっている最新バージョンを使います||
+||Titanium SDK version||1.4.2||特段の問題がない限り、デフォルトになっている最新バージョンを使います||
 
 そして「Create Project」ボタンをクリックすると、ひな形に基づいたフォルダ・ファイル群が Directory/Name なフォルダに自動生成され、画面もプロジェクト編集画面に遷移します。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100309/20100309230651.png
-
 
 このプロジェクト編集画面の上部にあるパス名(終端は省略されることもありますが)をクリックすると、Finderが起動し、該当フォルダを開いてくれます。
 
@@ -463,13 +451,11 @@ button1.addEventListener('click', function(){
 
 部品の位置の指定方法はCSSでの指定に準拠しています。
 
-幅(width)や高さ(height)を指定しないと、コンテナ領域の全体に設定されることもあるので、コントロールの大きさや位置は明示的に指定するべきです。
+幅(width)や高さ(height)を指定しないと、コンテナ領域の全体に設定されることもあるので、コントロールの大きさや位置は可能な限り明示的に指定するべきです。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227085107.png
 
-
 またイベントリスナの登録については（一部の例外をのぞき）次のように記述されます。
-
 {{{
 object.addEventListener('EVENT_NAME', function(event){
     // コールバック無名関数
@@ -482,7 +468,6 @@ object.addEventListener('EVENT_NAME', function(event){
 基本的にiPhone SDKのUIKitでサポートされているものがベースとなります。
 
 そこから離れた描画などは現時点ではあまり得意ではなさそうですが、今後OpenGLへの対応がモジュール的にされそうではあります。
-
 
 ともあれ、どのようなものがサポートされているかを駆け足になりますがご紹介していこうと思います。
 
@@ -532,9 +517,7 @@ Options Dialogはこのような表示になります。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190654.png
 
-
 それぞれclickイベントでボタンのindexを返すため処理の分岐を行う事ができます。
-
 
 また、Email作成用の専用ダイアログ(Email Dialog)が別途用意されています。
 
@@ -561,7 +544,6 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195105.png
 
 === Views - !TableView ===
 TableViewは出来る事が多岐にわたっているため、大変奥が深いものになっています。
-
 
 左のような端的な行選択だけでなく、右のような各行に対するレイアウトデザインすることも可能です。
 
@@ -682,6 +664,5 @@ http://developer.appcelerator.com/apidoc/mobile/
 分からない事があれば公式のオープンサポート掲示板を訪ねてみましょう。解決の糸口が見つかると思います。
 
 http://developer.appcelerator.com/questions
-
 
 また、Twitterのハッシュタグ #titanium という手もあります。本稿についてのご質問なども @donayama宛か #titaniumでつぶやいてください。
