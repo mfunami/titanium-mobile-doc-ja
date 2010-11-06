@@ -1,7 +1,8 @@
 #summary Titanium MobileのUIデザインについて
 #labels Tips,作業中
 
-= Titanium MobileのUIデザインについて（超作業中） =
+= Titanium MobileのUIデザインについて（超作業中というかコピーしただけデス） =
+（原文）https://github.com/appcelerator/titanium_documentation/blob/master/source/en/ui_design.md
 
 This guide covers how User Interfaces are designed and developed using Ti. After reading it, you should be familiar with the following concepts:
 
