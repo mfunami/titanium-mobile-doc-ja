@@ -1,21 +1,19 @@
-#summary Titanium Mobileのアプリケーションフォルダ構成と詳細設定
+#summary Titanium Mobileのプロジェクトフォルダ構成と詳細設定
 #labels 作業中
 
-= Titanium Mobileのアプリケーションフォルダ構成と詳細設定 =
+= Titanium Mobileのプロジェクトフォルダ構成と詳細設定 =
 （原文）https://github.com/appcelerator/titanium_documentation/blob/master/source/en/app_structure.md
 
-This guide will explain the Appcelerator project structure and set of files and directories.
+== プロジェクトフォルダについて ==
+プロジェクトフォルダ直下には主要なファイル・フォルダとして以下のようなものがあります。
 
-== The Project Folder ==
-There are a number of files and important folders in your mobile project. Here's the main files:
-
-    * LICENSE - this file just describes the Appcelerator license. This is for your reference and not included in your application.
-    * LICENSE.txt - this is your end-user application license. This is not currently used for mobile project but will be used in the future.
-    * README- this file just describes the project and is not included in your application.
-    * tiapp.xml - this is the main application descriptor file and describes details about your application and is used by the packager and the runtime.
-    * build - this directory is where phone-specific project files and resources are kept. This folder is used by the packager and by developer for building, compiling and creating your native distributions. Generally, files in this folder should not be modified as this files are changed on demand by Titanium as your application changes. Use caution when touching any files or folders in these directories as it may render your application unusable.
-    * Resources - this folder is very important and contains all your application files such as your JavaScript, HTML, images, etc. This is the main folder you will use to include resources for your application. All files included in this folder are packaged and available to your application.
-    * i18n - this folder (optional) contains the localization resources for each language supported. This folder must be created as it's not created by default.
+||LICENSE||this file just describes the Appcelerator license. This is for your reference and not included in your application.||
+||LICENSE.txt||this is your end-user application license. This is not currently used for mobile project but will be used in the future.||
+||README||this file just describes the project and is not included in your application.||
+||tiapp.xml||アプリケーションの設定を記述するファイルです。実行時や配布ファイル作成に用います。||
+||buildフォルダ||this directory is where phone-specific project files and resources are kept. This folder is used by the packager and by developer for building, compiling and creating your native distributions. Generally, files in this folder should not be modified as this files are changed on demand by Titanium as your application changes. Use caution when touching any files or folders in these directories as it may render your application unusable.||
+||Resourcesフォルダ||this folder is very important and contains all your application files such as your JavaScript, HTML, images, etc. This is the main folder you will use to include resources for your application. All files included in this folder are packaged and available to your application.||
+||i18nフォルダ||(Ver.1.5.0以降の新機能)this folder (optional) contains the localization resources for each language supported. This folder must be created as it's not created by default.||
 
 === Special resources per platform ===
 
@@ -66,3 +64,6 @@ To use a custom AndroidManifest.xml, copy the AndroidManifest.xml from the build
 === Excluding files from source control ===
 
 If you'd like to exclude certain files from source code control that change dynamically or that are generated locally, you should exclude the files and folders from the following two directories: build/iphone and build/android.
+
+----
+原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
