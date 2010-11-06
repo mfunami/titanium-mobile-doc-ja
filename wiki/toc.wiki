@@ -98,7 +98,7 @@
   * [guides_util_string 文字列変換(BASE64, MD5)]
 
 === 4th Step : アプリケーション詳細設定と公開・配布 ===
- * アプリケーション詳細設定
+ * (追記予定) [app_structure アプリケーションフォルダ構造と詳細設定]
   * [tiapp_xml tiapp.xml, manifestファイルについて]
   * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
  * (追記予定) Xcodeでのビルド
