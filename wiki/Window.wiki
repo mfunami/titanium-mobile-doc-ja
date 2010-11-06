@@ -154,21 +154,21 @@ window.open({
 
 === 表示形式(modalStyle) ===
 
- * MODAL_PRESENTATION_CURRENT_CONTEXT
+ * Ti.UI.iPhone.MODAL_PRESENTATION_CURRENT_CONTEXT
   * 親ウィンドウと同じスタイルで表示する。
- * MODAL_PRESENTATION_FORMSHEET
+ * Ti.UI.iPhone.MODAL_PRESENTATION_FORMSHEET
   * 高さ・幅ともにスクリーンサイズより小さいウィンドウを中央寄せで表示します。もし横向きでキーボード表示をしている場合は上余白を詰めて表示されます。 ウィンドウの外側は薄暗くマスクされ、タッチしても反応しません。
- * MODAL_PRESENTATION_FULLSCREEN
+ * Ti.UI.iPhone.MODAL_PRESENTATION_FULLSCREEN
   * スクリーン全体を覆う形で表示されます。
- * MODAL_PRESENTATION_PAGESHEET
-  * スクリーンの高さと同じ高さ、ウィンドウ幅は縦方向時のスクリーンの幅と同じに設定されたウィンドウを表示します。ウィンドウの外側は薄暗くマスクされ、タッチしても反応しません。（縦方向のときはMODAL_PRESENTATION_FULLSCREENと同じ挙動となります）
+ * Ti.UI.iPhone.MODAL_PRESENTATION_PAGESHEET
+  * スクリーンの高さと同じ高さ、ウィンドウ幅は縦方向時のスクリーンの幅と同じに設定されたウィンドウを表示します。ウィンドウの外側は薄暗くマスクされ、タッチしても反応しません。（縦方向のときはTi.UI.iPhone.MODAL_PRESENTATION_FULLSCREENと同じ挙動となります）
 
 === 表示時アニメーション(modalTransitionStyle) ===
 
- * MODAL_TRANSITION_STYLE_COVER_VERTICAL
- * MODAL_TRANSITION_STYLE_CROSS_DISSOLVE
- * MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
- * MODAL_TRANSITION_STYLE_PARTIAL_CURL 
+ * Ti.UI.iPhone.MODAL_TRANSITION_STYLE_COVER_VERTICAL
+ * Ti.UI.iPhone.MODAL_TRANSITION_STYLE_CROSS_DISSOLVE
+ * Ti.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
+ * Ti.UI.iPhone.MODAL_TRANSITION_STYLE_PARTIAL_CURL 
 
 == Android "root" Windows ==
 In Android, you may wish to specify that a window which you create (such as the first window) should be considered the root window and that the application should exit when the back button is pressed from that window. This is particularly useful if your application is not using a Tab Group and therefore the splash screen window is appearing whenever you press the back button from your lowest window on the stack.
