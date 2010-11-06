@@ -13,13 +13,13 @@
 === 1st Step : はじめの一歩 ===
 
  * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]（単体でも成立するよう「はじめに」と「UIカタログ」と内容が一部重複しています）
-  * (追記予定) コラム：Android向けアプリケーション開発の場合。
 
 === 2nd Step : UIカタログ ===
 
  * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
  * Window編
   * [Window]
+   * (追記予定) WindowのURL指定, Ti.includeによるJavaScriptコンテキスト
   * [TabGroup]
   * [StatusBar]
   * [NavBar]
@@ -57,7 +57,6 @@
   * [ProgressBar]
  * [guides_ui_properties 共通プロパティ]
  * [guides_ui_animation アニメーション]
- * (追記予定) コラム：実践！!Xib2Jsを用いた高速モックアップ作成
 
 === 3rd Step : APIカタログ ===
  * Titanium Mobile APIの全体像を俯瞰する
@@ -102,15 +101,17 @@
   * [tiapp_xml tiapp.xml, manifestファイルについて]
   * [howto_change_splashscreen 起動時画像(スプラッシュスクリーン)の変更方法]
  * (追記予定) Xcodeでのビルド
- * (追記予定) Ti.includeによるコンテキスト
  * (追記予定) 実デバイスでの動作検証
  * [guides_distributing_app_to_beta_testers βテスタへのアプリケーション配布]
  * (追記予定) AppStoreでの公開
 
-=== 5th Step : コードリーディング(Snapost) ===
- * [codereading_snapost AppStoreに登録されているアプリケーションソースに基づくコードリーディング]
- * (追記予定) KitchenSink内のTableView関連ソース解説
+=== 5th Step : コードリーディング ===
+ * [codereading_snapost AppStoreに登録されているアプリケーション"Snapost"のコードを読む]
+ * (追記予定) KitchenSinkのTableView関連サンプルを読み解く
 
 === Appendix ===
+ * (追記予定) コラム：実践！!Xib2Jsを用いた高速モックアップ作成
  * (追記予定) Objective-CによるTitanium Mobile独自モジュール開発
   * http://developer.appcelerator.com/doc/mobile/iphone/module_sdk の和訳ベース
+ * (追記予定) Android向けアプリケーション開発の「はじめの一歩」
+ * (追記予定) Android Marketへの公開手順
