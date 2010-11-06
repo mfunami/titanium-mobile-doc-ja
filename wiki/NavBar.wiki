@@ -24,6 +24,9 @@ Titanium.UI.currentWindow.barColor = '#336699';
 // デフォルト色に戻す。
 Titanium.UI.currentWindow.barColor = null;
 }}}
+
+translucentプロパティをtrueに設定すると、背景透過表示がされます。
+
 == 表示テキストの変更 ==
 タイトル部分・プロンプトを表示する場合は次のようにします。
 {{{
