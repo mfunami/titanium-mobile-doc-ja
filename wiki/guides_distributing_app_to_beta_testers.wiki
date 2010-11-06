@@ -4,26 +4,28 @@
 = βテスタへのアプリケーション配布 =
 (原文) https://github.com/appcelerator/titanium_documentation/blob/master/source/en/ios.md
 
-With the 1.3.0 release, it should be possible to use Apple's tooling to do an ad hoc distribution of your application with the generated Xcode project (look in {{{build/iphone}}}). If you'd like to avoid Apple's tooling and use Titanium Developer, then read on for more information.
+== iOS(iPhone/iPad)の場合 ==
+Titanium Mobile 1.3以降では、Titanium Mobileから生成されたXcodeプロジェクト（{{{build/iphone}}}に配置されている）を用いて「iOSの正規の手順」でAd-Hoc配布を行う事ができますが、「iOSの正規の手順」ではなくTitanium Developerによるアプリケーション配布手順をこちらでは説明します。
 
-In lieu of doing an ad hoc distribution for iPhone, you can distribute the binary deployed to your local device for testing to your beta testers. The process for doing this is as follows:
+=== Provisioning Profile ===
+テストアプリケーションを提供するデバイスIDを含む開発用Provisioning Profileを作成します。
 
-== Provisioning Profile ==
-
-Create a development provisioning profile which contains the device IDs of all the individuals you would like to be able to test your application. Install your application to a device for testing to create the binary.
-
-== Zip up the binary ==
-
-Zip up the binary from your application's {{{build/iphone/build}}} directory:
+=== バイナリの圧縮  ===
+アプリケーションのビルド結果{{{build/iphone/build}}}のフォルダをzip圧縮します。
 
 http://img.skitch.com/20100526-8idhej948myb6jnn3mc88krahj.png
 
-== E-Mail the .zip file and the {{{.mobileprovision}}} file to beta testers ==
+=== zipファイルと{{{.mobileprovision}}}ファイルの送付 ===
+βテスタに対して、アプリケーションのzipファイルと生成したprovisioning profileをメールなどで送付します。
 
-Beta testers should now be able to drag the {{{.mobileprovision}}} file (the provisioning profile you created) to the iTunes icon to install it. Next, they should be able to similarly drag and drop the {{{.app}}} file into iTunes to install the app. Once they synch their phone through iTunes, your beta app should be installed on their device.
+==== Macユーザの場合 ====
+βテスタはまず{{{.mobileprovision}}}ファイルをiTunesアイコンにドラッグ＆ドロップし、インストールします。つづいて、同様にiTunesにzipファイルを展開したアプリケーションファイル {{{.app}}} をドラッグ＆ドロップします。その後、デバイスと同期をすることにより実機にインストールされます。
 
+==== Windowsユーザの場合 ====
+iPhone構成ユーティリティ(http://support.apple.com/kb/DL926?viewlocale=ja_JP)をインストールしたのち、zipファイルから展開した{{{.app}}}フォルダと{{{.mobileprovision}}}ファイルを同時に選択した状態でドラッグ＆ドロップすると、実機に直接インストールされます。
 
 == TODO ==
 https://github.com/appcelerator/titanium_documentation/blob/master/source/en/android.md の訳出
+
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
