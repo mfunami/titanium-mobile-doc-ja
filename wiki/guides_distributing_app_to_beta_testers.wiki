@@ -19,10 +19,10 @@ http://img.skitch.com/20100526-8idhej948myb6jnn3mc88krahj.png
 βテスタに対して、アプリケーションのzipファイルと生成したprovisioning profileをメールなどで送付します。
 
 ==== Macユーザの場合 ====
-βテスタはまず{{{.mobileprovision}}}ファイルをiTunesアイコンにドラッグ＆ドロップし、インストールします。つづいて、同様にiTunesにzipファイルを展開したアプリケーションファイル {{{.app}}} をドラッグ＆ドロップします。その後、デバイスと同期をすることにより実機にインストールされます。
+βテスタはまず {{{.mobileprovision}}} ファイルをiTunesアイコンにドラッグ＆ドロップし、インストールします。つづいて、同様にiTunesにzipファイルを展開したアプリケーションファイル {{{.app}}} をドラッグ＆ドロップします。その後、デバイスと同期をすることにより実機にインストールされます。
 
 ==== Windowsユーザの場合 ====
-iPhone構成ユーティリティ(http://support.apple.com/kb/DL926?viewlocale=ja_JP)をインストールしたのち、zipファイルから展開した{{{.app}}}フォルダと{{{.mobileprovision}}}ファイルを同時に選択した状態でドラッグ＆ドロップすると、実機に直接インストールされます。
+iPhone構成ユーティリティ ( http://support.apple.com/kb/DL926?viewlocale=ja_JP ) をインストールしたのち、zipファイルから展開した{{{.app}}}フォルダと{{{.mobileprovision}}}ファイルを同時に選択した状態でドラッグ＆ドロップすると、実機に直接インストールされます。
 
 == TODO ==
 https://github.com/appcelerator/titanium_documentation/blob/master/source/en/android.md の訳出
