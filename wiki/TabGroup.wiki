@@ -3,6 +3,8 @@
 = UIカタログ - !TabGroup =
 TabGroupは複数のwindowを束ねるアプリケーションUIの根幹を担います。
 
+アプリケーションのルートコンテナとしてはこのTabGroupもしくはWindowを配置する必要があります。
+
 http://img.skitch.com/20090708-8p1pjfyncp3jt8hs8aihf6qr5y.jpg
 
 http://img.skitch.com/20090708-1qpwi2pj72xnmbw24fwtniyspk.jpg
