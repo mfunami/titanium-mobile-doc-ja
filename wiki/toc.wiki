@@ -20,10 +20,10 @@
  * Window編
   * [Window]
    * (追記予定) WindowのURL指定, Ti.includeによるJavaScriptコンテキスト
+   * [StatusBar]
+   * [NavBar]
+   * [ToolBar]
   * [TabGroup]
-  * [StatusBar]
-  * [NavBar]
-  * [ToolBar]
   * [guides_ui_dialog ダイアログ]
   * [guides_ui_navigation_group NavigationGroup] (iPhoneのみ)
  * View編
