@@ -16,12 +16,12 @@
 ||i18nフォルダ||(Ver.1.5.0以降の新機能)このフォルダは必須ではありません。多言語化するための文字列リソースを配置し、そのように使用する際に「手動作成」してください。（初期状態では作成されません）||
 
 === プラットフォーム向けの特殊なリソース ===
+実行されるプラットフォームに基づいてResourcesフォルダの直下にはいくつかのフォルダがあります。
+（iphoneフォルダとandroidフォルダがそれにあたります）
+これらのフォルダのファイルはビルド時にResourcesフォルダ直下にコピーされて使用されます。
 
-There are a few specific folders under Resources that are special based on the final application package. Underneath the Resources folder is an iphone and android folder (dependent on which platforms you're using). All files placed under these folders will only be available on the platform by name. The files in these folders will take precedence (and will be merged) over files in the root Resources directory.
-
-For example:
-
-If you have a file named foo.png in the root folder and a file named foo.png under Resources/iphone - when Titanium compiles the application for iphone, you will have one file named foo.png which will be the file under the Resources/iphone directory. Directories are preserved during merging. This capability gives you more fine grain control over resources per platform in cases where you need to override or provide specific resources for a given platform. When you reference a file from your application, you should not include the platform in the name. For example, you would reference foo.png instead of iphone/foo.png since the files are merged into the base directory when packaged.
+たとえば、foo.pngというファイルがResources直下と、Resources/iphoneフォルダのいずれにもある場合、iPhone向けのビルドを行うと、iphoneフォルダの内容がマージされるためfoo.pngが上書きされます。
+アプリケーションからfoo.pngを使用する場合、Resoures/foo.pngを操作するようにコーディングする必要があります。
 
 == 起動時画像(スプラッシュスクリーン) ==
 アプリケーションの起動中に表示される起動時画像を標準のものと差し替えるためにはDefault.pngというファイルを置き換えてください。iPhoneでは画面中央部に回転するインジケータが表示されるため、画像をデザインするときに配慮が必要です。
@@ -42,18 +42,22 @@ iOS(iPhone)特有の設定としては次のようなものがあります。
 iPhone4などのRetinaディスプレイ向けの起動時画像を個別に用意する場合、{{{Default@2x.png}}}という名前のファイルを{{{Resources/iphone}}}フォルダに配置します。詳細は[ui_design]をご覧ください。
 
 ==== Info.plistをカスタマイズする ====
-To use a custom Info.plist, copy the Info.plist from the build/iphone folder. If this folder does not exist, run your application in the simulator once and it should be created automatically. You'll want to copy the Info.plist file into the root directory of your project (at the same level as tiapp.xml). Whatever values are placed in your custom Info.plist will be used as-is by the Titanium compiler.
+Info.plistの内容を変更する場合、build/iphoneフォルダにあるInfo.plstをプロジェクト直下のフォルダにコピーする必要があります。（もし存在しない場合はシミュレータ向けのビルドを一度行うことで生成されます）
+
+カスタマイズされたInfo.plistの内容がその後のビルドにそのまま使用されます。
 
 ==== Custom Fonts ====
 フォントファイルをアプリケーション内に同梱することでカスタムフォントを使用できるようになります。詳細は[ui_design]をご覧ください。
 
 === Android特有の設定 ===
 
-==== Custom AndroidManifest.xml ====
-To use a custom AndroidManifest.xml, copy the AndroidManifest.xml from the build/android folder. If this folder does not exist, run your application in the simulator once and it should be created automatically. You'll want to copy the AndroidManifest.xml file into the root directory of your project (at the same level as tiapp.xml). Whatever values are placed in your custom AndroidManifest.xml will be used as-is by the Titanium compiler.
+==== AndroidManifest.xmlをカスタマイズする ====
+AndroidManifest.xmlの内容を変更する場合は、build/androidフォルダにあるAndroidManifest.xmlをプロジェクト直下のフォルダにコピーする必要があります。（もし存在しない場合はエミュレータ向けのビルドを一度行うことで生成されます）
 
-=== Excluding files from source control ===
-If you'd like to exclude certain files from source code control that change dynamically or that are generated locally, you should exclude the files and folders from the following two directories: build/iphone and build/android.
+カスタマイズされたAndroidManifest.xmlの内容がその後のビルドにそのまま使用されます。
+
+=== プラットフォーム別ファイルマージをしたくない場合 ===
+プラットフォーム別のフォルダからのビルド時マージを防ぎたい場合、Resourcesフォルダ内のiphoneフォルダやandroidフォルダを、あるいはフォルダ内の個別のファイルを削除してください。
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
