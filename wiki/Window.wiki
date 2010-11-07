@@ -138,8 +138,8 @@ window1.animate({
 
 [guides_ui_animation 詳細はこちら]
 
-== モーダルウィンドウ(iPadのみ) ==
-iPadではいくつかの表示形式でモーダルウィンドウを前面に表示できるようになっています。
+== モーダルウィンドウ ==
+いくつかの表示形式でモーダルウィンドウを前面に表示できるようになっています。
 
 http://img.skitch.com/20100406-bqb3f8pb6e4ger7wkcdcw5mbar.png
 
