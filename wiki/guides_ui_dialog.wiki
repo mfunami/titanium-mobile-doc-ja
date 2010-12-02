@@ -122,6 +122,7 @@ emailDialog.addEventListener('complete', function(e){
 
  * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/alert.js
  * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/options_dialog.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/email_dialog.js
 
 
 == 関連するAPIドキュメント ==
