@@ -68,6 +68,10 @@ Titanium.UI.currentWindow.rightNavButton = b3;
 Titanium.UI.currentWindow.setRightNavButton(null);
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_navbar.js
+
 == 関連するAPIドキュメント == 
  * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Window
 ----
