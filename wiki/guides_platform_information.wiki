@@ -41,6 +41,11 @@
 ||url||string||アプリケーションに関するURL||
 ||version||string||アプリケーションのバージョン||
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_properties.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/properties.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Platform-module
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.App-module
