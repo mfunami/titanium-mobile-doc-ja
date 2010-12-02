@@ -26,6 +26,15 @@ scrollView.add(view);
 Titanium.UI.currentWindow.add(scrollView);
 }}}
 
+
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/scroll_views_basic.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/scroll_views_tabs.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/scroll_views_many.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/scroll_views_textareas.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/scroll_views_without_clipping.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/scroll_views_scaling.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ScrollView-object
 
