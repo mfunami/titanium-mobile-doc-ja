@@ -36,6 +36,10 @@ label1.addEventListener('click', function(e){
 });
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/navgroup.js
+
 == 関連するAPIドキュメント ==
 
  * http://developer.appcelerator.com/blog/2010/06/how-to-create-an-iphone-navigation-group.html
