@@ -118,6 +118,11 @@ emailDialog.addEventListener('complete', function(e){
 });
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/alert.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/options_dialog.js
+
 
 == 関連するAPIドキュメント ==
 
