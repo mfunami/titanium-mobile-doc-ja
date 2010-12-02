@@ -82,6 +82,7 @@ tabs[2].setBadge(3);
 == 関連するKitchenSinkソース ==
 
  * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/tab_groups.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/tabs.js
 
 == 関連するAPIドキュメント ==
 
