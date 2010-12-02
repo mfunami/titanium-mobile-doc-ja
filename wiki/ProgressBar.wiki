@@ -22,16 +22,18 @@ var ind=Titanium.UI.createProgressBar({
 	style:Titanium.UI.iPhone.ProgressBarStyle.PLAIN,
 	top:60	
 });
+win.add(ind);
+ind.show();
 
 // タイマーによる進捗シミュレーション
 var interval = setInterval(function(){
-	if (ind.val == 10){
+	if (ind.value == 10){
 		clearInterval(interval);
 		ind.hide();
 		return;
 	}
 	ind.value = ind.value + 1;
-	ind.message = 'Downloading ' + val + ' of 10';
+	ind.message = 'Downloading ' + ind.value + ' of 10';
 },1000);
 }}}
 
