@@ -33,6 +33,10 @@ view.addEventListener('change',function(e){
 Ti.UI.currentWindow.add(view);
 }}}
 
+== 関連するKitchenSinkドキュメント ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/coverflow.js
+
 == 関連するAPIドキュメント ==
 
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.CoverFlowView-object
