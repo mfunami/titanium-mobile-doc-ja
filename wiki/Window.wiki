@@ -191,6 +191,14 @@ windowのイベントとしては次のようなものがあります。
 ||focus||選択状態になる||
 ||blur||選択外状態になる||
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_properties.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_standalone.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_constructor.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_layout.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_events.js
+
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Window-object
 
