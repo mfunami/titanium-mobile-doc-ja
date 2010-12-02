@@ -145,6 +145,12 @@ mapview.addEventListener('click', function(e){
 });
 }}}
 
+
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/map_view.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/map_view2.js
+ * 
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map-module
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map.MapView-object.html
