@@ -217,6 +217,60 @@ var tableView = Ti.UI.createTableView({
 });
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_basic.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_perf.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_custom_rowdata.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_headers.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_footers.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_basic.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_custom_rowheader.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_section_header.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_emptydata.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_row_append.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_row_delete.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_row_insert.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_row_update.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_set.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_removeall.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_empty.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_auto_height.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_refresh.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_composite.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_layout.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_layout_2.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_layout_3.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_layout_4.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_layout_5.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_custom_header.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_custom_footer.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_controls.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_controls_2.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_update_row_objects.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_textfield.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_headers_filter.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_options.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_remote_images.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_remote_images_2.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_cell_selection.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_search.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_grouped_bg_image.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_delete.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_delete_2.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_delete_3.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_move.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_grouped.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_api_empty_append.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_selectable.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_events.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_touch.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_edit_and_move.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_noscroll.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_pull_to_refresh.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/table_view_dynamic_scroll.js
+
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableView-object
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TableViewRow-object
