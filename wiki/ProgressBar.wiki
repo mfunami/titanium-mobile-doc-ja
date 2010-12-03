@@ -37,6 +37,9 @@ var interval = setInterval(function(){
 },1000);
 }}}
 
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/progress_bar.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ProgressBar-object
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.ProgressBarStyle-object.html
