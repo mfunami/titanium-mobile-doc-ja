@@ -3,6 +3,8 @@
 = UIカタログ(コントロール) - !ActivityIndicator =
 現在なんらかの処理中であることを示すアイコンとメッセージを表示するコントロールです。
 
+デフォルトは白いので背景色などを調整する必要があるかもしれません。
+
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190720.png
 
 {{{
@@ -37,6 +39,9 @@ button1.addEventListener('click', function(){
 });
 
 }}}
+
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/activity_indicator.js
 
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ActivityIndicator-object
