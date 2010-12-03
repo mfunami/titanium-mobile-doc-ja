@@ -239,6 +239,19 @@ button.addEventListener('click', function(){
 });
 }}}
 
+
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/basic_animation.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/transitions.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_animation.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/view_animation.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/control_animation.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/2d_transform.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/3d_transform.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/anchor_point.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_scaling.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/animation_points.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Animation-object
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.AnimationStyle-object.html
