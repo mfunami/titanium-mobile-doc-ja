@@ -31,6 +31,10 @@ Titanium.Network.addConnectivityListener('change', function(e) {
 });
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/network.js
+
 == 関連するAPIドキュメント ==
 
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network-module
