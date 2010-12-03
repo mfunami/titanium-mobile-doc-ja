@@ -45,6 +45,11 @@ if (xml2.evaluate) {
 }
 }}}
 
+
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xml_dom.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xml_rss.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.XML-module
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.XML.DOMDocument-object.html
