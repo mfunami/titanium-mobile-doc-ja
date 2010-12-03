@@ -53,5 +53,10 @@ footer.add(footerLabel);
 win.add(footer);
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/vertical_layout_basic.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/vertical_layout_table_view.js
+
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
