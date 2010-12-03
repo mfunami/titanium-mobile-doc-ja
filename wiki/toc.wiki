@@ -68,7 +68,7 @@
    * Forsquare
    * FaceBook
    * Yahoo(YQL)
-  * (追記予定) !PushNotifications
+  * (追記予定) !PushNotifications [http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/push_notification.js KS]
   * (追記予定) !BonjourBrowser / !BonjourService 
  * I/O編
   * [guides_app_properties アプリケーションプロパティ]
