@@ -43,5 +43,9 @@ var l3 = Ti.UI.createLabel({
 view.add(l3);
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/horizontal_layout.js
+
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
