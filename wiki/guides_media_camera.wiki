@@ -258,6 +258,23 @@ Titanium.Media.showCamera({
 }}}
 
 
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/photo_gallery.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/camera_basic.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/camera_overlay.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/camera_overlay_webview.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/camera_ar.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/camera_gallery.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/camera_file.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/camera_video.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/screenshot.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/photo_gallery_file.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/photo_gallery_xhr.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/photo_gallery_bgimage.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/photo_gallery_camera.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/photo_gallery_video.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/record_video.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media-module
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media.openPhotoGallery-method.html
