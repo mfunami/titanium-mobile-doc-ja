@@ -219,6 +219,16 @@ var textfield = Titanium.UI.createTextField({
 win.add(textfield);
 }}}
 
+
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/textfield_events.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/textfield_keyboards.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/textfield_borders.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/textfield_therest.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/textfield_toolbar.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/textfield_buttons.js
+
 == 関連するAPIドキュメント ==
 
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.TextField-object
