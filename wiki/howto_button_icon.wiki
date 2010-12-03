@@ -37,7 +37,12 @@ var button = Titanium.UI.createButton({
  * Titanium.UI.iPhone.SystemButton.INFO_DARK
  * Titanium.UI.iPhone.SystemButton.INFO_LIGHT
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/system_buttons.js
+
 == 関連するAPIドキュメント ==
+
  * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.SystemIcon
 
 ----
