@@ -155,7 +155,20 @@ xhr = null;
 }}}
 
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_error.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_error.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_xml.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_properties.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_filedownload.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_utf8.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_cookie.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_settimeout.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/xhr_fileupload.js
+
 == 関連するAPIドキュメント ==
+
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network-module
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network.HTTPClient-object.html
 
