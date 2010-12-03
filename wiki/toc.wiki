@@ -74,7 +74,7 @@
    * FaceBook
    * Yahoo(YQL)
   * (追記予定) !PushNotifications [http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/push_notification.js KS]
-  * (追記予定) !BonjourBrowser / !BonjourService 
+  * (追記予定) !BonjourBrowser / !BonjourService [http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/bonjour.js KS]
  * I/O編
   * [guides_filesystem ファイルシステム]
   * [guides_database  データベース]
