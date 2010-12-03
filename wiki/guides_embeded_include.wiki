@@ -24,6 +24,11 @@ Titanium.includeは使用したコンテキストに対して指定したスク�
 
 別コンテキストで評価可能であるのならば、windowを分割するなどして対策しましょう。
 
+
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/js_include.js
+
 == 関連するAPIドキュメント ==
 
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.include-method.html
