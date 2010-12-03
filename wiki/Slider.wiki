@@ -25,6 +25,10 @@ slider1.addEventListener('change',function(e) {
 });
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/slider.js
+
 == 関連するAPIドキュメント ==
  * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Slider
 
