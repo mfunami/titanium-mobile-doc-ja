@@ -49,6 +49,10 @@ b2.addEventListener('click', function(){
 win.add(b2);
 }}}
 
+
+== 関連するKitchenSinkソース == 
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/label.js
+
 == 関連するAPIドキュメント == 
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Label-object
 
