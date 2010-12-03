@@ -79,6 +79,10 @@ var button = Titanium.UI.createButton({title:'Text'});
 Titanium.UI.currentWindow.setToolbar([fixedSpace,button]);
 }}}
 
+
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/button.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Button-object
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.SystemButtonStyle-object.html
