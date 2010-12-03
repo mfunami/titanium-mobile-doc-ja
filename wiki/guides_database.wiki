@@ -64,6 +64,10 @@ rows.close();
 db.close();
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/database.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database-module
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Database.open-method.html
