@@ -25,6 +25,10 @@ Ti.API.info('情報');
 Ti.API.debug('デバッグ情報');
 }}}
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/logging.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.API-module
 
