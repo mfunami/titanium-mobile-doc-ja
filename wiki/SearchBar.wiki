@@ -43,6 +43,10 @@ search.addEventListener('blur', function(e){
 });
 }}}
 
+
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/searchbar.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.SearchBar-object
 
