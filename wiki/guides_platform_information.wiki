@@ -41,6 +41,10 @@
 ||url||string||アプリケーションに関するURL||
 ||version||string||アプリケーションのバージョン||
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/platform.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/properties.js
 
 
 == 関連するAPIドキュメント ==
