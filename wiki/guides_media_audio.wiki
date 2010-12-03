@@ -93,6 +93,16 @@ setTimeout(function(e){
 
  * Titanium.App.idleTimerDisabled
 
+== 関連するKitchenSinkソース ==
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/sound_local.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/sound_file.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/sound_file_url.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/sound_remote_url.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/sound_remote.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/sound_record.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/sound_session_mode.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/sound_bg.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Media-module
 
