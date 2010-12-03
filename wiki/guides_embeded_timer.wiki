@@ -39,6 +39,11 @@ setInterval(function(){
 }}}
 
 
+== 関連するKitchenSinkソース ==
+
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/set_timeout.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/set_interval.js
+
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium-module
 
