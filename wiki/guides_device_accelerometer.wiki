@@ -61,6 +61,7 @@ XYZの軸に関する状態について口で説明するよりもこれを見�
 == 関連するKitchenSinkソース
 
  * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/accelerometer.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/orientation.js
 
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Gesture-module
