@@ -22,6 +22,8 @@ Titanium.UI.currentWindow.add(myView);
 
 最後に追加されたViewがWindow上では初期表示されますが、他の追加しておいたViewに切り替えたり、最初から{{{visible: false}}}として追加したViewを表示させるには{{{window#animate}}}を実行する事により、表示させる事が出来ます。
 
+またshowメソッド、hideメソッドも用意されています。
+
 その際にtransitionプロパティを指定する事により、すでに用意されているアニメーションを簡単に実行できます。
 
 次の例では左へフリップするアニメーションで表示します。
