@@ -43,6 +43,52 @@ webview.addEventListener('load', function(e){
 });
 }}}
 
+== 進む・戻る・再読込の処理 ==
+ブラウザの「進む」・「戻る」・「再読込」に相当する処理がWebViewのメソッドとして用意されています。
+
+ * goForward()
+ * goBack()
+ * reload()
+
+== ツールバーの表示制御 ==
+
+iOSとAndroidで実装が異なりますが、WebViewに対してToolbarの設定ができます。
+
+{{{
+// ツールバーを表示する
+var toolbar = null;
+if(Titanium.Platform.name == 'iPhone OS'){
+  var button = Titanium.UI.createButton({
+    title:'ボタン'
+  });
+  w.setToolbar([button]);
+}
+else{
+  toolbar = Ti.UI.createView({
+    backgroundColor: '#000',
+    opacity:0.8,
+    bottom:10,
+    width:300,
+    height:50,
+    zIndex:1000
+  });
+  toolbar.add(Ti.UI.createLabel({
+    text: 'ボタン代わり'
+  }));
+  w.add(toolbar);
+}
+
+// ツールバーを除去する
+if(Titanium.Platform.name == 'iPhone OS'){
+	w.setToolbar(null, {animated:true});
+}
+else{
+  if(toolbar != null){
+    w.remove(toolbar);
+  }
+}
+}}}
+
 == 特殊なイベント ==
 すべて仮引数にurlプロパティを持ったWebViewに特化されたイベントです。
 
