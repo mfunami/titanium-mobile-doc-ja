@@ -2,6 +2,15 @@
 
 = Titanium Mobile & doc-ja News History =
 
+=== 2010/10/29 ===
+トップからのリンクに[http://builds.appcelerator.com.s3.amazonaws.com/index.html 「Appcelerator Continuous Builds」]、@masuidriveさんの[http://tidocs.com/mobile/latest/ 「Titanium Mobile API Documents」]を追加しました。
+
+=== 2010/10/21 ===
+立薗理彦さんの[http://www.atmarkit.co.jp/fwcr/design/index/index_titanium.html Web技術でネイティブアプリを作れるTitanium]の連載[http://www.atmarkit.co.jp/fwcr/design/tool/titanium03/01.html 第3回]が掲載されています。
+
+=== 2010/10/20 ===
+GREEの伊藤直也さんの[http://d.hatena.ne.jp/naoya/20101020 Titanium Mobile についての勉強会資料]にて当プロジェクトをご紹介いただきました。ありがとうございます。
+
 === 2010/07/26 ===
 [https://developer.appcelerator.com/apidoc/mobile/1.4/changelog.html Titanium Mobile Ver.1.4.0]がリリースされています。
 
