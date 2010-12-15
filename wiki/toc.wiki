@@ -92,7 +92,7 @@
  * プラットフォーム編
   * [guides_platform_information 環境情報取得]
   * [guides_platform_openurl 他アプリケーション連携(OpenURL)]
-  * クリップボード
+  * [guides_platform_clipboard クリップボード制御]
   * iOS
    * Background Service 
    * Local Notification
