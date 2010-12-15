@@ -74,7 +74,6 @@
    * Forsquare
    * FaceBook
    * Yahoo(YQL)
-  * (追記予定) !PushNotifications [http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/push_notification.js KS]
   * (追記予定) !BonjourBrowser / !BonjourService [http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/bonjour.js KS]
  * I/O編
   * [guides_filesystem ファイルシステム]
@@ -96,15 +95,13 @@
   * iOS
    * Background Service 
    * Local Notification
-   * Push Notification
+   * (追記予定) !PushNotifications [http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/push_notification.js KS]
  * ユーティリティ編
   * [guides_app_log ログ出力]
   * [guides_embeded_timer タイマー処理]
   * [guides_embeded_include ライブラリ取込]
   * [guides_xml_dom XML DOM Parser]
-  * [guides_util_string 文字列変換(BASE64, MD5)]
-  * String.format
-  * ローカライズ
+  * [guides_util_string 文字列処理　編集(Format)・変換(BASE64, MD5)・ローカライズ]
 
 === 4th Step : アプリケーション詳細設定と公開・配布 ===
  * (追記予定) [app_structure アプリケーションフォルダ構造と詳細設定]
