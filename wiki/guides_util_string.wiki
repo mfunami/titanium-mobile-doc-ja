@@ -3,13 +3,20 @@
 = APIカタログ(ユーティリティ編) - 文字列処理　編集(Format)・変換(BASE64, MD5)・ローカライズ =
 
 == 文字列編集 ==
+固定した前後に変数となる文字列を埋め込むようなアリガチな処理に対して、文字列結合を繰り返すのではなく、Ver.1.5.0から用意された、拡張されたStringオブジェクトのformat関数を使ってみましょう。
 
-Format
+第一引数にはテンプレートとなる文字列を設定します。そこに{{{%s}}}を必要個数並べます。
+
+第二引数以降で先ほどの{{{%s}}}と置き換えられる値を並べていきます。
+
 {{{
-// test out logging to developer console, formatting and localization
-Ti.API.info(String.format("%s%s",L("welcome_message","default_not_set"),Titanium.version));
-Ti.API.debug(String.format("%s %s",L("user_agent_message","default_not_set"),Titanium.userAgent));
+//「文字列foo、結合bar」となる
+Ti.API.info(String.format("文字列%s、%sbar", "foo", "結合"));
+}}}
 
+数値や日付の変換も可能です。
+
+{{{
 Ti.API.debug(String.format("locale specific date is %s",String.formatDate(new Date))); // default is short
 Ti.API.debug(String.format("locale specific date (medium) is %s",String.formatDate(new Date,"medium")));
 Ti.API.debug(String.format("locale specific date (long) is %s",String.formatDate(new Date,"long")));
@@ -35,7 +42,10 @@ URIエンコード・デコードを行う関数が用意されています。
  * decodeURIComponent
  * encodeURIComponent
 
-== ローカライズ(L10n) ==
+== 多言語対応(i18n) ==
+多言語対応のための機能がVer.1.5.0以降追加されました。
+
+プロジェクト直下にi18nフォルダを作成し、その下にjaフォルダ（ISOの言語2文字略称コードに準拠）を作成、さらにその下にstrings.xmlを新規作成します。
 
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
@@ -50,9 +60,14 @@ URIエンコード・デコードを行う関数が用意されています。
 	<string name="mashups_win_title">Mashups</string>
 </resources>
 }}}
+
+呼び出し方としては{{{Ti.Local.getString("strings.xmlでの定義名")}}}を使います。
+
+第二引数以降がある場合、String.formatと同様に挙動します。
+
+また、{{{Ti.Local.getString}}}に対して{{{L}}}というエイリアスが用意されています。
+
 {{{
-
-
 Ti.API.info("should be en, was = "+Ti.Locale.currentLanguage);
 Ti.API.info("welcome_message = "+Ti.Locale.getString("welcome_message"));
 Ti.API.info("should be def, was = "+Ti.Locale.getString("welcome_message2","def"));
