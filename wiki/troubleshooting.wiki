@@ -30,3 +30,7 @@ iOS系の場合はbuildフォルダに生成されたInfo.plistを加工後、�
  * [https://appcelerator.lighthouseapp.com/projects/25719/tickets/332-unable-to-package ここ]に書かれている resorces/js/index.js の該当部分をコメントアウト
  * 環境変数 HTTP_PROXY に {{{http://host:port}}} 形式で値をセット
  * appcelerator.xml に {{{ <proxy>yourProxy:yourPort</proxy>}}}の記述を追加 [http://developer.appcelerator.com/question/18161/can-i-work-with-titanium-developer-without-network-access-or-via-proxy ここ参照]
+
+== まとめられている方のページ ==
+
+ * http://hamasyou.com/blog/archives/000371
