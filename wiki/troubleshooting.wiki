@@ -28,12 +28,47 @@ buildフォルダ直下にiphoneフォルダやandroidフォルダを作成み�
 
 iOS系の場合はbuildフォルダに生成されたInfo.plistを加工後、プロジェクト直下に配置しておけばOK。
 
+ただし、ファイル名とかフォルダ名に日本語名つけてるとマズイかもしれません。（Titanium Mobileに限らず、全般的にリスクを孕んでいますね）
+
+== プロジェクト名に Titanium という単語が入るとエラーになる ==
+
+Titanium でプロジェクトを作成するときに、プロジェクト名に「Titanium」っていう単語が入るとコンパイルエラーになりますので、別の名前にしましょう。
+
+== touch.jsというファイル名は許されない ==
+
+なので、リネームしましょう。
+
 == HTTP Proxy環境でログインできない！ ==
 
  * [https://appcelerator.lighthouseapp.com/projects/25719/tickets/332-unable-to-package ここ]に書かれている resorces/js/index.js の該当部分をコメントアウト
  * 環境変数 HTTP_PROXY に {{{http://host:port}}} 形式で値をセット
  * appcelerator.xml に {{{ <proxy>yourProxy:yourPort</proxy>}}}の記述を追加 [http://developer.appcelerator.com/question/18161/can-i-work-with-titanium-developer-without-network-access-or-via-proxy ここ参照]
 
-== まとめられている方のページ ==
+== Rum Emulatorで「Launch」を押しても空振りする ==
+
+終了後すぐにLaunchしていませんか？
+
+一旦「Stop」ボタンを押して／シミュレータを終了して／さらに数秒待ってからもう一度試してください。
+
+ダメならTitanium Developerを再起動して、もう一度試してください。
+
+これでほぼ回復するはずですが、それでもダメなら buildフォルダ内の対象デバイスのbuild.logを見ましょう。末尾になんらかのエラーが書いてあるはずです。
+
+== build.log に FileNotFound のようなエラーがでてる場合 ==
+
+結構繊細なTitaniumのプロジェクトが壊れている可能性があります。
+
+新しいプロジェクトを作り、旧プロジェクト配下からソースなどを移して、リビルドしてみましょう。
+
+他でも詰まった場合はまずこれを試してみると吉です。
+
+== シミュレータでは動くのに、実機に転送しようとすると「Install Error」になる ==
+
+実機のiOSのバージョンとXCodeに入っているSDKのバージョンが一致してない可能性があります。
+
+XCodeを起動し、ウインドウメニューから「オーガナイザ」を立ち上げ、対象となるデバイスのiOS のバージョンとXCode のサポートしているバージョンに差異が無いか確認しましょう。
+
+
+== 参考にさせて頂いたページ（順不同） ==
 
  * http://hamasyou.com/blog/archives/000371
