@@ -1,11 +1,14 @@
 #summary Titanium Mobileでの開発の際のよくある「困ったこと」の解決方法
 #labels 作業中
+#sidebar TableOfContents
 
 = 困ったときは？ =
 
 Titanium Mobileでの開発の際のよくある「困ったこと」の解決方法をQ&A形式でまとめていく*予定*です。
 
 ネタがあったらコメント欄にお願い致します！ m(_ _)m
+
+<wiki:toc max_depth="3" />
 
 == 日本語入力すると動かない！ ==
 
