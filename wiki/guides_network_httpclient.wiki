@@ -16,6 +16,7 @@ var xhr = Titanium.Network.createHTTPClient();
 
 // 第一引数はHTTP Method(GETかPOSTがほとんどだと思いますが)
 // 第二引数はURIです。
+// 第三引数は非同期か同期かを選択します。（デフォルトは非同期）
 xhr.open('GET','http://search.twitter.com/search.json?q=%23titanium');
 
 // レスポンスを受け取るイベント
