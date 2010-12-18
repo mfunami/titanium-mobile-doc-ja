@@ -108,16 +108,16 @@ xhr.ondatastream = function(e){
 }}}
 
 == 標準認証 ==
-実はあまりこのHTTPClient、あまりスマートにできていません。
+かつてはURL埋め込み方式だった標準認証もsetBasicCredentialsが用意されました。
 
-標準認証時は次のようにしろとドキュメントに書かれていて思わず脱力してしまいます。
 {{{
 try{
     var xhr = Titanium.Network.createHTTPClient();
+    xhr. setBasicCredentials(username, password);
     xhr.onload = function() {
         //do work on "this.responseXML"
     };
-    xhr.open("GET","https://"+username + ":" + password + "@twitter.com/account/verify_credentials.xml");
+    xhr.open("GET","https://twitter.com/account/verify_credentials.xml");
     xhr.send();
 }
 catch(error){
@@ -128,9 +128,6 @@ catch(error){
     }).show();
 }
 }}}
-URLに直接ユーザ名とパスワードを埋め込む方式です。
-
-このあたりは今後改善されていくと信じたいところです。
 
 == リクエストヘッダの追加 ==
 HTTPリクエストヘッダに対する操作も可能です。
