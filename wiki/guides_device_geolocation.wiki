@@ -25,14 +25,14 @@ GPS、電子コンパスから現在状態を測定するため、2つの方法�
 
 ==== GPS(Titanium.Geolocation.getCurrentPosition) ====
 {{{
-Titanium.Geolocation.getCurrentPosition(function(e)
+Titanium.Geolocation.getCurrentPosition(function(e){
     // エラー時はコールバック関数の引数のerrorプロパティがセットされます
     if(e.error){
         Ti.API.error(e.error);
         return;
     }
     // 状態取得時の処理
-    var coords = e.corrds;
+    var coords = e.coords;
     /*
     // 中身はこんなデータです。
     {
@@ -54,12 +54,12 @@ Titanium.Geolocation.getCurrentPosition(function(e)
          "timestamp":274737055043
     }
     */
-);
+});
 }}}
 
 ==== 電子コンパス(Titanium.Geolocation.getCurrentHeading() ====
 {{{
-Titanium.Geolocation.getCurrentHeading(function(e)
+Titanium.Geolocation.getCurrentHeading(function(e){
     // エラー時はコールバック関数の引数のerrorプロパティがセットされます
     if(e.error){
         Ti.API.error(e.error);
@@ -77,7 +77,7 @@ Titanium.Geolocation.getCurrentHeading(function(e)
     var accuracy = e.heading.accuracy;
     // 取得時刻
     var timestamp = e.heading.timestamp;
-);
+});
 }}}
 
 === 継続検知するイベント(Titanium.Geolocation.addEventListener) ===
@@ -85,14 +85,14 @@ Titanium.Geolocation.getCurrentHeading(function(e)
 
 ==== GPS(locationイベント) ====
 {{{
-Titanium.Geolocation.addEventListener("location", function(e)
+Titanium.Geolocation.addEventListener("location", function(e){
     // エラー時はコールバック関数の引数のerrorプロパティがセットされます
     if(e.error){
         Ti.API.error(e.error);
         return;
     }
     // 状態取得時の処理
-    var coords = e.corrds;
+    var coords = e.coords;
     /*
     // 中身はこんなデータです。
     {
@@ -114,12 +114,12 @@ Titanium.Geolocation.addEventListener("location", function(e)
          "timestamp":274737055043
     }
     */
-);
+});
 }}}
 
 ==== 電子コンパス(headingイベント) ====
 {{{
-Titanium.Geolocation.addEventListener("heading", function(e)
+Titanium.Geolocation.addEventListener("heading", function(e){
     // エラー時はコールバック関数の引数のerrorプロパティがセットされます
     if(e.error){
         Ti.API.error(e.error);
@@ -137,7 +137,7 @@ Titanium.Geolocation.addEventListener("heading", function(e)
     var accuracy = e.heading.accuracy;
     // 取得時刻
     var timestamp = e.heading.timestamp;
-);
+});
 }}}
 
 == その他 ==
