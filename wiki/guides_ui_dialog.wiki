@@ -82,7 +82,7 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313205052.png
 
 ぼくはMMSに対応してからめっきり使わなくなりましたが(^^;
 {{{
-var emailDialog = Titanium.UI.createEmailDialog()
+var emailDialog = Titanium.UI.createEmailDialog();
 
 // 題名の初期値をセットします
 emailDialog.setSubject('題名');
