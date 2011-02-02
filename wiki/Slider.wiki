@@ -30,7 +30,7 @@ slider1.addEventListener('change',function(e) {
  * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/slider.js
 
 == 関連するAPIドキュメント ==
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Slider
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Slider-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
