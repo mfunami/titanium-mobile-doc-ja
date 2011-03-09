@@ -2,6 +2,28 @@
 
 = Titanium Mobile & doc-ja News History =
 
+
+=== 2010/12/14 ===
+[http://developer.appcelerator.com/blog/2010/12/titanium-mobile-1-5-0-is-ga-today.html Titanium Mobile Ver.1.5.0]がリリースされています。
+
+ドキュメント類は…頑張って追いかけます！
+
+=== 2010/12/10 ===
+12月19日 はてな技術勉強会にてAppceleratorの@masuidriveさんの講演ならびに「Titanium Mobile と はてなのAPI を使った iPhone/Android アプリ開発」をテーマとしたHackathonが行われます。→[http://atnd.org/events/10950 ATND]
+
+=== 2010/12/04 ===
+Appceleratorの日本語公式Twitterアカウント[http://twitter.com/appcelerator_ja/ @appcelerator_ja]が開設されました。中の人は@masuidriveさんです。
+
+=== 2010/11/06 ===
+最新版のTitanium Mobile SDK 1.4.1をOSX環境に新規導入して、KitchenSinkのビルドに失敗されている場合は、[continuous_builds こちらのページ]を参考にして、最新版のVer.1.4.2を導入してください。
+
+=== 2010/11/01 ===
+[http://twitter.com/daoki2/ @daoki2さん]の!InterfaceBuilderのGUIデザイナで生成する.xibファイルからTitanium Mobile用のJSコードを生成するツール[http://blog.frogonmobile.com/apps/xib2js/ Xib2Js]の最新版Ver.1.2が公開されました。
+
+=== 2010/09/20 ===
+[http://developer.appcelerator.com/blog/2010/09/titanium-mobile-1-4-1-for-osx-only.html Titanium Mobile Ver.1.4.1]がリリースされています。
+[http://developer.appcelerator.com/blog/2010/09/titanium-module-api-uploaded-as-a-pdf.html 公式APIリファレンス(PDF版)]もリリースされています。
+
 === 2010/10/29 ===
 トップからのリンクに[http://builds.appcelerator.com.s3.amazonaws.com/index.html 「Appcelerator Continuous Builds」]、@masuidriveさんの[http://tidocs.com/mobile/latest/ 「Titanium Mobile API Documents」]を追加しました。
 
