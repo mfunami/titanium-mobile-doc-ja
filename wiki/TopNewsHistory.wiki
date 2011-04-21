@@ -3,6 +3,11 @@
 = Titanium Mobile & doc-ja News History =
 
 
+=== 2011/2/24 ===
+[http://developer.appcelerator.com/blog/2011/02/titanium-mobile-1-6-0-is-released.html Titanium Mobile Ver.1.6.0]がリリースされています。
+
+=== 2010/12/17 ===
+[http://developer.appcelerator.com/blog/2010/12/titanium-mobile-1-5-1-is-released.html Titanium Mobile Ver.1.5.1]がリリースされています。
 === 2010/12/14 ===
 [http://developer.appcelerator.com/blog/2010/12/titanium-mobile-1-5-0-is-ga-today.html Titanium Mobile Ver.1.5.0]がリリースされています。
 
