@@ -1,0 +1,6 @@
+== リンク集 ==
+
+ * [toc 「Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発」目次]
+ * [http://code.google.com/p/titanium-mobile-doc-ja/w/list wikiの一覧]
+ * [troubleshooting 困ったときは？]
+ * [http://ti.masuidrive.jp/ 非公式Titanium掲示板]
