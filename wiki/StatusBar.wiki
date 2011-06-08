@@ -1,6 +1,8 @@
 #summary UIカタログ - StatusBar (iPhoneのみ)
 #labels api,ui,view,iPhone
 = UIカタログ - !StatusBar (iPhoneのみ) =
+<wiki:toc max_depth="3" />
+
 StatusBarは３種類の設定を切り替えることができます。
 
 また、表示非表示も切り替える事が出来ます。
@@ -24,11 +26,11 @@ Titanium.UI.iPhone.showStatusBar();
 
 == 関連するKitchenSinkソース ==
 
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/statusbar.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/statusbar.js
 
 == 関連するAPIドキュメント == 
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.StatusBar-object.html
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone-object
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.iPhone.StatusBar-object
 
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
