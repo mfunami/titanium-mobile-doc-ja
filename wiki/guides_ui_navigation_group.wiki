@@ -1,6 +1,7 @@
 #summary UIカタログ - NavigationGroup
 #labels ui,view,iPhone
 = UIカタログ - !NavigationGroup =
+<wiki:toc max_depth="3" />
 
 !NavigationGroupは階層化されたコンテンツのナビゲーションを統括する特殊なViewです。
 
@@ -38,7 +39,7 @@ label1.addEventListener('click', function(e){
 
 == 関連するKitchenSinkソース ==
 
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/navgroup.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/navgroup.js
 
 == 関連するAPIドキュメント ==
 
