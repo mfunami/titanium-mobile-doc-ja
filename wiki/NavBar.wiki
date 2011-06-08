@@ -3,6 +3,8 @@
 = UIカタログ - !NavBar  =
 WindowのStatusBarの直下にあり、画面遷移をしていく画面でのナビゲーション・指示を司るUI部品です。
 
+<wiki:toc max_depth="3" />
+
 == 表示・非表示の切り替え ==
 {{{
 // 現在のwindowから表示→非表示
@@ -73,6 +75,6 @@ Titanium.UI.currentWindow.setRightNavButton(null);
  * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_navbar.js
 
 == 関連するAPIドキュメント == 
- * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Window
+ * https://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Window-object
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
