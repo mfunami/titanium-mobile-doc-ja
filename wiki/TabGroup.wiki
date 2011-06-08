@@ -1,6 +1,8 @@
 #summary UIカタログ - TabGroup
 #labels ui,api,view
 = UIカタログ - !TabGroup =
+<wiki:toc max_depth="3" />
+
 TabGroupは複数のwindowを束ねるアプリケーションUIの根幹を担います。
 
 アプリケーションのルートコンテナとしてはこのTabGroupもしくはWindowを配置する必要があります。
@@ -81,8 +83,8 @@ tabs[2].setBadge(3);
 
 == 関連するKitchenSinkソース ==
 
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/tab_groups.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/tabs.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/tab_groups.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/tabs.js
 
 == 関連するAPIドキュメント ==
 
