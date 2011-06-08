@@ -1,10 +1,7 @@
-== リンク集 ==
+== 外部リンク集 ==
  * [http://developer.appcelerator.com/apidoc/mobile/ 公式APIリファレンス]
  * [http://tidocs.com Titanium Mobile APIリファレンス(非公式)] 
  * [http://ti.masuidrive.jp/ 非公式Titanium掲示板]
-
- * [http://code.google.com/p/titanium-mobile-doc-ja/w/list wikiの一覧]
- * [troubleshooting 困ったときは？]
 
 == 「Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発」 ==
 
