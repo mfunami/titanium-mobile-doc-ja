@@ -1,6 +1,8 @@
 #summary UIカタログ - ToolBar
 #labels api,ui,view
 = UIカタログ - !ToolBar =
+<wiki:toc max_depth="3" />
+
 ToolBarは（主に画面下部に配置する）ボタンなどのコントロールを収納するコンテナです。
 
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227190715.png
@@ -70,8 +72,8 @@ Titanium.UI.currentWindow.add(toolbar1);
 
 == 関連するKitchenSinkソース ==
 
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/window_toolbar.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/toolbar.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/window_toolbar.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/toolbar.js
 
 == 関連するAPIドキュメント ==
 
