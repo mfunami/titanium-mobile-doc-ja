@@ -1,6 +1,7 @@
 #summary UIカタログ(API) - ダイアログ関連
 #labels api,ui,dialog
 = UIカタログ(API) - ダイアログ関連 =
+<wiki:toc max_depth="3" />
 
 == シンプルなアラート(Alert Dialog) ==
 http://f.hatena.ne.jp/images/fotolife/d/donayama/20100313/20100313205050.png
@@ -120,9 +121,9 @@ emailDialog.addEventListener('complete', function(e){
 
 == 関連するKitchenSinkソース ==
 
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/alert.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/options_dialog.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/email_dialog.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/alert.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/options_dialog.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/email_dialog.js
 
 
 == 関連するAPIドキュメント ==
