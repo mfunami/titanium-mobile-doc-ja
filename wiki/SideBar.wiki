@@ -1,63 +1,60 @@
-== 外部リンク集 ==
- * [http://developer.appcelerator.com/apidoc/mobile/ 公式APIリファレンス]
+ 外部リンク集
+* [http://developer.appcelerator.com/apidoc/mobile/ 公式APIリファレンス]
  * [http://tidocs.com Titanium Mobile APIリファレンス(非公式)] 
  * [http://ti.masuidrive.jp/ 非公式Titanium掲示板]
 
-== 「Appcelerator Titanium MobileではじめるiPhoneアプリケーション開発」 ==
-
-* [toc 目次]
+=== [toc 目次] ==
  
-=== はじめに ===
+==== はじめに ====
 
  * [about_titanium_mobile Titanium Mobileについて]
 
 === 1st Step : はじめの一歩 ===
 
- * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]（単体でも成立するよう「はじめに」と「UIカタログ」と内容が一部重複しています）
+ * [get_started Titanium MobileでiPhoneアプリ開発を始めよう!!]
 
 === 2nd Step : UIカタログ ===
-
- * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
- * Window編
-  * [Window]
-   * [StatusBar]
-   * [NavBar]
-   * [ToolBar]
-  * [TabGroup]
-  * [guides_ui_dialog ダイアログ]
-  * [guides_ui_navigation_group NavigationGroup] (iPhoneのみ)
- * View編
-  * [Views View(共通)]
-  * [WebView]
-  * [ImageView]
-  * [CoverFlowView]
-  * [MapView]
-  * [TableView]
-  * [ScrollView]
-  * [ScrollableView]
-  * [DashboardView]
-  * [guides_ui_verticallayout VirticalLayout]
-  * [guides_ui_horizontallayout HorizontalLayout]
-  * (追記予定) [SplitWindow] (iPadのみ)
-  * [Popover] (iPadのみ)
-  * Ad View
- * Control編
-  * [Label]
-  * [Button]
-   * [howto_button_icon システムボタンアイコンの使い方]
-   * [howto_button_style ボタン形状の指定]
-  * [TextField]
-  * [TextArea]
-  * [Switch]
-  * [Slider]
-  * [Picker]
-  * [ButtonBar ButtonBar] (iPhoneのみ)
-  * [TabbedBar TabbedBar] (iPhoneのみ)
-  * [SearchBar]
-  * [ActivityIndicator]
-  * [ProgressBar]
- * [guides_ui_properties 共通プロパティ]
- * [guides_ui_animation アニメーション]
+  * [guides_ui_iphone_abstruct ユーザインタフェイス概説]
+  * Window編
+    * [Window]
+      * [StatusBar]
+      * [NavBar]
+      * [ToolBar]
+     * [TabGroup]
+     * [guides_ui_dialog ダイアログ]
+   * [guides_ui_navigation_group NavigationGroup] (iPhoneのみ)
+  * View編
+    * [Views View(共通)]
+    * [WebView]
+    * [ImageView]
+    * [CoverFlowView]
+    * [MapView]
+    * [TableView]
+    * [ScrollView]
+    * [ScrollableView]
+    * [DashboardView]
+    * [guides_ui_verticallayout VirticalLayout]
+    * [guides_ui_horizontallayout HorizontalLayout]
+    * (追記予定) [SplitWindow] (iPadのみ)
+    * [Popover] (iPadのみ)
+    * Ad View
+  * Control編
+    * [Label]
+    * [Button]
+      * [howto_button_icon システムボタンアイコンの使い方]
+      * [howto_button_style ボタン形状の指定]
+    * [TextField]
+    * [TextArea]
+    * [Switch]
+    * [Slider]
+    * [Picker]
+    * [ButtonBar ButtonBar] (iPhoneのみ)
+    * [TabbedBar TabbedBar] (iPhoneのみ)
+    * [SearchBar]
+    * [ActivityIndicator]
+    * [ProgressBar]
+  * [guides_ui_properties 共通プロパティ]
+  * [guides_ui_animation アニメーション]
 
 === 3rd Step : APIカタログ ===
  * Titanium Mobile APIの全体像を俯瞰する
