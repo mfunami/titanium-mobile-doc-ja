@@ -137,6 +137,12 @@ window1.animate({
     transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
 });
 }}}
+また、open時の引数として指定する方法もあります。
+{{{
+nextWindow.open({
+	transition:Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+});
+}}}
 
 [guides_ui_animation 詳細はこちら]
 
