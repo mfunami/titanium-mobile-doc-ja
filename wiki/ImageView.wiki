@@ -66,20 +66,19 @@ animationView.stop();
 ちなみにwidth, heightプロパティ指定時に元画像サイズよりも大きい場合、そのサイズに画像が引き伸ばされます。
 
 == 関連するAPIドキュメント ==
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_basic.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_animated.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_file.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_remote.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_scaling.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_positioning.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_encoding.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_blob.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_mask.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_toolbar.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/image_view_updateimages.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_basic.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_animated.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_file.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_remote.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_scaling.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_positioning.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_encoding.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_blob.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_mask.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_toolbar.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/image_view_updateimages.js
 
 == 関連するAPIドキュメント ==
- * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.ImageView-object
-
+ * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Map.Annotation-object.html
 ----
 原著作者表示：[http://www.appcelerator.com/ Appcelerator, Inc]
