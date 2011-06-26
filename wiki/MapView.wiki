@@ -147,8 +147,8 @@ mapview.addEventListener('click', function(e){
 
 
 == 関連するKitchenSinkソース ==
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/map_view.js
- * http://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/map_view2.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/map_view.js
+ * http://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/map_view2.js
  * 
 
 == 関連するAPIドキュメント ==
