@@ -14,8 +14,11 @@ http://f.hatena.ne.jp/images/fotolife/d/donayama/20100227/20100227195105.png
 // 単純なURLのロード
 var webview = Ti.UI.createWebView();
 // こういったイベントの取得も可能です
+webview.addEventListener('beforeload',function(e){
+     Ti.API.debug("読み込み開始: "+e.url);
+});
 webview.addEventListener('load',function(e){
-     Ti.API.debug("webview loaded: "+e.url);
+     Ti.API.debug("読み込み完了: "+e.url);
 });
 webview.url = "http://www.google.co.jp/";
 }}}
@@ -109,7 +112,7 @@ webView.addEventListener('load', function(e){
 }}}
 
 == 関連するKitchenSinkドキュメント ==
- * https://github.com/appcelerator/KitchenSink/blob/master/KitchenSink/Resources/examples/web_views.js
+ * https://github.com/appcelerator/KitchenSink/blob/master/Resources/examples/web_views.js
 
 == 関連するAPIドキュメント ==
  * http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.WebView-object
