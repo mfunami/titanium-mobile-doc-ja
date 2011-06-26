@@ -3,6 +3,30 @@
 = Titanium Mobile & doc-ja News History =
 
 
+=== 2011/5/25 ===
+
+翔泳社より[http://amzn.to/jwSK4K Titanium Mobileで開発するiPhone/Androidアプリ]というタイトルで当サイト管理人執筆の入門書が発売されることになりました。発売日は6/10ごろを予定しています。よろしくお願い致しますm(_ _)m
+
+=== 2011/5/17 ===
+
+[http://developer.appcelerator.com/blog/2011/05/titanium-mobile-sdk-1-7-rc1.html Titanium Mobile Ver.1.7.0 RC1]ならびに[http://developer.appcelerator.com/blog/2011/05/titanium-studio-1-0-release-candidate-1.html Titanium Studio 1.0 RC1]がそれぞれリリースされています。
+
+=== 2011/4/19 ===
+[http://developer.appcelerator.com/blog/2011/04/titanium-mobile-1-6-2-is-released.html Titanium Mobile Ver.1.6.2]がリリースされています。
+
+=== 2011/4/5 ===
+
+統合開発環境[http://developer.appcelerator.com/blog/2011/04/titanium-studio-1-0%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%89%88%E3%81%A8%E3%83%87%E3%83%90%E3%83%83%E3%82%AC%E3%82%92%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9.html?lang=ja Titanium Studio Ver.1.0 Preview]がリリースされています。Titanium Mobile SDK 1.7βと組み合わせての利用となります。利用上の注意点等は左記リンク内をご参照ください。
+
+=== 2011/3/16 ===
+[http://developer.appcelerator.com/blog/2011/03/titanium-mobile-1-6-1-released.html Titanium Mobile Ver.1.6.1]がリリースされています。Xcode4/iOS SDK 4.3に対応しました。
+
+
+=== 2011/3/9 ===
+
+[http://ti.masuidrive.jp/ 非公式Titanium掲示板]をAppceleratorの増井さんが開設されました。Appcelerator本家でコミュニティサイトが立ち上がったタイミングでマージされる予定です。質問等は是非こちらで！
+なお利用に当たっては[http://ti.masuidrive.jp/topic.php?id=1 こちら]をまずご覧ください。
+
 === 2011/2/24 ===
 [http://developer.appcelerator.com/blog/2011/02/titanium-mobile-1-6-0-is-released.html Titanium Mobile Ver.1.6.0]がリリースされています。
 
