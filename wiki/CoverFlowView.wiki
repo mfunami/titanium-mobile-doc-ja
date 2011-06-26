@@ -22,12 +22,12 @@ var view = Titanium.UI.createCoverFlowView({
 
 // 画像選択時のイベント
 view.addEventListener('click',function(e){
-    Titanium.API.info("image clicked: "+e.index+', selected is '+view.selected);	
+    Titanium.API.info('image clicked: ' + e.index + ', selected is ' + view.selected);	
 });
 
 // フリックなどで選択中の画像が変わったときのイベント
 view.addEventListener('change',function(e){
-    Titanium.API.info("image changed: "+e.index+', selected is '+view.selected);	
+    Titanium.API.info('現在の画像: ' + e.index + ', 直近の画像: ' + view.selected);	
 });
 
 Ti.UI.currentWindow.add(view);
