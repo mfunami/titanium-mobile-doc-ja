@@ -39,9 +39,8 @@
   * [DashboardView]
   * [guides_ui_verticallayout VirticalLayout]
   * [guides_ui_horizontallayout HorizontalLayout]
-  * (追記予定) [SplitWindow] (iPadのみ)
+  * [SplitWindow] (iPadのみ)
   * [Popover] (iPadのみ)
-  * Ad View
  * Control編
   * [Label]
   * [Button]
