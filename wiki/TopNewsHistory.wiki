@@ -3,6 +3,16 @@
 = Titanium Mobile & doc-ja News History =
 
 
+=== 2011/12/23 ===
+[http://developer.appcelerator.com/blog/2011/12/titanium-mobile-1-8.html Titanium Mobile Ver.1.8.0とTitanium Studio Ver.1.0.7]がリリースされました。
+
+=== 2011/6/14 ===
+[http://developer.appcelerator.com/blog/2011/06/introducing-titanium-studio.html Titanium Mobile Ver.1.7.0とTitanium Studio Ver.1.0]がリリースされています。これをもってTitanium Developerの配布も終了しました（オープンソースソフトウェアとして継続されます）。
+
+=== 2011/6/10 ===
+
+翔泳社より[http://amzn.to/jwSK4K Titanium Mobileで開発するiPhone/Androidアプリ]というタイトルで当サイト管理人執筆の入門書が発売されました。宜しくお願いいたします。
+
 === 2011/5/25 ===
 
 翔泳社より[http://amzn.to/jwSK4K Titanium Mobileで開発するiPhone/Androidアプリ]というタイトルで当サイト管理人執筆の入門書が発売されることになりました。発売日は6/10ごろを予定しています。よろしくお願い致しますm(_ _)m
