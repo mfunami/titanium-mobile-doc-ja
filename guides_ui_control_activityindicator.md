@@ -1,0 +1,1 @@
+[移動先](ActivityIndicator.md)
